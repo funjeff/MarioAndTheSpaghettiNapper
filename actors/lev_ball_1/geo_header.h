@@ -1,0 +1,10 @@
+extern const GeoLayout black_bobomb_geo[];
+extern Lights1 lev_ball_1_f3d_material_lights;
+extern u8 lev_ball_1_luigi_texture_ci8[];
+extern u8 lev_ball_1_luigi_texture_ci8_pal_rgba16[];
+extern Vtx lev_ball_1_Sphere_mesh_layer_1_vtx_0[1984];
+extern Gfx lev_ball_1_Sphere_mesh_layer_1_tri_0[];
+extern Gfx mat_lev_ball_1_f3d_material[];
+extern Gfx mat_revert_lev_ball_1_f3d_material[];
+extern Gfx lev_ball_1_Sphere_mesh_layer_1[];
+extern Gfx lev_ball_1_material_revert_render_settings[];

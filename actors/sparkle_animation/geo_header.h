@@ -1,0 +1,10 @@
+extern const GeoLayout sparkles_animation_geo[];
+extern Lights1 sparkle_animation_f3d_material_001_layer1_lights;
+extern u8 sparkle_animation_Headgear_Luigi_S_ci8[];
+extern u8 sparkle_animation_Headgear_Luigi_S_ci8_pal_rgba16[];
+extern Vtx sparkle_animation__0_0_node_mesh_layer_1_vtx_0[634];
+extern Gfx sparkle_animation__0_0_node_mesh_layer_1_tri_0[];
+extern Gfx mat_sparkle_animation_f3d_material_001_layer1[];
+extern Gfx mat_revert_sparkle_animation_f3d_material_001_layer1[];
+extern Gfx sparkle_animation__0_0_node_mesh_layer_1[];
+extern Gfx sparkle_animation_material_revert_render_settings[];
