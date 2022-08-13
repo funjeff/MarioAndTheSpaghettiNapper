@@ -553,6 +553,9 @@
 //custom (by jeffrey or sam)
 
 #define MODEL_LUIGI_ROPE                  0xE4   //luigi_rope_geo
+#define MODEL_FRIDGE                      0xE5   //fridge_geo
+#define MODEL_CUTSCENE_TOAD               0xE6   //cutscene_toad_geo
+#define MODEL_CUTSCENE_LUIGI              0xE7   //cutscene_toad_geo
 
 
 // Menu Models (overwrites Level Geometry IDs)

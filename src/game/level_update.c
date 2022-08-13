@@ -690,6 +690,11 @@ void initiate_painting_warp(void) {
 s16 level_trigger_warp(struct MarioState *m, s32 warpOp) {
     s32 fadeMusic = TRUE;
 
+    if (m->riddenObj != NULL){
+       	 m->riddenObj->oInteractStatus = 4194304; //INT_STATUS_STOP_RIDING
+      	 m->riddenObj = NULL;
+    }
+
     if (sDelayedWarpOp == WARP_OP_NONE) {
 #ifdef SAVE_NUM_LIVES
         save_file_set_num_lives(m->numLives);
@@ -1216,7 +1221,7 @@ s32 init_level(void) {
                     if (save_file_exists(gCurrSaveFileNum - 1)) {
                         set_mario_action(gMarioState, ACT_IDLE, 0);
                     } else {
-                        set_mario_action(gMarioState, ACT_INTRO_CUTSCENE, 0);
+                        set_mario_action(gMarioState, ACT_FIRST_CUTSCENE, 0);
                         fadeFromColor = TRUE;
                     }
                 }

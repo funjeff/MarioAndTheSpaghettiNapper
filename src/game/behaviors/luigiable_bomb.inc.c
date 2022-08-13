@@ -34,6 +34,8 @@ void bhv_luigiable_bomb_loop(void) {
 
 			  gMarioState->angleVel[1] = 0x400;
 
+			  gMarioState->faceAngle[1] = obj_angle_to_object(gMarioObject,o);
+
 			  set_mario_action(gMarioState, ACT_SWINGING_ROPE, 0);
 			  obj_mark_for_deletion(o);
 			}
@@ -48,6 +50,8 @@ void bhv_luigiable_bomb_loop(void) {
     		       luigi->maxWeegCount = luigi->weegCount;
 
     		       gMarioState->angleVel[1] = 0x900;
+
+    		       gMarioState->faceAngle[1] = obj_angle_to_object(gMarioObject,o);
 
     		      set_mario_action(gMarioState, ACT_SWINGING_ROPE_FALL, 0);
     		      obj_mark_for_deletion(o);

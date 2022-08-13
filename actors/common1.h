@@ -305,4 +305,6 @@ extern const Gfx bomb_seg6_dl_0605A8A8[];
 extern const Gfx bomb_seg6_dl_0605A9C0[];
 
 
+#include "fridge/geo_header.h"
+
 #endif

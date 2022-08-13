@@ -28,3 +28,5 @@
 
 #include "luigi_rope/geo.inc.c"
 #include "bomb/geo.inc.c"
+
+#include "fridge/geo.inc.c"

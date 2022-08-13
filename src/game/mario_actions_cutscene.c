@@ -27,6 +27,7 @@
 #include "seq_ids.h"
 #include "sound_init.h"
 #include "rumble_init.h"
+#include "print.h"
 
 static struct Object *sIntroWarpPipeObj;
 static struct Object *sEndPeachObj;
@@ -1812,6 +1813,343 @@ static s32 act_intro_cutscene(struct MarioState *m) {
     return FALSE;
 }
 
+enum {
+	FIRST_SET_UP,
+    FIRST_WALK_TO_FRIDGE,
+    FIRST_ATTACK_FRIDGE,
+    FIRST_PRINCESS_CAPTURED,
+    FIRST_LUIGI_FLASHBACK,
+    FIRST_LUIGI_STEAL_IT,
+	FIRST_GO_TO_LUIGI,
+	FIRST_ATTACK_LUIGI,
+};
+
+
+static void first_cutscene_set_up(struct MarioState *m){
+	struct Object * luigi = spawn_object_relative(0,500,60,880, gMarioObject, MODEL_CUTSCENE_LUIGI   ,bhvCutsceneProp);
+	struct Object * fridge = spawn_object_relative(0,-420,0,1000, gMarioObject, MODEL_FRIDGE   ,bhvCutsceneProp);
+
+	obj_set_angle(luigi,luigi->oFaceAnglePitch+ 16400,luigi->oFaceAngleYaw + 26768, luigi->oFaceAngleRoll + 32768);
+
+	obj_set_angle(fridge,fridge->oFaceAnglePitch  + 16368,fridge->oFaceAngleYaw + 12368, fridge->oFaceAngleRoll);
+
+	fridge->cutscenePropMove = 1;
+	fridge->cutscenePropMoveOnState = FIRST_WALK_TO_FRIDGE + 1;
+	fridge->cutscenePropObjMoveSpeed = 5;
+
+	fridge->cutscenePropObjXDisplace = 90;
+	fridge->cutscenePropObjYDisplace = -100;
+
+	luigi->cutscenePropMove = 1;
+	luigi->cutscenePropMoveOnState = FIRST_GO_TO_LUIGI + 1;
+	luigi->cutscenePropObjMoveSpeed = 2;
+
+	luigi->cutscenePropObjXDisplace = -25;
+	luigi->cutscenePropObjYDisplace = -30;
+
+
+	gHudDisplay.flags = HUD_DISPLAY_NONE;
+
+	set_mario_animation(m, MARIO_ANIM_WALKING);
+
+	play_sound(SOUND_CUTSCENE_LUNCH_BREAK, m->marioObj->header.gfx.pos);
+
+	advance_cutscene_step(m);
+
+}
+
+static void first_cutscene_walk_to_fridge(struct MarioState *m){
+	m->actionTimer++;
+
+	if (m->actionTimer == 40){
+		play_sound(SOUND_CUTSCENE_PLUMBER_HUNGRY, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == 80){
+		play_sound(SOUND_CUTSCENE_PLUMBER_PASTA, m->marioObj->header.gfx.pos);
+	}
+}
+
+static void first_cutscene_attack_fridge(struct MarioState *m){
+	if (m->actionTimer == 0){
+		 set_mario_animation(m, MARIO_ANIM_FIRST_PUNCH);
+	}
+
+	if (m->actionTimer == 8){
+		 set_mario_animation(m, MARIO_ANIM_SECOND_PUNCH);
+	}
+
+	if (m->actionTimer == 12){
+		 set_mario_animation(m, MARIO_ANIM_GROUND_KICK);
+	}
+
+	if (m->actionTimer == 27){
+		play_sound(SOUND_CUTSCENE_OH_MY_GOD, m->marioObj->header.gfx.pos);
+
+	}
+
+	if (m->actionTimer == 100){
+		struct Object * toad = spawn_object_relative(0,-200,0,-600, gMarioObject, MODEL_CUTSCENE_TOAD ,bhvCutsceneProp);
+
+		toad->cutscenePropMove = 2;
+		toad->cutscenePropMoveOnState = FIRST_PRINCESS_CAPTURED + 1;
+		toad->cutscenePropObjMoveSpeed = 40;
+		toad->cutscenePropObjXDisplace = 120;
+		toad->cutscenePropObjYDisplace = -300;
+
+		gMarioState->faceAngle[1] = -1*obj_angle_to_object(gMarioObject,toad);
+		vec3s_set(gMarioObject->header.gfx.angle, 0, gMarioState->faceAngle[1], 0);
+
+		play_sound(SOUND_CUTSCENE_TOAD_HEY, m->marioObj->header.gfx.pos);
+
+		advance_cutscene_step(m);
+	}
+
+	m->actionTimer++;
+}
+
+static void first_cutscene_princess_capture(struct MarioState *m){
+//	advance_cutscene_step(m);
+}
+
+
+static void first_cutscene_luigi_flashback(struct MarioState *m){
+	m->actionTimer++;
+
+	if (m->actionTimer == 30){
+		play_sound(SOUND_CUTSCENE_MARIO_HELP, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == 55){
+		play_sound(SOUND_CUTSCENE_SPAGETII_NAPPER, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == 95){
+		play_sound(SOUND_CUTSCENE_SAVE_THE_SPAGETII_1, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == 140){
+		play_sound(SOUND_CUTSCENE_SAVE_THE_SPAGETII_2, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == 185){
+		play_sound(SOUND_CUTSCENE_STOMIC, m->marioObj->header.gfx.pos);
+	}
+
+
+
+	if (m->actionTimer > 270 && m->actionTimer < 460){
+		print_text(20, 40,"well uh it all started");
+		if (m->actionTimer > 340){
+			print_text(30, 20,"just a few minutes ago");
+		}
+		if (m->actionTimer == 420){
+			play_transition(0x000001, 30, 255,255,255);
+		}
+	}
+
+
+
+	if (m->actionTimer == 480){
+		play_transition(0x000000, 60, 255,255,255);
+		uintptr_t *behaviorAddr = segmented_to_virtual(bhvCutsceneProp);
+
+		struct ObjectNode *listHead = &gObjectLists[get_object_list_from_behavior(behaviorAddr)];
+
+		struct Object *luigiProp = (struct Object *) listHead->next;
+
+		 while (luigiProp != (struct Object *) listHead) {
+			 if (luigiProp->behavior == behaviorAddr) {
+				 break;
+			 }
+			 luigiProp = (struct Object *) luigiProp->header.next;
+		 }
+
+
+		play_sound(SOUND_CUTSCENE_LUIGI_SPAGETII, m->marioObj->header.gfx.pos);
+
+		luigiProp->oPosX = gMarioObject->header.gfx.pos[0];
+		luigiProp->oPosY = gMarioObject->header.gfx.pos[1] + 100;
+		luigiProp->oPosZ = gMarioObject->header.gfx.pos[2];
+
+		obj_set_angle(luigiProp,0,8320, 0);
+
+		gMarioObject->header.gfx.pos[1] = gMarioObject->header.gfx.pos[1] - 500;
+		advance_cutscene_step(m);
+	}
+}
+
+static void first_cutscene_luigi_steal_it(struct MarioState *m){
+		m->actionTimer++;
+
+		if (m->actionTimer == 30){
+			play_sound(SOUND_CUTSCENE_ILL_STEAL_IT, m->marioObj->header.gfx.pos);
+		}
+
+		if (m->actionTimer == 70){
+			play_sound(SOUND_CUTSCENE_NOONE_WILL_EVER_KNOW, m->marioObj->header.gfx.pos);
+		}
+
+		if (m->actionTimer == 150){
+			play_sound(SOUND_CUTSCENE_EVIL_LAUGH, m->marioObj->header.gfx.pos);
+		}
+
+		if (m->actionTimer == 200){
+			play_transition(0x000001, 30, 255,255,255);
+		}
+		if (m->actionTimer == 260){
+			play_transition(0x000000, 60, 255,255,255);
+
+			uintptr_t *behaviorAddr = segmented_to_virtual(bhvCutsceneProp);
+
+			struct ObjectNode *listHead = &gObjectLists[get_object_list_from_behavior(behaviorAddr)];
+
+			struct Object *luigiProp = (struct Object *) listHead->next;
+
+			 while (luigiProp != (struct Object *) listHead) {
+				 if (luigiProp->behavior == behaviorAddr) {
+					 break;
+				 }
+				 luigiProp = (struct Object *) luigiProp->header.next;
+			 }
+
+
+			luigiProp->oPosX = gMarioObject->oPosX - 500;
+			luigiProp->oPosY = gMarioObject->oPosY + 60;
+			luigiProp->oPosZ = gMarioObject->oPosZ - 880;
+
+			gMarioState->usedObj = luigiProp;
+
+			obj_set_angle(luigiProp,16400,58768,32768);
+
+			SET_BPARAM2(luigiProp->oBehParams, 0x07);
+
+			gMarioObject->header.gfx.pos[1] = gMarioObject->header.gfx.pos[1] + 500;
+
+		}
+
+		if (m->actionTimer > 300 && m->actionTimer < 420){
+			print_text(20, 60,"so yeah thats");
+			if (m->actionTimer > 340){
+				print_text(30, 40,"totally what happened");
+			}
+
+			if (m->actionTimer > 380){
+				print_text(30, 20,"except there was more");
+				print_text(40, 0,"evil laughter");
+			}
+		}
+
+		if (m->actionTimer == 420){
+			play_sound(SOUND_CUTSCENE_MARIO_GRUNT, m->marioObj->header.gfx.pos);
+		}
+
+		if (m->actionTimer == 450){
+			advance_cutscene_step(m);
+			set_mario_animation(m, MARIO_ANIM_WALKING);
+		}
+
+}
+
+static void first_cutscene_go_to_luigi(struct MarioState *m){
+
+}
+
+static void first_cutscene_attack_luigi(struct MarioState *m){
+		m->actionTimer++;
+		if (m->actionTimer == 1){
+			play_sound(SOUND_CUTSCENE_MARIO_LUIGI, m->marioObj->header.gfx.pos);
+			set_mario_animation(m, MARIO_ANIM_FIRST_PUNCH);
+		}
+
+		if (m->actionTimer == 8){
+			 set_mario_animation(m, MARIO_ANIM_SECOND_PUNCH);
+		}
+
+		if (m->actionTimer == 12){
+			 set_mario_animation(m, MARIO_ANIM_GROUND_KICK);
+		}
+
+		if (m->actionTimer == 20){
+			set_mario_animation(m, MARIO_ANIM_FIRST_PUNCH);
+		}
+
+		if (m->actionTimer == 28){
+			set_mario_animation(m, MARIO_ANIM_SECOND_PUNCH);
+		}
+
+		if (m->actionTimer == 32){
+			 set_mario_animation(m, MARIO_ANIM_GROUND_KICK);
+		}
+
+		if (m->actionTimer == 40){
+			set_mario_animation(m, MARIO_ANIM_FIRST_PUNCH);
+		}
+
+		if (m->actionTimer == 48){
+			set_mario_animation(m, MARIO_ANIM_SECOND_PUNCH);
+		}
+
+		if (m->actionTimer == 52){
+			set_mario_animation(m, MARIO_ANIM_GROUND_KICK);
+		}
+
+		if (m->actionTimer == 60){
+			play_sound(SOUND_CUTSCENE_ITS_NO_USE, m->marioObj->header.gfx.pos);
+		}
+
+		if (m->actionTimer == 120){
+			play_sound(SOUND_CUTSCENE_SPAGETTI_BACK, m->marioObj->header.gfx.pos);
+		}
+
+		if (m->actionTimer == 180){
+			play_sound(SOUND_CUTSCENE_PASTA_BE_WITH_ME, m->marioObj->header.gfx.pos);
+		}
+
+		if (m->actionTimer == 250){
+			m->actionState = ACT_STATE_BBH_ENTER_JUMP_INIT;
+			gMarioState->pos[0] = gMarioObject->header.gfx.pos[0];
+			gMarioState->pos[1] = gMarioObject->header.gfx.pos[1];
+			gMarioState->pos[2] = gMarioObject->header.gfx.pos[2];
+
+
+
+			set_mario_action(m, ACT_BBH_ENTER_JUMP, 0);
+		}
+}
+
+
+static s32 act_first_cutscene(struct MarioState *m){
+	 switch (m->actionArg) {
+	 	 	 case FIRST_SET_UP:
+	 	        first_cutscene_set_up(m);
+	 	        break;
+	 	 	case FIRST_WALK_TO_FRIDGE:
+	        	first_cutscene_walk_to_fridge(m);
+	            break;
+	        case FIRST_ATTACK_FRIDGE:
+	        	first_cutscene_attack_fridge(m);
+	            break;
+	        case FIRST_PRINCESS_CAPTURED:
+	        	first_cutscene_princess_capture(m);
+	            break;
+	        case FIRST_LUIGI_FLASHBACK:
+	        	first_cutscene_luigi_flashback(m);
+	            break;
+	        case FIRST_LUIGI_STEAL_IT:
+	        	first_cutscene_luigi_steal_it(m);
+	            break;
+	        case FIRST_GO_TO_LUIGI:
+	        	first_cutscene_go_to_luigi(m);
+	        	break;
+	        case FIRST_ATTACK_LUIGI:
+	        	first_cutscene_attack_luigi(m);
+	        	break;
+	 }
+	return FALSE;
+}
+
+
 // jumbo star cutscene: Mario lands after grabbing the jumbo star
 static void jumbo_star_cutscene_falling(struct MarioState *m) {
     if (m->actionState == ACT_STATE_JUMBO_STAR_CUTSCENE_FALLING_FALL) {
@@ -2651,6 +2989,7 @@ s32 mario_execute_cutscene_action(struct MarioState *m) {
     switch (m->action) {
         case ACT_DISAPPEARED:                cancel = act_disappeared(m);                break;
         case ACT_INTRO_CUTSCENE:             cancel = act_intro_cutscene(m);             break;
+        case ACT_FIRST_CUTSCENE:             cancel = act_first_cutscene(m);             break;
         case ACT_STAR_DANCE_EXIT:            cancel = act_star_dance(m);                 break;
         case ACT_STAR_DANCE_NO_EXIT:         cancel = act_star_dance(m);                 break;
         case ACT_STAR_DANCE_WATER:           cancel = act_star_dance_water(m);           break;

@@ -558,7 +558,7 @@ void bhv_nightmare_4_loop (void);
 void bhv_luigi_rope_loop(void);
 void bhv_luigi_rope_init(void);
 void bhv_luigiable_bomb_loop(void);
-
+void bhv_cutscene_prop_loop(void);
 
 Gfx *geo_move_mario_part_from_parent(s32 callContext, UNUSED struct GraphNode *node, Mat4 mtx);
 

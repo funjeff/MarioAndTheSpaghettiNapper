@@ -86,4 +86,8 @@ extern const Gfx toad_seg6_dl_06008A90[];
 extern const Gfx toad_seg6_dl_06008BD8[];
 extern const struct Animation *const toad_seg6_anims_0600FB58[];
 
+#include "cutscene_toad/geo_header.h"
+
+#include "cutscene_luigi/geo_header.h"
+
 #endif

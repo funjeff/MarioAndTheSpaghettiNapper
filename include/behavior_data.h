@@ -551,4 +551,6 @@ extern const BehaviorScript bhvNightmareChunk4[];
 extern const BehaviorScript bhvLuigiRope[];
 extern const BehaviorScript bhvLuigiableBomb[];
 
+extern const BehaviorScript bhvCutsceneProp[];
+
 #endif // BEHAVIOR_DATA_H

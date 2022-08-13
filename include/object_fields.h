@@ -1344,5 +1344,13 @@ os16112*/
 //bowser bomb
 #define bombRopeEnd oF4
 
+//cutscene prop
+
+#define cutscenePropMove oF4 //0 is no movement 1 is move mario towards this object 2 is move this object toward mario
+#define cutscenePropMoveOnState oF8 // the state to move this prop on
+#define cutscenePropObjMoveSpeed o100 //speed mario moves towards object or object moves towards mario
+#define cutscenePropObjXDisplace o104 //displacement from pos that mario walks too
+#define cutscenePropObjYDisplace o108 //displacement from pos that mario walks too
+
 
 #endif // OBJECT_FIELDS_H

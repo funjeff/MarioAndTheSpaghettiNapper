@@ -355,6 +355,123 @@ sound_ref .sound_action_jump_default
 sound_ref .sound_action_jump_default
 sound_ref .sound_action_jump_default
 sound_ref .sound_action_jump_default
+sound_ref .sound_lunch_break
+sound_ref .sound_plumber_hungry
+sound_ref .sound_plumber_pasta
+sound_ref .sound_toad_hey
+sound_ref .sound_mario_help
+sound_ref .sound_spagetii_napper
+sound_ref .sound_save_the_spagetii_1
+sound_ref .sound_save_the_spagetii_2
+sound_ref .sound_stomic
+sound_ref .sound_luigi_spagetii
+sound_ref .sound_ill_steal_it
+sound_ref .sound_noone_will_ever_know
+sound_ref .sound_evil_laugh
+sound_ref .sound_mario_grunt
+sound_ref .sound_mario_luigi
+sound_ref .sound_its_no_use
+
+.sound_lunch_break:
+chan_setbank 11 
+chan_setinstr 0 
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_plumber_hungry:
+chan_setbank 11 
+chan_setinstr 1 
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_plumber_pasta:
+chan_setbank 11 
+chan_setinstr 2 
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_toad_hey:
+chan_setbank 11 
+chan_setinstr 3 
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_mario_help:
+chan_setbank 11 
+chan_setinstr 4 
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_spagetii_napper:
+chan_setbank 11 
+chan_setinstr 5
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_save_the_spagetii_1:
+chan_setbank 11 
+chan_setinstr 6 
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_save_the_spagetii_2:
+chan_setbank 11 
+chan_setinstr 7 
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_stomic:
+chan_setbank 11 
+chan_setinstr 8 
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_luigi_spagetii:
+chan_setbank 11 
+chan_setinstr 9 
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_ill_steal_it:
+chan_setbank 11 
+chan_setinstr 10 
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_noone_will_ever_know:
+chan_setbank 11 
+chan_setinstr 11 
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_evil_laugh:
+chan_setbank 11 
+chan_setinstr 12 
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_mario_grunt:
+chan_setbank 11 
+chan_setinstr 13 
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_mario_luigi:
+chan_setbank 11 
+chan_setinstr 14 
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_its_no_use:
+chan_setbank 11 
+chan_setinstr 15 
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.layer_new_sound:
+layer_note1 39, 0xc8, 127 
+layer_end
+
 
 .sound_action_jump_default:
 chan_setbank 1
@@ -1581,6 +1698,30 @@ sound_ref .sound_moving_riding_shell_spooky
 sound_ref .sound_moving_riding_shell_snow
 sound_ref .sound_moving_riding_shell_ice
 sound_ref .sound_moving_riding_shell_sand
+sound_ref .sound_spagetii_back
+sound_ref .sound_pasta_be_with_me
+sound_ref .sound_OH_MY_GOD
+
+
+.sound_OH_MY_GOD:
+chan_setbank 11 
+chan_setinstr 18 
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_spagetii_back:
+chan_setbank 11 
+chan_setinstr 16 
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_pasta_be_with_me:
+chan_setbank 11 
+chan_setinstr 17
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+
 
 .sound_moving_slide_default:
 chan_setbank 3
@@ -8068,3 +8209,6 @@ envelope_line 1000 32700
 envelope_line 10 16000
 envelope_line 200 32760
 envelope_goto 3
+
+
+
