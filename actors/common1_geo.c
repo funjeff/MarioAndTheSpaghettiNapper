@@ -30,3 +30,5 @@
 #include "bomb/geo.inc.c"
 
 #include "fridge/geo.inc.c"
+
+#include "nightmare_chunk/geo.inc.c"

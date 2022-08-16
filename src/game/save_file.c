@@ -17,6 +17,7 @@
 #include "sram.h"
 #endif
 #include "puppycam2.h"
+#include "print.h"
 
 #define ALIGN4(val) (((val) + 0x3) & ~0x3)
 
@@ -753,6 +754,8 @@ void disable_warp_checkpoint(void) {
  * game should set a warp checkpoint.
  */
 void check_if_should_set_warp_checkpoint(struct WarpNode *warpNode) {
+
+
     if (warpNode->destLevel & WARP_CHECKPOINT) {
         // Overwrite the warp checkpoint variables.
         gWarpCheckpoint.actNum = gCurrActNum;
@@ -760,6 +763,7 @@ void check_if_should_set_warp_checkpoint(struct WarpNode *warpNode) {
         gWarpCheckpoint.levelID = warpNode->destLevel & 0x7F;
         gWarpCheckpoint.areaNum = warpNode->destArea;
         gWarpCheckpoint.warpNode = warpNode->destNode;
+
     }
 }
 
@@ -772,9 +776,12 @@ s32 check_warp_checkpoint(struct WarpNode *warpNode) {
     s16 warpCheckpointActive = FALSE;
     s16 currCourseNum = gLevelToCourseNumTable[(warpNode->destLevel & 0x7F) - 1];
 
+
+
+
     // gSavedCourseNum is only used in this function.
-    if (gWarpCheckpoint.courseNum != COURSE_NONE && gSavedCourseNum == currCourseNum
-        && gWarpCheckpoint.actNum == gCurrActNum) {
+    if (gWarpCheckpoint.courseNum != COURSE_NONE) {
+
         warpNode->destLevel = gWarpCheckpoint.levelID;
         warpNode->destArea = gWarpCheckpoint.areaNum;
         warpNode->destNode = gWarpCheckpoint.warpNode;

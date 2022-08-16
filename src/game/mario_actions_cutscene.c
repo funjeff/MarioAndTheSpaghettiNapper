@@ -1829,6 +1829,8 @@ static void first_cutscene_set_up(struct MarioState *m){
 	struct Object * luigi = spawn_object_relative(0,500,60,880, gMarioObject, MODEL_CUTSCENE_LUIGI   ,bhvCutsceneProp);
 	struct Object * fridge = spawn_object_relative(0,-420,0,1000, gMarioObject, MODEL_FRIDGE   ,bhvCutsceneProp);
 
+
+	m->statusForCamera->cameraEvent = CAM_EVENT_FIRST;
 	obj_set_angle(luigi,luigi->oFaceAnglePitch+ 16400,luigi->oFaceAngleYaw + 26768, luigi->oFaceAngleRoll + 32768);
 
 	obj_set_angle(fridge,fridge->oFaceAnglePitch  + 16368,fridge->oFaceAngleYaw + 12368, fridge->oFaceAngleRoll);

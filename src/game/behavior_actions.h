@@ -550,15 +550,15 @@ void bhv_dust_smoke_loop(void);
 void bhv_yoshi_loop(void);
 void bhv_volcano_trap_loop(void);
 
-void bhv_nightmare_1_loop (void);
-void bhv_nightmare_2_loop (void);
-void bhv_nightmare_3_loop (void);
-void bhv_nightmare_4_loop (void);
+void bhv_nightmare_chunk_loop (void);
+void bhv_big_nightmare_chunk_loop (void);
+void bhv_big_nightmare_chunk_init (void);
 
 void bhv_luigi_rope_loop(void);
 void bhv_luigi_rope_init(void);
 void bhv_luigiable_bomb_loop(void);
 void bhv_cutscene_prop_loop(void);
+
 
 Gfx *geo_move_mario_part_from_parent(s32 callContext, UNUSED struct GraphNode *node, Mat4 mtx);
 

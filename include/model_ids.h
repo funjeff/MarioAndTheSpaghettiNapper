@@ -556,6 +556,7 @@
 #define MODEL_FRIDGE                      0xE5   //fridge_geo
 #define MODEL_CUTSCENE_TOAD               0xE6   //cutscene_toad_geo
 #define MODEL_CUTSCENE_LUIGI              0xE7   //cutscene_toad_geo
+#define MODEL_NIGHTMARE_CHUNK             0xE8   //nightmare_chunk_geo
 
 
 // Menu Models (overwrites Level Geometry IDs)

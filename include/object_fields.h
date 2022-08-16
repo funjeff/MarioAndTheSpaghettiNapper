@@ -1352,5 +1352,11 @@ os16112*/
 #define cutscenePropObjXDisplace o104 //displacement from pos that mario walks too
 #define cutscenePropObjYDisplace o108 //displacement from pos that mario walks too
 
+//nightmare chunk
+#define nightmareChunkTimer oF8 //time the chunk has been breaking
+#define nightmareOgX oF4 //original x pos
+#define nightmareOgY o100 //original y pos
+#define nightmareOgZ oFC //original z pos
+
 
 #endif // OBJECT_FIELDS_H

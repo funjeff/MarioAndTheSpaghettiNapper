@@ -784,4 +784,7 @@ UNUSED s32 debug_sequence_tracker(s16 debugInputSequence[]) {
 #include "behaviors/luigi_rope_inc.c"
 #include "behaviors/luigiable_bomb.inc.c"
 #include "behaviors/cutscene_prop.inc.c"
+#include "behaviors/nightmare_chunk.inc.c"
+#include "behaviors/nightmare_chunk_big.inc.c"
+
 

@@ -93,3 +93,5 @@ UNUSED static const u64 binid_22 = 22;
 #include "bomb/model.inc.c"
 
 #include "fridge/model.inc.c"
+
+#include "nightmare_chunk/model.inc.c"

@@ -512,6 +512,8 @@ enum MarioActionFlags {
 #define ACT_UNUSED_0FE                 0x000000FE // (0x0FE)
 #define ACT_UNUSED_0FF                 0x000000FF // (0x0FF)
 
+
+
 // group 0x100: cutscene actions
 #define ACT_DISAPPEARED                0x00001300 // (0x100 | ACT_FLAG_STATIONARY | ACT_FLAG_INTANGIBLE)
 #define ACT_INTRO_CUTSCENE             0x04001301 // (0x101 | ACT_FLAG_STATIONARY | ACT_FLAG_INTANGIBLE | ACT_FLAG_ALLOW_FIRST_PERSON)
@@ -578,6 +580,7 @@ enum MarioActionFlags {
 #define ACT_UNUSED_13E                 0x0000013E // (0x13E)
 #define ACT_UNUSED_13F                 0x0000013F // (0x13F)
 
+#define ACT_DOING_NOTHING              0x0000133E
 #define ACT_FIRST_CUTSCENE             0x00001536
 
 // group 0x140: "automatic" actions

@@ -543,10 +543,8 @@ extern const BehaviorScript bhvUnusedFakeStar[];
 
 //custom
 
-extern const BehaviorScript bhvNightmareChunk1[];
-extern const BehaviorScript bhvNightmareChunk2[];
-extern const BehaviorScript bhvNightmareChunk3[];
-extern const BehaviorScript bhvNightmareChunk4[];
+extern const BehaviorScript bhvNightmareChunk[];
+extern const BehaviorScript bhvBigNightmareChunk[];
 
 extern const BehaviorScript bhvLuigiRope[];
 extern const BehaviorScript bhvLuigiableBomb[];
