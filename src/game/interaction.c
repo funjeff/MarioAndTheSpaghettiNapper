@@ -24,6 +24,7 @@
 #include "sound_init.h"
 #include "rumble_init.h"
 #include "config.h"
+#include "src/game/print.h"
 
 u8  sDelayInvincTimer;
 s16 sInvulnerable;
@@ -166,6 +167,7 @@ u32 determine_interaction(struct MarioState *m, struct Object *obj) {
     u32 interaction = 0;
     u32 action = m->action;
 
+
     if (action & ACT_FLAG_ATTACKING) {
         if (action == ACT_PUNCHING || action == ACT_MOVE_PUNCHING || action == ACT_JUMP_KICK) {
             s16 dYawToObject = mario_obj_angle_to_object(m, obj) - m->faceAngle[1];
@@ -233,6 +235,8 @@ u32 determine_interaction(struct MarioState *m, struct Object *obj) {
 u32 attack_object(struct Object *obj, s32 interaction) {
     u32 attackType = ATTACK_NONE;
 
+
+
     switch (interaction) {
         case INT_GROUND_POUND_OR_TWIRL:
             attackType = ATTACK_GROUND_POUND_OR_TWIRL;
@@ -255,6 +259,7 @@ u32 attack_object(struct Object *obj, s32 interaction) {
             attackType = ATTACK_FROM_BELOW;
             break;
     }
+
 
     obj->oInteractStatus = attackType + (INT_STATUS_INTERACTED | INT_STATUS_WAS_ATTACKED);
     return attackType;

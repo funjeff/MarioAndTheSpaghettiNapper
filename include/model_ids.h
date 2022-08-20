@@ -557,6 +557,9 @@
 #define MODEL_CUTSCENE_TOAD               0xE6   //cutscene_toad_geo
 #define MODEL_CUTSCENE_LUIGI              0xE7   //cutscene_toad_geo
 #define MODEL_NIGHTMARE_CHUNK             0xE8   //nightmare_chunk_geo
+#define ARROW_PLATFORM                    0xE9   //arrow_platform_geo
+#define MODEL_MARIO_PUPPET                0xEA   //mario_puppet_geo
+#define MODEL_BOMBABLE_DOOR               0xEB   //key_door_geo
 
 
 // Menu Models (overwrites Level Geometry IDs)

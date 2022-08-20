@@ -95,3 +95,13 @@ UNUSED static const u64 binid_22 = 22;
 #include "fridge/model.inc.c"
 
 #include "nightmare_chunk/model.inc.c"
+#include "arrow_platform/model.inc.c"
+#include "arrow_platform/collision.inc.c"
+
+
+#include "mario_puppet/model.inc.c"
+#include "bombable_door/collision.inc.c"
+#include "bombable_door/model.inc.c"
+
+#include "impact_smoke/model.inc.c"
+#include "bowser_flame/model.inc.c"

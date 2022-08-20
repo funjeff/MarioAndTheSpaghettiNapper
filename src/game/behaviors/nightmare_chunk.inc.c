@@ -19,8 +19,24 @@ struct ObjectHitbox sNightmareChunckHitbox = {
     /* hurtboxHeight: */ 100,
 };
 
+struct ObjectHitbox sNightmareChunckExpandedHitbox = {
+    /* interactType: */ 0,
+    /* downOffset: */65,
+    /* damageOrCoinValue: */ 0,
+    /* health: */ 0,
+    /* numLootCoins: */ 0,
+    /* radius: */ 300,
+    /* height: */ 250,
+    /* hurtboxRadius: */ 100,
+    /* hurtboxHeight: */ 200,
+};
+
 void bhv_nightmare_chunk_loop(void) {
-    obj_set_hitbox(o, &sNightmareChunckHitbox);
+	if (!GET_BPARAM1(o->oBehParams)) {
+		obj_set_hitbox(o, &sNightmareChunckHitbox);
+	} else {
+		obj_set_hitbox(o, &sNightmareChunckExpandedHitbox);
+	}
     if (obj_check_if_collided_with_object(o, gMarioObject) && o->nightmareChunkTimer == 0) {
     	o->nightmareChunkTimer = 1;
     	set_mario_action(gMarioState, ACT_DISAPPEARED, 0);
@@ -43,6 +59,7 @@ void bhv_nightmare_chunk_loop(void) {
 
 			if (o->nightmareChunkTimer == 90){
 				gMarioState->usedObj = o;
+
 				level_trigger_warp(gMarioState, WARP_OP_WARP_OBJECT);
 				obj_mark_for_deletion(o);
 			}

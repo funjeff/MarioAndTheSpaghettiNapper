@@ -1320,22 +1320,23 @@ s32 act_swinging_rope (struct MarioState *m){
     }
 //	tilt_body_ground_shell(m, startYaw);
 
-	set_mario_animation(m,MARIO_ANIM_SWINGING_BOWSER);
+    cur_obj_disable_rendering();
 
 
-	if ((m->controller->buttonDown & R_TRIG)){
-		m->angleVel[1] += 20;
-
-		if (m->angleVel[1] > 0xBCD) {
-			 m->angleVel[1] = 0xBCD;
-		}
-
-		m->faceAngle[1] += m->angleVel[1];
+	if ((m->controller->buttonDown & B_BUTTON)){
+//		m->angleVel[1] += 20;
+//
+//		if (m->angleVel[1] > 0xBCD) {
+//			 m->angleVel[1] = 0xBCD;
+//		}
+//
+//		m->faceAngle[1] += m->angleVel[1];
 
 
 	} else {
 
-		  return set_mario_action(m, ACT_RIDING_SHELL_GROUND, 0);
+
+   	  return set_mario_action(m, ACT_RIDING_SHELL_GROUND, 0);
 
 
 	}

@@ -554,11 +554,19 @@ void bhv_nightmare_chunk_loop (void);
 void bhv_big_nightmare_chunk_loop (void);
 void bhv_big_nightmare_chunk_init (void);
 
+void bhv_arrow_platform_loop (void);
+void bhv_arrow_platform_init (void);
+
 void bhv_luigi_rope_loop(void);
 void bhv_luigi_rope_init(void);
 void bhv_luigiable_bomb_loop(void);
 void bhv_cutscene_prop_loop(void);
 
+void bhv_mario_puppet_loop(void);
+void bhv_mario_puppet_init(void);
+
+void bhv_bombable_door_loop (void);
+void bhv_bombable_door_init (void);
 
 Gfx *geo_move_mario_part_from_parent(s32 callContext, UNUSED struct GraphNode *node, Mat4 mtx);
 

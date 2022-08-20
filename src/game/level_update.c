@@ -738,7 +738,6 @@ s16 level_trigger_warp(struct MarioState *m, s32 warpOp) {
 #endif
                 sDelayedWarpTimer = 48;
                 sSourceWarpNodeId = WARP_NODE_DEATH;
-
                 struct ObjectWarpNode* node = area_get_warp_node(sSourceWarpNodeId);
 
                 sWarpCheckpointActive = check_warp_checkpoint(&node->node);
@@ -768,10 +767,11 @@ s16 level_trigger_warp(struct MarioState *m, s32 warpOp) {
                     sWarpCheckpointActive = check_warp_checkpoint(&warpNode->node);
 
 
+
                 }
 
                 sDelayedWarpTimer = 20;
-                play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, sDelayedWarpTimer, 0x00, 0x00, 0x00);
+               // play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, sDelayedWarpTimer, 0x00, 0x00, 0x00);
                 break;
 
             case WARP_OP_LOOK_UP: // enter totwc

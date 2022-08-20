@@ -540,6 +540,7 @@ extern const BehaviorScript bhvEndBirds1[];
 extern const BehaviorScript bhvEndBirds2[];
 extern const BehaviorScript bhvIntroScene[];
 extern const BehaviorScript bhvUnusedFakeStar[];
+extern const BehaviorScript bhvWarpOneWay[];
 
 //custom
 
@@ -550,5 +551,11 @@ extern const BehaviorScript bhvLuigiRope[];
 extern const BehaviorScript bhvLuigiableBomb[];
 
 extern const BehaviorScript bhvCutsceneProp[];
+
+extern const BehaviorScript bhvArrowPlatform[];
+
+extern const BehaviorScript bhvMarioPuppet[];
+
+extern const BehaviorScript bhvBombableDoor[];
 
 #endif // BEHAVIOR_DATA_H

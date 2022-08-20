@@ -9,9 +9,9 @@
 void bhv_luigi_rope_loop (void){
 
     if (o->weegCount == o->maxWeegCount){
-    	obj_set_angle(o,o->parentObj->oFaceAnglePitch + 32768,o->parentObj->oFaceAngleYaw + 52768, o->parentObj->oFaceAngleRoll);
+    	obj_set_angle(o,o->parentObj->oFaceAnglePitch + 32768,o->parentObj->oFaceAngleYaw + 20000, o->parentObj->oFaceAngleRoll);
 
-        cur_obj_set_pos_relative(o->parentObj, 30, 250, 80);
+        cur_obj_set_pos_relative(o->parentObj, 50, 250 - 200, 80);
     } else {
     	obj_set_angle(o,o->parentObj->oFaceAnglePitch,o->parentObj->oFaceAngleYaw, o->parentObj->oFaceAngleRoll);
 
@@ -20,6 +20,7 @@ void bhv_luigi_rope_loop (void){
     }
 
     if (gMarioState->action != ACT_SWINGING_ROPE && gMarioState->action != ACT_SWINGING_ROPE_FALL && gMarioState->action != ACT_SWINGING_ROPE_JUMP ){
+
     	obj_mark_for_deletion(o);
     }
 }

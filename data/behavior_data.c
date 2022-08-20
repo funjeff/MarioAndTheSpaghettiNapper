@@ -389,6 +389,16 @@ enum BehaviorCommands {
     BC_B(BHV_CMD_SPAWN_WATER_DROPLET), \
     BC_PTR(dropletParams)
 
+const BehaviorScript bhvMarioPuppet[] = {
+	BEGIN(OBJ_LIST_LEVEL),
+	OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+	SET_OBJ_PHYSICS(/*Wall hitbox radius*/ 30, /*Gravity*/ -400, /*Bounciness*/ -50, /*Drag strength*/ 1000, /*Friction*/ 1000, /*Buoyancy*/ 200, /*Unused*/ 0, 0),
+	CALL_NATIVE(bhv_mario_puppet_init),
+	BEGIN_LOOP(),
+	    CALL_NATIVE(bhv_mario_puppet_loop),
+	END_LOOP(),
+};
+
 const BehaviorScript bhvCutsceneProp[] = {
 	BEGIN(OBJ_LIST_LEVEL),
 	OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
@@ -417,6 +427,7 @@ const BehaviorScript bhvLuigiableBomb[] = {
     END_LOOP(),
 };
 
+
 const BehaviorScript bhvNightmareChunk[] = {
     BEGIN(OBJ_LIST_LEVEL),
     OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
@@ -434,6 +445,30 @@ const BehaviorScript bhvBigNightmareChunk[] = {
 	BEGIN_LOOP(),
 	    CALL_NATIVE(bhv_big_nightmare_chunk_loop),
 	END_LOOP(),
+};
+
+const BehaviorScript bhvArrowPlatform[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    CALL_NATIVE(bhv_arrow_platform_init),
+	LOAD_COLLISION_DATA(arrow_platform_collision),
+	SET_HITBOX(/*Radius*/ 260, /*Height*/ 50),
+	BEGIN_LOOP(),
+        CALL_NATIVE(bhv_arrow_platform_loop),
+		CALL_NATIVE(load_object_collision_model),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvBombableDoor[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+	LOAD_COLLISION_DATA(bombable_door_collision),
+	SET_HITBOX(/*Radius*/ 260, /*Height*/ 50),
+	CALL_NATIVE(bhv_bombable_door_init),
+	BEGIN_LOOP(),
+        CALL_NATIVE(bhv_bombable_door_loop),
+		CALL_NATIVE(load_object_collision_model),
+    END_LOOP(),
 };
 
 const BehaviorScript bhvStarDoor[] = {
@@ -924,6 +959,15 @@ const BehaviorScript bhvWarp[] = {
     BEGIN(OBJ_LIST_LEVEL),
     OR_INT(oFlags, (OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
     SET_INT(oInteractType, INTERACT_WARP),
+    SET_INT(oIntangibleTimer, 0),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_warp_loop),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvWarpOneWay[] = {
+    BEGIN(OBJ_LIST_LEVEL),
+    OR_INT(oFlags, (OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
     SET_INT(oIntangibleTimer, 0),
     BEGIN_LOOP(),
         CALL_NATIVE(bhv_warp_loop),

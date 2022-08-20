@@ -66,7 +66,7 @@ KING_BOBOMB_DIRS := king_bobomb water_bubble
 BOO_DIRS         := bookend book chair small_key mad_piano boo haunted_cage
 MR_I_DIRS        := mr_i_eyeball mr_i_iris swoop snufit dorrie scuttlebug
 HOOT_DIRS        := yellow_sphere_small hoot yoshi_egg thwomp bullet_bill heave_ho
-COINS_DIRS       := mist explosion butterfly coin warp_pipe door bowser_key flame blue_fish pebble leaves mario_cap breath_meter power_meter mushroom_1up star sand dirt transparent_star white_particle wooden_signpost tree bomb
+COINS_DIRS       := mist explosion butterfly coin warp_pipe door bowser_key flame blue_fish pebble leaves mario_cap breath_meter power_meter mushroom_1up star sand dirt transparent_star white_particle wooden_signpost tree bomb bowser_flame impact_smoke
 BUBBA_DIRS       := bubba wiggler wiggler_body_part lakitu_enemy spiny_egg spiny
 SKEETER_DIRS     := skeeter seaweed water_mine cyan_fish bub water_ring treasure_chest
 KLEPTO_DIRS      := klepto eyerok pokey tornado
@@ -75,7 +75,7 @@ AMP_DIRS         := blue_coin_switch amp cannon_lid cannon_base cannon_barrel ch
 MOLE_DIRS        := monty_mole_hole monty_mole smoke ukiki fwoosh
 LAKITU_DIRS      := lakitu_cameraman mips boo_castle toad
 PEACH_DIRS       := bird peach yoshi
-BOWSER_DIRS      := bowser_flame impact_ring yellow_sphere bowser impact_smoke
+BOWSER_DIRS      := impact_ring yellow_sphere bowser
 MARIO_DIRS       := mario bubble walk_smoke burn_smoke small_water_splash water_wave sparkle water_splash white_particle_small sparkle_animation
 
 # Actor Textures

@@ -1701,6 +1701,10 @@ sound_ref .sound_moving_riding_shell_sand
 sound_ref .sound_spagetii_back
 sound_ref .sound_pasta_be_with_me
 sound_ref .sound_OH_MY_GOD
+sound_ref .sound_tony_hawk
+sound_ref .sound_good
+sound_ref .sound_great
+sound_ref .sound_excelent
 
 
 .sound_OH_MY_GOD:
@@ -1718,6 +1722,30 @@ chan_end
 .sound_pasta_be_with_me:
 chan_setbank 11 
 chan_setinstr 17
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_tony_hawk:
+chan_setbank 12 
+chan_setinstr 0
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_good:
+chan_setbank 12 
+chan_setinstr 1
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_great:
+chan_setbank 12 
+chan_setinstr 2
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_excelent:
+chan_setbank 12 
+chan_setinstr 3
 chan_setlayer 0, .layer_new_sound 
 chan_end
 

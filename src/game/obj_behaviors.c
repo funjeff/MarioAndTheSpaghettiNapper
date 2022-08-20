@@ -786,5 +786,10 @@ UNUSED s32 debug_sequence_tracker(s16 debugInputSequence[]) {
 #include "behaviors/cutscene_prop.inc.c"
 #include "behaviors/nightmare_chunk.inc.c"
 #include "behaviors/nightmare_chunk_big.inc.c"
+#include "behaviors/arrow_platform.inc.c"
+#include "behaviors/mario_puppet.inc.c"
+#include "behaviors/bombable_door.inc.c"
+
+
 
 

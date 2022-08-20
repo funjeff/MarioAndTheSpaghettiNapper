@@ -644,6 +644,11 @@ void apply_gravity(struct MarioState *m) {
                 m->vel[1] = -37.5f;
             }
         }
+    } if (m->action == ACT_RIDING_SHELL_LAUNCH){
+    	m->vel[1] -= 4.0f;
+    	 if (m->vel[1] < -25.0f) {
+    	     m->vel[1] = -25.0f;
+    	 }
     } else {
         m->vel[1] -= 4.0f;
         if (m->vel[1] < -75.0f) {
@@ -717,6 +722,7 @@ s32 perform_air_step(struct MarioState *m, u32 stepArg) {
 
     return stepResult;
 }
+
 
 // They had these functions the whole time and never used them? Lol
 

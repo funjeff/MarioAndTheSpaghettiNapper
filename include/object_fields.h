@@ -1340,6 +1340,14 @@ os16112*/
 #define /*0x0F4*/ weegCount oF4
 #define /*0x0F4*/ maxWeegCount oF8
 
+//luigiable bomb
+#define luigiBombBeingCarried oF4
+#define luigiBombMarkedForRespawn oF8
+#define luigiBombCanBePickedUp oFC
+
+//mario puppet
+
+#define mario_puppet_spin_speed oF4
 
 //bowser bomb
 #define bombRopeEnd oF4
@@ -1358,5 +1366,11 @@ os16112*/
 #define nightmareOgY o100 //original y pos
 #define nightmareOgZ oFC //original z pos
 
+//arrow platform
+
+#define arrowPlatformSpeed oF4 //the speed to launch mario at
+#define arrowPlatformTricks oF8 //first bit is for swing trick second bit is for tony hawk points third bit is for good great excellent forth bit is for earthwake chest explode trick
+#define arrowPlatformTimer oFC //timer to activate tricks
+#define tonyHawkPoints o100 //timer to activate tricks
 
 #endif // OBJECT_FIELDS_H

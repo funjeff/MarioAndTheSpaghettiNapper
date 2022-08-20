@@ -790,6 +790,9 @@ u32 set_mario_action_airborne(struct MarioState *m, u32 action, u32 actionArg) {
         case ACT_SWINGING_ROPE_JUMP:
             set_mario_y_vel_based_on_fspeed(m, 42.0f, 0.75f);
             break;
+        case ACT_RIDING_SHELL_LAUNCH:
+            set_mario_y_vel_based_on_fspeed(m, 42.0f, 0.25);
+            break;
 
         case ACT_JUMP:
         case ACT_HOLD_JUMP:

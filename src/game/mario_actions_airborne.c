@@ -33,7 +33,7 @@ void play_far_fall_sound(struct MarioState *m) {
     u32 action = m->action;
     if (!(action & ACT_FLAG_INVULNERABLE) && action != ACT_TWIRLING && action != ACT_FLYING
         && !(m->flags & MARIO_FALL_SOUND_PLAYED)) {
-        if (m->peakHeight - m->pos[1] > FALL_DAMAGE_HEIGHT_SMALL && m->action != ACT_RIDING_SHELL_JUMP) {
+        if (m->peakHeight - m->pos[1] > FALL_DAMAGE_HEIGHT_SMALL && m->action != ACT_RIDING_SHELL_JUMP && m->action != ACT_RIDING_SHELL_LAUNCH) {
             play_sound(SOUND_MARIO_WAAAOOOW, m->marioObj->header.gfx.cameraToObject);
             m->flags |= MARIO_FALL_SOUND_PLAYED;
         }
@@ -220,6 +220,34 @@ void update_air_without_turn(struct MarioState *m) {
             m->forwardVel += intendedMag * coss(intendedDYaw) * 1.5f;
             sidewaysSpeed = intendedMag * sins(intendedDYaw) * 10.0f;
         }
+
+        //! Uncapped air speed. Net positive when moving forward.
+        if (m->forwardVel > dragThreshold) {
+            m->forwardVel -= 1.0f;
+        }
+        if (m->forwardVel < -16.0f) {
+            m->forwardVel += 2.0f;
+        }
+
+        m->slideVelX = m->forwardVel * sins(m->faceAngle[1]);
+        m->slideVelZ = m->forwardVel * coss(m->faceAngle[1]);
+
+        m->slideVelX += sidewaysSpeed * sins(m->faceAngle[1] + 0x4000);
+        m->slideVelZ += sidewaysSpeed * coss(m->faceAngle[1] + 0x4000);
+
+        m->vel[0] = m->slideVelX;
+        m->vel[2] = m->slideVelZ;
+    }
+}
+
+
+void update_air_without_turn_no_input(struct MarioState *m) {
+    f32 sidewaysSpeed = 0.0f;
+    f32 dragThreshold;
+
+    if (!check_horizontal_wind(m)) {
+        dragThreshold = m->action == ACT_LONG_JUMP ? 48.0f : 32.0f;
+        m->forwardVel = approach_f32(m->forwardVel, 0.0f, 0.35f, 0.35f);
 
         //! Uncapped air speed. Net positive when moving forward.
         if (m->forwardVel > dragThreshold) {
@@ -763,10 +791,43 @@ s32 act_riding_shell_air(struct MarioState *m) {
      	return set_mario_action(m, ACT_FREEFALL, 0);
    }
 
+    if (m->controller->buttonPressed & Z_TRIG){
+        mario_stop_riding_object(m);
+      	return set_mario_action(m, ACT_GROUND_POUND, 0);
+    }
+
 
     if (!(m->controller->buttonDown & L_TRIG)){
        	m->lHeld = 0;
     }
+
+    m->marioObj->header.gfx.pos[1] += 180.0f;
+    return FALSE;
+}
+
+s32 act_riding_shell_launched(struct MarioState *m) {
+    play_mario_sound(m, SOUND_ACTION_TERRAIN_JUMP, 0);
+
+    update_air_without_turn_no_input(m);
+
+    switch (perform_air_step(m, 0)) {
+        case AIR_STEP_LANDED:
+            set_mario_action(m, ACT_RIDING_SHELL_GROUND, 1);
+            break;
+
+        case AIR_STEP_HIT_WALL:
+            mario_set_forward_vel(m, 0.0f);
+            break;
+
+        case AIR_STEP_HIT_LAVA_WALL:
+            lava_boost_on_wall(m);
+            break;
+    }
+    if (m->controller->buttonPressed & Z_TRIG){
+       	mario_stop_riding_object(m);
+     	return set_mario_action(m, ACT_GROUND_POUND, 0);
+   }
+
 
     m->marioObj->header.gfx.pos[1] += 180.0f;
     return FALSE;
@@ -792,21 +853,21 @@ s32 act_swinging_rope_air (struct MarioState *m){
 	    }
 //	tilt_body_ground_shell(m, startYaw);
 
-	set_mario_animation(m,MARIO_ANIM_SWINGING_BOWSER);
+//	set_mario_animation(m,MARIO_ANIM_SWINGING_BOWSER);
 
+	  cur_obj_disable_rendering();
 
-	if ((m->controller->buttonDown & R_TRIG)){
-		m->angleVel[1] += 20;
-
-		if (m->angleVel[1] > 0xBCD) {
-			 m->angleVel[1] = 0xBCD;
-		}
-
-		m->faceAngle[1] += m->angleVel[1];
+	if ((m->controller->buttonDown & B_BUTTON)){
+//		m->angleVel[1] += 20;
+//
+//		if (m->angleVel[1] > 0xBCD) {
+//			 m->angleVel[1] = 0xBCD;
+//		}
+//
+//		m->faceAngle[1] += m->angleVel[1];
 
 
 	} else {
-
 		  return set_mario_action(m, ACT_RIDING_SHELL_GROUND, 0);
 
 
@@ -2195,6 +2256,7 @@ s32 mario_execute_airborne_action(struct MarioState *m) {
         case ACT_LONG_JUMP:            cancel = act_long_jump(m);            break;
         case ACT_RIDING_SHELL_JUMP:
         case ACT_RIDING_SHELL_FALL:    cancel = act_riding_shell_air(m);     break;
+        case ACT_RIDING_SHELL_LAUNCH:  cancel = act_riding_shell_launched(m);break;
         case ACT_SWINGING_ROPE_JUMP:
         case ACT_SWINGING_ROPE_FALL:   cancel = act_swinging_rope_air(m);    break;
         case ACT_DIVE:                 cancel = act_dive(m);                 break;

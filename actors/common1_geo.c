@@ -32,3 +32,10 @@
 #include "fridge/geo.inc.c"
 
 #include "nightmare_chunk/geo.inc.c"
+#include "arrow_platform/geo.inc.c"
+
+#include "mario_puppet/geo.inc.c"
+#include "bombable_door/geo.inc.c"
+
+#include "impact_smoke/geo.inc.c"
+#include "bowser_flame/geo.inc.c"

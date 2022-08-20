@@ -75,4 +75,18 @@ extern Gfx dl_billboard_num_E[];
 extern Gfx dl_billboard_num_F[];
 #endif
 
+extern u8 good_hud_image_texture[];
+
+
+extern u8 great_texture_image_texture[];
+
+extern u8 excelent_top_right_texture[];
+
+extern u8 excelent_top_left_texture[];
+extern u8 excelent_top_left_texture_pal_rgba16[];
+
+extern u8 excelent_bottom_left_texture[];
+
+extern u8 excelent_bottom_right_texture[];
+
 #endif // SEGMENT2_H

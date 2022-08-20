@@ -1,0 +1,10 @@
+extern const GeoLayout arrow_platform_geo[];
+extern Lights1 arrow_platform_f3d_material_lights;
+extern u8 arrow_platform_arrow_ci8[];
+extern u8 arrow_platform_arrow_ci8_pal_rgba16[];
+extern Vtx arrow_platform_Cube_mesh_layer_1_vtx_0[24];
+extern Gfx arrow_platform_Cube_mesh_layer_1_tri_0[];
+extern Gfx mat_arrow_platform_f3d_material[];
+extern Gfx mat_revert_arrow_platform_f3d_material[];
+extern Gfx arrow_platform_Cube_mesh_layer_1[];
+extern Gfx arrow_platform_material_revert_render_settings[];
