@@ -1705,6 +1705,17 @@ sound_ref .sound_tony_hawk
 sound_ref .sound_good
 sound_ref .sound_great
 sound_ref .sound_excelent
+sound_ref .sound_ending_toad_voice
+sound_ref .sound_ending_happy_ending
+sound_ref .sound_little_toadies
+sound_ref .sound_oh_crap_simpsons
+sound_ref .sound_pasta_power
+sound_ref .sound_suspence_noise
+sound_ref .sound_wait_a_minute
+sound_ref .sound_noodle_away
+sound_ref .sound_oooooooh
+sound_ref .sound_that_time
+sound_ref .sound_mario_hmmmmmm
 
 
 .sound_OH_MY_GOD:
@@ -1749,7 +1760,71 @@ chan_setinstr 3
 chan_setlayer 0, .layer_new_sound 
 chan_end
 
+.sound_ending_toad_voice:
+chan_setbank 11 
+chan_setinstr 19
+chan_setlayer 0, .layer_new_sound 
+chan_end
 
+.sound_ending_happy_ending:
+chan_setbank 11 
+chan_setinstr 20
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_little_toadies:
+chan_setbank 11 
+chan_setinstr 21
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_oh_crap_simpsons:
+chan_setbank 11 
+chan_setinstr 22
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_pasta_power:
+chan_setbank 11 
+chan_setinstr 23
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_suspence_noise:
+chan_setbank 11 
+chan_setinstr 24
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_wait_a_minute:
+chan_setbank 11 
+chan_setinstr 25
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_noodle_away:
+chan_setbank 11 
+chan_setinstr 26
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_oooooooh:
+chan_setbank 11 
+chan_setinstr 27
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_that_time:
+chan_setbank 11 
+chan_setinstr 28
+chan_setlayer 0, .layer_new_sound 
+chan_end
+
+.sound_mario_hmmmmmm:
+chan_setbank 11
+chan_setinstr 29
+chan_setlayer 0, .layer_96E
+chan_end
 
 .sound_moving_slide_default:
 chan_setbank 3

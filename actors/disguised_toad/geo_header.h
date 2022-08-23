@@ -1,0 +1,15 @@
+extern const GeoLayout disguised_toad_geo[];
+extern Lights1 disguised_toad_Material02_f3d_v4_001_v4_lights;
+extern Lights1 disguised_toad_Material_054_goomba_grp_png_f3d_v4_001_lights;
+extern u8 disguised_toad_Toad_grp_ci8[];
+extern u8 disguised_toad_Toad_grp_ci8_pal_rgba16[];
+extern u8 disguised_toad_goomba_grp_rgba32[];
+extern Vtx disguised_toad_Toad_mesh_layer_1_vtx_0[523];
+extern Gfx disguised_toad_Toad_mesh_layer_1_tri_0[];
+extern Vtx disguised_toad_Toad_mesh_layer_1_vtx_1[74];
+extern Gfx disguised_toad_Toad_mesh_layer_1_tri_1[];
+extern Gfx mat_disguised_toad_Material02_f3d_v4_001_v4[];
+extern Gfx mat_revert_disguised_toad_Material02_f3d_v4_001_v4[];
+extern Gfx mat_disguised_toad_Material_054_goomba_grp_png_f3d_v4_001[];
+extern Gfx disguised_toad_Toad_mesh_layer_1[];
+extern Gfx disguised_toad_material_revert_render_settings[];

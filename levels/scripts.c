@@ -343,6 +343,11 @@ const LevelScript script_func_global_16[] = {
     LOAD_MODEL_FROM_GEO(MODEL_TOAD,                    toad_geo),
 	LOAD_MODEL_FROM_GEO(MODEL_CUTSCENE_TOAD,           cutscene_toad_geo),
 	LOAD_MODEL_FROM_GEO(MODEL_CUTSCENE_LUIGI,          cutscene_luigi_geo),
+	LOAD_MODEL_FROM_GEO(MODEL_CUTSCENE_BOWSER,         cutscene_bowser_geo),
+	LOAD_MODEL_FROM_GEO(MODEL_DISGUISED_TOAD,          disguised_toad_geo),
+	LOAD_MODEL_FROM_GEO(MODEL_PEACH_CAGE,              peach_cage_geo),
+	LOAD_MODEL_FROM_GEO(MODEL_TALKABLE_GOOMBA,         talkable_goomba_geo),
+	LOAD_MODEL_FROM_GEO(MODEL_TALKABLE_LUIGI,talkable_luigi_geo),
     RETURN(),
 };
 

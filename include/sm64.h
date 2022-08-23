@@ -583,6 +583,8 @@ enum MarioActionFlags {
 
 #define ACT_DOING_NOTHING              0x0000133E
 #define ACT_FIRST_CUTSCENE             0x00001536
+#define ACT_POST_BOWSER_CUTSCENE       0x00001537
+
 
 // group 0x140: "automatic" actions
 #define ACT_HOLDING_POLE               0x08100340 // (0x140 | ACT_FLAG_STATIONARY | ACT_FLAG_ON_POLE | ACT_FLAG_PAUSE_EXIT)

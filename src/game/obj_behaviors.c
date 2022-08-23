@@ -789,7 +789,7 @@ UNUSED s32 debug_sequence_tracker(s16 debugInputSequence[]) {
 #include "behaviors/arrow_platform.inc.c"
 #include "behaviors/mario_puppet.inc.c"
 #include "behaviors/bombable_door.inc.c"
-
+#include "behaviors/cutscene_trigger.inc.c"
 
 
 

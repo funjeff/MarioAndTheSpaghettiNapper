@@ -105,3 +105,10 @@ UNUSED static const u64 binid_22 = 22;
 
 #include "impact_smoke/model.inc.c"
 #include "bowser_flame/model.inc.c"
+
+#include "cutscene_bowser/model.inc.c"
+#include "disguised_toad/model.inc.c"
+#include "peach_cage/model.inc.c"
+#include "talkable_goomba/model.inc.c"
+
+#include "talkable_luigi/model.inc.c"

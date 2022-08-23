@@ -509,91 +509,173 @@ Warning!\n\
 Cold, Cold Crevasse\n\
 Below!"))
 
-DEFINE_DIALOG(DIALOG_041, 1, 3, 30, 200, _("\
-I win! You lose!\n\
-Ha ha ha!\n\
+DEFINE_DIALOG(DIALOG_041, 1, 4, 30, 200, _("\
+Hey, Mario!\n\
+Im a uhhhh goomba\n\
+Yeah thats right!\n\
+Im a goomba\n\
+Yeah I work for bowser.\n\
+and he TOADally\n\
+stole that spagetti\n\
 \n\
-That's what you get for\n\
-messin' with Koopa the\n\
-Quick.\n\
-Better luck next time!"))
+Mario: wait\n\
+if your a goomba\n\
+then why did you\n\
+make a toad pun?\n\
+well um uh\n\
+I was just\n\
+trying tooo\n\
+\n\
+emphasize how much\n\
+toad DIDEN'T steal it\n\
+\n\
+"))
 
-DEFINE_DIALOG(DIALOG_042, 1, 4, 30, 200, _("\
-Caution! Narrow Bridge!\n\
-Cross slowly!\n\
+DEFINE_DIALOG(DIALOG_042, 1, 3, 30, 200, _("\
+Yo!\n\
+Im ACTUALLY a goomba.\n\
 \n\
+Don't know whats the deal\n\
+with that guy over there\n\
+is!\n\
+In any case he definitly.\n\
+doesen't work here\n\
 \n\
-You can jump to the edge\n\
-of the cliff and hang on,\n\
-and you can climb off the\n\
-edge if you move slowly.\n\
-When you want to let go,\n\
-either press [Z] or press\n\
-the Control Stick in the\n\
-direction of Mario's back.\n\
-To climb up, press Up on\n\
-the Control Stick. To\n\
-scurry up quickly, press\n\
-the [A] Button."))
+He keeps ranting about\n\
+bowser stealing spagetti\n\
+for some reason\n\
+but thats not possible\n\
+bowsers been asleep here \n\
+in the castle all day!\n\
+We should probably have\n\
+like woken him up\n\
+or something\n\
+but he pays us by the hour\n\
+not the princess's captured\n\
+so im not too concerned"))
 
 DEFINE_DIALOG(DIALOG_043, 1, 5, 30, 200, _("\
-If you jump and hold the\n\
-[A] Button, you can hang on\n\
-to some objects overhead.\n\
-It's the same as grabbing\n\
-a flying bird!"))
+Hey mario!\n\
+something weirds going on\n\
+theres supposed to be 3\n\
+goombas here at this post.\n\
+but theres four!\n\
+the way I see it theres\n\
+only one possiblity\n\
+\n\
+AN IMPOSTER GOOMBA!\n\
+\n\
+What if mario is in there\n\
+disguising as one of us?\n\
+\n\
+\n\
+\n\
+\n\
+oh my god\n\
+weve been compermised\n\
+RED ALERT RED ALERT\n\
+\n\
+wait no your mario!?!?\n\
+then that means if\n\
+your out here\n\
+and he is in there\n\
+\n\
+OH NO\n\
+THERES TWO MARIOS!!!!\n\
+AND ONE OF THEMS\n\
+A GOOMBA\n\
+\n\
+Dont think you can pull a\n\
+fast one on us!\n\
+Because were onto your \n\
+tricks mario!\n\
+or should I say goombario?"))
 
 DEFINE_DIALOG(DIALOG_044, 1, 5, 95, 200, _("\
-Whooo's there? Whooo\n\
-woke me up? It's still\n\
-daylight--I should be\n\
-sleeping!\n\
+Alright mario!\n\
+Im in position\n\
+they don't suspect a thing.\n\
 \n\
-Hey, as long as I'm\n\
-awake, why not take a\n\
-short flight with me?\n\
-Press and hold [A] to grab\n\
-on. Release [A] to let go.\n\
-I'll take you wherever\n\
-you want to go, as long\n\
-as my wings hold out.\n\
-Watch my shadow, and\n\
-grab on."))
+we attack on monday\n\
+\n\
+\n\
+\n\
+\n\
+\n\
+Mario nods in agreement\n\
+\n\
+\n\
+\n\
+"))
 
-DEFINE_DIALOG(DIALOG_045, 1, 6, 95, 200, _("\
-Whew! I'm just about\n\
-flapped out. You should\n\
-lay off the pasta, Mario!\n\
-That's it for now. Press\n\
-[A] to let go. Okay,\n\
-bye byyyyyyeeee!"))
+DEFINE_DIALOG(DIALOG_045, 1, 4, 30, 200, _("\
+Mario! I knew you would\n\
+save me! Thank you Mario\n\
+\n\
+\n\
+Mario: ohhhh well you see\n\
+im kinda like off the clock\n\
+right now you know how it is\n\
+\n\
+huh! Mario?\n\
+\n\
+\n\
+\n\
+well its just you don't pay\n\
+overtime and im kinda on\n\
+a seperate quest right now\n\
+\n\
+yaknow your supposed\n\
+to give me a weeks notice\n\
+before being kidnapped \n\
+\n\
+how about we rescue you\n\
+first thing tommarow\n\
+\n\
+\n\
+luigi: oh no can do bro\n\
+I told e-gadd Id test his \n\
+gaddget tommarow\n\
+\n\
+OK so the day after\n\
+\n\
+\n\
+\n\
+but thats the day of the\n\
+big kart race\n\
+\n\
+\n\
+OK SO THE DAY AFTER\n\
+THAT\n\
+\n\
+\n\
+no can do!\n\
+theres a mario party\n\
+that day\n\
+no way im missing that\n\
+FINE 4 DAYS FROM NOW\n\
+\n\
+\n\
+\n\
+well thats a weekend bro \n\
+you really wanna fight\n\
+bowser on your day off?\n\
+\n\
+MONDAY WE WILL BE HERE\n\
+ON MONDAY\n\
+\n\
+"))
 
-DEFINE_DIALOG(DIALOG_046, 1, 5, 30, 200, _("\
-You have to master three\n\
-important jumping\n\
-techniques.\n\
-First try the Triple Jump.\n\
+DEFINE_DIALOG(DIALOG_046, 1, 3, 30, 200, _("\
+Hey mario, when we find\n\
+that spagetti your gonna\n\
+share it right?\n\
 \n\
-Run fast, then jump three\n\
-times, one, two, three.\n\
-If you time the jumps\n\
-right, you'll hop, skip,\n\
-then jump really high.\n\
-Next, go for distance\n\
-with the Long Jump. Run,\n\
-press [Z] to crouch then [A]\n\
-to jump really far.\n\
 \n\
-To do the Wall Kick, press\n\
-[A] to jump at a wall, then\n\
-jump again when you hit\n\
-the wall.\n\
 \n\
-Got that? Triple Jump,\n\
-Long Jump, Wall Kick.\n\
-Practice, practice,\n\
-practice. You don't stand\n\
-a chance without them."))
+\n\
+\n\
+Right?"))
 
 DEFINE_DIALOG(DIALOG_047, 1, 2, 95, 200, _("\
 Hi! I'll prepare the\n\

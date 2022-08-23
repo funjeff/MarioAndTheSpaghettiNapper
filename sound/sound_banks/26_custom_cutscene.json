@@ -104,6 +104,61 @@
             "release_rate": 208,
             "envelope": "envelope0",
             "sound": "12_OH_MY_GOD"
+        },
+		"inst19": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "13_end_voice"
+        },
+		"inst20": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "14_happy_ending"
+        },
+		"inst21": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "15_little_toadies"
+        },
+		"inst22": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "16_oh_crap"
+        },
+		"inst23": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "17_pasta_power"
+        },
+		"inst24": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "18_suspence_noise"
+        },
+		"inst25": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "19_wait_a_minute"
+        },
+		"inst26": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "1A_a_noodle_away_from_disaster"
+        },
+		"inst27": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "1B_oooooooh"
+        },
+		"inst28": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "1C_that_time"
+        },
+		"inst29": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "1D_mario_hmmmmm"
         }
     },
     "instrument_list": [
@@ -125,6 +180,17 @@
 		"inst15",
 		"inst16",
 		"inst17",
-		"inst18"
+		"inst18",
+		"inst19",
+		"inst20",
+		"inst21",
+		"inst22",
+		"inst23",
+		"inst24",
+		"inst25",
+		"inst26",
+		"inst27",
+		"inst28",
+		"inst29"
     ]
 }

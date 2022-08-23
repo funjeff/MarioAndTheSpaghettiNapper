@@ -1354,11 +1354,15 @@ os16112*/
 
 //cutscene prop
 
-#define cutscenePropMove oF4 //0 is no movement 1 is move mario towards this object 2 is move this object toward mario
-#define cutscenePropMoveOnState oF8 // the state to move this prop on
-#define cutscenePropObjMoveSpeed o100 //speed mario moves towards object or object moves towards mario
-#define cutscenePropObjXDisplace o104 //displacement from pos that mario walks too
-#define cutscenePropObjYDisplace o108 //displacement from pos that mario walks too
+#define cutscenePropMove os16F4 //0 is no movement 1 is move mario towards this object 2 is move this object toward mario 3 is move towards set coordinates 4 is pitch down
+#define cutscenePropMoveOnState os16F6 // the state to move this prop on
+#define cutscenePropObjMoveSpeed os16F8 //speed mario moves towards object or object moves towards mario
+#define cutscenePropObjXDisplace os16FA //displacement from pos that mario walks too
+#define cutscenePropObjYDisplace os16FC //displacement from pos that mario walks too
+#define cutscenePropPresetMoveX os16FE
+#define cutscenePropPresetMoveY os16100
+#define cutscenePropDoesAdvanceCutscene os16102
+#define cutscenePropDoesDeleteItself os16104
 
 //nightmare chunk
 #define nightmareChunkTimer oF8 //time the chunk has been breaking

@@ -1814,6 +1814,160 @@ static s32 act_intro_cutscene(struct MarioState *m) {
 }
 
 enum {
+	POST_BOWSER_HUDDLE,
+    POST_BOWSER_TURN,
+    POST_BOWSER_PASTA_POWER,
+    POST_BOWSER_END_SCENE,
+};
+
+static void post_bowser_cutscene_huddle(struct MarioState *m){
+	m->actionTimer++;
+
+	if (m->actionTimer == 1){
+		uintptr_t *behaviorAddr = segmented_to_virtual(bhvCutsceneProp);
+		struct ObjectNode *listHead = &gObjectLists[get_object_list_from_behavior(behaviorAddr)];
+
+		struct Object *toadProp = (struct Object *) listHead->next;
+
+		while (toadProp != (struct Object *) listHead) {
+			if (toadProp->behavior == behaviorAddr) {
+			 	 break;
+			}
+			toadProp = (struct Object *) toadProp->header.next;
+		}
+
+		play_sound(SOUND_CUTSCENE_OOOOOOOOH, m->marioObj->header.gfx.pos);
+
+	}
+
+	if (m->actionTimer == 40){
+		play_sound(SOUND_CUTSCENE_NOODLE_AWAY, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == 68){
+		play_sound(SOUND_CUTSCENE_THAT_TIME, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == 135){
+		play_sound(SOUND_CUTSCENE_MARIO_HMM,m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == 205){
+		play_sound(SOUND_CUTSCENE_WAIT_A_MINUTE, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == 245) {
+		advance_cutscene_step(m);
+	}
+
+
+}
+
+static void post_bowser_cutscene_turn(struct MarioState *m){
+	m->actionTimer++;
+	if (m->actionTimer < 50){
+		m->marioObj->header.gfx.angle[1] = m->marioObj->header.gfx.angle[1] - 150;
+	}
+	if (m->actionTimer == 50){
+		uintptr_t *behaviorAddr = segmented_to_virtual(bhvCutsceneProp);
+
+		struct ObjectNode *listHead = &gObjectLists[get_object_list_from_behavior(behaviorAddr)];
+
+		struct Object *toadProp = (struct Object *) listHead->next;
+
+		while (toadProp != (struct Object *) listHead) {
+			if (toadProp->behavior == behaviorAddr) {
+				 break;
+			 }
+			 toadProp = (struct Object *) toadProp->header.next;
+		}
+
+		toadProp->cutscenePropMove = 1;
+		toadProp->cutscenePropObjMoveSpeed = 20;
+		toadProp->cutscenePropMoveOnState = POST_BOWSER_PASTA_POWER + 1;
+		toadProp->cutscenePropObjXDisplace = -40;
+		toadProp->cutscenePropObjYDisplace = 70;
+
+		gMarioState->usedObj = toadProp;
+
+
+		play_sound(SOUND_CUTSCENE_LITTLE_TOADIES, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == 110){
+		gHudDisplay.flags = gHudDisplay.flags + HUD_DISPLAY_RAGU;
+		play_sound(SOUND_CUTSCENE_SUSPENCE_NOISE, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == 160){
+		gHudDisplay.flags = gHudDisplay.flags - HUD_DISPLAY_RAGU;
+		play_sound(SOUND_CUTSCENE_OH_CRAP_SIMPSONS, m->marioObj->header.gfx.pos);
+
+	}
+
+	if (m->actionTimer == 200){
+		play_sound(SOUND_CUTSCENE_PASTA_POWER, m->marioObj->header.gfx.pos);
+		set_mario_animation(m, MARIO_ANIM_RUNNING);
+		advance_cutscene_step(m);
+	}
+}
+
+static void post_bowser_pasta_power(struct MarioState *m){
+
+}
+
+static void post_bowser_end_scene(struct MarioState *m){
+	m->actionTimer++;
+	if (m->actionTimer == 1){
+		set_mario_animation(m, MARIO_ANIM_FIRST_PUNCH);
+
+		uintptr_t *behaviorAddr = segmented_to_virtual(bhvCutsceneProp);
+
+		struct ObjectNode *listHead = &gObjectLists[get_object_list_from_behavior(behaviorAddr)];
+
+		struct Object *toadProp = (struct Object *) listHead->next;
+
+		while (toadProp != (struct Object *) listHead) {
+			if (toadProp->behavior == behaviorAddr) {
+				 break;
+			 }
+			toadProp = (struct Object *) toadProp->header.next;
+		}
+
+		toadProp->cutscenePropMove = 4;
+		toadProp->cutscenePropMoveOnState = POST_BOWSER_END_SCENE + 1;
+	}
+
+	if (m->actionTimer == 15){
+
+		m->actionState = ACT_STATE_BBH_ENTER_JUMP_INIT;
+		gMarioState->pos[0] = gMarioObject->header.gfx.pos[0];
+		gMarioState->pos[1] = gMarioObject->header.gfx.pos[1];
+		gMarioState->pos[2] = gMarioObject->header.gfx.pos[2];
+
+		set_mario_action(m, ACT_BBH_ENTER_JUMP, 0);
+	}
+}
+
+static s32 act_post_bowser_cutscene(struct MarioState *m) {
+    switch (m->actionArg) {
+        case POST_BOWSER_HUDDLE:
+            post_bowser_cutscene_huddle(m);
+            break;
+        case POST_BOWSER_TURN:
+        	post_bowser_cutscene_turn(m);
+            break;
+        case POST_BOWSER_PASTA_POWER:
+            post_bowser_pasta_power(m);
+            break;
+        case POST_BOWSER_END_SCENE:
+            post_bowser_end_scene(m);
+            break;
+    }
+    return FALSE;
+}
+
+enum {
 	FIRST_SET_UP,
     FIRST_WALK_TO_FRIDGE,
     FIRST_ATTACK_FRIDGE,
@@ -2991,6 +3145,7 @@ s32 mario_execute_cutscene_action(struct MarioState *m) {
     switch (m->action) {
         case ACT_DISAPPEARED:                cancel = act_disappeared(m);                break;
         case ACT_INTRO_CUTSCENE:             cancel = act_intro_cutscene(m);             break;
+        case ACT_POST_BOWSER_CUTSCENE:       cancel = act_post_bowser_cutscene(m);       break;
         case ACT_FIRST_CUTSCENE:             cancel = act_first_cutscene(m);             break;
         case ACT_STAR_DANCE_EXIT:            cancel = act_star_dance(m);                 break;
         case ACT_STAR_DANCE_NO_EXIT:         cancel = act_star_dance(m);                 break;

@@ -39,3 +39,10 @@
 
 #include "impact_smoke/geo.inc.c"
 #include "bowser_flame/geo.inc.c"
+
+#include "cutscene_bowser/geo.inc.c"
+#include "disguised_toad/geo.inc.c"
+#include "peach_cage/geo.inc.c"
+#include "talkable_goomba/geo.inc.c"
+
+#include "talkable_luigi/geo.inc.c"

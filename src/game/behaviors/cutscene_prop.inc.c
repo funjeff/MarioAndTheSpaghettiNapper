@@ -11,7 +11,7 @@
 
 
 void bhv_cutscene_prop_loop(void) {
-    if (gMarioState->action == ACT_FIRST_CUTSCENE){
+    if (gMarioState->action == ACT_FIRST_CUTSCENE || gMarioState->action ==ACT_POST_BOWSER_CUTSCENE){
 
 		if (gMarioState->actionArg + 1 == o->cutscenePropMoveOnState) {
 
@@ -60,9 +60,14 @@ void bhv_cutscene_prop_loop(void) {
 				}
 
 				if (xDone && yDone){
-					 gMarioState->actionState = 0;
-					 gMarioState->actionTimer = 0;
-					 gMarioState->actionArg++;
+					if (o->cutscenePropDoesAdvanceCutscene){
+						 gMarioState->actionState = 0;
+					 	 gMarioState->actionTimer = 0;
+					 	 gMarioState->actionArg++;
+					}
+					if (o->cutscenePropDoesDeleteItself){
+						obj_mark_for_deletion(o);
+					}
 				}
 
 			}
@@ -109,10 +114,19 @@ void bhv_cutscene_prop_loop(void) {
 					}
 				}
 				if (xDone && yDone){
-				 gMarioState->actionState = 0;
-				 gMarioState->actionTimer = 0;
-				 gMarioState->actionArg++;
+					if (o->cutscenePropDoesAdvanceCutscene){
+						 gMarioState->actionState = 0;
+					 	 gMarioState->actionTimer = 0;
+					 	 gMarioState->actionArg++;
+					}
+					if (o->cutscenePropDoesDeleteItself){
+						obj_mark_for_deletion(o);
+					}
 				}
+			}
+
+			if (o->cutscenePropMove == 4){
+				obj_set_angle(o,o->oFaceAnglePitch - 1000,o->oFaceAngleYaw, o->oFaceAngleRoll);
 			}
 		}
     }

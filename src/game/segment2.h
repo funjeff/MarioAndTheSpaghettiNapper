@@ -89,4 +89,6 @@ extern u8 excelent_bottom_left_texture[];
 
 extern u8 excelent_bottom_right_texture[];
 
+extern u8 ragu_image_texture[];
+
 #endif // SEGMENT2_H

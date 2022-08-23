@@ -1334,6 +1334,7 @@ s32 lvl_set_current_level(UNUSED s16 initOrUpdate, s32 levelNum) {
     sWarpCheckpointActive = FALSE;
     gCurrLevelNum = levelNum;
     gCurrCourseNum = gLevelToCourseNumTable[levelNum - 1];
+	if (gCurrLevelNum == LEVEL_CCM) return 0;
 	if (gCurrLevelNum == LEVEL_BOB) return 0;
 
     if (gCurrDemoInput != NULL || gCurrCreditsEntry != NULL || gCurrCourseNum == COURSE_NONE) {
@@ -1363,6 +1364,11 @@ s32 lvl_set_current_level(UNUSED s16 initOrUpdate, s32 levelNum) {
  * Play the "thank you so much for to playing my game" sound.
  */
 s32 lvl_play_the_end_screen_sound(UNUSED s16 initOrUpdate, UNUSED s32 levelNum) {
-    play_sound(SOUND_MENU_THANK_YOU_PLAYING_MY_GAME, gGlobalSoundSource);
+    play_sound(SOUND_ENDING_TOAD_VOICE, gGlobalSoundSource);
+    return TRUE;
+}
+
+s32 lvl_play_the_end_screen_sound_part_2(UNUSED s16 initOrUpdate, UNUSED s32 levelNum) {
+    play_sound(SOUND_ENDING_HAPPY_ENDING, gGlobalSoundSource);
     return TRUE;
 }

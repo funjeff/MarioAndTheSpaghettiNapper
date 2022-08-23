@@ -1,4 +1,5 @@
 // bobomb.inc.c
+#include "src/game/print.h"
 
 static struct ObjectHitbox sBobombHitbox = {
     /* interactType:      */ INTERACT_GRABBABLE,
@@ -282,6 +283,8 @@ void bhv_bobomb_fuse_smoke_init(void) {
     cur_obj_scale(1.2f);
 }
 
+
+
 void bhv_bobomb_buddy_init(void) {
     o->oGravity = 2.5f;
     o->oFriction = 0.8f;
@@ -292,13 +295,8 @@ void bhv_bobomb_buddy_init(void) {
 void bobomb_buddy_act_idle(void) {
     s16 animFrame = o->header.gfx.animInfo.animFrame;
 
+ //   object_step();
     // vec3f_copy(&o->oBobombBuddyPosCopyVec, &o->oPosVec);
-
-    object_step();
-
-    if (animFrame == 5 || animFrame == 16) {
-        cur_obj_play_sound_2(SOUND_OBJ_BOBOMB_WALK);
-    }
 
     if (o->oDistanceToMario < 1000.0f) {
         o->oMoveAngleYaw = approach_s16_symmetric(o->oMoveAngleYaw, o->oAngleToMario, 0x140);
@@ -364,15 +362,13 @@ void bobomb_buddy_cannon_dialog(s16 dialogFirstText, s16 dialogSecondText) {
 
 void bobomb_buddy_act_talk(void) {
     if (set_mario_npc_dialog(MARIO_DIALOG_LOOK_FRONT) == MARIO_DIALOG_STATUS_SPEAK) {
-        o->activeFlags |= ACTIVE_FLAG_INITIATED_TIME_STOP;
-
+			o->activeFlags |= ACTIVE_FLAG_INITIATED_TIME_STOP;
         switch (o->oBobombBuddyRole) {
             case BOBOMB_BUDDY_ROLE_ADVICE:
                 if (cutscene_object_with_dialog(CUTSCENE_DIALOG, o, o->oBehParams2ndByte)
                     != BOBOMB_BUDDY_BP_STYPE_GENERIC) {
                     set_mario_npc_dialog(MARIO_DIALOG_STOP);
-
-                    o->activeFlags &= ~ACTIVE_FLAG_INITIATED_TIME_STOP;
+               		o->activeFlags &= ~ACTIVE_FLAG_INITIATED_TIME_STOP;
                     o->oBobombBuddyHasTalkedToMario = BOBOMB_BUDDY_HAS_TALKED;
                     o->oInteractStatus = INT_STATUS_NONE;
                     o->oAction = BOBOMB_BUDDY_ACT_IDLE;
@@ -393,9 +389,6 @@ void bobomb_buddy_act_talk(void) {
 void bobomb_buddy_act_turn_to_talk(void) {
     s16 animFrame = o->header.gfx.animInfo.animFrame;
 
-    if (animFrame == 5 || animFrame == 16) {
-        cur_obj_play_sound_2(SOUND_OBJ_BOBOMB_WALK);
-    }
 
     o->oMoveAngleYaw = approach_s16_symmetric(o->oMoveAngleYaw, o->oAngleToMario, 0x1000);
 
@@ -426,8 +419,6 @@ void bobomb_buddy_actions(void) {
 
 void bhv_bobomb_buddy_loop(void) {
     bobomb_buddy_actions();
-
-    curr_obj_random_blink(&o->oBobombBuddyBlinkTimer);
 
     o->oInteractStatus = INT_STATUS_NONE;
 }

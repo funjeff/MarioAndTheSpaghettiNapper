@@ -560,6 +560,11 @@
 #define ARROW_PLATFORM                    0xE9   //arrow_platform_geo
 #define MODEL_MARIO_PUPPET                0xEA   //mario_puppet_geo
 #define MODEL_BOMBABLE_DOOR               0xEB   //key_door_geo
+#define MODEL_CUTSCENE_BOWSER             0xE9   //cutscene_bowser_geo
+#define MODEL_DISGUISED_TOAD              0xEA   //disguised_toad_geo
+#define MODEL_PEACH_CAGE                  0xEB   //peach_cage_geo
+#define MODEL_TALKABLE_GOOMBA             0xEC   //talkable_goomba_geo
+#define MODEL_TALKABLE_LUIGI              0xED   //talkable_luigi_geo
 
 
 // Menu Models (overwrites Level Geometry IDs)

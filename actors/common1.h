@@ -350,4 +350,14 @@ extern const Gfx flame_seg6_dl_0601C888[];
 extern const Gfx flame_seg6_dl_0601C928[];
 
 
+#include "cutscene_bowser/geo_header.h"
+
+#include "disguised_toad/geo_header.h"
+
+#include "peach_cage/geo_header.h"
+
+#include "talkable_goomba/geo_header.h"
+
+#include "talkable_luigi/geo_header.h"
+
 #endif
