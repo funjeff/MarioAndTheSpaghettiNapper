@@ -565,6 +565,9 @@
 #define MODEL_PEACH_CAGE                  0xEB   //peach_cage_geo
 #define MODEL_TALKABLE_GOOMBA             0xEC   //talkable_goomba_geo
 #define MODEL_TALKABLE_LUIGI              0xED   //talkable_luigi_geo
+#define MODEL_EARTHWAKE_BLOCK             0xEE   //temp_earthwake_block_geo
+#define MODEL_EARTHWAKE_HAND              0xEF   //eathwake_hand_geo
+#define MODEL_EARTHWAKE_HEAD              0xF0   //eathwake_head_geo
 
 
 // Menu Models (overwrites Level Geometry IDs)

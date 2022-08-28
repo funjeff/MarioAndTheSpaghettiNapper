@@ -1,0 +1,7 @@
+extern const GeoLayout temp_earthwake_block_geo[];
+extern Lights1 temp_earthwake_block_f3d_material_001_lights;
+extern Vtx temp_earthwake_block_Cube_001_mesh_layer_1_vtx_0[24];
+extern Gfx temp_earthwake_block_Cube_001_mesh_layer_1_tri_0[];
+extern Gfx mat_temp_earthwake_block_f3d_material_001[];
+extern Gfx temp_earthwake_block_Cube_001_mesh_layer_1[];
+extern Gfx temp_earthwake_block_material_revert_render_settings[];

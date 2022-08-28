@@ -206,6 +206,10 @@ const LevelScript script_func_global_1[] = {
 	LOAD_MODEL_FROM_GEO(MODEL_BOMBABLE_DOOR,           bombable_door_geo),
     LOAD_MODEL_FROM_GEO(MODEL_BOWSER_SMOKE,            bowser_impact_smoke_geo),
 	LOAD_MODEL_FROM_GEO(MODEL_BOWSER_FLAMES,           bowser_flames_geo),
+	LOAD_MODEL_FROM_GEO(MODEL_EARTHWAKE_BLOCK,         temp_earthwake_block_geo),
+	LOAD_MODEL_FROM_GEO(MODEL_EARTHWAKE_HAND,          eathwake_hand_geo),
+	LOAD_MODEL_FROM_GEO(MODEL_EARTHWAKE_HEAD,          eathwake_head_geo),
+
     RETURN(),
 };
 
@@ -333,6 +337,7 @@ const LevelScript script_func_global_15[] = {
  //   LOAD_MODEL_FROM_GEO(MODEL_CHAIN_CHOMP,             chain_chomp_geo),
     LOAD_MODEL_FROM_GEO(MODEL_KOOPA_FLAG,              koopa_flag_geo),
     LOAD_MODEL_FROM_GEO(MODEL_WOODEN_POST,             wooden_post_geo),
+	LOAD_MODEL_FROM_GEO(MODEL_TALKABLE_LUIGI,          talkable_luigi_geo),
     RETURN(),
 };
 

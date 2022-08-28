@@ -18,7 +18,32 @@
 
 void bhv_arrow_platform_loop (void){
 
-	if (cur_obj_was_attacked_or_ground_pounded()){
+	if ((o->arrowPlatformTricks & TRICK_EARTHWAKE_CHEST_EXPLOSION) && !o->earthwakePlatformActive){
+		uintptr_t *behaviorAddr = segmented_to_virtual(bhvNightmareChunk);
+
+		struct ObjectNode *listHead = &gObjectLists[get_object_list_from_behavior(behaviorAddr)];
+
+		struct Object *chunk = (struct Object *) listHead->next;
+
+		s16 found = 0;
+
+		while (chunk != (struct Object *) listHead) {
+			if (chunk->behavior == behaviorAddr) {
+				found = 1;
+				break;
+			 }
+			chunk = (struct Object *) chunk->header.next;
+		}
+
+		if (!found){
+			cur_obj_enable_rendering();
+			cur_obj_become_tangible();
+			o->earthwakePlatformActive = 1;
+		}
+
+	}
+
+	if (cur_obj_was_attacked_or_ground_pounded() && ( !(o->arrowPlatformTricks & TRICK_EARTHWAKE_CHEST_EXPLOSION) || o->earthwakePlatformActive)){
 		gMarioState->faceAngle [1] = o->oMoveAngleYaw;
 		gMarioState->forwardVel = o->arrowPlatformSpeed * 2;
 
@@ -41,7 +66,7 @@ void bhv_arrow_platform_loop (void){
 	if (o->arrowPlatformTimer != 0){
 		o->arrowPlatformTimer = o->arrowPlatformTimer + 1;
 
-		if (gMarioState->action == ACT_RIDING_SHELL_LAUNCH){
+		if (gMarioState->action == ACT_RIDING_SHELL_LAUNCH || gMarioState->action == ACT_DISAPPEARED){
 
 			if ((o->arrowPlatformTricks & TRICK_GOOD) && o->arrowPlatformTimer == 2){
 				gHudDisplay.flags = gHudDisplay.flags + HUD_DISPLAY_GOOD;
@@ -66,6 +91,27 @@ void bhv_arrow_platform_loop (void){
 			if ((o->arrowPlatformTricks & TRICK_STAR_DANCE) && o->arrowPlatformTimer == 5) {
 				set_mario_animation(gMarioState, MARIO_ANIM_STAR_DANCE);
 				play_sound(SOUND_MARIO_HERE_WE_GO, gMarioObject->header.gfx.cameraToObject);
+			}
+
+			if ((o->arrowPlatformTricks & TRICK_EARTHWAKE_CHEST_EXPLOSION) && o->arrowPlatformTimer == 35){
+				gMarioState->statusForCamera->cameraEvent = CAM_EVENT_FIRST;
+			}
+
+			if ((o->arrowPlatformTricks & TRICK_EARTHWAKE_CHEST_EXPLOSION) && o->arrowPlatformTimer == 40) {
+				if (gMarioState->riddenObj != NULL){
+				 	 gMarioState->riddenObj->oInteractStatus = 4194304; //INT_STATUS_STOP_RIDING
+				   	 gMarioState->riddenObj = NULL;
+				}
+
+				set_mario_action(gMarioState, ACT_DISAPPEARED, 0);
+
+				play_sound(SOUND_GENERAL_BOWSER_BOMB_EXPLOSION, gMarioObject->header.gfx.cameraToObject);
+				spawn_object(gMarioObject, MODEL_EXPLOSION, bhvExplosion);
+			}
+
+			if ((o->arrowPlatformTricks & TRICK_EARTHWAKE_CHEST_EXPLOSION) && o->arrowPlatformTimer == 50) {
+				gMarioState->usedObj = o;
+				level_trigger_warp(gMarioState, WARP_OP_WARP_OBJECT);
 			}
 
 			if ((o->arrowPlatformTricks & TRICK_TONY_HAWK) && (o->arrowPlatformTricks & TRICK_STAR_DANCE) && !(o->arrowPlatformTricks & TRICK_SWING_KICK)){
@@ -150,6 +196,10 @@ void bhv_arrow_platform_init (void){
 		o->tonyHawkPoints = 10000;
 	}
 
+	if (o->arrowPlatformTricks & TRICK_EARTHWAKE_CHEST_EXPLOSION){
+		cur_obj_disable_rendering();
+		cur_obj_become_intangible();
+	}
 
 }
 

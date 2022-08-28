@@ -11,7 +11,7 @@
 
 
 void bhv_cutscene_prop_loop(void) {
-    if (gMarioState->action == ACT_FIRST_CUTSCENE || gMarioState->action ==ACT_POST_BOWSER_CUTSCENE){
+    if (gMarioState->action == ACT_FIRST_CUTSCENE || gMarioState->action ==ACT_POST_BOWSER_CUTSCENE ||gMarioState->action == ACT_EARTHWAKE_CUTSCENE){
 
 		if (gMarioState->actionArg + 1 == o->cutscenePropMoveOnState) {
 
@@ -67,6 +67,7 @@ void bhv_cutscene_prop_loop(void) {
 					}
 					if (o->cutscenePropDoesDeleteItself){
 						obj_mark_for_deletion(o);
+						o->cutscenePropMoveOnState = 0;
 					}
 				}
 
@@ -121,12 +122,17 @@ void bhv_cutscene_prop_loop(void) {
 					}
 					if (o->cutscenePropDoesDeleteItself){
 						obj_mark_for_deletion(o);
+						o->cutscenePropMoveOnState = 0;
 					}
 				}
 			}
 
 			if (o->cutscenePropMove == 4){
 				obj_set_angle(o,o->oFaceAnglePitch - 1000,o->oFaceAngleYaw, o->oFaceAngleRoll);
+			}
+
+			if (o->cutscenePropMove == 5){
+				o->oPosY = o->oPosY + o->cutscenePropObjMoveSpeed;
 			}
 		}
     }

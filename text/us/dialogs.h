@@ -682,10 +682,26 @@ Hi! I'll prepare the\n\
 cannon for you!"))
 
 DEFINE_DIALOG(DIALOG_048, 1, 4, 30, 200, _("\
-Snow Mountain Summit\n\
-Watch for slippery\n\
-conditions! Please enter\n\
-the cottage first."))
+Mario look!\n\
+theres a weak point\n\
+on his shoulders\n\
+\n\
+I bet if you destroy\n\
+those it will weaken\n\
+him!\n\
+\n\
+and then you can\n\
+attack him with that\n\
+launchpad in the back\n\
+\n\
+Mario: OK in that case\n\
+you get the right one\n\
+ill get the left one\n\
+\n\
+ohhh uhh sorry mario\n\
+i have to uhhhh\n\
+come up with an excuse!\n\
+Ill leave this to you"))
 
 DEFINE_DIALOG(DIALOG_049, 1, 5, 30, 200, _("\
 Remember that tricky Wall\n\

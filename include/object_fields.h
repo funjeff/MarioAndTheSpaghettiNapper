@@ -1354,7 +1354,7 @@ os16112*/
 
 //cutscene prop
 
-#define cutscenePropMove os16F4 //0 is no movement 1 is move mario towards this object 2 is move this object toward mario 3 is move towards set coordinates 4 is pitch down
+#define cutscenePropMove os16F4 //0 is no movement 1 is move mario towards this object 2 is move this object toward mario 3 is move towards set coordinates 4 is pitch down 5 is move directly up
 #define cutscenePropMoveOnState os16F6 // the state to move this prop on
 #define cutscenePropObjMoveSpeed os16F8 //speed mario moves towards object or object moves towards mario
 #define cutscenePropObjXDisplace os16FA //displacement from pos that mario walks too
@@ -1376,5 +1376,17 @@ os16112*/
 #define arrowPlatformTricks oF8 //first bit is for swing trick second bit is for tony hawk points third bit is for good great excellent forth bit is for earthwake chest explode trick
 #define arrowPlatformTimer oFC //timer to activate tricks
 #define tonyHawkPoints o100 //timer to activate tricks
+#define earthwakePlatformActive o104
+
+//earthwake block
+
+#define earthwakeAction oF4
+#define earthwakeDirection oF8
+#define earthwakeMoveTime oFC
+#define earthwakeFallTime o100
+#define earthwakeSegment o104 //0 is who cares 1 is left arm 2 is right arm 3 is chest
+
+
+//
 
 #endif // OBJECT_FIELDS_H

@@ -28,6 +28,7 @@
 #include "config.h"
 #include "puppyprint.h"
 
+
 #define CBUTTON_MASK (U_CBUTTONS | D_CBUTTONS | L_CBUTTONS | R_CBUTTONS)
 
 /**
@@ -4941,6 +4942,9 @@ u8 get_cutscene_from_mario_status(struct Camera *c) {
             case CAM_EVENT_FIRST:
                 cutscene = CUTSCENE_FIRST;
                 break;
+            case CAM_EVENT_EARTHWAKE:
+            	cutscene = CUTSCENE_EARTHWAKE;
+            	break;
         }
     }
     //! doorStatus is reset every frame. CameraTriggers need to constantly set doorStatus
@@ -6057,6 +6061,12 @@ struct CameraTrigger sCamBBH[] = {
  *
  * Each table is terminated with NULL_TRIGGER
  */
+struct CameraTrigger sCamWF[] = {
+	NULL_TRIGGER
+};
+struct CameraTrigger sCamJRB[] = {
+	NULL_TRIGGER
+};
 struct CameraTrigger *sCameraTriggers[LEVEL_COUNT + 1] = {
     NULL,
     #include "levels/level_defines.h"
@@ -7206,6 +7216,28 @@ void cutscene_grand_star(struct Camera *c) {
     cutscene_event(cutscene_grand_star_approach_mario, c, 160, -1);
     cutscene_event(cutscene_grand_star_move_cvar2, c, 110, -1);
 }
+
+void cutscene_earthwake_camera_start(UNUSED struct Camera *c) {
+	vec3f_set(c->focus, -300, 500, 700);
+	vec3f_set(c->pos, 350, 900, -560);
+
+}
+
+void cutscene_earthwake_camera_loop(UNUSED struct Camera *c) {
+
+}
+
+void cutscene_earthwake_start(struct Camera *c){
+	cutscene_event(cutscene_earthwake_camera_start,c,0,0);
+}
+
+void cutscene_earthwake_loop(struct Camera *c){
+	if(gMarioState->actionArg == 3){
+		vec3f_set(c->focus, c->focus[0],c->focus[1] + 10,c->focus[2]);
+		vec3f_set(c->pos, c->pos[0], c->pos[1] + 10, c->pos[2] -10);
+	}
+}
+
 
 /**
  * Zero the cvars that are used when Mario is flying.
@@ -9983,9 +10015,16 @@ struct Cutscene sCutsceneGrandStar[] = {
     { cutscene_grand_star_fly, CUTSCENE_LOOP }
 };
 
+
+
 struct Cutscene sCutsceneUnused[] = {
     { cutscene_unused_start, 1 },
     { cutscene_unused_loop, CUTSCENE_LOOP }
+};
+
+struct Cutscene sCutsceneEarthwake[] = {
+    { cutscene_earthwake_start, 1 },
+    { cutscene_earthwake_loop, CUTSCENE_LOOP }
 };
 
 /**
@@ -10398,13 +10437,13 @@ u8 sZoomOutAreaMasks[] = {
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 0, 0, 0, 0), // CASTLE_INSIDE  | HMC
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 0, 0, 0), // SSL            | BOB
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 0, 0, 0), // SL             | WDW
-	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 1, 0, 0), // JRB            | THI
+	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 1, 0, 0), // JRB            | THI
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 0, 0, 0), // TTC            | RR
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 0, 0, 0), // CASTLE_GROUNDS | BITDW
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 0, 0, 0), // VCUTM          | BITFS
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 0, 0, 0), // SA             | BITS
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 0, 0, 0, 0), // LLL            | DDD
-	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 0, 0, 0, 0), // WF             | ENDING
+	ZOOMOUT_AREA_MASK(1, 1, 1, 0, 0, 0, 0, 0), // WF             | ENDING
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 0, 0, 0, 0), // COURTYARD      | PSS
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 0, 0, 0), // COTMC          | TOTWC
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 0, 0, 0), // BOWSER_1       | WMOTR
@@ -10763,6 +10802,7 @@ void play_cutscene(struct Camera *c) {
         CUTSCENE(CUTSCENE_RED_COIN_STAR_SPAWN,  sCutsceneRedCoinStarSpawn)
         CUTSCENE(CUTSCENE_ENDING,               sCutsceneEnding)
         CUTSCENE(CUTSCENE_GRAND_STAR,           sCutsceneGrandStar)
+		CUTSCENE(CUTSCENE_EARTHWAKE,            sCutsceneEarthwake)
         CUTSCENE(CUTSCENE_DOOR_WARP,            sCutsceneDoorWarp)
         CUTSCENE(CUTSCENE_DOOR_PULL,            sCutsceneDoorPull)
         CUTSCENE(CUTSCENE_DOOR_PUSH,            sCutsceneDoorPush)

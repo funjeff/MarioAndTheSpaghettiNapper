@@ -470,6 +470,19 @@ const BehaviorScript bhvArrowPlatform[] = {
     END_LOOP(),
 };
 
+const BehaviorScript bhvEarthwakeBlock[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+	LOAD_COLLISION_DATA(earthwake_block_collision_collision),
+	SET_HITBOX(/*Radius*/ 260, /*Height*/ 50),
+	SET_FLOAT(oDrawingDistance, 20000),
+	CALL_NATIVE(bhv_earthwake_block_init),
+	BEGIN_LOOP(),
+        CALL_NATIVE(bhv_earthwake_block_loop),
+		CALL_NATIVE(load_object_collision_model),
+    END_LOOP(),
+};
+
 const BehaviorScript bhvBombableDoor[] = {
     BEGIN(OBJ_LIST_SURFACE),
     OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
@@ -4016,6 +4029,7 @@ const BehaviorScript bhvExplosion[] = {
     OR_INT(oFlags, (OBJ_FLAG_COMPUTE_DIST_TO_MARIO | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
     BILLBOARD(),
     SET_INTERACT_TYPE(INTERACT_DAMAGE),
+
     SET_INT(oDamageOrCoinValue, 2),
     SET_INT(oIntangibleTimer, 0),
     SET_HITBOX_WITH_OFFSET(/*Radius*/ 150, /*Height*/ 150, /*Downwards offset*/ 150),

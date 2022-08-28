@@ -46,3 +46,7 @@
 #include "talkable_goomba/geo.inc.c"
 
 #include "talkable_luigi/geo.inc.c"
+#include "temp_earthwake_block/geo.inc.c"
+#include "earthwake_hand/geo.inc.c"
+#include "earthwake_head/geo.inc.c"
+#include "earthwake_foot/geo.inc.c"

@@ -112,3 +112,9 @@ UNUSED static const u64 binid_22 = 22;
 #include "talkable_goomba/model.inc.c"
 
 #include "talkable_luigi/model.inc.c"
+#include "temp_earthwake_block/model.inc.c"
+#include "earthwake_hand/model.inc.c"
+#include "earthwake_head/model.inc.c"
+#include "earthwake_foot/model.inc.c"
+
+#include "earthwake_block_collision/collision.inc.c"

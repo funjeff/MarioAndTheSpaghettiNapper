@@ -40,6 +40,7 @@ void bhv_nightmare_chunk_loop(void) {
     if (obj_check_if_collided_with_object(o, gMarioObject) && o->nightmareChunkTimer == 0) {
     	o->nightmareChunkTimer = 1;
     	set_mario_action(gMarioState, ACT_DISAPPEARED, 0);
+
     	o->nightmareOgX = o->oPosX;
     	o->nightmareOgY = o->oPosY;
     	o->nightmareOgZ = o->oPosZ;
@@ -59,9 +60,26 @@ void bhv_nightmare_chunk_loop(void) {
 
 			if (o->nightmareChunkTimer == 90){
 				gMarioState->usedObj = o;
-
 				level_trigger_warp(gMarioState, WARP_OP_WARP_OBJECT);
 				obj_mark_for_deletion(o);
+
+				if (GET_BPARAM3(o->oBehParams)){
+					uintptr_t *behaviorAddr = segmented_to_virtual(bhvEarthwakeBlock);
+
+					struct ObjectNode *listHead = &gObjectLists[get_object_list_from_behavior(behaviorAddr)];
+
+					struct Object *block = (struct Object *) listHead->next;
+
+					while (block != (struct Object *) listHead) {
+						if (block->behavior == behaviorAddr) {
+							if (block->earthwakeSegment == GET_BPARAM3(o->oBehParams)){
+								block->earthwakeFallTime = 500;
+							}
+						 }
+						block = (struct Object *) block->header.next;
+					}
+				}
+
 			}
 
 			if (o->nightmareChunkTimer % 10 == 0 && o->nightmareChunkTimer <= 60){

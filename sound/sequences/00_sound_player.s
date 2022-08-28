@@ -1716,6 +1716,27 @@ sound_ref .sound_noodle_away
 sound_ref .sound_oooooooh
 sound_ref .sound_that_time
 sound_ref .sound_mario_hmmmmmm
+sound_ref .sound_earthwake_roar
+sound_ref .sound_gallopin_garlic
+sound_ref .sound_luigi_gibberish_1
+sound_ref .sound_luigi_gibberish_2
+sound_ref .sound_luigi_gibberish_3
+sound_ref .sound_luigi_gibberish_4
+sound_ref .sound_mario_gibberish_1
+sound_ref .sound_mario_gibberish_2
+sound_ref .sound_mario_gibberish_3
+sound_ref .sound_mario_gibberish_4
+sound_ref .sound_mario_gibberish_5
+sound_ref .sound_mario_gibberish_6
+sound_ref .sound_tough_tortiline
+sound_ref .sound_both_gibberish_1
+sound_ref .sound_both_gibberish_2
+sound_ref .sound_both_gibberish_3
+sound_ref .sound_both_gibberish_4
+sound_ref .sound_both_gibberish_5
+sound_ref .sound_luigi_look
+sound_ref .sound_hasta_la_pasta
+
 
 
 .sound_OH_MY_GOD:
@@ -1823,8 +1844,129 @@ chan_end
 .sound_mario_hmmmmmm:
 chan_setbank 11
 chan_setinstr 29
-chan_setlayer 0, .layer_96E
+chan_setlayer 0, .layer_new_sound
 chan_end
+
+.sound_earthwake_roar:
+chan_setbank 11
+chan_setinstr 30
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_gallopin_garlic:
+chan_setbank 11
+chan_setinstr 31
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_luigi_gibberish_1:
+chan_setbank 11
+chan_setinstr 32
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_luigi_gibberish_2:
+chan_setbank 11
+chan_setinstr 33
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_luigi_gibberish_3:
+chan_setbank 11
+chan_setinstr 34
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_luigi_gibberish_4:
+chan_setbank 11
+chan_setinstr 35
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_mario_gibberish_1:
+chan_setbank 11
+chan_setinstr 36
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_mario_gibberish_2:
+chan_setbank 11
+chan_setinstr 37
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_mario_gibberish_3:
+chan_setbank 11
+chan_setinstr 38
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_mario_gibberish_4:
+chan_setbank 11
+chan_setinstr 39
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_mario_gibberish_5:
+chan_setbank 11
+chan_setinstr 40
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_mario_gibberish_6:
+chan_setbank 11
+chan_setinstr 41
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_tough_tortiline:
+chan_setbank 11
+chan_setinstr 42
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_both_gibberish_1:
+chan_setbank 11
+chan_setinstr 43
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_both_gibberish_2:
+chan_setbank 11
+chan_setinstr 44
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_both_gibberish_4:
+chan_setbank 11
+chan_setinstr 45
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_both_gibberish_5:
+chan_setbank 11
+chan_setinstr 46
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_both_gibberish_3:
+chan_setbank 11
+chan_setinstr 47
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_luigi_look:
+chan_setbank 11
+chan_setinstr 48
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_hasta_la_pasta:
+chan_setbank 11
+chan_setinstr 49
+chan_setlayer 0, .layer_new_sound
+chan_end
+
 
 .sound_moving_slide_default:
 chan_setbank 3

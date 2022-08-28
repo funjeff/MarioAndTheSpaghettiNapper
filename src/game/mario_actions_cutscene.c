@@ -1968,6 +1968,377 @@ static s32 act_post_bowser_cutscene(struct MarioState *m) {
 }
 
 enum {
+	EARTHWAKE_DEATH_SET_UP,
+	EARTHWAKE_DEATH_UNUSED_1,
+	EARTHWAKE_DEATH_UNUSED_2,
+	EARTHWAKE_DEATH_ZOOM_OUT,
+	EARTHWAKE_DEATH_HASTA_LA_PASTA
+
+};
+
+
+static void earthwake_death_set_up(struct MarioState *m){
+
+	uintptr_t *behaviorAddr = segmented_to_virtual(bhvEarthwakeBlock);
+	struct ObjectNode *listHead = &gObjectLists[get_object_list_from_behavior(behaviorAddr)];
+
+	struct Object *block = (struct Object *) listHead->next;
+	while (block != (struct Object *) listHead) {
+		if (block->behavior == behaviorAddr) {
+			block->earthwakeFallTime = 500;
+		 }
+		block = (struct Object *) block->header.next;
+	}
+
+	gMarioState->statusForCamera->cameraEvent = CAM_EVENT_EARTHWAKE;
+	advance_cutscene_step(m);
+}
+
+static void earthwake_death_zoom_out (struct MarioState *m) {
+	m->actionTimer++;
+	if (m->actionTimer == 160){
+		advance_cutscene_step(m);
+	}
+}
+
+static void earthwake_death_hasta_la_pasta (struct MarioState *m){
+	m->actionTimer++;
+	if (m->actionTimer == 50){
+		play_sound(SOUND_CUTSCENE_HASTA_LA_PASTA,m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == 130){
+		//TODO warp to next scene
+	}
+}
+
+static s32 post_earthwake_cutscene(struct MarioState *m){
+	switch (m->actionArg) {
+	        case EARTHWAKE_DEATH_SET_UP:
+	            earthwake_death_set_up(m);
+	            break;
+	        case EARTHWAKE_DEATH_UNUSED_1:
+	        	advance_cutscene_step(m);
+	            break;
+	        case EARTHWAKE_DEATH_UNUSED_2:
+	        	advance_cutscene_step(m);
+	            break;
+	        case EARTHWAKE_DEATH_ZOOM_OUT:
+	            earthwake_death_zoom_out(m);
+	            break;
+	        case EARTHWAKE_DEATH_HASTA_LA_PASTA:
+	        	earthwake_death_hasta_la_pasta(m);
+	        	break;
+	   }
+
+	return FALSE;
+}
+
+enum {
+	EARTHWAKE_ARGUMENT,
+    EARTHWAKE_EARTHWAKE_RISES,
+	EARTHWAKE_EARTHWAKE_DONE_RISING,
+	EARTHWAKE_ZOOM_OUT,
+	EARTHWAKE_ROAR
+};
+
+static void earthwake_argument(struct MarioState *m){
+	gMarioState->statusForCamera->cameraEvent = CAM_EVENT_EARTHWAKE;
+
+	m->actionTimer++;
+	if (m->actionTimer == 1){
+
+		s16 first = 1;
+
+		uintptr_t *behaviorAddr = segmented_to_virtual(bhvCutsceneProp);
+
+		struct ObjectNode *listHead = &gObjectLists[get_object_list_from_behavior(behaviorAddr)];
+
+		struct Object *block = (struct Object *) listHead->next;
+
+		while (block != (struct Object *) listHead) {
+			if (block->behavior == behaviorAddr) {
+				if (!first){
+					block->cutscenePropMove = 5;
+					block->cutscenePropMoveOnState = EARTHWAKE_EARTHWAKE_RISES+ 1;
+					block->cutscenePropObjMoveSpeed = 20;
+				} else {
+					gMarioState->usedObj = block;
+					first = 0;
+				}
+			 }
+			block = (struct Object *) block->header.next;
+		}
+	}
+
+	if (m->actionTimer == 31){
+		play_sound(SOUND_CUTSCENE_MARIO_GIBBERISH_1, m->marioObj->header.gfx.pos);
+	}
+	if (m->actionTimer > 30 && m->actionTimer < 90){
+		print_text(10,20,"luigi give me back my");
+		print_text(10,0,"spaghetti!");
+	}
+
+	if (m->actionTimer == 91){
+		play_sound(SOUND_CUTSCENE_LUIGI_GIBBERISH_2, m->marioObj->header.gfx.pos);
+	}
+	if (m->actionTimer > 90 && m->actionTimer < 150){
+		print_text(10,200,"Mario I diden't take");
+		print_text(10,180,"your pasta");
+	}
+
+	if (m->actionTimer == 151){
+		play_sound(SOUND_CUTSCENE_MARIO_GIBBERISH_2, m->marioObj->header.gfx.pos);
+	}
+	if (m->actionTimer > 150 && m->actionTimer < 210){
+		print_text(10,20,"yeah yeah exactly what");
+		print_text(10,0, "a theif would say");
+	}
+
+	if (m->actionTimer == 211){
+		play_sound(SOUND_CUTSCENE_LUIGI_GIBBERISH_1, m->marioObj->header.gfx.pos);
+	}
+	if (m->actionTimer > 210 && m->actionTimer < 250){
+		print_text(10,200,"you should probably lay");
+		print_text(10,180,"off the spaghetti anyway");
+	}
+
+	if (m->actionTimer == 251){
+		play_sound(SOUND_CUTSCENE_MARIO_GIBBERISH_3, m->marioObj->header.gfx.pos);
+	}
+	if (m->actionTimer > 250 && m->actionTimer < 290){
+		print_text(10,20,"right cuz I never see you");
+		print_text(10,0,"getting fourths at dinner");
+	}
+
+	if (m->actionTimer == 291){
+		play_sound(SOUND_CUTSCENE_LUIGI_GIBBERISH_3, m->marioObj->header.gfx.pos);
+	}
+	if (m->actionTimer > 290 && m->actionTimer < 330){
+		print_text(10,200,"bro your so fat your mom ");
+		print_text(10,180,"looks skinny by comparison");
+	}
+
+	if (m->actionTimer == 331){
+		play_sound(SOUND_CUTSCENE_MARIO_GIBBERISH_4, m->marioObj->header.gfx.pos);
+	}
+	if (m->actionTimer > 330 && m->actionTimer < 360){
+		print_text(10,20,"ok now youve gone too far");
+	}
+
+	if (m->actionTimer == 351){
+		play_sound(SOUND_CUTSCENE_LUIGI_GIBBERISH_4, m->marioObj->header.gfx.pos);
+	}
+	if (m->actionTimer > 350 && m->actionTimer < 380){
+		print_text(10,200,"Ive gone too far?");
+		print_text(10,180,"Ive gone too far!");
+	}
+
+	if (m->actionTimer == 381){
+		play_sound(SOUND_CUTSCENE_BOTH_GIBBERISH_1, m->marioObj->header.gfx.pos);
+	}
+	if (m->actionTimer > 380 && m->actionTimer < 410){
+		print_text(10,200,"you replaced all our");
+		print_text(10,180,"leaves with Spaghetti");
+	}
+
+	if (m->actionTimer == 411){
+		play_sound(SOUND_CUTSCENE_BOTH_GIBBERISH_2, m->marioObj->header.gfx.pos);
+	}
+	if (m->actionTimer > 410 && m->actionTimer < 440){
+		print_text(10,200,"you made our sink shoot");
+		print_text(10,180,"ragu instead of water");
+	}
+
+	if (m->actionTimer > 400 && m->actionTimer < 430){
+		print_text(10,20,"well you used all the");
+		print_text(10,0,"ragu without asking me");
+	}
+
+	if (m->actionTimer > 430 && m->actionTimer < 460){
+		print_text(10,20,"and you took down");
+		print_text(10,0,"my spaghetti leaves?!?!");
+	}
+
+	if (m->actionTimer == 441){
+		play_sound(SOUND_CUTSCENE_BOTH_GIBBERISH_3, m->marioObj->header.gfx.pos);
+	}
+	if (m->actionTimer > 440 && m->actionTimer < 470){
+		print_text(10,200,"don't even get me started");
+		print_text(10,180,"on the green pipe incident");
+	}
+
+	if (m->actionTimer == 471){
+		play_sound(SOUND_CUTSCENE_BOTH_GIBBERISH_5, m->marioObj->header.gfx.pos);
+	}
+	if (m->actionTimer > 470 && m->actionTimer < 500){
+		print_text(10,200,"and you used peaches");
+		print_text(10,180,"credit card for all that");
+	}
+
+	if (m->actionTimer == 501){
+		play_sound(SOUND_CUTSCENE_BOTH_GIBBERISH_1, m->marioObj->header.gfx.pos);
+	}
+	if (m->actionTimer > 500 && m->actionTimer < 530){
+		print_text(10,200,"and you said I stole");
+		print_text(10,180,"your spaghetti");
+	}
+
+	if (m->actionTimer > 530 && m->actionTimer < 535){
+		print_text(10,200,"hi matt and nolan");
+	}
+
+	if (m->actionTimer > 460 && m->actionTimer < 490){
+		print_text(10,20,"and that time you used");
+		print_text(10,0,"prego instead of ragu");
+	}
+
+	if (m->actionTimer > 490 && m->actionTimer < 520){
+		print_text(10,20,"and that time you");
+		print_text(10,0,"stole my spaghett");
+	}
+
+	if (m->actionTimer > 520 && m->actionTimer < 525){
+		print_text(10,20,"subscribe!");
+	}
+
+	if (m->actionTimer == 535){
+		play_sound(SOUND_CUTSCENE_BOTH_GIBBERISH_4, m->marioObj->header.gfx.pos);
+	}
+	if (m->actionTimer > 525){
+		print_text(0,20,"?????????????????????????????????????????");
+	}
+
+	if (m->actionTimer > 535){
+		print_text(0,200,"?????????????????????????????????????????");
+	}
+
+	if (m->actionTimer > 545){
+		print_text(0,40,"?????????????????????????????????????????");
+		print_text(0,180,"?????????????????????????????????????????");
+	}
+
+	if (m->actionTimer > 550){
+		print_text(0,60,"?????????????????????????????????????????");
+		print_text(0,160,"?????????????????????????????????????????");
+	}
+
+	if (m->actionTimer > 555){
+		print_text(0,80,"?????????????????????????????????????????");
+		print_text(0,140,"?????????????????????????????????????????");
+	}
+
+	if (m->actionTimer > 560){
+		print_text(0,100,"?????????????????????????????????????????");
+		print_text(0,120,"?????????????????????????????????????????");
+	}
+
+	if (m->actionTimer > 600){
+		advance_cutscene_step(m);
+	}
+}
+
+static void earthwake_earthwake_rises(struct MarioState *m){
+	m->actionTimer++;
+	if (m->actionTimer == 1){
+		play_sound(SOUND_CUTSCENE_BOTH_GIBBERISH_2, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == 40){
+		play_sound(SOUND_CUTSCENE_BOTH_GIBBERISH_5, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == 70){
+		play_sound(SOUND_CUTSCENE_BOTH_GIBBERISH_3, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == 100){
+		play_sound(SOUND_CUTSCENE_MARIO_GIBBERISH_1, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == 140){
+		play_sound(SOUND_CUTSCENE_MARIO_GIBBERISH_3, m->marioObj->header.gfx.pos);
+	}
+
+
+	if (m->actionTimer < 100){
+		print_text(0,20,"?????????????????????????????????????????");
+		print_text(0,200,"?????????????????????????????????????????");
+		print_text(0,40,"?????????????????????????????????????????");
+		print_text(0,180,"?????????????????????????????????????????");
+		print_text(0,60,"?????????????????????????????????????????");
+		print_text(0,160,"?????????????????????????????????????????");
+		print_text(0,80,"?????????????????????????????????????????");
+		print_text(0,140,"?????????????????????????????????????????");
+		print_text(0,100,"?????????????????????????????????????????");
+		print_text(0,120,"?????????????????????????????????????????");
+	}
+	if (m->actionTimer == 180){
+		advance_cutscene_step(m);
+	}
+}
+
+static void earthwake_earthwake_done_rising(struct MarioState *m){
+	m->actionTimer++;
+	if (m->actionTimer == 30){
+		play_sound(SOUND_CUTSCENE_GALLOPIN_GARLIC, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == 80){
+		play_sound(SOUND_CUTSCENE_LUIGI_LOOK, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == 120){
+		advance_cutscene_step(m);
+	}
+
+}
+
+static void earthwake_zoom_out(struct MarioState *m){
+	m->actionTimer++;
+	if (m->actionTimer == 160){
+		advance_cutscene_step(m);
+	}
+}
+
+static void earthwake_roar(struct MarioState *m){
+	m->actionTimer++;
+	if (m->actionTimer == 1){
+		play_sound(SOUND_CUTSCENE_EARTHWAKE_ROAR, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == 80){
+		play_sound(SOUND_CUTSCENE_TOUGH_TORTILINE, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == 130){
+		level_trigger_warp(gMarioState, WARP_OP_WARP_OBJECT);
+	}
+}
+
+static s32 act_earthwake_cutscene(struct MarioState *m){
+	 switch (m->actionArg) {
+		case EARTHWAKE_ARGUMENT:
+			earthwake_argument(m);
+			break;
+		case EARTHWAKE_EARTHWAKE_RISES:
+			earthwake_earthwake_rises(m);
+			break;
+		case EARTHWAKE_EARTHWAKE_DONE_RISING:
+			earthwake_earthwake_done_rising(m);
+			break;
+		case EARTHWAKE_ZOOM_OUT:
+			earthwake_zoom_out(m);
+			break;
+		case EARTHWAKE_ROAR:
+			earthwake_roar(m);
+			break;
+
+	 }
+	return FALSE;
+}
+
+enum {
 	FIRST_SET_UP,
     FIRST_WALK_TO_FRIDGE,
     FIRST_ATTACK_FRIDGE,
@@ -3147,6 +3518,8 @@ s32 mario_execute_cutscene_action(struct MarioState *m) {
         case ACT_INTRO_CUTSCENE:             cancel = act_intro_cutscene(m);             break;
         case ACT_POST_BOWSER_CUTSCENE:       cancel = act_post_bowser_cutscene(m);       break;
         case ACT_FIRST_CUTSCENE:             cancel = act_first_cutscene(m);             break;
+        case ACT_EARTHWAKE_CUTSCENE:         cancel = act_earthwake_cutscene(m);         break;
+        case ACT_POST_EARTHWAKE_CUTSCENE:    cancel = post_earthwake_cutscene(m);        break;
         case ACT_STAR_DANCE_EXIT:            cancel = act_star_dance(m);                 break;
         case ACT_STAR_DANCE_NO_EXIT:         cancel = act_star_dance(m);                 break;
         case ACT_STAR_DANCE_WATER:           cancel = act_star_dance_water(m);           break;

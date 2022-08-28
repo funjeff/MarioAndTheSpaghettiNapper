@@ -360,4 +360,15 @@ extern const Gfx flame_seg6_dl_0601C928[];
 
 #include "talkable_luigi/geo_header.h"
 
+#include "temp_earthwake_block/geo_header.h"
+
+#include "earthwake_hand/geo_header.h"
+
+#include "earthwake_head/geo_header.h"
+
+#include "earthwake_foot/geo_header.h"
+
+
+#include "earthwake_block_collision/collision_header.h"
+
 #endif

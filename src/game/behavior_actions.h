@@ -571,6 +571,10 @@ void bhv_bombable_door_init (void);
 void bhv_cutscene_trigger_loop (void);
 void bhv_cutscene_trigger_init (void);
 
+void bhv_earthwake_block_loop(void);
+void bhv_earthwake_block_init(void);
+
+
 Gfx *geo_move_mario_part_from_parent(s32 callContext, UNUSED struct GraphNode *node, Mat4 mtx);
 
 // Bowser

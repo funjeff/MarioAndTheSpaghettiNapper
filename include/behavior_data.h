@@ -558,6 +558,8 @@ extern const BehaviorScript bhvMarioPuppet[];
 
 extern const BehaviorScript bhvBombableDoor[];
 
+extern const BehaviorScript bhvEarthwakeBlock[];
+
 extern const BehaviorScript bhvCutsceneTrigger[];
 
 #endif // BEHAVIOR_DATA_H
