@@ -333,6 +333,7 @@
 #define /*0x1AE*/ oBowserEyesTimer       OBJECT_FIELD_S16(0x49, 1)
 #define /*0x1B0*/ oBowserEyesShut        OBJECT_FIELD_S16(0x4A, 0)
 #define /*0x1B2*/ oBowserRainbowLight    OBJECT_FIELD_S16(0x4A, 1)
+#define /*0x1B2*/ oBowserSoundEffectTimer OBJECT_FIELD_S16(0x4B, 0)
 
 /* Bowser Shockwave */
 #define /*0x0F4*/ oBowserShockWaveScale OBJECT_FIELD_F32(0x1B)
@@ -1361,8 +1362,10 @@ os16112*/
 #define cutscenePropObjYDisplace os16FC //displacement from pos that mario walks too
 #define cutscenePropPresetMoveX os16FE
 #define cutscenePropPresetMoveY os16100
-#define cutscenePropDoesAdvanceCutscene os16102
+#define cutscenePropDoesentAdvanceCutscene os16102
 #define cutscenePropDoesDeleteItself os16104
+#define cutscenePropSpawnSparkles os16106
+#define cutscenePropDisableGoodMovement os16108
 
 //nightmare chunk
 #define nightmareChunkTimer oF8 //time the chunk has been breaking
@@ -1387,6 +1390,14 @@ os16112*/
 #define earthwakeSegment o104 //0 is who cares 1 is left arm 2 is right arm 3 is chest
 
 
-//
+//ball
+#define koopaShellBig oF4
+
+//sparkle spawn
+
+#define sparkleSizeMin oFloatF4
+#define sparkleSizeMax oFloatF8
+
+
 
 #endif // OBJECT_FIELDS_H

@@ -116,6 +116,35 @@ void bhv_bowser_flame_spawn_loop(void) {
 }
 
 /**
+ * Checks if Bowser hits a mine from a distance, returns TRUE if so
+ */
+s32 bowser_check_hit_mine(void) {
+    f32 dist;
+    struct Object *mine = cur_obj_find_nearest_object_with_behavior(bhvBowserBomb, &dist);
+    if (mine != NULL && dist < 800.0f) {
+        mine->oInteractStatus |= INT_STATUS_HIT_MINE;
+        uintptr_t *behaviorAddr = segmented_to_virtual(bhvLuigiableBomb);
+
+   		struct ObjectNode *listHead = &gObjectLists[get_object_list_from_behavior(behaviorAddr)];
+
+   		struct Object * bomb = (struct Object *) listHead->next;
+
+       	while (bomb != (struct Object *) listHead) {
+        	if (bomb->behavior == behaviorAddr && bomb->luigiBombBeingCarried) {
+        		break;
+        	}
+        	bomb = (struct Object *) bomb->header.next;
+        }
+        obj_mark_for_deletion(bomb);
+
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
+
+/**
  * Bowser's Body main loop
  */
 void bhv_bowser_body_anchor_loop(void) {
@@ -384,6 +413,7 @@ void bowser_bits_action_list(void) {
         // Keep walking
         o->oAction = BOWSER_ACT_WALK_TO_MARIO;
     }
+
 }
 
 /**
@@ -616,17 +646,17 @@ void bowser_act_hit_mine(void) {
     }
     // Play flip animation
     if (o->oSubAction == BOWSER_SUB_ACT_HIT_MINE_START) {
-        cur_obj_init_animation_with_sound(BOWSER_ANIM_FLIP);
+        cur_obj_init_animation(BOWSER_ANIM_FLIP);
         o->oSubAction++;
         o->oBowserTimer = 0;
     // Play flip animation again, extend it and play bounce effects
     } else if (o->oSubAction == BOWSER_SUB_ACT_HIT_MINE_FALL) {
-        cur_obj_init_animation_with_sound(BOWSER_ANIM_FLIP);
+        cur_obj_init_animation(BOWSER_ANIM_FLIP);
         cur_obj_extend_animation_if_at_end();
         bowser_bounce_effects(&o->oBowserTimer);
         // Reset vel and stand up
         if (o->oBowserTimer > 2) {
-            cur_obj_init_animation_with_sound(BOWSER_ANIM_STAND_UP_FROM_FLIP);
+            cur_obj_init_animation(BOWSER_ANIM_STAND_UP_FROM_FLIP);
             o->oVelY = 0.0f;
             o->oForwardVel = 0.0f;
             o->oSubAction++;
@@ -922,19 +952,7 @@ void bowser_act_charge_mario(void) {
     }
 }
 
-/**
- * Checks if Bowser hits a mine from a distance, returns TRUE if so
- */
-s32 bowser_check_hit_mine(void) {
-    f32 dist;
-    struct Object *mine = cur_obj_find_nearest_object_with_behavior(bhvBowserBomb, &dist);
-    if (mine != NULL && dist < 800.0f) {
-        mine->oInteractStatus |= INT_STATUS_HIT_MINE;
-        return TRUE;
-    }
 
-    return FALSE;
-}
 
 /**
  * Bowser's thrown act that gets called after Mario releases him
@@ -1080,7 +1098,7 @@ s8 sBowserDanceStepNoises[] = { 24, 42, 60, -1 };
 void bowser_act_dance(void) {
     // Play a stomp sound effect on certain frames
     if (is_item_in_array(o->oTimer, sBowserDanceStepNoises)) {
-        cur_obj_play_sound_2(SOUND_OBJ_BOWSER_WALK);
+      //  cur_obj_play_sound_2(SOUND_OBJ_BOWSER_WALK);
     }
     // Play dance animation and after that return to default action
     if (cur_obj_init_animation_and_check_if_near_end(BOWSER_ANIM_DANCE)) {
@@ -1108,11 +1126,7 @@ void bowser_spawn_collectable(void) {
 void bowser_fly_back_dead(void) {
     cur_obj_init_animation_with_sound(BOWSER_ANIM_FLIP_DOWN);
     // More knockback in BitS
-    if (o->oBehParams2ndByte == BOWSER_BP_BITS) {
-        o->oForwardVel = -400.0f;
-    } else {
-        o->oForwardVel = -200.0f;
-    }
+    o->oForwardVel = 0.0f;
     o->oVelY = 100.0f;
     o->oMoveAngleYaw = o->oBowserAngleToCenter + 0x8000;
     o->oBowserTimer = 0;
@@ -1143,6 +1157,11 @@ s32 bowser_dead_wait_for_mario(void) {
     cur_obj_become_intangible();
     if (cur_obj_init_animation_and_check_if_near_end(BOWSER_ANIM_LAY_DOWN) && o->oDistanceToMario < 700.0f
         && abs_angle_diff(gMarioObject->oMoveAngleYaw, o->oAngleToMario) > 0x6000) {
+    	if (gMarioState->riddenObj != NULL){
+          	 gMarioState->riddenObj->oInteractStatus = 4194304; //INT_STATUS_STOP_RIDING
+           	 gMarioState->riddenObj = NULL;
+           	 set_mario_action(gMarioState, ACT_IDLE, 0);
+        }
         ret = TRUE;
     }
     cur_obj_extend_animation_if_at_end();
@@ -1239,34 +1258,74 @@ s32 bowser_dead_default_stage_ending(void) {
 s32 bowser_dead_final_stage_ending(void) {
     s32 dialogID;
 
-    if (o->oBowserTimer < 2) {
-        // Set dialog whenever you have 120 stars or not
-        if (gHudDisplay.stars < 120) {
-            dialogID = DIALOG_121;
-        } else {
-            dialogID = DIALOG_163;
-        }
-        // Lower music volume
-        if (o->oBowserTimer == 0) {
-            seq_player_lower_volume(SEQ_PLAYER_LEVEL, 60, 40);
-            o->oBowserTimer++;
-        }
-        // Play Bowser defeated dialog
-        if (cur_obj_update_dialog(MARIO_DIALOG_LOOK_UP,
-            (DIALOG_FLAG_TEXT_DEFAULT | DIALOG_FLAG_TIME_STOP_ENABLED), dialogID, 0)) {
-            // Dialog is done, fade out music and spawn grand star
-            cur_obj_set_model(MODEL_BOWSER_NO_SHADOW);
-            seq_player_unlower_volume(SEQ_PLAYER_LEVEL, 60);
-            seq_player_fade_out(SEQ_PLAYER_LEVEL, 1);
-            bowser_spawn_collectable();
-            o->oBowserTimer++;
-        }
+    if (o->oBowserTimer < 540) {
+       o->oBowserTimer++;
+
+       if (o->oBowserTimer == 1){
+    	   set_mario_action(gMarioState, ACT_DOING_NOTHING, 0);
+    	   set_mario_animation(gMarioState, MARIO_ANIM_IDLE_HEAD_RIGHT);
+    	   play_sound(SOUND_CUTSCENE_SHUT_UP, o->header.gfx.pos);
+       }
+
+       if (o->oBowserTimer == 21){
+      	   play_sound(SOUND_CUTSCENE_FUCK_YOU, o->header.gfx.pos);
+       }
+
+       if (o->oBowserTimer == 41){
+      	   play_sound(SOUND_CUTSCENE_YOU_FUCKING_DICK, o->header.gfx.pos);
+       }
+
+       if (o->oBowserTimer == 81){
+       	   play_sound(SOUND_CUTSCENE_ALLWAYS_NAYSAYING, o->header.gfx.pos);
+       }
+
+       if (o->oBowserTimer == 121){
+       	   play_sound(SOUND_CUTSCENE_EVERYTHING_I_CREATE, o->header.gfx.pos);
+       }
+
+       if (o->oBowserTimer == 161){
+       	   play_sound(SOUND_CUTSCENE_YOU_PIECE_OF_SHIT, o->header.gfx.pos);
+       }
+
+       if (o->oBowserTimer == 201){
+       	   play_sound(SOUND_CUTSCENE_YOU_CREATE_SOMETHING, o->header.gfx.pos);
+       }
+
+       if (o->oBowserTimer == 241){
+       	   play_sound(SOUND_CUTSCENE_LIKE_INWARD_SINGING, o->header.gfx.pos);
+       }
+
+       if (o->oBowserTimer == 281){
+       	   play_sound(SOUND_CUTSCENE_YOU_FUCKING_SHIT, o->header.gfx.pos);
+       }
+
+       if (o->oBowserTimer == 321){
+       	   play_sound(SOUND_CUTSCENE_SIT_IN_YOUR_TOWER, o->header.gfx.pos);
+       }
+
+       if (o->oBowserTimer == 371){
+       	   play_sound(SOUND_CUTSCENE_WHATS_FUNNY, o->header.gfx.pos);
+       }
+
+       if (o->oBowserTimer == 421){
+       	   play_sound(SOUND_CUTSCENE_YOU_FUCKING_BITCH, o->header.gfx.pos);
+       }
+
+       if (o->oBowserTimer == 461){
+       	   play_sound(SOUND_CUTSCENE_FUCKING_FUCK_YEAH, o->header.gfx.pos);
+       }
+
+       if (o->oBowserTimer == 501){
+       	   play_sound(SOUND_CUTSCENE_FUCKING_COCKASS, o->header.gfx.pos);
+       }
+
     // Slowly fade him out
     } else if (o->oOpacity > 4) {
         o->oOpacity -= 4;
     } else {
         // And at last, hide him
         bowser_dead_hide();
+        set_mario_action(gMarioState, ACT_IDLE, 0);
         return TRUE;
     }
     return FALSE;
@@ -1680,6 +1739,44 @@ void bhv_bowser_loop(void) {
             }
         }
     }
+
+    if (o->oBowserSoundEffectTimer == 40 && o->oHealth == 2){
+    	play_sound(SOUND_CUTSCENE_YOUR_NOT_GROOVY, gMarioObject->header.gfx.pos);
+    }
+
+    if (o->oBowserSoundEffectTimer == 80 && o->oHealth == 2){
+      	play_sound(SOUND_CUTSCENE_YOUR_A_NERD, gMarioObject->header.gfx.pos);
+    }
+
+    if (o->oBowserSoundEffectTimer == 40 && o->oHealth == 1){
+    	play_sound(SOUND_CUTSCENE_GREEN_AND_SCALLY, gMarioObject->header.gfx.pos);
+    }
+
+    if (o->oBowserSoundEffectTimer == 80 && o->oHealth == 1){
+       	play_sound(SOUND_CUTSCENE_MEAT_SAUCE, gMarioObject->header.gfx.pos);
+    }
+
+    if (o->oBowserSoundEffectTimer == 110 && o->oHealth == 1){
+    	play_sound(SOUND_CUTSCENE_DEEP_SPAGETTI, gMarioObject->header.gfx.pos);
+     }
+
+    o->oBowserSoundEffectTimer++;
+    if (bowser_check_hit_mine()) {
+           o->oHealth--;
+           if (o->oHealth <= 0) {
+               o->oAction = BOWSER_ACT_DEAD;
+           } else {
+        	   if (o->oHealth == 2){
+        		   o->oBowserSoundEffectTimer = 0;
+        	   }
+
+        	   if (o->oHealth == 1){
+
+        	       o->oBowserSoundEffectTimer = 0;
+        	   }
+               o->oAction = BOWSER_ACT_HIT_MINE;
+           }
+       }
 }
 
 /**

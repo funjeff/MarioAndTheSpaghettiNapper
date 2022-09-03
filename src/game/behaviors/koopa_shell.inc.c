@@ -15,6 +15,18 @@ struct ObjectHitbox sKoopaShellHitbox = {
     /* hurtboxHeight:     */ 50,
 };
 
+struct ObjectHitbox sBigKoopaShellHitbox = {
+    /* interactType:      */ INTERACT_KOOPA_SHELL,
+    /* downOffset:        */ 50,
+    /* damageOrCoinValue: */ 4,
+    /* health:            */ 1,
+    /* numLootCoins:      */ 1,
+    /* radius:            */ 120,
+    /* height:            */ 150,
+    /* hurtboxRadius:     */ 50,
+    /* hurtboxHeight:     */ 50,
+};
+
 void shell_despawn(void) {
     if (o->oTimer > 300) obj_flicker_and_disappear(o, 300);
 }
@@ -59,14 +71,29 @@ void bhv_koopa_shell_flame_spawn(void) {
 
 void koopa_shell_spawn_sparkles(f32 a) {
     struct Object *sparkleObj = spawn_object(o, MODEL_NONE, bhvSparkleSpawn);
+
+    if (o->koopaShellBig){
+    	sparkleObj->sparkleSizeMin = 1;
+    	sparkleObj->sparkleSizeMax = 2;
+
+    }
     sparkleObj->oPosY += a;
 }
 
 void bhv_koopa_shell_loop(void) {
     struct Surface *floor;
 
-    obj_set_hitbox(o, &sKoopaShellHitbox);
-    cur_obj_scale(1.0f);
+    if (!o->koopaShellBig){
+    	obj_set_hitbox(o, &sKoopaShellHitbox);
+    } else {
+    	obj_set_hitbox(o, &sBigKoopaShellHitbox);
+    }
+
+    if (!o->koopaShellBig){
+    	cur_obj_scale(1.0f);
+    } else {
+    	cur_obj_scale(4.0f);
+    }
 
     obj_set_angle(o,o->oFaceAnglePitch + gMarioState->forwardVel * 50,o->oFaceAngleYaw, o->oFaceAngleRoll);
 
@@ -86,7 +113,11 @@ void bhv_koopa_shell_loop(void) {
             break;
 
         case KOOPA_SHELL_ACT_MARIO_RIDING:
-        	cur_obj_set_pos_relative(gMarioObject, 0, 80, 0);
+        	if (!o->koopaShellBig){
+        		cur_obj_set_pos_relative(gMarioObject, 0, 80, 0);
+        	} else {
+        		cur_obj_set_pos_relative(gMarioObject, 0, 400, 0);
+        	}
             floor = cur_obj_update_floor_height_and_get_floor();
 
             if (absf(find_water_level(o->oPosX, o->oPosZ) - o->oPosY) < 10.0f) {
@@ -95,10 +126,18 @@ void bhv_koopa_shell_loop(void) {
                 if (floor != NULL && floor->type == SURFACE_BURNING) {
                     bhv_koopa_shell_flame_spawn();
                 } else {
-                    koopa_shell_spawn_sparkles(-30.0f);
+                	if (!o->koopaShellBig){
+                		koopa_shell_spawn_sparkles(-30.0f);
+                	} else {
+                		koopa_shell_spawn_sparkles(-150.0f);
+                	}
                 }
             } else {
-                koopa_shell_spawn_sparkles(-30.0f);
+            	if (!o->koopaShellBig){
+            		koopa_shell_spawn_sparkles(-30.0f);
+            	} else {
+            	   koopa_shell_spawn_sparkles(-150.0f);
+            	}
             }
 
             o->oFaceAngleYaw = gMarioObject->oMoveAngleYaw;

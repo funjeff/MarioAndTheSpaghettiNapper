@@ -757,6 +757,27 @@ void tilt_body_ground_shell(struct MarioState *m, s16 startYaw) {
     marioObj->header.gfx.pos[1] += 180.0f;
 }
 
+void tilt_body_ground_big_shell(struct MarioState *m, s16 startYaw) {
+    struct MarioBodyState *marioBodyState = m->marioBodyState;
+    struct Object *marioObj = m->marioObj;
+    s16 dYaw = m->faceAngle[1] - startYaw;
+    //! (Speed Crash) These casts can cause a crash if (dYaw * forwardVel / 12) or
+    //! (forwardVel * 170) exceed or equal 2^31. Harder (if not impossible to do)
+    //! while on a Koopa Shell making this less of an issue.
+    s16 nextBodyRoll = -(s16)(dYaw * m->forwardVel / 12.0f);
+    s16 nextBodyPitch = (s16)(m->forwardVel * 170.0f);
+
+    nextBodyRoll  = CLAMP(nextBodyRoll, -0x1800, 0x1800);
+    nextBodyPitch = CLAMP(nextBodyPitch,      0, 0x1000);
+
+    marioBodyState->torsoAngle[2] = approach_s32_symmetric(marioBodyState->torsoAngle[2], nextBodyRoll,  0x200);
+    marioBodyState->torsoAngle[0] = approach_s32_symmetric(marioBodyState->torsoAngle[0], nextBodyPitch, 0x200);
+    marioBodyState->headAngle[2] = -marioBodyState->torsoAngle[2];
+
+    marioObj->header.gfx.angle[2] = marioBodyState->torsoAngle[2];
+    marioObj->header.gfx.pos[1] += 800.0f;
+}
+
 s32 act_walking(struct MarioState *m) {
     Vec3f startPos;
     s16 startYaw = m->faceAngle[1];
@@ -1300,6 +1321,49 @@ s32 act_riding_shell_ground(struct MarioState *m) {
 #endif
     return FALSE;
 }
+
+s32 act_riding_big_shell_ground(struct MarioState *m) {
+
+
+    s16 startYaw = m->faceAngle[1];
+
+    if (m->input & INPUT_A_PRESSED) {
+        return set_mario_action(m, ACT_RIDING_BIG_SHELL_JUMP, 0);
+    }
+
+
+    update_shell_speed(m);
+    set_mario_animation(m, m->actionArg == 0 ? MARIO_ANIM_START_RIDING_SHELL : MARIO_ANIM_RIDING_SHELL);
+
+    switch (perform_ground_step(m)) {
+        case GROUND_STEP_LEFT_GROUND:
+            set_mario_action(m, ACT_RIDING_BIG_SHELL_FALL, 0);
+            break;
+
+//        case GROUND_STEP_HIT_WALL:
+//            mario_stop_riding_object(m);
+//            play_sound(m->flags & MARIO_METAL_CAP ? SOUND_ACTION_METAL_BONK : SOUND_ACTION_BONK,
+//                       m->marioObj->header.gfx.cameraToObject);
+//            m->particleFlags |= PARTICLE_VERTICAL_STAR;
+//            set_mario_action(m, ACT_BACKWARD_GROUND_KB, 0);
+//            break;
+    }
+
+    tilt_body_ground_big_shell(m, startYaw);
+    if (m->floor->type == SURFACE_BURNING) {
+        play_sound(SOUND_MOVING_RIDING_SHELL_LAVA, m->marioObj->header.gfx.cameraToObject);
+    } else {
+        play_sound(SOUND_MOVING_TERRAIN_RIDING_SHELL + m->terrainSoundAddend,
+                   m->marioObj->header.gfx.cameraToObject);
+    }
+
+    adjust_sound_for_speed(m);
+#if ENABLE_RUMBLE
+    reset_rumble_timers_slip();
+#endif
+    return FALSE;
+}
+
 
 s32 act_swinging_rope (struct MarioState *m){
 
@@ -2072,6 +2136,7 @@ s32 mario_execute_moving_action(struct MarioState *m) {
         case ACT_FINISH_TURNING_AROUND:    cancel = act_finish_turning_around(m);    break;
         case ACT_BRAKING:                  cancel = act_braking(m);                  break;
         case ACT_RIDING_SHELL_GROUND:      cancel = act_riding_shell_ground(m);      break;
+        case ACT_RIDING_BIG_SHELL_GROUND:  cancel = act_riding_big_shell_ground(m);  break;
         case ACT_CRAWLING:                 cancel = act_crawling(m);                 break;
         case ACT_BURNING_GROUND:           cancel = act_burning_ground(m);           break;
         case ACT_DECELERATING:             cancel = act_decelerating(m);             break;

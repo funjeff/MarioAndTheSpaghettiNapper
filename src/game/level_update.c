@@ -743,6 +743,8 @@ s16 level_trigger_warp(struct MarioState *m, s32 warpOp) {
                 sWarpCheckpointActive = check_warp_checkpoint(&node->node);
 
 
+
+
                 play_transition(WARP_TRANSITION_FADE_INTO_BOWSER, sDelayedWarpTimer, 0x00, 0x00, 0x00);
                 play_sound(SOUND_MENU_BOWSER_LAUGH, gGlobalSoundSource);
 #ifdef PREVENT_DEATH_LOOP
@@ -766,7 +768,11 @@ s16 level_trigger_warp(struct MarioState *m, s32 warpOp) {
 
                     sWarpCheckpointActive = check_warp_checkpoint(&warpNode->node);
 
+                    if (m->bigBallCamera){
+                   	 m->dudeCounter = 50;
+                   	 m->bigBallCamera = 0;
 
+                   }
 
                 }
 
@@ -1334,6 +1340,9 @@ s32 lvl_set_current_level(UNUSED s16 initOrUpdate, s32 levelNum) {
     sWarpCheckpointActive = FALSE;
     gCurrLevelNum = levelNum;
     gCurrCourseNum = gLevelToCourseNumTable[levelNum - 1];
+	if (gCurrLevelNum == LEVEL_DDD) return 0;
+	if (gCurrLevelNum == LEVEL_BOWSER_3) return 0;
+	if (gCurrLevelNum == LEVEL_BITS) return 0;
 	if (gCurrLevelNum == LEVEL_WF) return 0;
 		if (gCurrLevelNum == LEVEL_CCM) return 0;
 	if (gCurrLevelNum == LEVEL_BOB) return 0;

@@ -51,7 +51,7 @@
 // -- 1-UP MUSHROOM --
 
 // Collecting a 1-Up Mushroom will fully heal Mario.
-#define MUSHROOMS_HEAL
+//#define MUSHROOMS_HEAL
 
 // -- PLATFORM ON TRACK --
 

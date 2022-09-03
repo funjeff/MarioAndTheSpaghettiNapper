@@ -791,6 +791,4 @@ UNUSED s32 debug_sequence_tracker(s16 debugInputSequence[]) {
 #include "behaviors/bombable_door.inc.c"
 #include "behaviors/cutscene_trigger.inc.c"
 #include "behaviors/earthwake_block.inc.c"
-
-
-
+#include "behaviors/destroyable_block.inc.c"

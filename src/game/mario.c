@@ -250,7 +250,7 @@ void play_mario_jump_sound(struct MarioState *m) {
             play_sound(SOUND_MARIO_YAHOO_WAHA_YIPPEE + ((gAudioRandom % 5) << 16),
             m->marioObj->header.gfx.cameraToObject);
         } else {
-        	if (m->action == ACT_RIDING_SHELL_JUMP){
+        	if (m->action == ACT_RIDING_SHELL_JUMP || m->action == ACT_SWINGING_ROPE_JUMP || m->action == ACT_RIDING_BIG_SHELL_JUMP){
             	u32 rand = gAudioRandom % 4;
        			if (rand == 0){
        				play_sound(SOUND_GENERAL_CRAZY_BOX_BOING_SLOW,m->marioObj->header.gfx.cameraToObject);
@@ -787,6 +787,9 @@ u32 set_mario_action_airborne(struct MarioState *m, u32 action, u32 actionArg) {
         case ACT_RIDING_SHELL_JUMP:
             set_mario_y_vel_based_on_fspeed(m, 42.0f, 0.75f);
             break;
+        case ACT_RIDING_BIG_SHELL_JUMP:
+             set_mario_y_vel_based_on_fspeed(m, 42.0f, 1.75f);
+             break;
         case ACT_SWINGING_ROPE_JUMP:
             set_mario_y_vel_based_on_fspeed(m, 42.0f, 0.75f);
             break;
@@ -1536,8 +1539,12 @@ void update_mario_info_for_cam(struct MarioState *m) {
 
     vec3s_copy(m->statusForCamera->faceAngle, m->faceAngle);
 
-    if (!(m->flags & MARIO_LEDGE_CLIMB_CAMERA)) {
+    if (!(m->flags & MARIO_LEDGE_CLIMB_CAMERA) ) {
         vec3f_copy(m->statusForCamera->pos, m->pos);
+    }
+
+    if (m->bigBallCamera){
+    	m->statusForCamera->pos[1] = m->statusForCamera->pos[1] + 800;
     }
 }
 
@@ -1712,6 +1719,43 @@ void queue_rumble_particles(struct MarioState *m) {
  */
 s32 execute_mario_action(UNUSED struct Object *obj) {
     s32 inLoop = TRUE;
+
+    if (gMarioState->dudeCounter > 0){
+    	gMarioState->dudeCounter--;
+    	if (gMarioState->dudeCounter == 107){
+    		play_sound(SOUND_CUTSCENE_DUDES, gGlobalSoundSource);
+    	}
+
+    	if (gMarioState->dudeCounter == 0){
+    	   	uintptr_t *behaviorAddr = segmented_to_virtual(bhvHidden1upInPole);
+  			struct ObjectNode *listHead = &gObjectLists[get_object_list_from_behavior(behaviorAddr)];
+
+   			struct Object *toad = (struct Object *) listHead->next;
+
+       		while (toad != (struct Object *) listHead) {
+       			if (toad->behavior == behaviorAddr) {
+           			 break;
+           		}
+          		toad = (struct Object *) toad->header.next;
+           	}
+    	   obj_mark_for_deletion(toad);
+
+
+
+    	   struct Object * ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BLACK_BOBOMB   ,bhvKoopaShell);
+    	   ball->koopaShellBig = 1;
+    	   u32 interaction = determine_interaction(gMarioState, ball);
+    	   gMarioState->riddenObj = ball;
+    	   gMarioState->interactObj = ball;
+    	   gMarioState->usedObj = ball;
+    	   attack_object(ball, interaction);
+    	   gMarioState->bigBallCamera = 1;
+    	   set_mario_action(gMarioState, ACT_RIDING_BIG_SHELL_GROUND, 0);
+
+    	   spawn_object_relative(0,0,0,0, gMarioObject, MODEL_CUTSCENE_TOAD, bhvHidden1upInPole);
+
+    	}
+    }
 
     // Updates once per frame:
     vec3f_get_dist_and_lateral_dist_and_angle(gMarioState->prevPos, gMarioState->pos, &gMarioState->moveSpeed, &gMarioState->lateralSpeed, &gMarioState->movePitch, &gMarioState->moveYaw);

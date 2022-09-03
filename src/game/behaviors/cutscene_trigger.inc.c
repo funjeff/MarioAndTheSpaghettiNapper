@@ -12,7 +12,7 @@ void bhv_cutscene_trigger_init (void){
 }
 
 void bhv_cutscene_trigger_loop(void) {
-	if (gMarioState->action != ACT_EMERGE_FROM_PIPE && gMarioState->action != ACT_SPAWN_SPIN_AIRBORNE){
+	if (gMarioState->action != ACT_EMERGE_FROM_PIPE){
 		switch (GET_BPARAM1(o->oBehParams)){
 		case 1:
 			gMarioObject->header.gfx.angle[1] = 0;
@@ -27,6 +27,22 @@ void bhv_cutscene_trigger_loop(void) {
 			break;
 		case 3:
 			set_mario_action(gMarioState,ACT_POST_EARTHWAKE_CUTSCENE, 0);
+			set_mario_animation(gMarioState, MARIO_ANIM_IDLE_HEAD_RIGHT);
+			break;
+		case 4:
+			;
+		  	struct Object * ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BLACK_BOBOMB   ,bhvKoopaShell);
+		  	ball->koopaShellBig = 1;
+		    u32 interaction = determine_interaction(gMarioState, ball);
+		    gMarioState->riddenObj = ball;
+		    gMarioState->interactObj = ball;
+		    gMarioState->usedObj = ball;
+		    attack_object(ball, interaction);
+		    gMarioState->bigBallCamera = 1;
+		    set_mario_action(gMarioState, ACT_RIDING_BIG_SHELL_GROUND, 0);
+			break;
+		case 5:
+			set_mario_action(gMarioState,ACT_TOAD_CUTSCENE, 0);
 			set_mario_animation(gMarioState, MARIO_ANIM_IDLE_HEAD_RIGHT);
 			break;
 		}

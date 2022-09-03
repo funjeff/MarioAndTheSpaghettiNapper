@@ -4945,6 +4945,9 @@ u8 get_cutscene_from_mario_status(struct Camera *c) {
             case CAM_EVENT_EARTHWAKE:
             	cutscene = CUTSCENE_EARTHWAKE;
             	break;
+            case CAM_EVENT_TOAD_CUTSCENE:
+                 cutscene = CUTSCENE_TOAD_CUTSCENE;
+                 break;
         }
     }
     //! doorStatus is reset every frame. CameraTriggers need to constantly set doorStatus
@@ -6065,6 +6068,15 @@ struct CameraTrigger sCamWF[] = {
 	NULL_TRIGGER
 };
 struct CameraTrigger sCamJRB[] = {
+	NULL_TRIGGER
+};
+struct CameraTrigger sCamBitS[] = {
+	NULL_TRIGGER
+};
+struct CameraTrigger sCamBowser_3[] = {
+	NULL_TRIGGER
+};
+struct CameraTrigger sCamDDD[] = {
 	NULL_TRIGGER
 };
 struct CameraTrigger *sCameraTriggers[LEVEL_COUNT + 1] = {
@@ -7238,6 +7250,20 @@ void cutscene_earthwake_loop(struct Camera *c){
 	}
 }
 
+
+void cutscene_toad_camera_start(UNUSED struct Camera *c) {
+	vec3f_set(c->focus, 0, 0,0);
+	vec3f_set(c->pos, 1800, 0, -400);
+
+}
+
+void cutscene_toad_start (struct Camera *c){
+	cutscene_event(cutscene_toad_camera_start,c,0,0);
+}
+
+void cutscene_toad_loop(struct Camera *c){
+
+}
 
 /**
  * Zero the cvars that are used when Mario is flying.
@@ -10027,6 +10053,11 @@ struct Cutscene sCutsceneEarthwake[] = {
     { cutscene_earthwake_loop, CUTSCENE_LOOP }
 };
 
+struct Cutscene sCutsceneToadCutscene[] = {
+	{ cutscene_toad_start, 1 },
+    { cutscene_toad_loop, CUTSCENE_LOOP }
+};
+
 /**
  * Cutscene that plays when Mario enters a door that warps to another area.
  */
@@ -10442,7 +10473,7 @@ u8 sZoomOutAreaMasks[] = {
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 0, 0, 0), // CASTLE_GROUNDS | BITDW
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 0, 0, 0), // VCUTM          | BITFS
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 0, 0, 0), // SA             | BITS
-	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 0, 0, 0, 0), // LLL            | DDD
+	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 1, 0, 0), // LLL            | DDD
 	ZOOMOUT_AREA_MASK(1, 1, 1, 0, 0, 0, 0, 0), // WF             | ENDING
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 0, 0, 0, 0), // COURTYARD      | PSS
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 0, 0, 0), // COTMC          | TOTWC
@@ -10803,6 +10834,7 @@ void play_cutscene(struct Camera *c) {
         CUTSCENE(CUTSCENE_ENDING,               sCutsceneEnding)
         CUTSCENE(CUTSCENE_GRAND_STAR,           sCutsceneGrandStar)
 		CUTSCENE(CUTSCENE_EARTHWAKE,            sCutsceneEarthwake)
+		CUTSCENE(CUTSCENE_TOAD_CUTSCENE,        sCutsceneToadCutscene)
         CUTSCENE(CUTSCENE_DOOR_WARP,            sCutsceneDoorWarp)
         CUTSCENE(CUTSCENE_DOOR_PULL,            sCutsceneDoorPull)
         CUTSCENE(CUTSCENE_DOOR_PUSH,            sCutsceneDoorPush)

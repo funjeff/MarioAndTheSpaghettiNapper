@@ -1736,7 +1736,40 @@ sound_ref .sound_both_gibberish_4
 sound_ref .sound_both_gibberish_5
 sound_ref .sound_luigi_look
 sound_ref .sound_hasta_la_pasta
-
+sound_ref .sound_shut_up
+sound_ref .sound_fuck_you
+sound_ref .sound_you_fuckin_dick
+sound_ref .sound_allways_naysaying
+sound_ref .sound_everything_i_create
+sound_ref .sound_you_piece_of_shit
+sound_ref .sound_you_create_something
+sound_ref .sound_like_inward_singing
+sound_ref .sound_you_fucking_shit
+sound_ref .sound_sit_in_your_tower
+sound_ref .sound_whats_funny
+sound_ref .sound_you_fucking_bitch
+sound_ref .sound_fucking_fuck_yeah
+sound_ref .sound_fuckin_cockass
+sound_ref .sound_green_and_scally
+sound_ref .sound_deep_spagetti
+sound_ref .sound_your_not_groovy
+sound_ref .sound_your_a_nerd
+sound_ref .sound_meat_sauce
+sound_ref .sound_hey_I_gotta
+sound_ref .sound_bodacios_idea
+sound_ref .sound_mushroom
+sound_ref .sound_princess
+sound_ref .sound_I_shrunk
+sound_ref .sound_the_mario_brothers
+sound_ref .sound_never_make_it
+sound_ref .sound_why_dont_you_just
+sound_ref .sound_give_up_right_now
+sound_ref .sound_no
+sound_ref .sound_I_have_to_try
+sound_ref .sound_even_if_its
+sound_ref .sound_by_myself
+sound_ref .sound_your_a_fool
+sound_ref .sound_a_fool
 
 
 .sound_OH_MY_GOD:
@@ -1964,6 +1997,210 @@ chan_end
 .sound_hasta_la_pasta:
 chan_setbank 11
 chan_setinstr 49
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_fuck_you:
+chan_setbank 11
+chan_setinstr 50
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_you_fuckin_dick:
+chan_setbank 11
+chan_setinstr 51
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_allways_naysaying:
+chan_setbank 11
+chan_setinstr 52
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_everything_i_create:
+chan_setbank 11
+chan_setinstr 53
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_you_create_something:
+chan_setbank 11
+chan_setinstr 54
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_like_inward_singing:
+chan_setbank 11
+chan_setinstr 55
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_you_fucking_shit:
+chan_setbank 11
+chan_setinstr 56
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_sit_in_your_tower:
+chan_setbank 11
+chan_setinstr 57
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_whats_funny:
+chan_setbank 11
+chan_setinstr 58
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_you_fucking_bitch:
+chan_setbank 11
+chan_setinstr 59
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_fucking_fuck_yeah:
+chan_setbank 11
+chan_setinstr 60
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_fuckin_cockass:
+chan_setbank 11
+chan_setinstr 61
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_shut_up:
+chan_setbank 11
+chan_setinstr 62
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_you_piece_of_shit:
+chan_setbank 11
+chan_setinstr 63
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_green_and_scally:
+chan_setbank 11
+chan_setinstr 64
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_deep_spagetti:
+chan_setbank 11
+chan_setinstr 65
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_your_not_groovy:
+chan_setbank 11
+chan_setinstr 66
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_your_a_nerd:
+chan_setbank 11
+chan_setinstr 67
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_meat_sauce:
+chan_setbank 11
+chan_setinstr 68
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_hey_I_gotta:
+chan_setbank 11
+chan_setinstr 69
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_bodacios_idea:
+chan_setbank 11
+chan_setinstr 70
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_mushroom:
+chan_setbank 11
+chan_setinstr 71
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_princess:
+chan_setbank 11
+chan_setinstr 72
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_I_shrunk:
+chan_setbank 11
+chan_setinstr 73
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_the_mario_brothers:
+chan_setbank 11
+chan_setinstr 74
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_never_make_it:
+chan_setbank 11
+chan_setinstr 75
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_why_dont_you_just:
+chan_setbank 11
+chan_setinstr 76
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_give_up_right_now:
+chan_setbank 11
+chan_setinstr 77
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_no:
+chan_setbank 11
+chan_setinstr 78
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_I_have_to_try:
+chan_setbank 11
+chan_setinstr 79
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_even_if_its:
+chan_setbank 11
+chan_setinstr 80
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_by_myself:
+chan_setbank 11
+chan_setinstr 81
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_your_a_fool:
+chan_setbank 11
+chan_setinstr 82
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_a_fool:
+chan_setbank 11
+chan_setinstr 83
 chan_setlayer 0, .layer_new_sound
 chan_end
 
@@ -2425,6 +2662,98 @@ sound_ref .sound_peach_something_special
 sound_ref .sound_peach_bake_a_cake
 sound_ref .sound_peach_for_mario
 sound_ref .sound_peach_mario2
+sound_ref .sound_starman
+sound_ref .sound_starbright
+sound_ref .sound_give_me_pasta_power
+sound_ref .sound_give_me_pasta_might
+sound_ref .sound_spagetii
+sound_ref .sound_ravioli
+sound_ref .sound_macorni
+sound_ref .sound_tortolini
+sound_ref .sound_moschili
+sound_ref .sound_linguine
+sound_ref .sound_garlic_ice_cream
+sound_ref .sound_so_much_for_the_great_escape
+sound_ref .sound_dudes
+
+
+.sound_starman:
+chan_setbank 11
+chan_setinstr 84
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_starbright:
+chan_setbank 11
+chan_setinstr 85
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_give_me_pasta_power:
+chan_setbank 11
+chan_setinstr 86
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_give_me_pasta_might:
+chan_setbank 11
+chan_setinstr 87
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_spagetii:
+chan_setbank 11
+chan_setinstr 88
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_ravioli:
+chan_setbank 11
+chan_setinstr 89
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_macorni:
+chan_setbank 11
+chan_setinstr 90
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_tortolini:
+chan_setbank 11
+chan_setinstr 91
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_moschili:
+chan_setbank 11
+chan_setinstr 92
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_linguine:
+chan_setbank 11
+chan_setinstr 93
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_garlic_ice_cream:
+chan_setbank 11
+chan_setinstr 94
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_so_much_for_the_great_escape:
+chan_setbank 11
+chan_setinstr 95
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_dudes:
+chan_setbank 11
+chan_setinstr 96
+chan_setlayer 0, .layer_new_sound
+chan_end
 
 .sound_mario_jump_hoo:
 chan_setbank 8

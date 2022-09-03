@@ -259,6 +259,241 @@
             "release_rate": 208,
             "envelope": "envelope0",
             "sound": "31_hasta_la_pasta"
+        },
+		"inst50": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "32_fuck_you"
+        },
+		"inst51": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "33_you_fuckin_dick"
+        },
+		"inst52": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "34_allways_naysaying"
+        },
+		"inst53": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "35_everything_I_create"
+        },
+		"inst54": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "36_you_create_something"
+        },
+		"inst55": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "37_like_inward_signing"
+        },
+		"inst56": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "38_you_fucking_shit"
+        },
+		"inst57": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "39_sit_in_your_tower"
+        },
+		"inst58": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "3A_whats_funny"
+        },
+		"inst59": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "3B_you_fucking_bitch"
+        },
+		"inst60": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "3C_fucking_fuck_yeah"
+        },
+		"inst61": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "3D_fuckin_cockass"
+        },
+		"inst62": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "3E_shut_up"
+        },
+		"inst63": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "3F_you_peice_of_shit"
+        },
+		"inst64": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "40_green_and_scally"
+        },
+		"inst65": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "41_deep_spagetti"
+        },
+		"inst66": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "42_your_not_groovy"
+        },
+		"inst67": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "43_your_a_nerd"
+        },
+		"inst68": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "44_meat_sauce"
+        },
+		"inst69": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "45_hey_I_gotta"
+        },
+		"inst70": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "46_bodacios_idea"
+        },
+		"inst71": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "47_mushroom"
+        },
+		"inst72": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "48_princess"
+        },
+		"inst73": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "49_I_shrunk"
+        },
+		"inst74": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "4A_the_mario_brothers"
+        },
+		"inst75": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "4B_never_make_it"
+        },
+		"inst76": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "4C_why_dont_you_just"
+        },
+		"inst77": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "4D_give_up_right_now"
+        },
+		"inst78": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "4E_no"
+        },
+		"inst79": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "4F_ive_got_to_try"
+        },
+		"inst80": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "50_even_if_its"
+        },
+		"inst81": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "51_by_myself"
+        },
+		"inst82": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "52_your_a_fool"
+        },
+		"inst83": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "53_a_fool"
+        },
+		"inst84": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "54_starman"
+        },
+		"inst85": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "55_starbright"
+        },
+		"inst86": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "56_give_me_pasta_power"
+        },
+		"inst87": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "57_give_me_pasta_might"
+        },
+		"inst88": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "58_spagetii"
+        },
+		"inst89": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "59_ravioli"
+        },
+		"inst90": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "5A_macorni"
+        },
+		"inst91": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "5B_tortolini"
+        },
+		"inst92": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "5C_moscicheli"
+        },
+		"inst93": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "5D_linguine"
+        },
+		"inst94": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "5E_garlic_ice_cream"
+        },
+			"inst95": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "5F_so_much_for_the_great_escape"
+        },
+			"inst96": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "60_dudes"
         }
     },
     "instrument_list": [
@@ -311,6 +546,53 @@
 		"inst46",
 		"inst47",
 		"inst48",
-		"inst49"
+		"inst49",
+		"inst50",
+		"inst51",
+		"inst52",
+		"inst53",
+		"inst54",
+		"inst55",
+		"inst56",
+		"inst57",
+		"inst58",
+		"inst59",
+		"inst60",
+		"inst61",
+		"inst62",
+		"inst63",
+		"inst64",
+		"inst65",
+		"inst66",
+		"inst67",
+		"inst68",
+		"inst69",
+		"inst70",
+		"inst71",
+		"inst72",
+		"inst73",
+		"inst74",
+		"inst75",
+		"inst76",
+		"inst77",
+		"inst78",
+		"inst79",
+		"inst80",
+		"inst81",
+		"inst82",
+		"inst83",
+		"inst84",
+		"inst85",
+		"inst86",
+		"inst87",
+		"inst88",
+		"inst89",
+		"inst90",
+		"inst91",
+		"inst92",
+		"inst93",
+		"inst94",
+		"inst95",
+		"inst96"
     ]
 }

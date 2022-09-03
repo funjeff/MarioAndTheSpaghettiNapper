@@ -2,18 +2,20 @@
 
 void bhv_1up_interact(void) {
     if (obj_check_if_collided_with_object(o, gMarioObject)) {
-        play_sound(SOUND_GENERAL_COLLECT_1UP, gGlobalSoundSource);
+        play_sound(SOUND_CUTSCENE_SO_MUCH_FOR_THE_GREAT_ESCAPE, gGlobalSoundSource);
 #ifdef MUSHROOMS_HEAL
         gMarioState->healCounter   = 31;
 #ifdef BREATH_METER
         gMarioState->breathCounter = 31;
 #endif
 #endif
-        gMarioState->numLives++;
+        gMarioState->hurtCounter = 31;
+        gMarioState->dudeCounter = 172;
 #ifdef SAVE_NUM_LIVES
         save_file_set_num_lives(gMarioState->numLives);
 #endif
         o->activeFlags = ACTIVE_FLAG_DEACTIVATED;
+        gMarioState->bigBallCamera = 0;
 #if ENABLE_RUMBLE
         queue_rumble_data(5, 80);
 #endif
@@ -25,6 +27,14 @@ void bhv_1up_common_init(void) {
     o->oGravity = 3.0f;
     o->oFriction = 1.0f;
     o->oBuoyancy = 1.0f;
+}
+
+void bhv_1up_toad_init(void) {
+    o->oMoveAnglePitch = -0x4000;
+    o->oGravity = 3.0f;
+    o->oFriction = 1.0f;
+    o->oBuoyancy = 1.0f;
+    cur_obj_scale(4.0f);
 }
 
 void bhv_1up_init(void) {
@@ -54,9 +64,9 @@ void one_up_loop_in_air(void) {
 }
 
 void pole_1up_move_towards_mario(void) {
-    f32 dx = gMarioObject->header.gfx.pos[0] - o->oPosX;
-    f32 dy = gMarioObject->header.gfx.pos[1] - o->oPosY + 120.0f;
-    f32 dz = gMarioObject->header.gfx.pos[2] - o->oPosZ;
+    f32 dx = gMarioObject->oPosX - o->oPosX;
+    f32 dy = gMarioObject->oPosY - o->oPosY + 120.0f;
+    f32 dz = gMarioObject->oPosZ - o->oPosZ;
     s16 targetPitch = atan2s(sqrtf(sqr(dx) + sqr(dz)), dy);
 
     obj_turn_toward_object(o, gMarioObject, O_MOVE_ANGLE_YAW_INDEX, 0x1000);
@@ -65,7 +75,9 @@ void pole_1up_move_towards_mario(void) {
     o->oVelY = sins(o->oMoveAnglePitch) * 30.0f;
     o->oForwardVel = coss(o->oMoveAnglePitch) * 30.0f;
 
+
     bhv_1up_interact();
+
 }
 
 void one_up_move_away_from_mario(s16 collisionFlags) {
@@ -294,7 +306,6 @@ void bhv_1up_hidden_in_pole_loop(void) {
                 o->oVelY = 40.0f;
                 o->oAction = MUSHROOM_ACT_LOOP_IN_AIR;
                 o->header.gfx.node.flags &= ~GRAPH_RENDER_INVISIBLE;
-                play_sound(SOUND_GENERAL2_1UP_APPEAR, gGlobalSoundSource);
             }
             break;
 
@@ -305,9 +316,6 @@ void bhv_1up_hidden_in_pole_loop(void) {
 
         case MUSHROOM_ACT_LOOP_IN_AIR:
             object_step();
-            if (o->oTimer > 17) {
-                spawn_object(o, MODEL_NONE, bhvSparkleSpawn);
-            }
 
             one_up_loop_in_air();
 

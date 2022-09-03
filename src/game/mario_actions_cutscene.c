@@ -701,7 +701,7 @@ s32 act_standing_death(struct MarioState *m) {
         return set_mario_action(m, ACT_SUFFOCATION, 0);
     }
 
-    play_sound_if_no_flag(m, SOUND_MARIO_DYING, MARIO_ACTION_SOUND_PLAYED);
+ //   play_sound_if_no_flag(m, SOUND_MARIO_DYING, MARIO_ACTION_SOUND_PLAYED);
     common_death_handler(m, MARIO_ANIM_DYING_FALL_OVER, 80);
     if (m->marioObj->header.gfx.animInfo.animFrame == 77) {
         play_mario_landing_sound(m, SOUND_ACTION_TERRAIN_BODY_HIT_GROUND);
@@ -710,19 +710,19 @@ s32 act_standing_death(struct MarioState *m) {
 }
 
 s32 act_electrocution(struct MarioState *m) {
-    play_sound_if_no_flag(m, SOUND_MARIO_DYING, MARIO_ACTION_SOUND_PLAYED);
+ //   play_sound_if_no_flag(m, SOUND_MARIO_DYING, MARIO_ACTION_SOUND_PLAYED);
     common_death_handler(m, MARIO_ANIM_ELECTROCUTION, 43);
     return FALSE;
 }
 
 s32 act_suffocation(struct MarioState *m) {
-    play_sound_if_no_flag(m, SOUND_MARIO_DYING, MARIO_ACTION_SOUND_PLAYED);
+  //  play_sound_if_no_flag(m, SOUND_MARIO_DYING, MARIO_ACTION_SOUND_PLAYED);
     common_death_handler(m, MARIO_ANIM_SUFFOCATING, 86);
     return FALSE;
 }
 
 s32 act_death_on_back(struct MarioState *m) {
-    play_sound_if_no_flag(m, SOUND_MARIO_DYING, MARIO_ACTION_SOUND_PLAYED);
+ //   play_sound_if_no_flag(m, SOUND_MARIO_DYING, MARIO_ACTION_SOUND_PLAYED);
     if (common_death_handler(m, MARIO_ANIM_DYING_ON_BACK, 54) == 40) {
         play_mario_heavy_landing_sound(m, SOUND_ACTION_TERRAIN_BODY_HIT_GROUND);
     }
@@ -730,7 +730,7 @@ s32 act_death_on_back(struct MarioState *m) {
 }
 
 s32 act_death_on_stomach(struct MarioState *m) {
-    play_sound_if_no_flag(m, SOUND_MARIO_DYING, MARIO_ACTION_SOUND_PLAYED);
+ //   play_sound_if_no_flag(m, SOUND_MARIO_DYING, MARIO_ACTION_SOUND_PLAYED);
     if (common_death_handler(m, MARIO_ANIM_DYING_ON_STOMACH, 37) == 37) {
         play_mario_heavy_landing_sound(m, SOUND_ACTION_TERRAIN_BODY_HIT_GROUND);
     }
@@ -758,7 +758,7 @@ s32 act_quicksand_death(struct MarioState *m) {
 }
 
 s32 act_eaten_by_bubba(struct MarioState *m) {
-    play_sound_if_no_flag(m, SOUND_MARIO_DYING, MARIO_ACTION_SOUND_PLAYED);
+ //   play_sound_if_no_flag(m, SOUND_MARIO_DYING, MARIO_ACTION_SOUND_PLAYED);
     set_mario_animation(m, MARIO_ANIM_A_POSE);
     m->marioObj->header.gfx.node.flags &= ~GRAPH_RENDER_ACTIVE;
 #ifdef BREATH_METER
@@ -1810,6 +1810,196 @@ static s32 act_intro_cutscene(struct MarioState *m) {
             intro_cutscene_set_mario_to_idle(m);
             break;
     }
+    return FALSE;
+}
+
+
+
+
+static s32 act_toad_cutscene(struct MarioState *m) {
+
+	m->actionTimer++;
+
+
+	u32 HEY_I_GOTTA_TIME = 1;
+	u32 BODACIOS_IDEA_TIME = HEY_I_GOTTA_TIME + 50;
+	u32 MUSHROOM_TIME = BODACIOS_IDEA_TIME + 60;
+	u32 PRINCESS_TIME = MUSHROOM_TIME + 23;
+	u32 I_SHRUNK_TIME = PRINCESS_TIME + 40;
+	u32 THE_MARIO_BROTHERS_TIME = I_SHRUNK_TIME + 50;
+	u32 NEVER_MAKE_IT_TIME = THE_MARIO_BROTHERS_TIME + 60;
+	u32 WHY_DONT_YOU_TIME = NEVER_MAKE_IT_TIME + 35;
+	u32 GIVE_UP_RIGHT_NOW_TIME = WHY_DONT_YOU_TIME + 25;
+	u32 NO_TIME = GIVE_UP_RIGHT_NOW_TIME + 35;
+	u32 I_HAVE_TO_TRY_TIME = NO_TIME +15;
+	u32 EVEN_IF_ITS_TIME = I_HAVE_TO_TRY_TIME + 30;
+	u32 BY_MYSELF_TIME = EVEN_IF_ITS_TIME + 25;
+	u32 YOUR_A_FOOL_TIME = BY_MYSELF_TIME + 30;
+	u32 A_FOOL_TIME = YOUR_A_FOOL_TIME + 30;
+	u32 STARMAN_TIME = A_FOOL_TIME + 30;
+	u32 STARBRIGHT_TIME = STARMAN_TIME + 30;
+	u32 GIVE_ME_PASTA_POWER_TIME = STARBRIGHT_TIME + 30;
+	u32 GIVE_ME_PASTA_MIGHT_TIME = GIVE_ME_PASTA_POWER_TIME + 40;
+	u32 SPAGETII_TIME = GIVE_ME_PASTA_MIGHT_TIME + 40;
+	u32 RAVIOLI_TIME =  SPAGETII_TIME + 25;
+	u32 MACORNI_TIME =  RAVIOLI_TIME + 25;
+	u32 TORTOLINI_TIME =  MACORNI_TIME + 25;
+	u32 MOSCOCHELI_TIME = TORTOLINI_TIME + 25;
+	u32 LINGUINE_TIME =  MOSCOCHELI_TIME + 25;
+	u32 GARLIC_ICE_CREAM_TIME =  LINGUINE_TIME + 25;
+
+
+	if (m->actionTimer == HEY_I_GOTTA_TIME){
+		play_sound(SOUND_CUTSCENE_HEY_I_GOTTA, m->marioObj->header.gfx.pos);
+		m->statusForCamera->cameraEvent = CAM_EVENT_TOAD_CUTSCENE;
+	}
+
+	if (m->actionTimer == BODACIOS_IDEA_TIME){
+		play_sound(SOUND_CUTSCENE_BODACIOS_IDEA, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == MUSHROOM_TIME){
+		uintptr_t *behaviorAddr = segmented_to_virtual(bhvCutsceneProp);
+		struct ObjectNode *listHead = &gObjectLists[get_object_list_from_behavior(behaviorAddr)];
+
+		struct Object *toadProp = (struct Object *) listHead->next;
+
+		while (toadProp != (struct Object *) listHead) {
+			if (toadProp->behavior == behaviorAddr) {
+				break;
+			}
+			toadProp = (struct Object *) toadProp->header.next;
+		}
+
+		obj_scale(toadProp, 8.0);
+
+		m->usedObj = toadProp;
+
+		play_sound(SOUND_CUTSCENE_MUSHROOM, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == PRINCESS_TIME){
+		play_sound(SOUND_CUTSCENE_PRINCESS, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == I_SHRUNK_TIME){
+		play_sound(SOUND_CUTSCENE_I_SHRUNK, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == THE_MARIO_BROTHERS_TIME){
+		play_sound(SOUND_CUTSCENE_THE_MARIO_BROHTERS, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == NEVER_MAKE_IT_TIME){
+		play_sound(SOUND_CUTSCENE_NEVER_MAKE_IT, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == WHY_DONT_YOU_TIME){
+		play_sound(SOUND_CUTSCENE_WHY_DONT_YOU_JUST, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == GIVE_UP_RIGHT_NOW_TIME){
+		play_sound(SOUND_CUTSCENE_GIVE_UP_RIGHT_NOW, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == NO_TIME){
+		play_sound(SOUND_CUTSCENE_NO, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == I_HAVE_TO_TRY_TIME){
+		play_sound(SOUND_CUTSCENE_I_HAVE_TO_TRY, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == EVEN_IF_ITS_TIME){
+		play_sound(SOUND_CUTSCENE_EVEN_IF_ITS, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == BY_MYSELF_TIME){
+		play_sound(SOUND_CUTSCENE_BY_MYSELF, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == YOUR_A_FOOL_TIME){
+		play_sound(SOUND_CUTSCENE_YOUR_A_FOOL, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == A_FOOL_TIME){
+		play_sound(SOUND_CUTSCENE_A_FOOL, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer > STARMAN_TIME && m->actionTimer < SPAGETII_TIME){
+		m->marioObj->header.gfx.pos[1] = m->marioObj->header.gfx.pos[1] + 5;
+	}
+
+	if (m->actionTimer == STARMAN_TIME){
+		play_sound(SOUND_CUTSCENE_STARMAN, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == STARBRIGHT_TIME){
+		play_sound(SOUND_CUTSCENE_STARBRIGHT, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == GIVE_ME_PASTA_POWER_TIME){
+		play_sound(SOUND_CUTSCENE_GIVE_ME_PASTA_POWER, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == GIVE_ME_PASTA_MIGHT_TIME){
+		play_sound(SOUND_CUTSCENE_GIVE_ME_PASTA_MIGHT, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer > SPAGETII_TIME && m->actionTimer < GARLIC_ICE_CREAM_TIME){
+
+
+		if ((random_float()* 3) > 2){
+
+			struct Object * luigi = spawn_object_relative(0,(random_u16()%1000)- 500,0,(random_u16()%1000) - 500, gMarioObject, MODEL_CUTSCENE_LUIGI   ,bhvCutsceneProp);
+
+			obj_set_angle(luigi,luigi->oFaceAnglePitch+ (random_float()* 32000),luigi->oFaceAngleYaw + (random_float()* 32000), luigi->oFaceAngleRoll + (random_float()* 32000));
+
+			luigi->oPosY = luigi->oPosY + (m->marioObj->header.gfx.pos[1] - m->marioObj->oPosY);
+
+			luigi->cutscenePropMove = 2;
+			luigi->cutscenePropMoveOnState = 0 + 1;
+			luigi->cutscenePropObjMoveSpeed = 20;
+
+			luigi->cutscenePropDoesentAdvanceCutscene = 1;
+			luigi->cutscenePropDisableGoodMovement = 1;
+			luigi->cutscenePropDoesDeleteItself = 1;
+
+		}
+	}
+
+	if (m->actionTimer == SPAGETII_TIME){
+		play_sound(SOUND_CUTSCENE_SPAGETII, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == RAVIOLI_TIME){
+		play_sound(SOUND_CUTSCENE_RAVIOLI, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == MACORNI_TIME){
+		play_sound(SOUND_CUTSCENE_MACORNI, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == TORTOLINI_TIME){
+		play_sound(SOUND_CUTSCENE_TORTOLINI, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == MOSCOCHELI_TIME){
+		play_sound(SOUND_CUTSCENE_MOSCICHELI, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == LINGUINE_TIME){
+		play_sound(SOUND_CUTSCENE_LINGUINE, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == GARLIC_ICE_CREAM_TIME){
+		play_sound(SOUND_CUTSCENE_GARLIC_ICE_CREAM, m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == GARLIC_ICE_CREAM_TIME + 30){
+		level_trigger_warp(gMarioState, WARP_OP_WARP_OBJECT);
+	}
+
     return FALSE;
 }
 
@@ -3520,6 +3710,7 @@ s32 mario_execute_cutscene_action(struct MarioState *m) {
         case ACT_FIRST_CUTSCENE:             cancel = act_first_cutscene(m);             break;
         case ACT_EARTHWAKE_CUTSCENE:         cancel = act_earthwake_cutscene(m);         break;
         case ACT_POST_EARTHWAKE_CUTSCENE:    cancel = post_earthwake_cutscene(m);        break;
+        case ACT_TOAD_CUTSCENE:              cancel = act_toad_cutscene(m);              break;
         case ACT_STAR_DANCE_EXIT:            cancel = act_star_dance(m);                 break;
         case ACT_STAR_DANCE_NO_EXIT:         cancel = act_star_dance(m);                 break;
         case ACT_STAR_DANCE_WATER:           cancel = act_star_dance_water(m);           break;

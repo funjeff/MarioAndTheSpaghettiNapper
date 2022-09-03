@@ -644,7 +644,7 @@ void apply_gravity(struct MarioState *m) {
                 m->vel[1] = -37.5f;
             }
         }
-    } if (m->action == ACT_RIDING_SHELL_LAUNCH){
+    } else if (m->action == ACT_RIDING_SHELL_LAUNCH){
     	m->vel[1] -= 4.0f;
     	 if (m->vel[1] < -25.0f) {
     	     m->vel[1] = -25.0f;

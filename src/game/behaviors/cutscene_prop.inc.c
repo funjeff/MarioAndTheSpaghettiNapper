@@ -11,7 +11,7 @@
 
 
 void bhv_cutscene_prop_loop(void) {
-    if (gMarioState->action == ACT_FIRST_CUTSCENE || gMarioState->action ==ACT_POST_BOWSER_CUTSCENE ||gMarioState->action == ACT_EARTHWAKE_CUTSCENE){
+    if (gMarioState->action == ACT_FIRST_CUTSCENE || gMarioState->action ==ACT_POST_BOWSER_CUTSCENE ||gMarioState->action == ACT_EARTHWAKE_CUTSCENE || gMarioState->action == ACT_TOAD_CUTSCENE){
 
 		if (gMarioState->actionArg + 1 == o->cutscenePropMoveOnState) {
 
@@ -60,12 +60,15 @@ void bhv_cutscene_prop_loop(void) {
 				}
 
 				if (xDone && yDone){
-					if (o->cutscenePropDoesAdvanceCutscene){
+					if (!o->cutscenePropDoesentAdvanceCutscene){
 						 gMarioState->actionState = 0;
 					 	 gMarioState->actionTimer = 0;
 					 	 gMarioState->actionArg++;
 					}
 					if (o->cutscenePropDoesDeleteItself){
+						if (o->cutscenePropSpawnSparkles){
+							spawn_object(o, MODEL_NONE, bhvSparkleSpawn);
+						}
 						obj_mark_for_deletion(o);
 						o->cutscenePropMoveOnState = 0;
 					}
@@ -89,38 +92,57 @@ void bhv_cutscene_prop_loop(void) {
 				f32 ydistNew = xdistNew * newSlope;
 
 				if (o->oPosX > gMarioObject->header.gfx.pos[0] - o->cutscenePropObjXDisplace){
-					o->oPosX = o->header.gfx.pos[0] - xdistNew;
+					if (!o->cutscenePropDisableGoodMovement){
+						o->oPosX = o->header.gfx.pos[0] - xdistNew;
+					} else {
+						o->oPosX = o->oPosX - o->cutscenePropObjMoveSpeed;
+					}
 					if (o->oPosX < gMarioObject->header.gfx.pos[0]- o->cutscenePropObjXDisplace){
 							o->oPosX = gMarioObject->header.gfx.pos[0] - o->cutscenePropObjXDisplace;
 							xDone = TRUE;
 					}
 				} else {
-					o->oPosX = o->oPosX + xdistNew;
+					if (!o->cutscenePropDisableGoodMovement){
+						o->oPosX = o->header.gfx.pos[0] + xdistNew;
+					} else {
+						o->oPosX = o->oPosX + o->cutscenePropObjMoveSpeed;
+					}
 					if (o->oPosX > gMarioObject->header.gfx.pos[0] - o->cutscenePropObjXDisplace){
 						o->oPosX = gMarioObject->header.gfx.pos[0] - o->cutscenePropObjXDisplace;
 						xDone = TRUE;
 					}
 				}
 					if (o->oPosZ > gMarioObject->header.gfx.pos[2] - o->cutscenePropObjYDisplace){
-					o->oPosZ= o->oPosZ - ydistNew;
+						if (!o->cutscenePropDisableGoodMovement){
+							o->oPosZ = o->header.gfx.pos[2] - ydistNew;
+						} else {
+							o->oPosZ = o->oPosZ - o->cutscenePropObjMoveSpeed;
+						}
 					if (o->oPosZ < gMarioObject->header.gfx.pos[2] - o->cutscenePropObjYDisplace){
 						o->oPosZ = gMarioObject->header.gfx.pos[2] - o->cutscenePropObjYDisplace;
 						yDone = TRUE;
 					}
 				} else {
-					o->oPosZ = o->oPosZ + ydistNew;
+					if (!o->cutscenePropDisableGoodMovement){
+						o->oPosZ = o->header.gfx.pos[2] + ydistNew;
+					} else {
+						o->oPosZ = o->oPosZ + o->cutscenePropObjMoveSpeed;
+					}
 					if (o->oPosZ > gMarioObject->header.gfx.pos[2] - o->cutscenePropObjYDisplace){
 						o->oPosZ = gMarioObject->header.gfx.pos[2]- o->cutscenePropObjYDisplace;
 						yDone = TRUE;
 					}
 				}
 				if (xDone && yDone){
-					if (o->cutscenePropDoesAdvanceCutscene){
+					if (!o->cutscenePropDoesentAdvanceCutscene){
 						 gMarioState->actionState = 0;
 					 	 gMarioState->actionTimer = 0;
 					 	 gMarioState->actionArg++;
 					}
 					if (o->cutscenePropDoesDeleteItself){
+						if (o->cutscenePropSpawnSparkles){
+							spawn_object(o, MODEL_NONE, bhvSparkleSpawn);
+						}
 						obj_mark_for_deletion(o);
 						o->cutscenePropMoveOnState = 0;
 					}

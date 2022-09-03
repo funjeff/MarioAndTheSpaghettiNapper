@@ -499,6 +499,8 @@ struct MarioState {
    //Jeffreys mario state fields begin
 
            u8 lHeld;
+           u8 bigBallCamera;
+           u8 dudeCounter;
 };
 
 #endif // TYPES_H

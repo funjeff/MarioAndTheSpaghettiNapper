@@ -540,9 +540,11 @@ extern const BehaviorScript bhvEndBirds1[];
 extern const BehaviorScript bhvEndBirds2[];
 extern const BehaviorScript bhvIntroScene[];
 extern const BehaviorScript bhvUnusedFakeStar[];
-extern const BehaviorScript bhvWarpOneWay[];
+
 
 //custom
+
+extern const BehaviorScript bhvWarpOneWay[];
 
 extern const BehaviorScript bhvNightmareChunk[];
 extern const BehaviorScript bhvBigNightmareChunk[];
@@ -561,5 +563,7 @@ extern const BehaviorScript bhvBombableDoor[];
 extern const BehaviorScript bhvEarthwakeBlock[];
 
 extern const BehaviorScript bhvCutsceneTrigger[];
+
+extern const BehaviorScript bhvDestroyableBlock[];
 
 #endif // BEHAVIOR_DATA_H

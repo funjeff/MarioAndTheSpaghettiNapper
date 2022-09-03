@@ -33,7 +33,7 @@ void play_far_fall_sound(struct MarioState *m) {
     u32 action = m->action;
     if (!(action & ACT_FLAG_INVULNERABLE) && action != ACT_TWIRLING && action != ACT_FLYING
         && !(m->flags & MARIO_FALL_SOUND_PLAYED)) {
-        if (m->peakHeight - m->pos[1] > FALL_DAMAGE_HEIGHT_SMALL && m->action != ACT_RIDING_SHELL_JUMP && m->action != ACT_RIDING_SHELL_LAUNCH) {
+        if (m->peakHeight - m->pos[1] > FALL_DAMAGE_HEIGHT_SMALL && m->action != ACT_RIDING_SHELL_JUMP && m->action != ACT_RIDING_SHELL_LAUNCH && m->action != ACT_RIDING_BIG_SHELL_JUMP) {
             play_sound(SOUND_MARIO_WAAAOOOW, m->marioObj->header.gfx.cameraToObject);
             m->flags |= MARIO_FALL_SOUND_PLAYED;
         }
@@ -802,6 +802,33 @@ s32 act_riding_shell_air(struct MarioState *m) {
     }
 
     m->marioObj->header.gfx.pos[1] += 180.0f;
+    return FALSE;
+}
+
+
+s32 act_riding_big_shell_air(struct MarioState *m) {
+    play_mario_sound(m, SOUND_ACTION_TERRAIN_JUMP, 0);
+    set_mario_animation(m, MARIO_ANIM_JUMP_RIDING_SHELL);
+
+    update_air_without_turn(m);
+
+    switch (perform_air_step(m, 0)) {
+        case AIR_STEP_LANDED:
+            set_mario_action(m, ACT_RIDING_BIG_SHELL_GROUND, 1);
+            break;
+
+        case AIR_STEP_HIT_WALL:
+            mario_set_forward_vel(m, 0.0f);
+            break;
+
+        case AIR_STEP_HIT_LAVA_WALL:
+            lava_boost_on_wall(m);
+            break;
+    }
+
+
+
+    m->marioObj->header.gfx.pos[1] += 800.0f;
     return FALSE;
 }
 
@@ -2256,6 +2283,8 @@ s32 mario_execute_airborne_action(struct MarioState *m) {
         case ACT_LONG_JUMP:            cancel = act_long_jump(m);            break;
         case ACT_RIDING_SHELL_JUMP:
         case ACT_RIDING_SHELL_FALL:    cancel = act_riding_shell_air(m);     break;
+        case ACT_RIDING_BIG_SHELL_JUMP:
+        case ACT_RIDING_BIG_SHELL_FALL: cancel = act_riding_big_shell_air(m); break;
         case ACT_RIDING_SHELL_LAUNCH:  cancel = act_riding_shell_launched(m);break;
         case ACT_SWINGING_ROPE_JUMP:
         case ACT_SWINGING_ROPE_FALL:   cancel = act_swinging_rope_air(m);    break;

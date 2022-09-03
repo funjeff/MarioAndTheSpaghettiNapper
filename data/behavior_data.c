@@ -411,7 +411,6 @@ const BehaviorScript bhvCutsceneTrigger[] = {
 
 const BehaviorScript bhvCutsceneProp[] = {
 	BEGIN(OBJ_LIST_LEVEL),
-	SET_INT(cutscenePropDoesAdvanceCutscene, 1),
 	OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
 	SET_OBJ_PHYSICS(/*Wall hitbox radius*/ 30, /*Gravity*/ -400, /*Bounciness*/ -50, /*Drag strength*/ 1000, /*Friction*/ 1000, /*Buoyancy*/ 200, /*Unused*/ 0, 0),
 	BEGIN_LOOP(),
@@ -493,6 +492,14 @@ const BehaviorScript bhvBombableDoor[] = {
         CALL_NATIVE(bhv_bombable_door_loop),
 		CALL_NATIVE(load_object_collision_model),
     END_LOOP(),
+};
+
+const BehaviorScript bhvDestroyableBlock[] = {
+	BEGIN(OBJ_LIST_LEVEL),
+	OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+	BEGIN_LOOP(),
+	    CALL_NATIVE(bhv_destroyable_block_loop),
+	END_LOOP(),
 };
 
 const BehaviorScript bhvStarDoor[] = {
@@ -2118,7 +2125,6 @@ const BehaviorScript bhvBowserTailAnchor[] = {
 const BehaviorScript bhvBowser[] = {
     BEGIN(OBJ_LIST_GENACTOR),
     OR_INT(oFlags, (OBJ_FLAG_COMPUTE_ANGLE_TO_MARIO | OBJ_FLAG_HOLDABLE | OBJ_FLAG_ACTIVE_FROM_AFAR | OBJ_FLAG_COMPUTE_DIST_TO_MARIO | OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
-    SET_INT(oInteractType, INTERACT_GRABBABLE),
     SET_HITBOX(/*Radius*/ 400, /*Height*/ 400),
     DROP_TO_FLOOR(),
     SET_HOME(),
@@ -4852,9 +4858,9 @@ const BehaviorScript bhvHidden1upInPole[] = {
     BEGIN(OBJ_LIST_LEVEL),
     OR_INT(oFlags, (OBJ_FLAG_COMPUTE_ANGLE_TO_MARIO | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
     BILLBOARD(),
-    SET_HITBOX_WITH_OFFSET(/*Radius*/ 30, /*Height*/ 30, /*Downwards offset*/ 0),
-    SET_FLOAT(oGraphYOffset, 30),
-    CALL_NATIVE(bhv_1up_common_init),
+    SET_HITBOX_WITH_OFFSET(/*Radius*/ 30, /*Height*/ 200, /*Downwards offset*/ 0),
+    SET_FLOAT(oGraphYOffset, 800),
+    CALL_NATIVE(bhv_1up_toad_init),
     BEGIN_LOOP(),
         SET_INT(oIntangibleTimer, 0),
         CALL_NATIVE(bhv_1up_hidden_in_pole_loop),
