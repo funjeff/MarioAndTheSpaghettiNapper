@@ -118,3 +118,5 @@ UNUSED static const u64 binid_22 = 22;
 #include "earthwake_foot/model.inc.c"
 
 #include "earthwake_block_collision/collision.inc.c"
+#include "big_massif/model.inc.c"
+#include "lil_massif/model.inc.c"

@@ -566,4 +566,7 @@ extern const BehaviorScript bhvCutsceneTrigger[];
 
 extern const BehaviorScript bhvDestroyableBlock[];
 
+extern const BehaviorScript bhvMassif[];
+
+
 #endif // BEHAVIOR_DATA_H

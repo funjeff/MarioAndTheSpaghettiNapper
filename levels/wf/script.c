@@ -34,7 +34,7 @@ const LevelScript level_wf_entry[] = {
 	LOAD_YAY0(0x08, _common0_yay0SegmentRomStart, _common0_yay0SegmentRomEnd), 
 	LOAD_RAW(0x0F, _common0_geoSegmentRomStart, _common0_geoSegmentRomEnd), 
 	LOAD_MIO0(0x7, _wf_segment_7SegmentRomStart, _wf_segment_7SegmentRomEnd), 
-	LOAD_MIO0(0xa, _water_skybox_mio0SegmentRomStart, _water_skybox_mio0SegmentRomEnd), 
+	LOAD_MIO0(0xa, _clouds_skybox_mio0SegmentRomStart, _clouds_skybox_mio0SegmentRomEnd), 
 	ALLOC_LEVEL_POOL(),
 	MARIO(MODEL_MARIO, 0x00000001, bhvMario), 
 	JUMP_LINK(script_func_global_1), 
@@ -74,7 +74,7 @@ const LevelScript level_wf_entry[] = {
 		MARIO_POS(0x03, -174, -223, -206, 479),
 		TERRAIN(wf_area_3_collision),
 		MACRO_OBJECTS(wf_area_3_macro_objs),
-		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_GRASS),
+		SET_BACKGROUND_MUSIC(0x00, SEQ_NEVER_LET_UP),
 		TERRAIN_TYPE(TERRAIN_GRASS),
 		/* Fast64 begin persistent block [area commands] */
 		/* Fast64 end persistent block [area commands] */
@@ -83,7 +83,7 @@ const LevelScript level_wf_entry[] = {
 	AREA(2, wf_area_2),
 		WARP_NODE(0x0A, LEVEL_BOB, 0x01, 0x0A, WARP_NO_CHECKPOINT),
 		WARP_NODE(0x01, LEVEL_WF, 0x02, 0x02, WARP_NO_CHECKPOINT),
-		WARP_NODE(0x02, LEVEL_BOB, 0x01, 0x0A, WARP_NO_CHECKPOINT),
+		WARP_NODE(0x02, LEVEL_WF, 0x02, 0x0A, WARP_NO_CHECKPOINT),
 		WARP_NODE(0xF0, LEVEL_WF, 0x02, 0x02, WARP_NO_CHECKPOINT),
 		WARP_NODE(0xF1, LEVEL_WF, 0x02, 0x02, WARP_NO_CHECKPOINT),
 		WARP_NODE(0x03, LEVEL_WF, 0x03, 0x0A, WARP_NO_CHECKPOINT),
@@ -117,7 +117,7 @@ const LevelScript level_wf_entry[] = {
 		MARIO_POS(0x02, -78, -205, 276, -53),
 		TERRAIN(wf_area_2_collision),
 		MACRO_OBJECTS(wf_area_2_macro_objs),
-		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_GRASS),
+		SET_BACKGROUND_MUSIC(0x00, SEQ_NEVER_LET_UP),
 		TERRAIN_TYPE(TERRAIN_GRASS),
 		/* Fast64 begin persistent block [area commands] */
 		/* Fast64 end persistent block [area commands] */
@@ -151,7 +151,7 @@ const LevelScript level_wf_entry[] = {
 		OBJECT(MODEL_TALKABLE_LUIGI, 137, 632, -192, 0, 0, 0, (2 << 24) | (1 << 16), bhvCutsceneProp),
 		TERRAIN(wf_area_1_collision),
 		MACRO_OBJECTS(wf_area_1_macro_objs),
-		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_GRASS),
+		STOP_MUSIC(0),
 		TERRAIN_TYPE(TERRAIN_GRASS),
 		/* Fast64 begin persistent block [area commands] */
 		/* Fast64 end persistent block [area commands] */

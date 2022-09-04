@@ -704,31 +704,56 @@ come up with an excuse!\n\
 Ill leave this to you"))
 
 DEFINE_DIALOG(DIALOG_049, 1, 5, 30, 200, _("\
-Remember that tricky Wall\n\
-Kick jump? It's a\n\
-technique you'll have to\n\
-master in order to reach\n\
-high places.\n\
-Use it to jump from wall\n\
-to wall. Press the\n\
-Control Stick in the\n\
-direction you want to\n\
-bounce to gain momentum.\n\
-Practice makes perfect!"))
+9998, 9999, 10000!\n\
+ha puny exercise\n\
+IS NOTHING!\n\
+beef triumps again\n\
+time for 3000 more\n\
+whats this puny\n\
+plumber doing here\n\
+\n\
+\n\
+he lacks the beef!\n\
+your spaghetti\n\
+is missing?\n\
+\n\
+\n\
+\n\
+ha! I laugh at your\n\
+spaghetti\n\
+\n\
+a meal for those\n\
+lacking beef\n\
+if your puny\n\
+beefless meal\n\
+is here it must\n\
+be past that beefy\n\
+purple rock\n\
+Rock is too beefy.\n\
+Even for big massif.\n\
+\n\
+\n\
+\n\
+Rock is cheating!\n\
+drawing its beef\n\
+from smaller \n\
+beefless rocks\n\
+\n\
+without those even\n\
+shrimp like you\n\
+could beef it up\n\
+\n\
+\n\
+3 puny rocks hide\n\
+behind 3 warp pipes\n\
+beef those and the\n\
+big one gets BEEFED\n\
+"))
 
-DEFINE_DIALOG(DIALOG_050, 1, 4, 30, 200, _("\
-Hold [Z] to crouch and\n\
-slide down a slope.\n\
-Or press [Z] while in the\n\
-air to Pound the Ground!\n\
-If you stop, crouch, then\n\
-jump, you'll do a\n\
-Backward Somersault!\n\
-Got that?\n\
-There's more. Crouch and\n\
-then jump to do a\n\
-Long Jump! Or crouch and\n\
-walk to...never mind."))
+DEFINE_DIALOG(DIALOG_050, 1, 3, 30, 200, _("\
+BEEF\n\
+\n\
+"))
 
 DEFINE_DIALOG(DIALOG_051, 1, 6, 30, 200, _("\
 Climbing's easy! When you\n\

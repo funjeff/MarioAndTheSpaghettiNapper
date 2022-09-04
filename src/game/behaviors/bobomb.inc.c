@@ -299,7 +299,9 @@ void bobomb_buddy_act_idle(void) {
     // vec3f_copy(&o->oBobombBuddyPosCopyVec, &o->oPosVec);
 
     if (o->oDistanceToMario < 1000.0f) {
-        o->oMoveAngleYaw = approach_s16_symmetric(o->oMoveAngleYaw, o->oAngleToMario, 0x140);
+    	if (!o->oBobombBuddyIsMassif){
+    		o->oMoveAngleYaw = approach_s16_symmetric(o->oMoveAngleYaw, o->oAngleToMario, 0x140);
+    	}
     }
 
     if (o->oInteractStatus == INT_STATUS_INTERACTED) {

@@ -50,3 +50,6 @@
 #include "earthwake_hand/geo.inc.c"
 #include "earthwake_head/geo.inc.c"
 #include "earthwake_foot/geo.inc.c"
+
+#include "big_massif/geo.inc.c"
+#include "lil_massif/geo.inc.c"

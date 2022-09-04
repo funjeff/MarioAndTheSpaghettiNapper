@@ -209,7 +209,8 @@ const LevelScript script_func_global_1[] = {
 	LOAD_MODEL_FROM_GEO(MODEL_EARTHWAKE_BLOCK,         temp_earthwake_block_geo),
 	LOAD_MODEL_FROM_GEO(MODEL_EARTHWAKE_HAND,          eathwake_hand_geo),
 	LOAD_MODEL_FROM_GEO(MODEL_EARTHWAKE_HEAD,          eathwake_head_geo),
-
+	LOAD_MODEL_FROM_GEO(MODEL_BIG_MASSIF,              big_massif_geo),
+	LOAD_MODEL_FROM_GEO(MODEL_LIL_MASSIF,              lil_massif_geo),
     RETURN(),
 };
 

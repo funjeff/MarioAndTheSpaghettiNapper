@@ -371,4 +371,8 @@ extern const Gfx flame_seg6_dl_0601C928[];
 
 #include "earthwake_block_collision/collision_header.h"
 
+#include "big_massif/geo_header.h"
+
+#include "lil_massif/geo_header.h"
+
 #endif

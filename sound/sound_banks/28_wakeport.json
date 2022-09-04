@@ -1,0 +1,104 @@
+{
+    "date": "1996-03-19",
+    "sample_bank": "instruments",
+    "envelopes": {
+        "envelope0": [
+            [2, 32700],
+            [1, 32700],
+            [32700, 29430],
+            "hang"
+        ],
+        "envelope1": [
+            [2, 32700],
+            [205, 0],
+            [1, 0],
+            "hang"
+        ],
+        "envelope2": [
+            [2, 32700],
+            [1, 32700],
+            [32700, 29430],
+            "hang"
+        ],
+        "envelope3": [
+            [6, 32700],
+            [1, 32700],
+            [32700, 29430],
+            "hang"
+        ],
+        "envelope4": [
+            [2, 32700],
+            [1, 32700],
+            [32700, 29430],
+            "hang"
+        ],
+        "envelope5": [
+            [2, 32700],
+            [205, 0],
+            [1, 0],
+            "hang"
+        ],
+        "envelope6": [
+            [2, 32700],
+            [1, 32700],
+            [32700, 29430],
+            "hang"
+        ]
+    },
+    "instruments": {
+        "inst0": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "1A_slap_bass"
+        },
+        "inst1": {
+            "release_rate": 34,
+            "envelope": "envelope1",
+            "sound": "44_grand_piano"
+        },
+        "inst2": {
+            "release_rate": 43,
+            "envelope": "envelope0",
+            "sound": "41_pan_flute"
+        },
+        "inst3": {
+            "release_rate": 15,
+            "normal_range_lo": 27,
+            "normal_range_hi": 46,
+            "envelope": "envelope3",
+            "sound_lo": "23_strings_1",
+            "sound": "24_strings_2",
+            "sound_hi": "25_strings_3"
+        },
+        "inst4": {
+            "release_rate": 43,
+            "normal_range_hi": 47,
+            "envelope": "envelope4",
+            "sound": "46_pizzicato_strings_1",
+            "sound_hi": "47_pizzicato_strings_2"
+        },
+        "inst5": {
+            "release_rate": 10,
+            "envelope": "envelope5",
+            "sound": "21_sine_bass"
+        },
+        "inst6": {
+            "release_rate": 19,
+            "normal_range_lo": 29,
+            "normal_range_hi": 63,
+            "envelope": "envelope0",
+            "sound_lo": "3B_banjo_2",
+            "sound": "3C_acoustic_guitar",
+            "sound_hi": "3D"
+        }
+    },
+    "instrument_list": [
+        "inst0",
+        "inst1",
+        "inst2",
+        "inst3",
+        "inst4",
+        "inst5",
+        "inst6"
+    ]
+}

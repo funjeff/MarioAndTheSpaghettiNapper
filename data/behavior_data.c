@@ -3854,6 +3854,21 @@ const BehaviorScript bhvBobombBuddy[] = {
     END_LOOP(),
 };
 
+const BehaviorScript bhvMassif[] = {
+    BEGIN(OBJ_LIST_GENACTOR),
+    OR_INT(oFlags, (OBJ_FLAG_COMPUTE_ANGLE_TO_MARIO | OBJ_FLAG_HOLDABLE | OBJ_FLAG_COMPUTE_DIST_TO_MARIO | OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    SET_INT(oBobombBuddyRole, 0),
+	SET_INT(oBobombBuddyIsMassif, 1),
+    SET_INTERACT_TYPE(INTERACT_TEXT),
+    SET_HITBOX_WITH_OFFSET(/*Radius*/ 100, /*Height*/ 220,100),
+    SET_HOME(),
+    CALL_NATIVE(bhv_bobomb_buddy_init),
+    BEGIN_LOOP(),
+        SET_INT(oIntangibleTimer, 0),
+        CALL_NATIVE(bhv_bobomb_buddy_loop),
+    END_LOOP(),
+};
+
 const BehaviorScript bhvBobombBuddyOpensCannon[] = {
     BEGIN(OBJ_LIST_GENACTOR),
     OR_INT(oFlags, (OBJ_FLAG_PERSISTENT_RESPAWN | OBJ_FLAG_COMPUTE_ANGLE_TO_MARIO | OBJ_FLAG_HOLDABLE | OBJ_FLAG_COMPUTE_DIST_TO_MARIO | OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),

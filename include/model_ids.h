@@ -568,6 +568,8 @@
 #define MODEL_EARTHWAKE_BLOCK             0xEE   //temp_earthwake_block_geo
 #define MODEL_EARTHWAKE_HAND              0xEF   //eathwake_hand_geo
 #define MODEL_EARTHWAKE_HEAD              0xF0   //eathwake_head_geo
+#define MODEL_BIG_MASSIF                  0xF1   //big_massif_geo
+#define MODEL_LIL_MASSIF                  0xF2   //lil_massif_geo
 
 
 
