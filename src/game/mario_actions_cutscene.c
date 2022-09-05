@@ -619,9 +619,9 @@ void general_star_dance_handler(struct MarioState *m, s32 isInWater) {
                 if (!(m->actionArg & 1)) {
                     level_trigger_warp(m, WARP_OP_STAR_EXIT);
                 } else {
-                    enable_time_stop();
-                    create_dialog_box_with_response(gLastCompletedStarNum == 7 ? DIALOG_013 : DIALOG_014);
-                    m->actionState = ACT_STATE_STAR_DANCE_DO_SAVE;
+                //    enable_time_stop();
+                 //   create_dialog_box_with_response(gLastCompletedStarNum == 7 ? DIALOG_013 : DIALOG_014);
+                    set_mario_action(m, ACT_IDLE, 0);
                 }
                 break;
         }
@@ -1116,7 +1116,7 @@ s32 act_exit_land_save_dialog(struct MarioState *m) {
                 }
                 if (gLastCompletedCourseNum == COURSE_BITDW
                  || gLastCompletedCourseNum == COURSE_BITFS) {
-                    m->actionState = ACT_STATE_EXIT_LAND_SAVE_DIALOG_KEY; // key exit
+                    // key exit
                 }
             }
             break;

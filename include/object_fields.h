@@ -1399,6 +1399,12 @@ os16112*/
 #define sparkleSizeMin oFloatF4
 #define sparkleSizeMax oFloatF8
 
+//penny
+
+#define pennyTimer oF4
+#define pennySize  oF8
+
+
 
 
 #endif // OBJECT_FIELDS_H

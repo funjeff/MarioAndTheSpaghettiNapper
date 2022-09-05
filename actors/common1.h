@@ -375,4 +375,6 @@ extern const Gfx flame_seg6_dl_0601C928[];
 
 #include "lil_massif/geo_header.h"
 
+#include "penny/geo_header.h"
+
 #endif

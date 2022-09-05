@@ -1,0 +1,18 @@
+extern const GeoLayout penny_geo[];
+extern Lights1 penny__03___Default_f3d_v4_001_lights;
+extern Lights1 penny__02___Default_f3d_v4_001_lights;
+extern Lights1 penny__01___Default_f3d_v4_001_lights;
+extern u8 penny_Penny_rgba32[];
+extern u8 penny_Penny_Back_rgba32[];
+extern u8 penny_Penny_Front_rgba32[];
+extern Vtx penny_Penny_mesh_layer_1_vtx_0[2056];
+extern Gfx penny_Penny_mesh_layer_1_tri_0[];
+extern Vtx penny_Penny_mesh_layer_1_vtx_1[83];
+extern Gfx penny_Penny_mesh_layer_1_tri_1[];
+extern Vtx penny_Penny_mesh_layer_1_vtx_2[79];
+extern Gfx penny_Penny_mesh_layer_1_tri_2[];
+extern Gfx mat_penny__03___Default_f3d_v4_001[];
+extern Gfx mat_penny__02___Default_f3d_v4_001[];
+extern Gfx mat_penny__01___Default_f3d_v4_001[];
+extern Gfx penny_Penny_mesh_layer_1[];
+extern Gfx penny_material_revert_render_settings[];

@@ -11,6 +11,7 @@
 #include "levels/hmc/header.h"
 #include "levels/ttm/header.h"
 #include "mario.h"
+#include "print.h"
 #include "memory.h"
 #include "moving_texture.h"
 #include "level_update.h"
@@ -1261,8 +1262,8 @@ Gfx *geo_painting_update(s32 callContext, UNUSED struct GraphNode *node, UNUSED 
         gLastPaintingUpdateCounter = gAreaUpdateCounter - 1;
         gPaintingUpdateCounter = gAreaUpdateCounter;
     } else {
-        gLastPaintingUpdateCounter = gPaintingUpdateCounter;
-        gPaintingUpdateCounter = gAreaUpdateCounter;
+       gLastPaintingUpdateCounter = gPaintingUpdateCounter;
+       gPaintingUpdateCounter = gAreaUpdateCounter;
 
         // Store Mario's position
         find_floor(gMarioObject->oPosX, gMarioObject->oPosY, gMarioObject->oPosZ, &surface);
@@ -1271,5 +1272,6 @@ Gfx *geo_painting_update(s32 callContext, UNUSED struct GraphNode *node, UNUSED 
         gPaintingMarioYPos = gMarioObject->oPosY;
         gPaintingMarioZPos = gMarioObject->oPosZ;
     }
+
     return NULL;
 }

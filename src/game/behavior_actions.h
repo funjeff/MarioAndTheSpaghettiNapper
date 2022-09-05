@@ -577,6 +577,8 @@ void bhv_earthwake_block_init(void);
 
 void bhv_destroyable_block_loop(void);
 
+void bhv_penny_loop(void);
+
 
 Gfx *geo_move_mario_part_from_parent(s32 callContext, UNUSED struct GraphNode *node, Mat4 mtx);
 

@@ -568,5 +568,6 @@ extern const BehaviorScript bhvDestroyableBlock[];
 
 extern const BehaviorScript bhvMassif[];
 
+extern const BehaviorScript bhvPenny[];
 
 #endif // BEHAVIOR_DATA_H

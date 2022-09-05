@@ -570,6 +570,7 @@
 #define MODEL_EARTHWAKE_HEAD              0xF0   //eathwake_head_geo
 #define MODEL_BIG_MASSIF                  0xF1   //big_massif_geo
 #define MODEL_LIL_MASSIF                  0xF2   //lil_massif_geo
+#define MODEL_PENNY                       0xF3   //penny_geo
 
 
 

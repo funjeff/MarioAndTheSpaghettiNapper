@@ -1,10 +1,7 @@
 extern const GeoLayout nightmare_chunk_geo[];
-extern Lights1 nightmare_chunk_f3d_material_lights;
-extern u8 nightmare_chunk_Nightmare_chunk_1_ci8[];
-extern u8 nightmare_chunk_Nightmare_chunk_1_ci8_pal_rgba16[];
+extern Lights1 nightmare_chunk_chunk_lights;
 extern Vtx nightmare_chunk_Icosphere_mesh_layer_1_vtx_0[240];
 extern Gfx nightmare_chunk_Icosphere_mesh_layer_1_tri_0[];
-extern Gfx mat_nightmare_chunk_f3d_material[];
-extern Gfx mat_revert_nightmare_chunk_f3d_material[];
+extern Gfx mat_nightmare_chunk_chunk[];
 extern Gfx nightmare_chunk_Icosphere_mesh_layer_1[];
 extern Gfx nightmare_chunk_material_revert_render_settings[];

@@ -755,65 +755,59 @@ BEEF\n\
 \n\
 "))
 
-DEFINE_DIALOG(DIALOG_051, 1, 6, 30, 200, _("\
-Climbing's easy! When you\n\
-jump at trees, poles or\n\
-pillars, you'll grab them\n\
-automatically. Press [A] to\n\
-jump off backward.\n\
+DEFINE_DIALOG(DIALOG_051, 1, 4, 30, 200, _("\
 \n\
-To rotate around the\n\
-object, press Right or\n\
-Left on the Control Stick.\n\
-When you reach the top,\n\
-press Up to do a\n\
-handstand!\n\
-Jump off from the\n\
-handstand for a high,\n\
-stylin' dismount."))
-
-DEFINE_DIALOG(DIALOG_052, 1, 5, 30, 200, _("\
-Stop and press [Z] to\n\
-crouch, then press [A]\n\
-to do a high, Backward\n\
-Somersault!\n\
+  TOAD KINGDOM\n\
+   law 32145\n\
 \n\
-To perform a Side\n\
-Somersault, run, do a\n\
-sharp U-turn and jump.\n\
-You can catch lots of\n\
-air with both jumps."))
+When racing against\n\
+king toad no challanger\n\
+can move faster than\n\
+a brisk walk."))
 
-DEFINE_DIALOG(DIALOG_053, 1, 5, 30, 200, _("\
-Sometimes, if you pass\n\
-through a coin ring or\n\
-find a secret point in a\n\
-course, a red number will\n\
-appear.\n\
-If you trigger five red\n\
-numbers, a secret Star\n\
-will show up."))
+DEFINE_DIALOG(DIALOG_052, 1, 4, 30, 200, _("\
+\n\
+  TOAD KINGDOM\n\
+   law 81456\n\
+\n\
+the phrase shoutouts to\n\
+simpleflips is banned\n\
+the correct phrase is\n\
+toasts to toad"))
 
-DEFINE_DIALOG(DIALOG_054, 1, 5, 30, 200, _("\
-Welcome to the snow\n\
-slide! Hop on! To speed\n\
-up, press forward on the\n\
-Control Stick. To slow\n\
-down, pull back."))
+DEFINE_DIALOG(DIALOG_053, 1, 4, 30, 200, _("\
+\n\
+  TOAD KINGDOM\n\
+   law 21152\n\
+\n\
+all citzens are equal\n\
+but king toad is more\n\
+equal\n\
+"))
+
+DEFINE_DIALOG(DIALOG_054, 1, 4, 30, 200, _("\
+fun fact!\n\
+this sign wasent in the\n\
+original mario 64\n\
+\n\
+did you know that\n\
+\n\
+\n\
+\n\
+no you fuckin dident\n\
+shut the fuck up\n\
+you lying piece of shit\n\
+"))
 
 DEFINE_DIALOG(DIALOG_055, 1, 4, 30, 200, _("\
-Hey-ey, Mario, buddy,\n\
-howzit goin'? Step right\n\
-up. You look like a fast\n\
-sleddin' kind of guy.\n\
-I know speed when I see\n\
-it, yes siree--I'm the\n\
-world champion sledder,\n\
-you know. Whaddya say?\n\
-How about a race?\n\
-Ready...\n\
 \n\
-//Go//// Don't Go"))
+  TOAD KINGDOM\n\
+   law 1\n\
+\n\
+bup\n\
+\n\
+\n\
+"))
 
 DEFINE_DIALOG(DIALOG_056, 1, 6, 30, 200, _("\
 You brrrr-oke my record!\n\
@@ -858,34 +852,14 @@ Her parents must be\n\
 worried sick!"))
 
 DEFINE_DIALOG(DIALOG_060, 1, 4, 30, 200, _("\
-ATTENTION!\n\
-Read Before Diving In!\n\
+\n\
+  TOAD KINGDOM\n\
+   law 1\n\
+\n\
+bup\n\
 \n\
 \n\
-If you stay under the\n\
-water for too long, you'll\n\
-run out of oxygen.\n\
-\n\
-Return to the surface for\n\
-air or find an air bubble\n\
-or coins to breathe while\n\
-underwater.\n\
-Press [A] to swim. Hold [A]\n\
-to swim slow and steady.\n\
-Tap [A] with smooth timing\n\
-to gain speed.\n\
-Press Up on the\n\
-Control Stick and press [A]\n\
-to dive.\n\
-\n\
-Press Down on the Control\n\
-Stick and press [A] to\n\
-return to the surface.\n\
-\n\
-Hold Down and press [A]\n\
-while on the surface near\n\
-the edge of the water to\n\
-jump out."))
+"))
 
 DEFINE_DIALOG(DIALOG_061, 1, 4, 30, 200, _("\
 BRRR! Frostbite Danger!\n\
@@ -893,29 +867,33 @@ Do not swim here.\n\
 I'm serious.\n\
 /--The Penguin"))
 
-DEFINE_DIALOG(DIALOG_062, 1, 3, 30, 200, _("\
-Hidden inside the green\n\
-block is the amazing\n\
-Metal Cap.\n\
-Wearing it, you won't\n\
-catch fire or be hurt\n\
-by enemy attacks.\n\
-You don't even have to\n\
-breathe while wearing it.\n\
+DEFINE_DIALOG(DIALOG_062, 1, 2, 30, 200, _("\
+Did you have fun\n\
+going down the slide?\n\
+well guess what\n\
+dumbfuck\n\
+theres no pipe down\n\
+here\n\
+theres no exit course\n\
 \n\
-The only problem:\n\
-It is too heavy to\n\
-swim with."))
+theres not even a\n\
+deathplane to rely on\n\
+so enjoy the walk of\n\
+shame back up dumbass"))
 
-DEFINE_DIALOG(DIALOG_063, 1, 5, 30, 200, _("\
-The Vanish Cap is inside\n\
-the blue block. Mr. I.\n\
-will be surprised, since\n\
-you'll be invisible when\n\
-you wear it!\n\
-Even the Big Boo will be\n\
-fooled--and you can walk\n\
-through secret walls, too."))
+DEFINE_DIALOG(DIALOG_063, 1, 4, 30, 200, _("\
+I figure if that no good\n\
+pasta plunderer toad is\n\
+anywhere its probably the\n\
+top of the castle\n\
+even still some of these\n\
+other rooms seem worth\n\
+checking out\n\
+\n\
+your call bro\n\
+\n\
+\n\
+"))
 
 DEFINE_DIALOG(DIALOG_064, 1, 5, 30, 200, _("\
 When you put on the Wing\n\
