@@ -1543,9 +1543,18 @@ void update_mario_info_for_cam(struct MarioState *m) {
         vec3f_copy(m->statusForCamera->pos, m->pos);
     }
 
-    if (m->bigBallCamera){
+    if (m->bigBallCamera == 1){
     	m->statusForCamera->pos[1] = m->statusForCamera->pos[1] + 800;
     }
+
+    if (m->bigBallCamera == 2){
+    	struct Object * chunk = cur_obj_nearest_object_with_behavior(bhvNightmareChunk);
+
+       	m->statusForCamera->pos[0] = chunk->oPosX;
+       	m->statusForCamera->pos[1] = chunk->oPosY;
+       	m->statusForCamera->pos[2] = chunk->oPosZ;
+    }
+
 }
 
 /**

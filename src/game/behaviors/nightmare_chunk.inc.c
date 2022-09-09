@@ -40,6 +40,7 @@ void bhv_nightmare_chunk_loop(void) {
     if (obj_check_if_collided_with_object(o, gMarioObject) && o->nightmareChunkTimer == 0) {
     	o->nightmareChunkTimer = 1;
     	set_mario_action(gMarioState, ACT_DISAPPEARED, 0);
+    	gMarioState->bigBallCamera = 2;
 
     	o->nightmareOgX = o->oPosX;
     	o->nightmareOgY = o->oPosY;
@@ -62,22 +63,41 @@ void bhv_nightmare_chunk_loop(void) {
 				gMarioState->usedObj = o;
 				level_trigger_warp(gMarioState, WARP_OP_WARP_OBJECT);
 				obj_mark_for_deletion(o);
-
+				gMarioState->bigBallCamera = 0;
 				if (GET_BPARAM3(o->oBehParams)){
 					uintptr_t *behaviorAddr = segmented_to_virtual(bhvEarthwakeBlock);
+
+					uintptr_t *behaviorAddr2 = segmented_to_virtual(bhvEarthwakeHand);
+
+					uintptr_t *behaviorAddr3 = segmented_to_virtual(bhvEarthwakeLeftShoulder);
+
+					uintptr_t *behaviorAddr4 = segmented_to_virtual(bhvEarthwakeRightShoulder);
+
 
 					struct ObjectNode *listHead = &gObjectLists[get_object_list_from_behavior(behaviorAddr)];
 
 					struct Object *block = (struct Object *) listHead->next;
 
 					while (block != (struct Object *) listHead) {
-						if (block->behavior == behaviorAddr) {
+						if (block->behavior == behaviorAddr || block->behavior == behaviorAddr3|| block->behavior == behaviorAddr4) {
 							if (block->earthwakeSegment == GET_BPARAM3(o->oBehParams)){
 								block->earthwakeFallTime = 500;
 							}
 						 }
 						block = (struct Object *) block->header.next;
 					}
+
+					struct ObjectNode * listHead2 = &gObjectLists[get_object_list_from_behavior(behaviorAddr2)];
+					struct Object *block2 = (struct Object *) listHead2->next;
+
+					while (block2 != (struct Object *) listHead2) {
+					if (block2->behavior == behaviorAddr2) {
+						if (block2->earthwakeSegment == GET_BPARAM3(o->oBehParams)){
+							block2->earthwakeFallTime = 500;
+						}
+					}
+					block2 = (struct Object *) block2->header.next;
+				}
 				}
 
 			}

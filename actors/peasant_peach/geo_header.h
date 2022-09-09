@@ -1,0 +1,10 @@
+extern const GeoLayout peasant_peach_geo[];
+extern Lights1 peasant_peach_Material03_f3d_v4_001_v4_lights;
+extern u8 peasant_peach_Peach_grp_ci8[];
+extern u8 peasant_peach_Peach_grp_ci8_pal_rgba16[];
+extern Vtx peasant_peach_Peach_mesh_layer_1_vtx_0[1338];
+extern Gfx peasant_peach_Peach_mesh_layer_1_tri_0[];
+extern Gfx mat_peasant_peach_Material03_f3d_v4_001_v4[];
+extern Gfx mat_revert_peasant_peach_Material03_f3d_v4_001_v4[];
+extern Gfx peasant_peach_Peach_mesh_layer_1[];
+extern Gfx peasant_peach_material_revert_render_settings[];

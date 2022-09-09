@@ -48,6 +48,8 @@ enum SeqId {
 	SEQ_WAKEPORT,                     // 0x23
 	SEQ_NEVER_LET_UP,                 // 0x24
 	SEQ_TOAD_TOWN,                    // 0x25
+	SEQ_THWOMP_VOLCANO,               // 0x26
+	SEQ_DEEP_CASTLE,                  // 0x27
     SEQ_COUNT
 };
 

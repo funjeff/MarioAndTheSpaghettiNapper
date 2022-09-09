@@ -1,0 +1,134 @@
+{
+    "date": "1996-03-19",
+    "sample_bank": "instruments",
+    "envelopes": {
+        "envelope0": [
+            [2, 32700],
+            [1, 32700],
+            [32700, 29430],
+            "hang"
+        ],
+        "envelope1": [
+            [11, 32700],
+            [1, 32700],
+            [32700, 29430],
+            "hang"
+        ],
+        "envelope2": [
+            [2, 32700],
+            [1, 32700],
+            [32700, 29430],
+            "hang"
+        ],
+        "envelope3": [
+            [6, 32700],
+            [1, 32700],
+            [32700, 29430],
+            "hang"
+        ],
+        "envelope4": [
+            [2, 32700],
+            [1, 32700],
+            [32700, 29430],
+            "hang"
+        ],
+        "envelope5": [
+            [2, 32700],
+            [1, 32700],
+            [32700, 29430],
+            "hang"
+        ],
+        "envelope6": [
+            [3, 32700],
+            [298, 0],
+            [1, 0],
+            "hang"
+        ],
+        "envelope7": [
+            [2, 32700],
+            [205, 0],
+            [1, 0],
+            "hang"
+        ],
+        "envelope8": [
+            [2, 32700],
+            [202, 0],
+            [1, 0],
+            "hang"
+        ],
+        "envelope9": [
+            [2, 32700],
+            [1, 32700],
+            [32700, 29430],
+            "hang"
+        ]
+    },
+    "instruments": {
+        "inst0": {
+            "release_rate": 43,
+            "envelope": "envelope0",
+            "sound": "41_pan_flute"
+        },
+        "inst1": {
+            "release_rate": 34,
+            "envelope": "envelope1",
+            "sound": "43_harmonica"
+        },
+        "inst2": {
+            "release_rate": 76,
+            "envelope": "envelope2",
+            "sound": "03_human_whistle"
+        },
+        "inst3": {
+            "release_rate": 15,
+            "normal_range_lo": 27,
+            "normal_range_hi": 46,
+            "envelope": "envelope3",
+            "sound_lo": "23_strings_1",
+            "sound": "24_strings_2",
+            "sound_hi": "25_strings_3"
+        },
+        "inst4": {
+            "release_rate": 208,
+            "envelope": "envelope4",
+            "sound": "16_french_horns"
+        },
+        "inst5": {
+            "release_rate": 208,
+            "envelope": "envelope5",
+            "sound": "2E_accordion"
+        },
+        "inst6": {
+            "release_rate": 10,
+            "envelope": "envelope6",
+            "sound": "26_crystal_rhodes"
+        },
+        "inst7": {
+            "release_rate": 53,
+            "envelope": "envelope7",
+            "sound": "04_bright_piano"
+        },
+        "inst8": {
+            "release_rate": 255,
+            "envelope": "envelope5",
+            "sound": "27_harpsichord"
+        },
+        "inst9": {
+            "release_rate": 208,
+            "envelope": "envelope9",
+            "sound": "09"
+        }
+    },
+    "instrument_list": [
+        "inst0",
+        "inst1",
+        "inst2",
+        "inst3",
+        "inst4",
+        "inst5",
+        "inst6",
+        "inst7",
+        "inst8",
+        "inst9"
+    ]
+}

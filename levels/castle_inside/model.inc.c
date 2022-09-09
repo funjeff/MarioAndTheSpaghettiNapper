@@ -1,68 +1,68 @@
-Lights1 castle_inside_dl_VisualMaterial0_f3d_v4_lights = gdSPDefLights1(
+Lights1 castle_inside_dl_VisualMaterial0_f3d_v4_001_v4_001_v4_001_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
 
-Lights1 castle_inside_dl_f3d_material_lights = gdSPDefLights1(
+Lights1 castle_inside_dl_f3d_material_v4_001_v4_001_v4_001_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
 
-Lights1 castle_inside_dl_f3d_material_002_lights = gdSPDefLights1(
+Lights1 castle_inside_dl_f3d_material_002_v4_001_v4_001_v4_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
 
-Lights1 castle_inside_dl_VisualMaterial10_f3d_v4_lights = gdSPDefLights1(
+Lights1 castle_inside_dl_VisualMaterial10_f3d_v4_001_v4_001_v4_001_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
 
-Lights1 castle_inside_dl_VisualMaterial20_f3d_v4_lights = gdSPDefLights1(
+Lights1 castle_inside_dl_VisualMaterial20_f3d_v4_001_v4_001_v4_001_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
 
-Lights1 castle_inside_dl_VisualMaterial30_f3d_v4_lights = gdSPDefLights1(
+Lights1 castle_inside_dl_VisualMaterial30_f3d_v4_001_v4_001_v4_001_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
 
-Lights1 castle_inside_dl_VisualMaterial40_f3d_v4_lights = gdSPDefLights1(
+Lights1 castle_inside_dl_VisualMaterial40_f3d_v4_001_v4_001_v4_001_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
 
-Lights1 castle_inside_dl_VisualMaterial50_f3d_v4_lights = gdSPDefLights1(
+Lights1 castle_inside_dl_VisualMaterial50_f3d_v4_001_v4_001_v4_001_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
 
-Lights1 castle_inside_dl_VisualMaterial60_f3d_v4_lights = gdSPDefLights1(
+Lights1 castle_inside_dl_VisualMaterial60_f3d_v4_001_v4_001_v4_001_lights = gdSPDefLights1(
 	0x13, 0x0, 0x29,
 	0x27, 0x0, 0x53, 0x28, 0x28, 0x28);
 
-Lights1 castle_inside_dl_f3d_material_001_lights = gdSPDefLights1(
+Lights1 castle_inside_dl_f3d_material_001_v4_001_v4_001_v4_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
 
-Lights1 castle_inside_dl_VisualMaterial80_f3d_v4_lights = gdSPDefLights1(
+Lights1 castle_inside_dl_VisualMaterial80_f3d_v4_001_v4_001_v4_001_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
 
-Lights1 castle_inside_dl_VisualMaterial90_f3d_v4_lights = gdSPDefLights1(
+Lights1 castle_inside_dl_VisualMaterial90_f3d_v4_001_v4_001_v4_001_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
 
-Lights1 castle_inside_dl_VisualMaterial100_f3d_v4_lights = gdSPDefLights1(
+Lights1 castle_inside_dl_VisualMaterial100_f3d_v4_001_v4_001_v4_001_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
 
-Lights1 castle_inside_dl_VisualMaterial110_f3d_v4_lights = gdSPDefLights1(
+Lights1 castle_inside_dl_VisualMaterial110_f3d_v4_001_v4_001_v4_001_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
 
-Lights1 castle_inside_dl_VisualMaterial170_f3d_v4_lights = gdSPDefLights1(
+Lights1 castle_inside_dl_VisualMaterial170_f3d_v4_001_v4_001_v4_001_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
 
-Lights1 castle_inside_dl_VisualMaterial180_f3d_v4_lights = gdSPDefLights1(
+Lights1 castle_inside_dl_VisualMaterial180_f3d_v4_001_v4_001_v4_001_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
 
-Lights1 castle_inside_dl_f3d_material_v4_lights = gdSPDefLights1(
+Lights1 castle_inside_dl_f3d_material_v4_002_v4_001_v4_001_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
 
@@ -4505,7 +4505,7 @@ Vtx castle_inside_dl__002_geometry_mesh_layer_1_vtx_0[236] = {
 	{{{-2959, -1829, -596},0, {462, 1998},{0xA7, 0x5B, 0x0, 0xFF}}},
 	{{{-2959, -1829, -894},0, {464, -556},{0xC1, 0x41, 0x5A, 0xFF}}},
 	{{{-3002, -1871, -894},0, {-16, -556},{0xC2, 0x40, 0x5A, 0xFF}}},
-	{{{-3254, -1618, -894},0, {-16, -556},{0x3F, 0xC1, 0x5A, 0xFF}}},
+	{{{-3254, -1618, -894},0, {-16, -556},{0x40, 0xC1, 0x5A, 0xFF}}},
 	{{{-3212, -1576, -894},0, {464, -556},{0x3F, 0xC1, 0x5A, 0xFF}}},
 	{{{-3212, -1576, -596},0, {462, 1998},{0x5A, 0xA6, 0x0, 0xFF}}},
 	{{{-3254, -1618, -596},0, {-16, 1998},{0x5A, 0xA6, 0x0, 0xFF}}},
@@ -5188,7 +5188,7 @@ Vtx castle_inside_dl__004_geometry_mesh_layer_1_vtx_0[243] = {
 	{{{-833, 1787, 0},0, {360, 1998},{0xA6, 0xA6, 0x0, 0xFF}}},
 	{{{-833, 1817, 0},0, {360, 1998},{0x81, 0x0, 0x0, 0xFF}}},
 	{{{-833, 1787, -477},0, {360, 1180},{0xB4, 0x9D, 0x17, 0xFF}}},
-	{{{-912, 1817, -596},0, {496, 1008},{0x96, 0x0, 0x46, 0xFF}}},
+	{{{-912, 1817, -596},0, {496, 1008},{0x96, 0x0, 0x47, 0xFF}}},
 	{{{-912, 1787, -596},0, {496, 1008},{0xA6, 0xBD, 0x3C, 0xFF}}},
 	{{{-833, 1787, -477},0, {360, 1180},{0xB4, 0x9D, 0x17, 0xFF}}},
 	{{{-912, 1787, -596},0, {496, 1008},{0xA6, 0xBD, 0x3C, 0xFF}}},
@@ -5197,7 +5197,7 @@ Vtx castle_inside_dl__004_geometry_mesh_layer_1_vtx_0[243] = {
 	{{{-833, 1787, 0},0, {360, 1998},{0xA6, 0xA6, 0x0, 0xFF}}},
 	{{{-1547, 1817, -477},0, {1588, 1180},{0x7A, 0x0, 0x25, 0xFF}}},
 	{{{-1468, 1787, -596},0, {1452, 1008},{0x5A, 0xBD, 0x3C, 0xFF}}},
-	{{{-1468, 1817, -596},0, {1452, 1008},{0x6A, 0x0, 0x46, 0xFF}}},
+	{{{-1468, 1817, -596},0, {1452, 1008},{0x6A, 0x0, 0x47, 0xFF}}},
 	{{{-1547, 1787, -477},0, {1588, 1180},{0x4C, 0x9D, 0x17, 0xFF}}},
 	{{{-1547, 1817, 0},0, {1588, 1998},{0x7F, 0x0, 0x0, 0xFF}}},
 	{{{-1547, 1787, 0},0, {1588, 1998},{0x5A, 0xA6, 0x0, 0xFF}}},
@@ -5671,10 +5671,10 @@ Vtx castle_inside_dl__005_geometry_mesh_layer_5_vtx_0[92] = {
 	{{{-3087, -1213, -714},0, {-15376, 1008},{0xD0, 0x76, 0x0, 0xFF}}},
 	{{{-3318, -1445, -596},0, {-17420, 1998},{0xA6, 0x5A, 0x0, 0xFF}}},
 	{{{-3318, -1445, -714},0, {-17420, 1008},{0xA6, 0x5A, 0x0, 0xFF}}},
-	{{{102, -3132, 118},0, {-1064, 1998},{0x96, 0xBA, 0x0, 0xFF}}},
-	{{{-16, -2954, 0},0, {974, 1008},{0x96, 0xBA, 0x0, 0xFF}}},
-	{{{102, -3132, 0},0, {-1064, 1008},{0x96, 0xBA, 0x0, 0xFF}}},
-	{{{-16, -2954, 118},0, {974, 1998},{0x96, 0xBA, 0x0, 0xFF}}},
+	{{{102, -3132, 118},0, {-1064, 1998},{0x96, 0xB9, 0x0, 0xFF}}},
+	{{{-16, -2954, 0},0, {974, 1008},{0x96, 0xB9, 0x0, 0xFF}}},
+	{{{102, -3132, 0},0, {-1064, 1008},{0x96, 0xB9, 0x0, 0xFF}}},
+	{{{-16, -2954, 118},0, {974, 1998},{0x96, 0xB9, 0x0, 0xFF}}},
 	{{{-291, -3096, 0},0, {974, 1008},{0x7F, 0x0, 0x0, 0xFF}}},
 	{{{-291, -2954, 118},0, {-16, 1998},{0x7F, 0x0, 0x0, 0xFF}}},
 	{{{-291, -3096, 118},0, {974, 1998},{0x7F, 0x0, 0x0, 0xFF}}},
@@ -5695,10 +5695,10 @@ Vtx castle_inside_dl__005_geometry_mesh_layer_5_vtx_0[92] = {
 	{{{493, -3132, 118},0, {-16, 1998},{0x0, 0x81, 0x0, 0xFF}}},
 	{{{102, -3132, 118},0, {3530, 1998},{0x0, 0x81, 0x0, 0xFF}}},
 	{{{493, -3132, 0},0, {-16, 1008},{0x0, 0x81, 0x0, 0xFF}}},
-	{{{493, -3132, 0},0, {974, 1008},{0x6A, 0xBA, 0x0, 0xFF}}},
-	{{{612, -2954, 0},0, {-1064, 1008},{0x6A, 0xBA, 0x0, 0xFF}}},
-	{{{612, -2954, 118},0, {-1064, 1998},{0x6A, 0xBA, 0x0, 0xFF}}},
-	{{{493, -3132, 118},0, {974, 1998},{0x6A, 0xBA, 0x0, 0xFF}}},
+	{{{493, -3132, 0},0, {974, 1008},{0x6A, 0xB9, 0x0, 0xFF}}},
+	{{{612, -2954, 0},0, {-1064, 1008},{0x6A, 0xB9, 0x0, 0xFF}}},
+	{{{612, -2954, 118},0, {-1064, 1998},{0x6A, 0xB9, 0x0, 0xFF}}},
+	{{{493, -3132, 118},0, {974, 1998},{0x6A, 0xB9, 0x0, 0xFF}}},
 	{{{612, -2954, 0},0, {-1068, 1008},{0x0, 0x81, 0x0, 0xFF}}},
 	{{{887, -2954, 118},0, {-3112, 1998},{0x0, 0x81, 0x0, 0xFF}}},
 	{{{612, -2954, 118},0, {-1068, 1998},{0x0, 0x81, 0x0, 0xFF}}},
@@ -7482,7 +7482,7 @@ Gfx castle_inside_dl_bup_010_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_castle_inside_dl_VisualMaterial0_f3d_v4[] = {
+Gfx mat_castle_inside_dl_VisualMaterial0_f3d_v4_001_v4_001_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
@@ -7501,17 +7501,17 @@ Gfx mat_castle_inside_dl_VisualMaterial0_f3d_v4[] = {
 	gsDPPipeSync(),
 	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_4b, 2, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 124),
-	gsSPSetLights1(castle_inside_dl_VisualMaterial0_f3d_v4_lights),
+	gsSPSetLights1(castle_inside_dl_VisualMaterial0_f3d_v4_001_v4_001_v4_001_lights),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_castle_inside_dl_VisualMaterial0_f3d_v4[] = {
+Gfx mat_revert_castle_inside_dl_VisualMaterial0_f3d_v4_001_v4_001_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetTextureLUT(G_TT_NONE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_castle_inside_dl_f3d_material[] = {
+Gfx mat_castle_inside_dl_f3d_material_v4_001_v4_001_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
@@ -7530,17 +7530,17 @@ Gfx mat_castle_inside_dl_f3d_material[] = {
 	gsDPPipeSync(),
 	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 124),
-	gsSPSetLights1(castle_inside_dl_f3d_material_lights),
+	gsSPSetLights1(castle_inside_dl_f3d_material_v4_001_v4_001_v4_001_lights),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_castle_inside_dl_f3d_material[] = {
+Gfx mat_revert_castle_inside_dl_f3d_material_v4_001_v4_001_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetTextureLUT(G_TT_NONE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_castle_inside_dl_f3d_material_002[] = {
+Gfx mat_castle_inside_dl_f3d_material_002_v4_001_v4_001_v4[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
@@ -7559,17 +7559,17 @@ Gfx mat_castle_inside_dl_f3d_material_002[] = {
 	gsDPPipeSync(),
 	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_4b, 2, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 124),
-	gsSPSetLights1(castle_inside_dl_f3d_material_002_lights),
+	gsSPSetLights1(castle_inside_dl_f3d_material_002_v4_001_v4_001_v4_lights),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_castle_inside_dl_f3d_material_002[] = {
+Gfx mat_revert_castle_inside_dl_f3d_material_002_v4_001_v4_001_v4[] = {
 	gsDPPipeSync(),
 	gsDPSetTextureLUT(G_TT_NONE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_castle_inside_dl_VisualMaterial10_f3d_v4[] = {
+Gfx mat_castle_inside_dl_VisualMaterial10_f3d_v4_001_v4_001_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
@@ -7588,17 +7588,17 @@ Gfx mat_castle_inside_dl_VisualMaterial10_f3d_v4[] = {
 	gsDPPipeSync(),
 	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_4b, 2, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 124),
-	gsSPSetLights1(castle_inside_dl_VisualMaterial10_f3d_v4_lights),
+	gsSPSetLights1(castle_inside_dl_VisualMaterial10_f3d_v4_001_v4_001_v4_001_lights),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_castle_inside_dl_VisualMaterial10_f3d_v4[] = {
+Gfx mat_revert_castle_inside_dl_VisualMaterial10_f3d_v4_001_v4_001_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetTextureLUT(G_TT_NONE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_castle_inside_dl_VisualMaterial20_f3d_v4[] = {
+Gfx mat_castle_inside_dl_VisualMaterial20_f3d_v4_001_v4_001_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
@@ -7617,17 +7617,17 @@ Gfx mat_castle_inside_dl_VisualMaterial20_f3d_v4[] = {
 	gsDPPipeSync(),
 	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 124),
-	gsSPSetLights1(castle_inside_dl_VisualMaterial20_f3d_v4_lights),
+	gsSPSetLights1(castle_inside_dl_VisualMaterial20_f3d_v4_001_v4_001_v4_001_lights),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_castle_inside_dl_VisualMaterial20_f3d_v4[] = {
+Gfx mat_revert_castle_inside_dl_VisualMaterial20_f3d_v4_001_v4_001_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetTextureLUT(G_TT_NONE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_castle_inside_dl_VisualMaterial30_f3d_v4[] = {
+Gfx mat_castle_inside_dl_VisualMaterial30_f3d_v4_001_v4_001_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
@@ -7639,11 +7639,11 @@ Gfx mat_castle_inside_dl_VisualMaterial30_f3d_v4[] = {
 	gsDPPipeSync(),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0),
 	gsDPSetTileSize(0, 0, 0, 252, 124),
-	gsSPSetLights1(castle_inside_dl_VisualMaterial30_f3d_v4_lights),
+	gsSPSetLights1(castle_inside_dl_VisualMaterial30_f3d_v4_001_v4_001_v4_001_lights),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_castle_inside_dl_VisualMaterial40_f3d_v4[] = {
+Gfx mat_castle_inside_dl_VisualMaterial40_f3d_v4_001_v4_001_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
@@ -7662,17 +7662,17 @@ Gfx mat_castle_inside_dl_VisualMaterial40_f3d_v4[] = {
 	gsDPPipeSync(),
 	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b, 8, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0),
 	gsDPSetTileSize(0, 0, 0, 252, 124),
-	gsSPSetLights1(castle_inside_dl_VisualMaterial40_f3d_v4_lights),
+	gsSPSetLights1(castle_inside_dl_VisualMaterial40_f3d_v4_001_v4_001_v4_001_lights),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_castle_inside_dl_VisualMaterial40_f3d_v4[] = {
+Gfx mat_revert_castle_inside_dl_VisualMaterial40_f3d_v4_001_v4_001_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetTextureLUT(G_TT_NONE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_castle_inside_dl_VisualMaterial50_f3d_v4[] = {
+Gfx mat_castle_inside_dl_VisualMaterial50_f3d_v4_001_v4_001_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0),
 	gsSPClearGeometryMode(G_CULL_BACK),
@@ -7693,26 +7693,26 @@ Gfx mat_castle_inside_dl_VisualMaterial50_f3d_v4[] = {
 	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 124),
 	gsDPSetPrimColor(0, 0, 254, 254, 254, 255),
-	gsSPSetLights1(castle_inside_dl_VisualMaterial50_f3d_v4_lights),
+	gsSPSetLights1(castle_inside_dl_VisualMaterial50_f3d_v4_001_v4_001_v4_001_lights),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_castle_inside_dl_VisualMaterial50_f3d_v4[] = {
+Gfx mat_revert_castle_inside_dl_VisualMaterial50_f3d_v4_001_v4_001_v4_001[] = {
 	gsDPPipeSync(),
 	gsSPSetGeometryMode(G_CULL_BACK),
 	gsDPSetTextureLUT(G_TT_NONE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_castle_inside_dl_VisualMaterial60_f3d_v4[] = {
+Gfx mat_castle_inside_dl_VisualMaterial60_f3d_v4_001_v4_001_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsSPSetLights1(castle_inside_dl_VisualMaterial60_f3d_v4_lights),
+	gsSPSetLights1(castle_inside_dl_VisualMaterial60_f3d_v4_001_v4_001_v4_001_lights),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_castle_inside_dl_f3d_material_001[] = {
+Gfx mat_castle_inside_dl_f3d_material_001_v4_001_v4_001_v4[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0),
 	gsSPClearGeometryMode(G_CULL_BACK),
@@ -7733,18 +7733,18 @@ Gfx mat_castle_inside_dl_f3d_material_001[] = {
 	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 124),
 	gsDPSetPrimColor(0, 0, 254, 254, 254, 255),
-	gsSPSetLights1(castle_inside_dl_f3d_material_001_lights),
+	gsSPSetLights1(castle_inside_dl_f3d_material_001_v4_001_v4_001_v4_lights),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_castle_inside_dl_f3d_material_001[] = {
+Gfx mat_revert_castle_inside_dl_f3d_material_001_v4_001_v4_001_v4[] = {
 	gsDPPipeSync(),
 	gsSPSetGeometryMode(G_CULL_BACK),
 	gsDPSetTextureLUT(G_TT_NONE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_castle_inside_dl_VisualMaterial80_f3d_v4[] = {
+Gfx mat_castle_inside_dl_VisualMaterial80_f3d_v4_001_v4_001_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
@@ -7756,11 +7756,11 @@ Gfx mat_castle_inside_dl_VisualMaterial80_f3d_v4[] = {
 	gsDPPipeSync(),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 252),
-	gsSPSetLights1(castle_inside_dl_VisualMaterial80_f3d_v4_lights),
+	gsSPSetLights1(castle_inside_dl_VisualMaterial80_f3d_v4_001_v4_001_v4_001_lights),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_castle_inside_dl_VisualMaterial90_f3d_v4[] = {
+Gfx mat_castle_inside_dl_VisualMaterial90_f3d_v4_001_v4_001_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
@@ -7779,17 +7779,17 @@ Gfx mat_castle_inside_dl_VisualMaterial90_f3d_v4[] = {
 	gsDPPipeSync(),
 	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 124),
-	gsSPSetLights1(castle_inside_dl_VisualMaterial90_f3d_v4_lights),
+	gsSPSetLights1(castle_inside_dl_VisualMaterial90_f3d_v4_001_v4_001_v4_001_lights),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_castle_inside_dl_VisualMaterial90_f3d_v4[] = {
+Gfx mat_revert_castle_inside_dl_VisualMaterial90_f3d_v4_001_v4_001_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetTextureLUT(G_TT_NONE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_castle_inside_dl_VisualMaterial100_f3d_v4[] = {
+Gfx mat_castle_inside_dl_VisualMaterial100_f3d_v4_001_v4_001_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
@@ -7808,17 +7808,17 @@ Gfx mat_castle_inside_dl_VisualMaterial100_f3d_v4[] = {
 	gsDPPipeSync(),
 	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 124),
-	gsSPSetLights1(castle_inside_dl_VisualMaterial100_f3d_v4_lights),
+	gsSPSetLights1(castle_inside_dl_VisualMaterial100_f3d_v4_001_v4_001_v4_001_lights),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_castle_inside_dl_VisualMaterial100_f3d_v4[] = {
+Gfx mat_revert_castle_inside_dl_VisualMaterial100_f3d_v4_001_v4_001_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetTextureLUT(G_TT_NONE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_castle_inside_dl_VisualMaterial110_f3d_v4[] = {
+Gfx mat_castle_inside_dl_VisualMaterial110_f3d_v4_001_v4_001_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
@@ -7830,11 +7830,11 @@ Gfx mat_castle_inside_dl_VisualMaterial110_f3d_v4[] = {
 	gsDPPipeSync(),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 252),
-	gsSPSetLights1(castle_inside_dl_VisualMaterial110_f3d_v4_lights),
+	gsSPSetLights1(castle_inside_dl_VisualMaterial110_f3d_v4_001_v4_001_v4_001_lights),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_castle_inside_dl_VisualMaterial170_f3d_v4[] = {
+Gfx mat_castle_inside_dl_VisualMaterial170_f3d_v4_001_v4_001_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0),
 	gsSPClearGeometryMode(G_CULL_BACK),
@@ -7855,18 +7855,18 @@ Gfx mat_castle_inside_dl_VisualMaterial170_f3d_v4[] = {
 	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 124),
 	gsDPSetPrimColor(0, 0, 254, 254, 254, 255),
-	gsSPSetLights1(castle_inside_dl_VisualMaterial170_f3d_v4_lights),
+	gsSPSetLights1(castle_inside_dl_VisualMaterial170_f3d_v4_001_v4_001_v4_001_lights),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_castle_inside_dl_VisualMaterial170_f3d_v4[] = {
+Gfx mat_revert_castle_inside_dl_VisualMaterial170_f3d_v4_001_v4_001_v4_001[] = {
 	gsDPPipeSync(),
 	gsSPSetGeometryMode(G_CULL_BACK),
 	gsDPSetTextureLUT(G_TT_NONE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_castle_inside_dl_VisualMaterial180_f3d_v4[] = {
+Gfx mat_castle_inside_dl_VisualMaterial180_f3d_v4_001_v4_001_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
@@ -7878,11 +7878,11 @@ Gfx mat_castle_inside_dl_VisualMaterial180_f3d_v4[] = {
 	gsDPPipeSync(),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 252),
-	gsSPSetLights1(castle_inside_dl_VisualMaterial180_f3d_v4_lights),
+	gsSPSetLights1(castle_inside_dl_VisualMaterial180_f3d_v4_001_v4_001_v4_001_lights),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_castle_inside_dl_f3d_material_v4[] = {
+Gfx mat_castle_inside_dl_f3d_material_v4_002_v4_001_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
@@ -7901,196 +7901,196 @@ Gfx mat_castle_inside_dl_f3d_material_v4[] = {
 	gsDPPipeSync(),
 	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 124),
-	gsSPSetLights1(castle_inside_dl_f3d_material_v4_lights),
+	gsSPSetLights1(castle_inside_dl_f3d_material_v4_002_v4_001_v4_001_lights),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_castle_inside_dl_f3d_material_v4[] = {
+Gfx mat_revert_castle_inside_dl_f3d_material_v4_002_v4_001_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetTextureLUT(G_TT_NONE),
 	gsSPEndDisplayList(),
 };
 
 Gfx castle_inside_dl__000_geometry_mesh_layer_1[] = {
-	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial0_f3d_v4),
+	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial0_f3d_v4_001_v4_001_v4_001),
 	gsSPDisplayList(castle_inside_dl__000_geometry_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_castle_inside_dl_VisualMaterial0_f3d_v4),
-	gsSPDisplayList(mat_castle_inside_dl_f3d_material),
+	gsSPDisplayList(mat_revert_castle_inside_dl_VisualMaterial0_f3d_v4_001_v4_001_v4_001),
+	gsSPDisplayList(mat_castle_inside_dl_f3d_material_v4_001_v4_001_v4_001),
 	gsSPDisplayList(castle_inside_dl__000_geometry_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material),
-	gsSPDisplayList(mat_castle_inside_dl_f3d_material_002),
+	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material_v4_001_v4_001_v4_001),
+	gsSPDisplayList(mat_castle_inside_dl_f3d_material_002_v4_001_v4_001_v4),
 	gsSPDisplayList(castle_inside_dl__000_geometry_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material_002),
+	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material_002_v4_001_v4_001_v4),
 	gsSPEndDisplayList(),
 };
 
 Gfx castle_inside_dl__001_geometry_mesh_layer_1[] = {
-	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial10_f3d_v4),
+	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial10_f3d_v4_001_v4_001_v4_001),
 	gsSPDisplayList(castle_inside_dl__001_geometry_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_castle_inside_dl_VisualMaterial10_f3d_v4),
+	gsSPDisplayList(mat_revert_castle_inside_dl_VisualMaterial10_f3d_v4_001_v4_001_v4_001),
 	gsSPEndDisplayList(),
 };
 
 Gfx castle_inside_dl__002_geometry_mesh_layer_1[] = {
-	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial20_f3d_v4),
+	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial20_f3d_v4_001_v4_001_v4_001),
 	gsSPDisplayList(castle_inside_dl__002_geometry_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_castle_inside_dl_VisualMaterial20_f3d_v4),
+	gsSPDisplayList(mat_revert_castle_inside_dl_VisualMaterial20_f3d_v4_001_v4_001_v4_001),
 	gsSPEndDisplayList(),
 };
 
 Gfx castle_inside_dl__003_geometry_mesh_layer_1[] = {
-	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial30_f3d_v4),
+	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial30_f3d_v4_001_v4_001_v4_001),
 	gsSPDisplayList(castle_inside_dl__003_geometry_mesh_layer_1_tri_0),
 	gsSPEndDisplayList(),
 };
 
 Gfx castle_inside_dl__004_geometry_mesh_layer_1[] = {
-	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial40_f3d_v4),
+	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial40_f3d_v4_001_v4_001_v4_001),
 	gsSPDisplayList(castle_inside_dl__004_geometry_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_castle_inside_dl_VisualMaterial40_f3d_v4),
+	gsSPDisplayList(mat_revert_castle_inside_dl_VisualMaterial40_f3d_v4_001_v4_001_v4_001),
 	gsSPEndDisplayList(),
 };
 
 Gfx castle_inside_dl__005_geometry_mesh_layer_5[] = {
-	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial50_f3d_v4),
+	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial50_f3d_v4_001_v4_001_v4_001),
 	gsSPDisplayList(castle_inside_dl__005_geometry_mesh_layer_5_tri_0),
-	gsSPDisplayList(mat_revert_castle_inside_dl_VisualMaterial50_f3d_v4),
+	gsSPDisplayList(mat_revert_castle_inside_dl_VisualMaterial50_f3d_v4_001_v4_001_v4_001),
 	gsSPEndDisplayList(),
 };
 
 Gfx castle_inside_dl__006_geometry_mesh_layer_1[] = {
-	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial60_f3d_v4),
+	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial60_f3d_v4_001_v4_001_v4_001),
 	gsSPDisplayList(castle_inside_dl__006_geometry_mesh_layer_1_tri_0),
 	gsSPEndDisplayList(),
 };
 
 Gfx castle_inside_dl__007_geometry_mesh_layer_5[] = {
-	gsSPDisplayList(mat_castle_inside_dl_f3d_material_001),
+	gsSPDisplayList(mat_castle_inside_dl_f3d_material_001_v4_001_v4_001_v4),
 	gsSPDisplayList(castle_inside_dl__007_geometry_mesh_layer_5_tri_0),
-	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material_001),
+	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material_001_v4_001_v4_001_v4),
 	gsSPEndDisplayList(),
 };
 
 Gfx castle_inside_dl__008_geometry_mesh_layer_1[] = {
-	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial80_f3d_v4),
+	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial80_f3d_v4_001_v4_001_v4_001),
 	gsSPDisplayList(castle_inside_dl__008_geometry_mesh_layer_1_tri_0),
 	gsSPEndDisplayList(),
 };
 
 Gfx castle_inside_dl__009_geometry_mesh_layer_1[] = {
-	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial90_f3d_v4),
+	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial90_f3d_v4_001_v4_001_v4_001),
 	gsSPDisplayList(castle_inside_dl__009_geometry_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_castle_inside_dl_VisualMaterial90_f3d_v4),
+	gsSPDisplayList(mat_revert_castle_inside_dl_VisualMaterial90_f3d_v4_001_v4_001_v4_001),
 	gsSPEndDisplayList(),
 };
 
 Gfx castle_inside_dl__010_geometry_mesh_layer_1[] = {
-	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial100_f3d_v4),
+	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial100_f3d_v4_001_v4_001_v4_001),
 	gsSPDisplayList(castle_inside_dl__010_geometry_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_castle_inside_dl_VisualMaterial100_f3d_v4),
+	gsSPDisplayList(mat_revert_castle_inside_dl_VisualMaterial100_f3d_v4_001_v4_001_v4_001),
 	gsSPEndDisplayList(),
 };
 
 Gfx castle_inside_dl__011_geometry_mesh_layer_1[] = {
-	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial110_f3d_v4),
+	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial110_f3d_v4_001_v4_001_v4_001),
 	gsSPDisplayList(castle_inside_dl__011_geometry_mesh_layer_1_tri_0),
 	gsSPEndDisplayList(),
 };
 
 Gfx castle_inside_dl__017_geometry_mesh_layer_5[] = {
-	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial170_f3d_v4),
+	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial170_f3d_v4_001_v4_001_v4_001),
 	gsSPDisplayList(castle_inside_dl__017_geometry_mesh_layer_5_tri_0),
-	gsSPDisplayList(mat_revert_castle_inside_dl_VisualMaterial170_f3d_v4),
+	gsSPDisplayList(mat_revert_castle_inside_dl_VisualMaterial170_f3d_v4_001_v4_001_v4_001),
 	gsSPEndDisplayList(),
 };
 
 Gfx castle_inside_dl__017_geometry_001_mesh_layer_5[] = {
-	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial170_f3d_v4),
+	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial170_f3d_v4_001_v4_001_v4_001),
 	gsSPDisplayList(castle_inside_dl__017_geometry_001_mesh_layer_5_tri_0),
-	gsSPDisplayList(mat_revert_castle_inside_dl_VisualMaterial170_f3d_v4),
+	gsSPDisplayList(mat_revert_castle_inside_dl_VisualMaterial170_f3d_v4_001_v4_001_v4_001),
 	gsSPEndDisplayList(),
 };
 
 Gfx castle_inside_dl__018_geometry_mesh_layer_1[] = {
-	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial180_f3d_v4),
+	gsSPDisplayList(mat_castle_inside_dl_VisualMaterial180_f3d_v4_001_v4_001_v4_001),
 	gsSPDisplayList(castle_inside_dl__018_geometry_mesh_layer_1_tri_0),
 	gsSPEndDisplayList(),
 };
 
 Gfx castle_inside_dl_bup_mesh_layer_1[] = {
-	gsSPDisplayList(mat_castle_inside_dl_f3d_material_v4),
+	gsSPDisplayList(mat_castle_inside_dl_f3d_material_v4_002_v4_001_v4_001),
 	gsSPDisplayList(castle_inside_dl_bup_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material_v4),
+	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material_v4_002_v4_001_v4_001),
 	gsSPEndDisplayList(),
 };
 
 Gfx castle_inside_dl_bup_001_mesh_layer_1[] = {
-	gsSPDisplayList(mat_castle_inside_dl_f3d_material_v4),
+	gsSPDisplayList(mat_castle_inside_dl_f3d_material_v4_002_v4_001_v4_001),
 	gsSPDisplayList(castle_inside_dl_bup_001_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material_v4),
+	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material_v4_002_v4_001_v4_001),
 	gsSPEndDisplayList(),
 };
 
 Gfx castle_inside_dl_bup_002_mesh_layer_1[] = {
-	gsSPDisplayList(mat_castle_inside_dl_f3d_material_v4),
+	gsSPDisplayList(mat_castle_inside_dl_f3d_material_v4_002_v4_001_v4_001),
 	gsSPDisplayList(castle_inside_dl_bup_002_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material_v4),
+	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material_v4_002_v4_001_v4_001),
 	gsSPEndDisplayList(),
 };
 
 Gfx castle_inside_dl_bup_003_mesh_layer_1[] = {
-	gsSPDisplayList(mat_castle_inside_dl_f3d_material_v4),
+	gsSPDisplayList(mat_castle_inside_dl_f3d_material_v4_002_v4_001_v4_001),
 	gsSPDisplayList(castle_inside_dl_bup_003_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material_v4),
+	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material_v4_002_v4_001_v4_001),
 	gsSPEndDisplayList(),
 };
 
 Gfx castle_inside_dl_bup_004_mesh_layer_1[] = {
-	gsSPDisplayList(mat_castle_inside_dl_f3d_material_v4),
+	gsSPDisplayList(mat_castle_inside_dl_f3d_material_v4_002_v4_001_v4_001),
 	gsSPDisplayList(castle_inside_dl_bup_004_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material_v4),
+	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material_v4_002_v4_001_v4_001),
 	gsSPEndDisplayList(),
 };
 
 Gfx castle_inside_dl_bup_005_mesh_layer_1[] = {
-	gsSPDisplayList(mat_castle_inside_dl_f3d_material_v4),
+	gsSPDisplayList(mat_castle_inside_dl_f3d_material_v4_002_v4_001_v4_001),
 	gsSPDisplayList(castle_inside_dl_bup_005_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material_v4),
+	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material_v4_002_v4_001_v4_001),
 	gsSPEndDisplayList(),
 };
 
 Gfx castle_inside_dl_bup_006_mesh_layer_1[] = {
-	gsSPDisplayList(mat_castle_inside_dl_f3d_material_v4),
+	gsSPDisplayList(mat_castle_inside_dl_f3d_material_v4_002_v4_001_v4_001),
 	gsSPDisplayList(castle_inside_dl_bup_006_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material_v4),
+	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material_v4_002_v4_001_v4_001),
 	gsSPEndDisplayList(),
 };
 
 Gfx castle_inside_dl_bup_007_mesh_layer_1[] = {
-	gsSPDisplayList(mat_castle_inside_dl_f3d_material_v4),
+	gsSPDisplayList(mat_castle_inside_dl_f3d_material_v4_002_v4_001_v4_001),
 	gsSPDisplayList(castle_inside_dl_bup_007_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material_v4),
+	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material_v4_002_v4_001_v4_001),
 	gsSPEndDisplayList(),
 };
 
 Gfx castle_inside_dl_bup_008_mesh_layer_1[] = {
-	gsSPDisplayList(mat_castle_inside_dl_f3d_material_v4),
+	gsSPDisplayList(mat_castle_inside_dl_f3d_material_v4_002_v4_001_v4_001),
 	gsSPDisplayList(castle_inside_dl_bup_008_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material_v4),
+	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material_v4_002_v4_001_v4_001),
 	gsSPEndDisplayList(),
 };
 
 Gfx castle_inside_dl_bup_009_mesh_layer_1[] = {
-	gsSPDisplayList(mat_castle_inside_dl_f3d_material_v4),
+	gsSPDisplayList(mat_castle_inside_dl_f3d_material_v4_002_v4_001_v4_001),
 	gsSPDisplayList(castle_inside_dl_bup_009_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material_v4),
+	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material_v4_002_v4_001_v4_001),
 	gsSPEndDisplayList(),
 };
 
 Gfx castle_inside_dl_bup_010_mesh_layer_1[] = {
-	gsSPDisplayList(mat_castle_inside_dl_f3d_material_v4),
+	gsSPDisplayList(mat_castle_inside_dl_f3d_material_v4_002_v4_001_v4_001),
 	gsSPDisplayList(castle_inside_dl_bup_010_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material_v4),
+	gsSPDisplayList(mat_revert_castle_inside_dl_f3d_material_v4_002_v4_001_v4_001),
 	gsSPEndDisplayList(),
 };
 

@@ -1,0 +1,1 @@
+extern const Collision earthwake_right_shoulder_collision_collision[];

@@ -93,7 +93,7 @@ void bhv_cutscene_prop_loop(void) {
 
 				if (o->oPosX > gMarioObject->header.gfx.pos[0] - o->cutscenePropObjXDisplace){
 					if (!o->cutscenePropDisableGoodMovement){
-						o->oPosX = o->header.gfx.pos[0] - xdistNew;
+						o->oPosX = o->oPosX - xdistNew;
 					} else {
 						o->oPosX = o->oPosX - o->cutscenePropObjMoveSpeed;
 					}
@@ -103,7 +103,7 @@ void bhv_cutscene_prop_loop(void) {
 					}
 				} else {
 					if (!o->cutscenePropDisableGoodMovement){
-						o->oPosX = o->header.gfx.pos[0] + xdistNew;
+						o->oPosX = o->oPosX + xdistNew;
 					} else {
 						o->oPosX = o->oPosX + o->cutscenePropObjMoveSpeed;
 					}
@@ -114,7 +114,7 @@ void bhv_cutscene_prop_loop(void) {
 				}
 					if (o->oPosZ > gMarioObject->header.gfx.pos[2] - o->cutscenePropObjYDisplace){
 						if (!o->cutscenePropDisableGoodMovement){
-							o->oPosZ = o->header.gfx.pos[2] - ydistNew;
+							o->oPosZ = o->oPosZ - ydistNew;
 						} else {
 							o->oPosZ = o->oPosZ - o->cutscenePropObjMoveSpeed;
 						}
@@ -124,7 +124,7 @@ void bhv_cutscene_prop_loop(void) {
 					}
 				} else {
 					if (!o->cutscenePropDisableGoodMovement){
-						o->oPosZ = o->header.gfx.pos[2] + ydistNew;
+						o->oPosZ = o->oPosZ + ydistNew;
 					} else {
 						o->oPosZ = o->oPosZ + o->cutscenePropObjMoveSpeed;
 					}

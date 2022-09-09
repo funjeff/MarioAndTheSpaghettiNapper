@@ -1325,7 +1325,10 @@ s32 bowser_dead_final_stage_ending(void) {
     } else {
         // And at last, hide him
         bowser_dead_hide();
-        set_mario_action(gMarioState, ACT_IDLE, 0);
+        SET_BPARAM2(o->oBehParams, 0x01);
+        gMarioState->usedObj = o;
+        level_trigger_warp(gMarioState, WARP_OP_WARP_OBJECT);
+
         return TRUE;
     }
     return FALSE;

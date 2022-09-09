@@ -114,6 +114,7 @@ const LevelScript level_main_scripts_entry[] = {
 	LOAD_MODEL_FROM_GEO(MODEL_LUIGI_ROPE, luigi_rope_geo),
 	LOAD_MODEL_FROM_GEO(MODEL_BOWSER_BOMB,             bowser_bomb_geo),
 	LOAD_MODEL_FROM_GEO(MODEL_FRIDGE,                  fridge_geo),
+	LOAD_MODEL_FROM_GEO(MODEL_BOWLING_PIN,             bowling_pin_geo),
 #ifdef IA8_30FPS_COINS
     LOAD_MODEL_FROM_GEO(MODEL_SILVER_COIN,             silver_coin_geo),
     LOAD_MODEL_FROM_GEO(MODEL_SILVER_COIN_NO_SHADOW,   silver_coin_no_shadow_geo),
@@ -208,10 +209,17 @@ const LevelScript script_func_global_1[] = {
 	LOAD_MODEL_FROM_GEO(MODEL_BOWSER_FLAMES,           bowser_flames_geo),
 	LOAD_MODEL_FROM_GEO(MODEL_EARTHWAKE_BLOCK,         temp_earthwake_block_geo),
 	LOAD_MODEL_FROM_GEO(MODEL_EARTHWAKE_HAND,          eathwake_hand_geo),
-	LOAD_MODEL_FROM_GEO(MODEL_EARTHWAKE_HEAD,          eathwake_head_geo),
 	LOAD_MODEL_FROM_GEO(MODEL_BIG_MASSIF,              big_massif_geo),
 	LOAD_MODEL_FROM_GEO(MODEL_LIL_MASSIF,              lil_massif_geo),
-	LOAD_MODEL_FROM_GEO(MODEL_PENNY,              penny_geo),
+	LOAD_MODEL_FROM_GEO(MODEL_PENNY,                   penny_geo),
+	LOAD_MODEL_FROM_GEO(MODEL_PAPER_CUBE,              paper_cube_geo),
+	LOAD_MODEL_FROM_GEO(MODEL_BIG_BOMBABLE_DOOR,       big_bombable_door_geo),
+	LOAD_MODEL_FROM_GEO(MODEL_PEASENT_MARIO,           peasant_mario_geo),
+	LOAD_MODEL_FROM_GEO(MODEL_PEASENT_PEACH,           peasant_peach_geo),
+	LOAD_MODEL_FROM_GEO(MODEL_PEASENT_BOWSER,          peasant_bowser_geo),
+	LOAD_MODEL_FROM_GEO(MODEL_CANDACE,                 candace_geo),
+	LOAD_MODEL_FROM_GEO(MODEL_BALJEET,                 baljeet_geo),
+
     RETURN(),
 };
 

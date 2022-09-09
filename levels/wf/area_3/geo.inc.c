@@ -3,7 +3,7 @@
 const GeoLayout wf_area_3_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_TRANSLATE_NODE_WITH_DL(LAYER_OPAQUE, -223, -753, 342, wf_dl_Cube_038_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(LAYER_OPAQUE, -219, -740, 349, wf_dl_Ground_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
@@ -21,7 +21,7 @@ const GeoLayout wf_area_3[] = {
 		GEO_OPEN_NODE(),
 			GEO_CAMERA_FRUSTUM_WITH_FUNC(45.0000, 100, 30000, geo_camera_fov),
 			GEO_OPEN_NODE(),
-				GEO_CAMERA(CAMERA_MODE_8_DIRECTIONS, 223, 753, -342, 223, 653, -342, geo_camera_main),
+				GEO_CAMERA(CAMERA_MODE_8_DIRECTIONS, 220, 743, -338, 220, 643, -338, geo_camera_main),
 				GEO_OPEN_NODE(),
 					GEO_BRANCH(1, wf_area_3_geo),
 					GEO_RENDER_OBJ(),

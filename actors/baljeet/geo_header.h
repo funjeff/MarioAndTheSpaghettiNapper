@@ -1,0 +1,15 @@
+extern const GeoLayout baljeet_geo[];
+extern Lights1 baljeet_bodyMt_mat_f3d_v4_lights;
+extern Lights1 baljeet_base01aMt_mat_f3d_v4_lights;
+extern u8 baljeet_a_ami_luigi01a_rgba32[];
+extern u8 baljeet_a_ami_mariobase01a_ci8[];
+extern u8 baljeet_a_ami_mariobase01a_ci8_pal_rgba16[];
+extern Vtx baljeet_obj_0_0_node_mesh_layer_1_vtx_0[1141];
+extern Gfx baljeet_obj_0_0_node_mesh_layer_1_tri_0[];
+extern Vtx baljeet_obj_0_0_node_mesh_layer_1_vtx_1[70];
+extern Gfx baljeet_obj_0_0_node_mesh_layer_1_tri_1[];
+extern Gfx mat_baljeet_bodyMt_mat_f3d_v4[];
+extern Gfx mat_baljeet_base01aMt_mat_f3d_v4[];
+extern Gfx mat_revert_baljeet_base01aMt_mat_f3d_v4[];
+extern Gfx baljeet_obj_0_0_node_mesh_layer_1[];
+extern Gfx baljeet_material_revert_render_settings[];

@@ -2176,8 +2176,11 @@ static void earthwake_death_set_up(struct MarioState *m){
 	while (block != (struct Object *) listHead) {
 		if (block->behavior == behaviorAddr) {
 			block->earthwakeFallTime = 500;
+			SET_BPARAM2(block->oBehParams, 0x01);
+			gMarioState->usedObj = block;
 		 }
 		block = (struct Object *) block->header.next;
+
 	}
 
 	gMarioState->statusForCamera->cameraEvent = CAM_EVENT_EARTHWAKE;
@@ -2198,7 +2201,8 @@ static void earthwake_death_hasta_la_pasta (struct MarioState *m){
 	}
 
 	if (m->actionTimer == 130){
-		//TODO warp to next scene
+
+		level_trigger_warp(gMarioState, WARP_OP_WARP_OBJECT);
 	}
 }
 
@@ -2463,7 +2467,7 @@ static void earthwake_earthwake_rises(struct MarioState *m){
 		print_text(0,100,"?????????????????????????????????????????");
 		print_text(0,120,"?????????????????????????????????????????");
 	}
-	if (m->actionTimer == 180){
+	if (m->actionTimer == 250){
 		advance_cutscene_step(m);
 	}
 }
@@ -2541,14 +2545,14 @@ enum {
 
 
 static void first_cutscene_set_up(struct MarioState *m){
-	struct Object * luigi = spawn_object_relative(0,500,60,880, gMarioObject, MODEL_CUTSCENE_LUIGI   ,bhvCutsceneProp);
-	struct Object * fridge = spawn_object_relative(0,-420,0,1000, gMarioObject, MODEL_FRIDGE   ,bhvCutsceneProp);
+	struct Object * luigi = spawn_object_relative(0,-500,60,-880, gMarioObject, MODEL_CUTSCENE_LUIGI   ,bhvCutsceneProp);
+	struct Object * fridge = spawn_object_relative(0,420,0,-1000, gMarioObject, MODEL_FRIDGE   ,bhvCutsceneProp);
 
 
 	m->statusForCamera->cameraEvent = CAM_EVENT_FIRST;
 	obj_set_angle(luigi,luigi->oFaceAnglePitch+ 16400,luigi->oFaceAngleYaw + 26768, luigi->oFaceAngleRoll + 32768);
 
-	obj_set_angle(fridge,fridge->oFaceAnglePitch  + 16368,fridge->oFaceAngleYaw + 12368, fridge->oFaceAngleRoll);
+	obj_set_angle(fridge,fridge->oFaceAnglePitch  + 16368,fridge->oFaceAngleYaw - 22368, fridge->oFaceAngleRoll);
 
 	fridge->cutscenePropMove = 1;
 	fridge->cutscenePropMoveOnState = FIRST_WALK_TO_FRIDGE + 1;
@@ -2613,6 +2617,7 @@ static void first_cutscene_attack_fridge(struct MarioState *m){
 		toad->cutscenePropObjMoveSpeed = 40;
 		toad->cutscenePropObjXDisplace = 120;
 		toad->cutscenePropObjYDisplace = -300;
+
 
 		gMarioState->faceAngle[1] = -1*obj_angle_to_object(gMarioObject,toad);
 		vec3s_set(gMarioObject->header.gfx.angle, 0, gMarioState->faceAngle[1], 0);

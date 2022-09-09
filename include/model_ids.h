@@ -35,6 +35,9 @@
 #define MODEL_WDW_BUBBLY_TREE                  0x17        // bubbly_tree_geo
 #define MODEL_CASTLE_GROUNDS_BUBBLY_TREE       0x17        // bubbly_tree_geo
 #define MODEL_WF_BUBBLY_TREE                   0x17        // bubbly_tree_geo
+
+
+
 #define MODEL_THI_BUBBLY_TREE                  0x17        // bubbly_tree_geo
 #define MODEL_COURTYARD_SPIKY_TREE             0x18        // spiky_tree_geo
 #define MODEL_CCM_SNOW_TREE                    0x19        // snow_tree_geo
@@ -269,6 +272,9 @@
 #define MODEL_WF_TOWER_DOOR                       0x39        // wf_geo_000BE0
 #define MODEL_WF_KICKABLE_BOARD_FELLED            0x3A        // wf_geo_000BC8
 
+
+
+
 // ending
 
 // castle grounds
@@ -493,9 +499,16 @@
 #define MODEL_WF_SLIDING_PLATFORM         0xAD        // wf_geo_000A98
 #define MODEL_WF_SMALL_BOMP               0xAE        // wf_geo_000A00
 #define MODEL_WF_ROTATING_WOODEN_PLATFORM 0xAF        // wf_geo_000A58
+
+
+
+
 #define MODEL_WF_TUMBLING_BRIDGE_PART     0xB0        // wf_geo_000AB0
 #define MODEL_WF_LARGE_BOMP               0xB1        // wf_geo_000A40
 #define MODEL_WF_TUMBLING_BRIDGE          0xB2        // wf_geo_000AC8
+
+
+
 #define MODEL_BOWSER_BOMB                 0xB3        // bowser_bomb_geo
 #define MODEL_WATER_MINE                  0xB3        // water_mine_geo
 #define MODEL_BOWLING_BALL                0xB4        // bowling_ball_geo
@@ -567,10 +580,32 @@
 #define MODEL_TALKABLE_LUIGI              0xED   //talkable_luigi_geo
 #define MODEL_EARTHWAKE_BLOCK             0xEE   //temp_earthwake_block_geo
 #define MODEL_EARTHWAKE_HAND              0xEF   //eathwake_hand_geo
-#define MODEL_EARTHWAKE_HEAD              0xF0   //eathwake_head_geo
 #define MODEL_BIG_MASSIF                  0xF1   //big_massif_geo
 #define MODEL_LIL_MASSIF                  0xF2   //lil_massif_geo
 #define MODEL_PENNY                       0xF3   //penny_geo
+#define MODEL_PAPER_CUBE                  0xF4   //paper_cube_geo
+#define MODEL_BOWLING_PIN                 0xF5   //bowling_pin_geo
+#define MODEL_BIG_BOMBABLE_DOOR           0xF6   //big_bombable_door_geo
+#define MODEL_PEASENT_MARIO               0xF7   //peasent_mario_geo
+#define MODEL_PEASENT_PEACH               0xF8   //peasent_peach_geo
+#define MODEL_PEASENT_BOWSER              0xF9   //peasent_bowser_geo
+#define MODEL_CANDACE                     0xFA   //peasent_candace_geo
+#define MODEL_BALJEET                     0xFB   //peasent_baljeet_geo
+
+
+
+
+#define MODEL_EARTHWAKE_BLOCK_YELLOW      0x36
+#define MODEL_EARTHWAKE_BLOCK_BLUE        0x37
+#define MODEL_EARTHWAKE_BLOCK_GREEN       0x38
+#define MODEL_EARTHWAKE_BLOCK_PINK        0x39
+#define MODEL_EARTHWAKE_HEAD              0x3A
+#define MODEL_EARTHWAKE_LEFT_HAND         0xAD
+#define MODEL_EARTHWAKE_RIGHT_HAND        0xAE
+#define MODEL_EARTHWAKE_LEFT_FOOT         0xB0
+#define MODEL_EARTHWAKE_RIGHT_FOOT        0xB1
+#define MODEL_EARTHWAKE_LEFT_SHOLDER      0xB2
+#define MODEL_EARTHWAKE_RIGHT_SHOULDER    0x17
 
 
 

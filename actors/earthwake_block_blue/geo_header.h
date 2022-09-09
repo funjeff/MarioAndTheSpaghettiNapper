@@ -1,0 +1,14 @@
+extern const GeoLayout earthwake_block_blue_geo[];
+extern Lights1 earthwake_block_blue_border_lights;
+extern Lights1 earthwake_block_blue_bluewall_lights;
+extern u8 earthwake_block_blue_BlueWall_ci4[];
+extern u8 earthwake_block_blue_BlueWall_ci4_pal_rgba16[];
+extern Vtx earthwake_block_blue_BlueCube_mesh_layer_1_vtx_0[168];
+extern Gfx earthwake_block_blue_BlueCube_mesh_layer_1_tri_0[];
+extern Vtx earthwake_block_blue_BlueCube_mesh_layer_1_vtx_1[24];
+extern Gfx earthwake_block_blue_BlueCube_mesh_layer_1_tri_1[];
+extern Gfx mat_earthwake_block_blue_border[];
+extern Gfx mat_earthwake_block_blue_bluewall[];
+extern Gfx mat_revert_earthwake_block_blue_bluewall[];
+extern Gfx earthwake_block_blue_BlueCube_mesh_layer_1[];
+extern Gfx earthwake_block_blue_material_revert_render_settings[];

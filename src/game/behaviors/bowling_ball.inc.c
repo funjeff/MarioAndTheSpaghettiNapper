@@ -1,5 +1,8 @@
 // bowling_ball.inc.c
 
+
+#include "src/game/print.h"
+
 static struct ObjectHitbox sBowlingBallHitbox = {
     /* interactType:      */ INTERACT_DAMAGE,
     /* downOffset:        */ 0,
@@ -39,6 +42,34 @@ static Trajectory sThiTinyMetalBallTraj[] = {
     TRAJECTORY_END(),
 };
 
+static Trajectory sBowserBallTraj[] = {
+    TRAJECTORY_POS(0, /*pos*/ 9637,  7470, -6872),
+    TRAJECTORY_POS(1, /*pos*/ 10078, 7437, -7405),
+    TRAJECTORY_POS(2, /*pos*/ 10264, 7367, -8027),
+    TRAJECTORY_POS(3, /*pos*/ 10151, 7272, -8504),
+    TRAJECTORY_POS(4, /*pos*/ 9805,  7222, -9037),
+    TRAJECTORY_POS(5, /*pos*/ 9215,  7159, -9344),
+    TRAJECTORY_POS(6, /*pos*/ 8430,  7089, -9152),
+    TRAJECTORY_POS(7, /*pos*/ 7902,  7010, -8619),
+    TRAJECTORY_POS(8, /*pos*/ 7679,  6922, -7886),
+	TRAJECTORY_POS(9, /*pos*/ 7899,  6838, -7154),
+	TRAJECTORY_POS(10, /*pos*/8474,  6756, -6583),
+	TRAJECTORY_POS(11, /*pos*/9166,  6733, -6324),
+	TRAJECTORY_POS(12, /*pos*/9812, 6640,  -6477),
+	TRAJECTORY_POS(13, /*pos*/10358, 6529, -7189),
+	TRAJECTORY_POS(14, /*pos*/10703, 6439, -8013),
+	TRAJECTORY_POS(15, /*pos*/10465, 6333, -8724),
+	TRAJECTORY_POS(16, /*pos*/9987, 6236,  -9393),
+	TRAJECTORY_POS(17, /*pos*/9172, 6136,  -9755),
+	TRAJECTORY_POS(18, /*pos*/8248, 6030,  -9483),
+	TRAJECTORY_POS(19, /*pos*/7520, 5932,  -8795),
+	TRAJECTORY_POS(20, /*pos*/7532, 5837,  -7831),
+	TRAJECTORY_POS(21, /*pos*/8202, 5735,  -6871),
+	TRAJECTORY_POS(22, /*pos*/9249, 5639,  -6224),
+	TRAJECTORY_POS(23, /*pos*/9249, 5577,  -5933),
+    TRAJECTORY_END(),
+};
+
 void bhv_bowling_ball_init(void) {
     o->oGravity = 5.5f;
     o->oFriction = 1.0f;
@@ -56,7 +87,7 @@ void bowling_ball_set_hitbox(void) {
 void bowling_ball_set_waypoints(void) {
     switch (o->oBehParams2ndByte) {
         case BBALL_BP_STYPE_BOB_UPPER:
-            o->oPathedStartWaypoint = segmented_to_virtual(bob_seg7_metal_ball_path0);
+            o->oPathedStartWaypoint = (struct Waypoint *) sBowserBallTraj;
             break;
 
         case BBALL_BP_STYPE_TTM:
@@ -78,6 +109,8 @@ void bowling_ball_set_waypoints(void) {
 }
 
 void bhv_bowling_ball_roll_loop(void) {
+
+
     bowling_ball_set_waypoints();
     s16 collisionFlags = object_step();
 
@@ -103,6 +136,11 @@ void bhv_bowling_ball_roll_loop(void) {
     if ((collisionFlags & OBJ_COL_FLAG_GROUNDED) && (o->oVelY > 5.0f)) {
         cur_obj_play_sound_2(SOUND_GENERAL_QUIET_POUND1_LOWPRIO);
     }
+    o->oBowlingBallForgetTimer = o->oBowlingBallForgetTimer + 1;
+    if (o->oBowlingBallForgetTimer == 600){
+    	obj_mark_for_deletion(o);
+    }
+
 }
 
 void bhv_bowling_ball_initialize_loop(void) {
@@ -159,7 +197,7 @@ void bhv_bowling_ball_loop(void) {
 void bhv_generic_bowling_ball_spawner_init(void) {
     switch (o->oBehParams2ndByte) {
         case BBALL_BP_STYPE_BOB_UPPER:
-            o->oBBallSpawnerMaxSpawnDist = 7000.0f;
+            o->oBBallSpawnerMaxSpawnDist = 20000.0f;
             o->oBBallSpawnerSpawnOdds = 2.0f;
             break;
 

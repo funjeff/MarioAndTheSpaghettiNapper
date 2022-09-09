@@ -778,11 +778,10 @@ s32 check_warp_checkpoint(struct WarpNode *warpNode) {
 
 
 
-
     // gSavedCourseNum is only used in this function.
     if (gWarpCheckpoint.courseNum != COURSE_NONE) {
 
-        warpNode->destLevel = gWarpCheckpoint.levelID;
+        warpNode->destLevel= gWarpCheckpoint.levelID;
         warpNode->destArea = gWarpCheckpoint.areaNum;
         warpNode->destNode = gWarpCheckpoint.warpNode;
         warpCheckpointActive = TRUE;

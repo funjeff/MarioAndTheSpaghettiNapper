@@ -1,9 +1,9 @@
 #include "src/game/envfx_snow.h"
 
-const GeoLayout eathwake_head_geo[] = {
+const GeoLayout earthwake_head_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, earthwake_head_Cube_005_mesh_layer_1),
+		GEO_DISPLAY_LIST(LAYER_OPAQUE, earthwake_head_Head_mesh_layer_1),
 		GEO_DISPLAY_LIST(LAYER_OPAQUE, earthwake_head_material_revert_render_settings),
 	GEO_CLOSE_NODE(),
 	GEO_END(),

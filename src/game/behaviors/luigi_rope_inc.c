@@ -9,7 +9,7 @@
 void bhv_luigi_rope_loop (void){
 
     if (o->weegCount == o->maxWeegCount){
-    	obj_set_angle(o,o->parentObj->oFaceAnglePitch + 32768,o->parentObj->oFaceAngleYaw + 20000, o->parentObj->oFaceAngleRoll);
+    	obj_set_angle(o,o->parentObj->oFaceAnglePitch,o->parentObj->oFaceAngleYaw + 20000, o->parentObj->oFaceAngleRoll + 32768);
 
         cur_obj_set_pos_relative(o->parentObj, 50, 250 - 200, 80);
     } else {

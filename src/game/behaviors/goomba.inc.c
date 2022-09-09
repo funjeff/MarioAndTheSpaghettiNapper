@@ -13,6 +13,7 @@ static struct ObjectHitbox sGoombaHitbox = {
     /* downOffset:        */ 0,
     /* damageOrCoinValue: */ 1,
     /* health:            */ 0,
+	/* numLootCoins:      */ 0,
     /* radius:            */ 72,
     /* height:            */ 50,
     /* hurtboxRadius:     */ 42,
@@ -329,6 +330,7 @@ void bhv_goomba_update(void) {
             o->oAnimState += FLOOMBA_ANIM_STATE_EYES_OPEN;
         }
 #endif
+
         cur_obj_update_floor_and_walls();
 
         if (o->oGoombaScale == 0.0f || (animSpeed = (o->oForwardVel / o->oGoombaScale * 0.4f)) < 1.0f) {
@@ -341,21 +343,23 @@ void bhv_goomba_update(void) {
 #endif
         cur_obj_init_animation_with_accel_and_sound(GOOMBA_ANIM_DEFAULT, animSpeed);
 
+        if (!GET_BPARAM3(o->oBehParams)){
         switch (o->oAction) {
-            case GOOMBA_ACT_WALK:
-                goomba_act_walk();
-                break;
-            case GOOMBA_ACT_ATTACKED_MARIO:
-                goomba_act_attacked_mario();
-                break;
-            case GOOMBA_ACT_JUMP:
-                goomba_act_jump();
-                break;
-#if defined(FLOOMBAS) && defined(INTRO_FLOOMBAS)
-            case FLOOMBA_ACT_STARTUP:
-                floomba_act_startup();
-                break;
-#endif
+				case GOOMBA_ACT_WALK:
+					goomba_act_walk();
+					break;
+				case GOOMBA_ACT_ATTACKED_MARIO:
+					goomba_act_attacked_mario();
+					break;
+				case GOOMBA_ACT_JUMP:
+					goomba_act_jump();
+					break;
+	#if defined(FLOOMBAS) && defined(INTRO_FLOOMBAS)
+				case FLOOMBA_ACT_STARTUP:
+					floomba_act_startup();
+					break;
+	#endif
+        }
         }
         if (obj_handle_attacks(&sGoombaHitbox, GOOMBA_ACT_ATTACKED_MARIO,
                                sGoombaAttackHandlers[o->oGoombaSize & 0x1])

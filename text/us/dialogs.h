@@ -881,60 +881,62 @@ deathplane to rely on\n\
 so enjoy the walk of\n\
 shame back up dumbass"))
 
-DEFINE_DIALOG(DIALOG_063, 1, 4, 30, 200, _("\
-I figure if that no good\n\
-pasta plunderer toad is\n\
-anywhere its probably the\n\
-top of the castle\n\
-even still some of these\n\
-other rooms seem worth\n\
-checking out\n\
+DEFINE_DIALOG(DIALOG_063, 1, 6, 30, 200, _("\
+Hack made by Dude45\n\
+and Pikmanfan2002\n\
 \n\
-your call bro\n\
+\n\
+\n\
+\n\
+its only our second hack\n\
+so when its inevadbly the\n\
+coolest you ever seen\n\
+feel free to put\n\
+SECOND HACK!??!??!\n\
+in the title\n\
+this hack is very heavily\n\
+inspired by mario and luigi\n\
+dream team\n\
+\n\
+so uh ...\n\
+hopefully you played that\n\
+in todays hack\n\
+the part of \n\
+Baljeet Tjinder \n\
+will be played by\n\
+a luigi amiibo\n\
+"))
+
+DEFINE_DIALOG(DIALOG_064, 1, 5, 30, 200, _("\
+hey bro!\n\
+See that bomb over there\n\
+Maybe we can use it too\n\
+blow up this wall!\n\
+\n\
+Try getting on the ball\n\
+and holding B while your\n\
+near it!\n\
+\n\
+\n\
+Then we can do a\n\
+bros swing attack\n\
 \n\
 \n\
 "))
 
-DEFINE_DIALOG(DIALOG_064, 1, 5, 30, 200, _("\
-When you put on the Wing\n\
-Cap that comes from a\n\
-red block, do the Triple\n\
-Jump to soar high into\n\
-the sky.\n\
-Use the Control Stick to\n\
-guide Mario. Pull back to\n\
-to fly up, press forward\n\
-to nose down, and press [Z]\n\
-to land."))
-
-DEFINE_DIALOG(DIALOG_065, 1, 6, 30, 200, _("\
-Swimming Lessons!\n\
-Tap [A] to do the breast\n\
-stroke. If you time the\n\
-taps right, you'll swim\n\
-fast.\n\
+DEFINE_DIALOG(DIALOG_065, 1, 4, 30, 200, _("\
+I bet if that no good\n\
+pasta plundering toad is\n\
+anywhere its probably\n\
+the top floor\n\
+even still\n\
 \n\
-Press and hold [A] to do a\n\
-slow, steady flutter kick.\n\
-Press Up on the Control\n\
-Stick to dive, and pull\n\
-back on the stick to head\n\
-for the surface.\n\
-To jump out of the water,\n\
-hold Down on the Control\n\
-Stick, then press [A].\n\
-Easy as pie, right?\n\
+some of these other rooms\n\
+seem worth checking out\n\
 \n\
+your call bro\n\
 \n\
-But remember:\n\
-Mario can't breathe under\n\
-the water! Return to the\n\
-surface for air when the\n\
-Power Meter runs low.\n\
-\n\
-And one last thing: You\n\
-can't open doors that\n\
-are underwater."))
+"))
 
 DEFINE_DIALOG(DIALOG_066, 1, 5, 30, 200, _("\
 Mario, it's Peach!\n\
@@ -1234,20 +1236,13 @@ here: Grab the pole to the\n\
 left and slide carefully\n\
 down."))
 
-DEFINE_DIALOG(DIALOG_089, 1, 5, 95, 200, _("\
-Both ways fraught with\n\
-danger! Watch your feet!\n\
-Those who can't do the\n\
-Long Jump, tsk, tsk. Make\n\
-your way to the right.\n\
-Right: Work Elevator\n\
-/// Cloudy Maze\n\
-Left: Black Hole\n\
-///Underground Lake\n\
+DEFINE_DIALOG(DIALOG_089, 1, 2, 95, 200, _("\
+SEE MOM I TOLD YOU\n\
+THEY MADE A ROMHACK\n\
+I TOLD YOU\n\
 \n\
-Red Circle: Elevator 2\n\
-//// Underground Lake\n\
-Arrow: You are here"))
+... but but but but\n\
+it was right here"))
 
 DEFINE_DIALOG(DIALOG_090, 1, 6, 30, 200, _("\
 Bwa ha ha ha!\n\
@@ -1274,61 +1269,113 @@ My troops in the walls\n\
 need them! Bwa ha ha!"))
 
 DEFINE_DIALOG(DIALOG_093, 1, 5, 30, 200, _("\
-Mario! You again! Well\n\
-that's just fine--I've\n\
-been looking for something\n\
-to fry with my fire\n\
-breath!\n\
-Your Star Power is\n\
-useless against me!\n\
-Your friends are all\n\
-trapped within the\n\
-walls...\n\
-And you'll never see the\n\
-Princess again!\n\
-Bwa ha ha ha!"))
+Oh boy its the best part\n\
+of the dream!\n\
+\n\
+the mario pumbling\n\
+part.\n\
+huh?\n\
+Your looking for\n\
+spaghetti\n\
+\n\
+\n\
+Spaghettis for nerds\n\
+I dont have any.\n\
+\n\
+\n\
+\n\
+guess what its my\n\
+dream so what I say\n\
+goes\n\
+\n\
+\n\
+and I say no tail\n\
+grabbing allowed\n\
+"))
 
-DEFINE_DIALOG(DIALOG_094, 1, 4, 30, 200, _("\
-Get a good run up the\n\
-slope! Do you remember\n\
-the Long Jump? Run, press\n\
-[Z], then jump!"))
+DEFINE_DIALOG(DIALOG_094, 1, 5, 30, 200, _("\
+I tried to kidnap\n\
+king toad.\n\
+but hes way more cool\n\
+awesome and smart\n\
+than I am\n\
+he knocked out me and\n\
+all my minions with a\n\
+single epic karate kick\n\
+\n\
+\n\
+it was also so epic that\n\
+it blew up my castle and\n\
+everyone inside\n\
+\n\
+\n\
+bank of toad wont even\n\
+cover the damages\n\
+\n\
+\n\
+\n\
+ive been homeless ever\n\
+since\n\
+\n\
+\n\
+:("))
 
 DEFINE_DIALOG(DIALOG_095, 1, 4, 30, 200, _("\
-To read a sign, stand in\n\
-front of it and press [B],\n\
-like you did just now.\n\
+Its been 4 days since\n\
+ive last had spaghetti\n\
 \n\
-When you want to talk to\n\
-a Koopa Troopa or other\n\
-animal, stand right in\n\
-front of it.\n\
-Please recover the Stars\n\
-that were stolen by\n\
-Bowser in this course."))
+\n\
+its over for me I wont\n\
+last much longer \n\
+\n\
+\n\
+im going crazy just this\n\
+morrning I jumped and\n\
+accedently said yahoo\n\
+\n\
+yahoo?\n\
+are you kidding me\n\
+we all know your\n\
+suppose to say\n\
+all hail king toad our\n\
+glorius leader\n\
+whenever you jump\n\
+\n\
+everytime I try to eat\n\
+king toad thinks of a\n\
+genious way to steal my\n\
+food\n\
+if only I was as smart as\n\
+king toad\n\
+then my pasta would be\n\
+safe"))
 
 DEFINE_DIALOG(DIALOG_096, 1, 4, 30, 200, _("\
-The path is narrow here.\n\
-Easy does it! No one is\n\
-allowed on top of the\n\
-mountain!\n\
-And if you know what's\n\
-good for you, you won't\n\
-wake anyone who's\n\
-sleeping!\n\
-Move slowly,\n\
-tread lightly."))
+King toad is such a good\n\
+leader.\n\
+\n\
+\n\
+he implented so many new\n\
+policys\n\
+\n\
+\n\
+my favorate is rule 1\n\
+\n\
+toad is better than\n\
+everybody else"))
 
-DEFINE_DIALOG(DIALOG_097, 1, 5, 30, 200, _("\
-Don't be a pushover!\n\
-If anyone tries to shove\n\
-you around, push back!\n\
-It's one-on-one, with a\n\
-fiery finish for the loser!"))
+DEFINE_DIALOG(DIALOG_097, 1, 2, 30, 200, _("\
+I forgot my satchel\n\
+"))
 
 DEFINE_DIALOG(DIALOG_098, 1, 2, 95, 200, _("\
-Come on in here...\n\
-...heh, heh, heh..."))
+SEE MOM I TOLD YOU\n\
+THE BOYS MADE A ROMHACK\n\
+I TOLD YOU\n\
+\n\
+... but but but but\n\
+it was right here\n\
+"))
 
 // unused
 DEFINE_DIALOG(DIALOG_099, 1, 5, 95, 200, _("\

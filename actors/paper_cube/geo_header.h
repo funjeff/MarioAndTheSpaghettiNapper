@@ -1,0 +1,17 @@
+extern const GeoLayout paper_cube_geo[];
+extern Lights1 paper_cube_f3d_material_001_lights;
+extern Lights1 paper_cube_f3d_material_lights;
+extern u8 paper_cube_CubeSide_ci4[];
+extern u8 paper_cube_CubeSide_ci4_pal_rgba16[];
+extern u8 paper_cube_CubeFace_ci4[];
+extern u8 paper_cube_CubeFace_ci4_pal_rgba16[];
+extern Vtx paper_cube_Cube_mesh_layer_1_vtx_0[20];
+extern Gfx paper_cube_Cube_mesh_layer_1_tri_0[];
+extern Vtx paper_cube_Cube_mesh_layer_1_vtx_1[4];
+extern Gfx paper_cube_Cube_mesh_layer_1_tri_1[];
+extern Gfx mat_paper_cube_f3d_material_001[];
+extern Gfx mat_revert_paper_cube_f3d_material_001[];
+extern Gfx mat_paper_cube_f3d_material[];
+extern Gfx mat_revert_paper_cube_f3d_material[];
+extern Gfx paper_cube_Cube_mesh_layer_1[];
+extern Gfx paper_cube_material_revert_render_settings[];

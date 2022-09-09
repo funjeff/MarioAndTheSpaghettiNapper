@@ -377,4 +377,50 @@ extern const Gfx flame_seg6_dl_0601C928[];
 
 #include "penny/geo_header.h"
 
+#include "earthwake_left_hand/geo_header.h"
+
+#include "earthwake_right_hand/geo_header.h"
+
+#include "earthwake_left_foot/geo_header.h"
+
+#include "earthwake_right_foot/geo_header.h"
+
+#include "earthwake_block_blue/geo_header.h"
+
+#include "earthwake_block_pink/geo_header.h"
+
+#include "earthwake_block_green/geo_header.h"
+
+#include "earthwake_block_yellow/geo_header.h"
+
+#include "earthwake_left_shoulder/geo_header.h"
+
+#include "earthwake_right_shoulder/geo_header.h"
+
+#include "earthwake_new_head/geo_header.h"
+
+#include "earthwake_left_shoulder_collision/collision_header.h"
+
+#include "earthwake_right_shoulder_collision/collision_header.h"
+
+#include "paper_cube/geo_header.h"
+
+#include "cube/collision_header.h"
+
+#include "bowling_pin/geo_header.h"
+
+#include "big_bombable_door/geo_header.h"
+
+#include "big_bombable_door/collision_header.h"
+
+#include "peasant_mario/geo_header.h"
+
+#include "peasant_peach/geo_header.h"
+
+#include "peasant_bowser/geo_header.h"
+
+#include "baljeet/geo_header.h"
+
+#include "candace/geo_header.h"
+
 #endif

@@ -559,6 +559,7 @@ extern const BehaviorScript bhvArrowPlatform[];
 extern const BehaviorScript bhvMarioPuppet[];
 
 extern const BehaviorScript bhvBombableDoor[];
+extern const BehaviorScript bhvBombableBlock[];
 
 extern const BehaviorScript bhvEarthwakeBlock[];
 
@@ -569,5 +570,15 @@ extern const BehaviorScript bhvDestroyableBlock[];
 extern const BehaviorScript bhvMassif[];
 
 extern const BehaviorScript bhvPenny[];
+
+extern const BehaviorScript bhvEarthwakeHand[];
+
+extern const BehaviorScript bhvEarthwakeLeftShoulder[];
+extern const BehaviorScript bhvEarthwakeRightShoulder[];
+
+extern const BehaviorScript bhvRestartCheckpoint[];
+
+extern const BehaviorScript bhvBigBombableDoor[];
+
 
 #endif // BEHAVIOR_DATA_H

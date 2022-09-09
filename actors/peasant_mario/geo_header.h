@@ -1,0 +1,10 @@
+extern const GeoLayout peasant_mario_geo[];
+extern Lights1 peasant_mario_Mario_f3d_v4_001_v4_001_lights;
+extern u8 peasant_mario_Mario_base_colours_ci8[];
+extern u8 peasant_mario_Mario_base_colours_ci8_pal_rgba16[];
+extern Vtx peasant_mario_Mario__mesh__mesh_layer_1_vtx_0[7914];
+extern Gfx peasant_mario_Mario__mesh__mesh_layer_1_tri_0[];
+extern Gfx mat_peasant_mario_Mario_f3d_v4_001_v4_001[];
+extern Gfx mat_revert_peasant_mario_Mario_f3d_v4_001_v4_001[];
+extern Gfx peasant_mario_Mario__mesh__mesh_layer_1[];
+extern Gfx peasant_mario_material_revert_render_settings[];

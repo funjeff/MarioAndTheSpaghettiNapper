@@ -312,6 +312,7 @@
 /* Bowling Ball */
 #define /*0x0F4*/ oBowlingBallTargetYaw OBJECT_FIELD_S32(0x1B)
 // 0x1D-0x21 reserved for pathing
+#define /*0x0F4*/ oBowlingBallForgetTimer OBJECT_FIELD_S32(0x22)
 
 /* Bowling Ball Spawner (Generic) */
 #define /*0x0F4*/ oBBallSpawnerMaxSpawnDist OBJECT_FIELD_F32(0x1B)
@@ -1403,6 +1404,10 @@ os16112*/
 
 #define pennyTimer oF4
 #define pennySize  oF8
+
+//bombable door
+
+#define bombableDoorHealth oF4
 
 
 

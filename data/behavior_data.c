@@ -446,6 +446,15 @@ const BehaviorScript bhvPenny[] = {
     END_LOOP(),
 };
 
+const BehaviorScript bhvRestartCheckpoint[] = {
+    BEGIN(OBJ_LIST_LEVEL),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    SET_OBJ_PHYSICS(/*Wall hitbox radius*/ 30, /*Gravity*/ -400, /*Bounciness*/ -50, /*Drag strength*/ 1000, /*Friction*/ 1000, /*Buoyancy*/ 200, /*Unused*/ 0, 0),
+	BEGIN_LOOP(),
+        CALL_NATIVE(bhv_restart_checkpoint_loop),
+    END_LOOP(),
+};
+
 
 const BehaviorScript bhvNightmareChunk[] = {
     BEGIN(OBJ_LIST_LEVEL),
@@ -472,6 +481,7 @@ const BehaviorScript bhvArrowPlatform[] = {
     CALL_NATIVE(bhv_arrow_platform_init),
 	LOAD_COLLISION_DATA(arrow_platform_collision),
 	SET_HITBOX(/*Radius*/ 260, /*Height*/ 50),
+	SET_FLOAT(oDrawingDistance, 20000),
 	BEGIN_LOOP(),
         CALL_NATIVE(bhv_arrow_platform_loop),
 		CALL_NATIVE(load_object_collision_model),
@@ -491,10 +501,73 @@ const BehaviorScript bhvEarthwakeBlock[] = {
     END_LOOP(),
 };
 
+const BehaviorScript bhvEarthwakeLeftShoulder[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+	LOAD_COLLISION_DATA(earthwake_left_shoulder_collision_collision),
+	SET_HITBOX(/*Radius*/ 260, /*Height*/ 50),
+	SET_FLOAT(oDrawingDistance, 20000),
+	CALL_NATIVE(bhv_earthwake_block_init),
+	BEGIN_LOOP(),
+        CALL_NATIVE(bhv_earthwake_block_loop),
+		CALL_NATIVE(load_object_collision_model),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvEarthwakeRightShoulder[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+	LOAD_COLLISION_DATA(earthwake_right_shoulder_collision_collision),
+	SET_HITBOX(/*Radius*/ 260, /*Height*/ 50),
+	SET_FLOAT(oDrawingDistance, 20000),
+	CALL_NATIVE(bhv_earthwake_block_init),
+	BEGIN_LOOP(),
+        CALL_NATIVE(bhv_earthwake_block_loop),
+		CALL_NATIVE(load_object_collision_model),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvEarthwakeHand[] = {
+    BEGIN(OBJ_LIST_LEVEL),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+	SET_HITBOX(/*Radius*/ 260, /*Height*/ 50),
+	SET_FLOAT(oDrawingDistance, 20000),
+	CALL_NATIVE(bhv_earthwake_block_init),
+	BEGIN_LOOP(),
+        CALL_NATIVE(bhv_earthwake_block_loop),
+    END_LOOP(),
+};
+
 const BehaviorScript bhvBombableDoor[] = {
     BEGIN(OBJ_LIST_SURFACE),
     OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
 	LOAD_COLLISION_DATA(bombable_door_collision),
+	SET_HITBOX(/*Radius*/ 260, /*Height*/ 50),
+	CALL_NATIVE(bhv_bombable_door_init),
+	SET_FLOAT(oDrawingDistance, 20000),
+	BEGIN_LOOP(),
+        CALL_NATIVE(bhv_bombable_door_loop),
+		CALL_NATIVE(load_object_collision_model),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvBigBombableDoor[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+	LOAD_COLLISION_DATA(big_bombable_door_collision),
+	SET_HITBOX(/*Radius*/ 260, /*Height*/ 50),
+	CALL_NATIVE(bhv_bombable_door_init),
+	SET_FLOAT(oDrawingDistance, 20000),
+	BEGIN_LOOP(),
+        CALL_NATIVE(bhv_bombable_door_loop),
+		CALL_NATIVE(load_object_collision_model),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvBombableBlock[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+	LOAD_COLLISION_DATA(cube_collision),
 	SET_HITBOX(/*Radius*/ 260, /*Height*/ 50),
 	CALL_NATIVE(bhv_bombable_door_init),
 	BEGIN_LOOP(),
