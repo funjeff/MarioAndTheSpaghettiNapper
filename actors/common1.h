@@ -423,4 +423,12 @@ extern const Gfx flame_seg6_dl_0601C928[];
 
 #include "candace/geo_header.h"
 
+#include "paper/geo_header.h"
+
+#include "basketball/geo_header.h"
+
+#include "gold_bar/geo_header.h"
+
+#include "gold_bar_single/geo_header.h"
+
 #endif

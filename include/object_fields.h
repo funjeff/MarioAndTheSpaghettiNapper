@@ -1409,6 +1409,11 @@ os16112*/
 
 #define bombableDoorHealth oF4
 
+//event trigger
+
+#define eventTriggered oF4
+#define eventTriggerDeleteTimer oF8
+
 
 
 

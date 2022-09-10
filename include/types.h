@@ -501,6 +501,7 @@ struct MarioState {
            u8 lHeld;
            u8 bigBallCamera;
            u8 dudeCounter;
+           u8 ballType;
 };
 
 #endif // TYPES_H

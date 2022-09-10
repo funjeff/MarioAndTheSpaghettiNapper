@@ -409,6 +409,15 @@ const BehaviorScript bhvCutsceneTrigger[] = {
    	END_LOOP(),
 };
 
+const BehaviorScript bhvEventTrigger[] = {
+   	BEGIN(OBJ_LIST_LEVEL),
+   	OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+   	SET_OBJ_PHYSICS(/*Wall hitbox radius*/ 30, /*Gravity*/ -400, /*Bounciness*/ -50, /*Drag strength*/ 1000, /*Friction*/ 1000, /*Buoyancy*/ 200, /*Unused*/ 0, 0),
+	BEGIN_LOOP(),
+   	    CALL_NATIVE(bhv_event_trigger_loop),
+   	END_LOOP(),
+};
+
 const BehaviorScript bhvCutsceneProp[] = {
 	BEGIN(OBJ_LIST_LEVEL),
 	OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
@@ -433,7 +442,7 @@ const BehaviorScript bhvLuigiableBomb[] = {
     OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
     SET_OBJ_PHYSICS(/*Wall hitbox radius*/ 30, /*Gravity*/ -400, /*Bounciness*/ -50, /*Drag strength*/ 1000, /*Friction*/ 1000, /*Buoyancy*/ 200, /*Unused*/ 0, 0),
 	BEGIN_LOOP(),
-        CALL_NATIVE(bhv_luigiable_bomb_loop),
+	  CALL_NATIVE(bhv_luigiable_bomb_loop),
     END_LOOP(),
 };
 
@@ -541,7 +550,7 @@ const BehaviorScript bhvEarthwakeHand[] = {
 const BehaviorScript bhvBombableDoor[] = {
     BEGIN(OBJ_LIST_SURFACE),
     OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
-	LOAD_COLLISION_DATA(bombable_door_collision),
+	LOAD_COLLISION_DATA(big_bombable_door_collision),
 	SET_HITBOX(/*Radius*/ 260, /*Height*/ 50),
 	CALL_NATIVE(bhv_bombable_door_init),
 	SET_FLOAT(oDrawingDistance, 20000),
@@ -570,6 +579,7 @@ const BehaviorScript bhvBombableBlock[] = {
 	LOAD_COLLISION_DATA(cube_collision),
 	SET_HITBOX(/*Radius*/ 260, /*Height*/ 50),
 	CALL_NATIVE(bhv_bombable_door_init),
+	SET_FLOAT(oDrawingDistance, 20000),
 	BEGIN_LOOP(),
         CALL_NATIVE(bhv_bombable_door_loop),
 		CALL_NATIVE(load_object_collision_model),
@@ -5333,6 +5343,19 @@ const BehaviorScript bhvGoomba[] = {
     CALL_NATIVE(bhv_goomba_init),
     BEGIN_LOOP(),
         CALL_NATIVE(bhv_goomba_update),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvToadGoomba[] = {
+    BEGIN(OBJ_LIST_PUSHABLE),
+    OR_INT(oFlags, (OBJ_FLAG_COMPUTE_ANGLE_TO_MARIO | OBJ_FLAG_COMPUTE_DIST_TO_MARIO | OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    DROP_TO_FLOOR(),
+    LOAD_ANIMATIONS(oAnimations, goomba_seg8_anims_0801DA4C),
+    SET_HOME(),
+    SET_OBJ_PHYSICS(/*Wall hitbox radius*/ 40, /*Gravity*/ -400, /*Bounciness*/ -50, /*Drag strength*/ 1000, /*Friction*/ 1000, /*Buoyancy*/ 0, /*Unused*/ 0, 0),
+    CALL_NATIVE(bhv_toad_goomba_init),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_toad_goomba_update),
     END_LOOP(),
 };
 

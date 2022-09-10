@@ -8,7 +8,15 @@
  */
 
 void bhv_sparkle_spawn_loop(void) {
-    struct Object *sparkle = try_to_spawn_object(0, 1.0f, o, MODEL_SPARKLES_ANIMATION, bhvSparkle);
+	struct Object *sparkle;
+	if (!gMarioState->ballType){
+		 sparkle = try_to_spawn_object(0, 1.0f, o, MODEL_SPARKLES_ANIMATION, bhvSparkle);
+	} else {
+		 sparkle = try_to_spawn_object(0, 1.0f, o, MODEL_BASKETBALL, bhvSparkle);
+		 o->sparkleSizeMax = .3;
+		 o->sparkleSizeMin = .1;
+
+	}
     if (sparkle != NULL) {
         obj_translate_xyz_random(sparkle, 90.0f);
         if (o->sparkleSizeMin != 0){

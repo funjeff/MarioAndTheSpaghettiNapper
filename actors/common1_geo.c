@@ -74,3 +74,7 @@
 #include "peasant_bowser/geo.inc.c"
 #include "baljeet/geo.inc.c"
 #include "candace/geo.inc.c"
+#include "paper/geo.inc.c"
+#include "basketball/geo.inc.c"
+#include "gold_bar/geo.inc.c"
+#include "gold_bar_single/geo.inc.c"

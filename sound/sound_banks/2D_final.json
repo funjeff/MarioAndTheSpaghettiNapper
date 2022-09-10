@@ -1,0 +1,124 @@
+{
+    "date": "1996-03-19",
+    "sample_bank": "instruments",
+    "envelopes": {
+        "envelope0": [
+            [2, 32700],
+            [205, 0],
+            [1, 0],
+            "hang"
+        ],
+        "envelope1": [
+            [2, 32700],
+            [205, 0],
+            [1, 0],
+            "hang"
+        ],
+        "envelope2": [
+            [6, 32700],
+            [1, 32700],
+            [32700, 29430],
+            "hang"
+        ],
+        "envelope3": [
+            [2, 32700],
+            [136, 0],
+            [32700, 0],
+            "hang"
+        ],
+        "envelope4": [
+            [2, 32700],
+            [1, 32700],
+            [32700, 29430],
+            "hang"
+        ],
+        "envelope5": [
+            [2, 32700],
+            [1, 32700],
+            [32700, 29430],
+            "hang"
+        ],
+        "envelope6": [
+            [2, 32700],
+            [1, 32700],
+            [32700, 29430],
+            "hang"
+        ],
+        "envelope7": [
+            [2, 32700],
+            [1, 32700],
+            [32700, 29430],
+            "hang"
+        ],
+        "envelope8": [
+            [2, 32700],
+            [1, 32700],
+            [32700, 29430],
+            "hang"
+        ]
+    },
+    "instruments": {
+        "inst0": {
+            "release_rate": 34,
+            "envelope": "envelope0",
+            "sound": "44_grand_piano"
+        },
+        "inst1": {
+            "release_rate": 53,
+            "envelope": "envelope1",
+            "sound": "04_bright_piano"
+        },
+        "inst2": {
+            "release_rate": 15,
+            "normal_range_lo": 27,
+            "normal_range_hi": 46,
+            "envelope": "envelope2",
+            "sound_lo": "23_strings_1",
+            "sound": "24_strings_2",
+            "sound_hi": "25_strings_3"
+        },
+        "inst3": {
+            "release_rate": 43,
+            "normal_range_hi": 47,
+            "envelope": "envelope3",
+            "sound": "46_pizzicato_strings_1",
+            "sound_hi": "47_pizzicato_strings_2"
+        },
+        "inst4": {
+            "release_rate": 10,
+            "envelope": "envelope4",
+            "sound": "22_boys_choir"
+        },
+        "inst5": {
+            "release_rate": 208,
+            "envelope": "envelope5",
+            "sound": "37_square_synth"
+        },
+        "inst6": {
+            "release_rate": 208,
+            "envelope": "envelope1",
+            "sound": "36_sawtooth_synth"
+        },
+        "inst7": {
+            "release_rate": 208,
+            "envelope": "envelope7",
+            "sound": "29_orchestra_hit"
+        },
+        "inst8": {
+            "release_rate": 208,
+            "envelope": "envelope8",
+            "sound": "09"
+        }
+    },
+    "instrument_list": [
+        "inst0",
+        "inst1",
+        "inst2",
+        "inst3",
+        "inst4",
+        "inst5",
+        "inst6",
+        "inst7",
+        "inst8"
+    ]
+}

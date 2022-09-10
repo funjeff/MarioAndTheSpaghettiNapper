@@ -278,12 +278,12 @@ a cake for you.\n\
 Yours truly--\n\
 Princess Toadstool"))
 
-DEFINE_DIALOG(DIALOG_021, 1, 5, 95, 200, _("\
-Welcome.\n\
-No one's home!\n\
-Now " SCRAM "\n\
-and don't come back!\n\
-Gwa ha ha!"))
+DEFINE_DIALOG(DIALOG021, 1, 5, 95, 200, ("\
+I stole your dumb food!\n\
+- Toad            shit\n\
+I mean  - Bowser\n\
+Yeah, it's from Bowser.\n\
+nice, i saved it"))
 
 DEFINE_DIALOG(DIALOG_022, 1, 2, 95, 200, _("\
 You need a key to open\n\
@@ -511,165 +511,167 @@ Below!"))
 
 DEFINE_DIALOG(DIALOG_041, 1, 4, 30, 200, _("\
 Hey, Mario!\n\
-Im a uhhhh goomba\n\
-Yeah thats right!\n\
-Im a goomba\n\
-Yeah I work for bowser.\n\
+I'm a, uhhhh, goomba...\n\
+Yeah, that's right!\n\
+I'm a goomba!\n\
+Yeah, I work for Bowser.\n\
 and he TOADally\n\
-stole that spagetti\n\
+stole that spaghetti\n\
 \n\
-Mario: wait\n\
-if your a goomba\n\
+Mario: Wait,\n\
+if you're a goomba,\n\
 then why did you\n\
 make a toad pun?\n\
-well um uh\n\
+Well, um, uh...\n\
 I was just\n\
-trying tooo\n\
+trying tooo...\n\
 \n\
 emphasize how much\n\
-toad DIDEN'T steal it\n\
+Toad DIDN'T steal it!\n\
 \n\
 "))
 
 DEFINE_DIALOG(DIALOG_042, 1, 3, 30, 200, _("\
 Yo!\n\
-Im ACTUALLY a goomba.\n\
+I'm ACTUALLY a goomba.\n\
 \n\
-Don't know whats the deal\n\
-with that guy over there\n\
-is!\n\
-In any case he definitly.\n\
-doesen't work here\n\
+Don't know what the deal\n\
+is with that guy \n\
+over there.\n\
+In any case he definitely\n\
+doesen't work here.\n\
 \n\
 He keeps ranting about\n\
-bowser stealing spagetti\n\
-for some reason\n\
-but thats not possible\n\
-bowsers been asleep here \n\
-in the castle all day!\n\
-We should probably have\n\
-like woken him up\n\
-or something\n\
-but he pays us by the hour\n\
-not the princess's captured\n\
-so im not too concerned"))
+Bowser stealing spaghetti\n\
+for some reason,\n\
+but that's not possible!\n\
+Bowser has been asleep \n\
+here in the castle all day!\n\
+We should probably have,\n\
+like, woken him up\n\
+or something,\n\
+but he pays us by \n\
+the hour, not the \n\
+princesses captured,\n\
+so I'm not too concerned."))
 
 DEFINE_DIALOG(DIALOG_043, 1, 5, 30, 200, _("\
-Hey mario!\n\
-something weirds going on\n\
-theres supposed to be 3\n\
-goombas here at this post.\n\
-but theres four!\n\
-the way I see it theres\n\
-only one possiblity\n\
+Hey Mario!\n\
+Something weird's going on...\n\
+There's supposed to be 3\n\
+goombas here at this post,\n\
+but there's four!\n\
+The way I see it, there's\n\
+only one possiblity:\n\
 \n\
 AN IMPOSTER GOOMBA!\n\
 \n\
-What if mario is in there\n\
+What if Mario is in there\n\
 disguising as one of us?\n\
 \n\
 \n\
 \n\
 \n\
 oh my god\n\
-weve been compermised\n\
-RED ALERT RED ALERT\n\
+We've been compromised!\n\
+RED ALERT, RED ALERT\n\
 \n\
-wait no your mario!?!?\n\
-then that means if\n\
-your out here\n\
-and he is in there\n\
+Wait, no, you're Mario?!?\n\
+Then that means if\n\
+you're out here,\n\
+and he is in there,\n\
 \n\
 OH NO\n\
-THERES TWO MARIOS!!!!\n\
-AND ONE OF THEMS\n\
+THERE'S TWO MARIOS!!!!\n\
+AND ONE OF THEM IS\n\
 A GOOMBA\n\
 \n\
-Dont think you can pull a\n\
+Don't think you can pull a\n\
 fast one on us!\n\
-Because were onto your \n\
-tricks mario!\n\
-or should I say goombario?"))
+Because we're onto your \n\
+tricks, Mario...\n\
+\n\
+or should I \n\
+say Goombario?"))
 
-DEFINE_DIALOG(DIALOG_044, 1, 5, 95, 200, _("\
-Alright mario!\n\
-Im in position\n\
-they don't suspect a thing.\n\
-\n\
-we attack on monday\n\
-\n\
-\n\
+DEFINE_DIALOG(DIALOG_044, 1, 4, 95, 200, _("\
+Alright Mario 1!\n\
+I'm in position.\n\
+They don't suspect \n\
+a thing. \n\
+We attack on monday.\n\
 \n\
 \n\
 \n\
-Mario nods in agreement\n\
 \n\
 \n\
 \n\
+\n\
+Mario nods in agreement.\n\
 "))
 
 DEFINE_DIALOG(DIALOG_045, 1, 4, 30, 200, _("\
 Mario! I knew you would\n\
-save me! Thank you Mario\n\
+save me! Thank you Mario!\n\
 \n\
 \n\
-Mario: ohhhh well you see\n\
-im kinda like off the clock\n\
-right now you know how it is\n\
-\n\
-huh! Mario?\n\
-\n\
-\n\
-\n\
-well its just you don't pay\n\
-overtime and im kinda on\n\
-a seperate quest right now\n\
-\n\
-yaknow your supposed\n\
-to give me a weeks notice\n\
-before being kidnapped \n\
-\n\
-how about we rescue you\n\
-first thing tommarow\n\
-\n\
-\n\
-luigi: oh no can do bro\n\
-I told e-gadd Id test his \n\
-gaddget tommarow\n\
-\n\
-OK so the day after\n\
+Mario: Ohhhh, well, you\n\
+see, I'm kinda, like,\n\
+off the clock right now...\n\
+you know how it is\n\
+What?\n\
 \n\
 \n\
 \n\
-but thats the day of the\n\
-big kart race\n\
+Well it's just you don't \n\
+pay overtime, and I'm \n\
+kinda on a separate \n\
+quest right now....\n\
+Y'know, you're supposed\n\
+to give me a week's notice\n\
+before being kidnapped! \n\
+\n\
+How about we rescue you...\n\
+first thing tomorrow?\n\
 \n\
 \n\
-OK SO THE DAY AFTER\n\
-THAT\n\
+Luigi: Oh, no can do bro!\n\
+I told E-Gadd I'd test\n\
+his Gadd-get tomorrow.\n\
 \n\
-\n\
-no can do!\n\
-theres a mario party\n\
-that day\n\
-no way im missing that\n\
-FINE 4 DAYS FROM NOW\n\
+Ok, so the day after.\n\
 \n\
 \n\
 \n\
-well thats a weekend bro \n\
-you really wanna fight\n\
-bowser on your day off?\n\
+But that's the day of the\n\
+big kart race!\n\
 \n\
-MONDAY WE WILL BE HERE\n\
-ON MONDAY\n\
+\n\
+OKAY, SO THE DAY AFTER\n\
+THAT!\n\
+\n\
+\n\
+No can do!\n\
+There's a Mario Party\n\
+that day!\n\
+No way I'm missing that!\n\
+FINE, FOUR DAYS\n\
+FROM NOW!\n\
+\n\
+\n\
+Well, that's a \n\
+weekend, bro.\n\
+You really wanna fight\n\
+Bowser on your day off?\n\
+MONDAY. WE WILL BE\n\
+HERE ON MONDAY.\n\
 \n\
 "))
 
 DEFINE_DIALOG(DIALOG_046, 1, 3, 30, 200, _("\
-Hey mario, when we find\n\
-that spagetti your gonna\n\
-share it right?\n\
+Hey Mario, when we find\n\
+that spaghetti you're \n\
+gonna share it, right?\n\
 \n\
 \n\
 \n\
@@ -682,119 +684,158 @@ Hi! I'll prepare the\n\
 cannon for you!"))
 
 DEFINE_DIALOG(DIALOG_048, 1, 4, 30, 200, _("\
-Mario look!\n\
-theres a weak point\n\
-on his shoulders\n\
+Mario, look!\n\
+There's a weak point\n\
+on his shoulders!\n\
 \n\
 I bet if you destroy\n\
-those it will weaken\n\
+those, it will weaken\n\
 him!\n\
 \n\
-and then you can\n\
-attack him with that\n\
-launchpad in the back\n\
+Then you can attack\n\
+him with that\n\
+launchpad in the back!\n\
 \n\
-Mario: OK in that case\n\
-you get the right one\n\
-ill get the left one\n\
-\n\
-ohhh uhh sorry mario\n\
-i have to uhhhh\n\
+Mario: Okay, in that\n\
+case, you get the\n\
+right one, and I'll\n\
+get the left one.\n\
+Ohhh, uhh, sorry Mario\n\
+I have to, uhhhh\n\
 come up with an excuse!\n\
-Ill leave this to you"))
+I'll leave this to you!"))
 
 DEFINE_DIALOG(DIALOG_049, 1, 5, 30, 200, _("\
 9998, 9999, 10000!\n\
-ha puny exercise\n\
+Ha! Puny exercise\n\
 IS NOTHING!\n\
-beef triumps again\n\
-time for 3000 more\n\
-whats this puny\n\
-plumber doing here\n\
+Beef triumphs again!\n\
+Time for 3000 more.\n\
+What's this puny\n\
+plumber doing here?\n\
 \n\
 \n\
-he lacks the beef!\n\
-your spaghetti\n\
+\n\
+HE LACKS THE BEEF!\n\
+\n\
+\n\
+\n\
+\n\
+Your spaghetti\n\
 is missing?\n\
 \n\
 \n\
 \n\
-ha! I laugh at your\n\
-spaghetti\n\
+Ha! I laugh at your\n\
+spaghetti!\n\
 \n\
-a meal for those\n\
-lacking beef\n\
-if your puny\n\
-beefless meal\n\
-is here it must\n\
-be past that beefy\n\
-purple rock\n\
+A meal for those\n\
+lacking beef.\n\
+If your puny beefless meal\n\
+is here, it must be past\n\
+that beefy purple rock.\n\
+\n\
+\n\
 Rock is too beefy.\n\
-Even for big massif.\n\
+Even for Big Massif.\n\
 \n\
 \n\
 \n\
 Rock is cheating!\n\
-drawing its beef\n\
+Drawing its beef\n\
 from smaller \n\
-beefless rocks\n\
+beefless rocks...\n\
 \n\
-without those even\n\
+Without those, even\n\
 shrimp like you\n\
-could beef it up\n\
+could beef it up.\n\
 \n\
 \n\
-3 puny rocks hide\n\
-behind 3 warp pipes\n\
-beef those and the\n\
-big one gets BEEFED\n\
+4 puny rocks hide\n\
+behind 4 warp pipes.\n\
+Beef those and the\n\
+big one gets BEEFED!\n\
 "))
 
-DEFINE_DIALOG(DIALOG_050, 1, 3, 30, 200, _("\
-BEEF\n\
+DEFINE_DIALOG(DIALOG_050, 1, 4, 30, 200, _("\
+Cutlet wants to master\n\
+art of ball balancing?\n\
 \n\
+\n\
+With tips and tricks,\n\
+mastering ball will\n\
+be PIECE OF BEEF!\n\
+\n\
+More speed means more\n\
+height! Cutlet can\n\
+scale BEEFIEST of\n\
+mountains!\n\
+Press L in mid-air\n\
+to dismount! Easier\n\
+to keep steady!\n\
+\n\
+Dismounting in air\n\
+can lead to\n\
+BIG BEEF COMBOS!\n\
+\n\
+Wall kick to new\n\
+heights! Barely miss\n\
+a leap? Ledge grab!\n\
+\n\
+Press [Z] to dismount\n\
+and SLAM into the floor!\n\
+Perfect for a full stop.\n\
+\n\
+Be careful,\n\
+dismounting gives\n\
+small push forward.\n\
+\n\
+Da, use tips to\n\
+smash, roll and\n\
+climb to victory!\n\
 "))
 
 DEFINE_DIALOG(DIALOG_051, 1, 4, 30, 200, _("\
 \n\
   TOAD KINGDOM\n\
-   law 32145\n\
+   LAW 32145\n\
 \n\
 When racing against\n\
-king toad no challanger\n\
+King Toad, no challenger\n\
 can move faster than\n\
 a brisk walk."))
 
 DEFINE_DIALOG(DIALOG_052, 1, 4, 30, 200, _("\
 \n\
   TOAD KINGDOM\n\
-   law 81456\n\
+   LAW 81456\n\
 \n\
-the phrase shoutouts to\n\
-simpleflips is banned\n\
-the correct phrase is\n\
-toasts to toad"))
+The phrase 'Shoutouts to\n\
+Simpleflips' is banned.\n\
+The correct phrase is\n\
+'Toasts to Toad.'"))
 
 DEFINE_DIALOG(DIALOG_053, 1, 4, 30, 200, _("\
 \n\
   TOAD KINGDOM\n\
-   law 21152\n\
+   LAW 21152\n\
 \n\
-all citzens are equal\n\
-but king toad is more\n\
-equal\n\
+All pasta possesions must\n\
+be forfeited to King Toad.\n\
+Otherwise, it will be\n\ 
+taken by force.\n\
 "))
 
 DEFINE_DIALOG(DIALOG_054, 1, 4, 30, 200, _("\
-fun fact!\n\
-this sign wasent in the\n\
-original mario 64\n\
+Fun Fact!\n\
+This sign wasn't in the\n\
+original Super Mario 64!\n\
 \n\
-did you know that\n\
+Did you know that?\n\
 \n\
 \n\
 \n\
-no you fuckin dident\n\
+no you fuckin didn't\n\
 shut the fuck up\n\
 you lying piece of shit\n\
 "))
@@ -802,7 +843,7 @@ you lying piece of shit\n\
 DEFINE_DIALOG(DIALOG_055, 1, 4, 30, 200, _("\
 \n\
   TOAD KINGDOM\n\
-   law 1\n\
+   LAW 1\n\
 \n\
 bup\n\
 \n\
@@ -854,7 +895,7 @@ worried sick!"))
 DEFINE_DIALOG(DIALOG_060, 1, 4, 30, 200, _("\
 \n\
   TOAD KINGDOM\n\
-   law 1\n\
+   LAW 1\n\
 \n\
 bup\n\
 \n\
@@ -870,16 +911,16 @@ I'm serious.\n\
 DEFINE_DIALOG(DIALOG_062, 1, 2, 30, 200, _("\
 Did you have fun\n\
 going down the slide?\n\
-well guess what\n\
+Well guess what\n\
 dumbfuck\n\
-theres no pipe down\n\
-here\n\
-theres no exit course\n\
+there's no pipe down\n\
+here!\n\
+There's no exit course!\n\
 \n\
-theres not even a\n\
-deathplane to rely on\n\
-so enjoy the walk of\n\
-shame back up dumbass"))
+There's not even a\n\
+deathplane to rely on!\n\
+So enjoy the walk of\n\
+shame back up, dumbass."))
 
 DEFINE_DIALOG(DIALOG_063, 1, 6, 30, 200, _("\
 Hack made by Dude45\n\
@@ -888,81 +929,87 @@ and Pikmanfan2002\n\
 \n\
 \n\
 \n\
-its only our second hack\n\
-so when its inevadbly the\n\
-coolest you ever seen\n\
+It's only our second hack\n\
+so when its inevitably the\n\
+coolest you've ever seen,\n\
 feel free to put\n\
-SECOND HACK!??!??!\n\
-in the title\n\
-this hack is very heavily\n\
-inspired by mario and luigi\n\
-dream team\n\
+""SECOND HACK!??!??!""\n\
+in the title.\n\
+This hack is very heavily\n\
+inspired by Mario and Luigi\n\
+Dream Team\n\
 \n\
-so uh ...\n\
-hopefully you played that\n\
-in todays hack\n\
-the part of \n\
+So, uh...\n\
+Hopefully you played that.\n\
+In today's episode of the\n\
+Super Show, the part of \n\
 Baljeet Tjinder \n\
 will be played by\n\
-a luigi amiibo\n\
+Luigi Amiibo.\n\
 "))
 
 DEFINE_DIALOG(DIALOG_064, 1, 5, 30, 200, _("\
-hey bro!\n\
-See that bomb over there\n\
-Maybe we can use it too\n\
+Hey, Bro!\n\
+See that bomb over there?\n\
+Maybe we can use it to\n\
 blow up this wall!\n\
 \n\
 Try getting on the ball\n\
-and holding B while your\n\
+and holding B while you're\n\
 near it!\n\
 \n\
 \n\
 Then we can do a\n\
-bros swing attack\n\
+Luiginary Swing Attack\n\
 \n\
 \n\
 "))
 
 DEFINE_DIALOG(DIALOG_065, 1, 4, 30, 200, _("\
 I bet if that no good\n\
-pasta plundering toad is\n\
-anywhere its probably\n\
-the top floor\n\
-even still\n\
+pasta plundering Toad is\n\
+anywhere, it's probably\n\
+the top floor.\n\
+Even still...\n\
 \n\
-some of these other rooms\n\
-seem worth checking out\n\
+Some of these other rooms\n\
+seem worth checking out.\n\
 \n\
-your call bro\n\
+Your call, Bro.\n\
 \n\
 "))
 
 DEFINE_DIALOG(DIALOG_066, 1, 5, 30, 200, _("\
-Mario, it's Peach!\n\
-Please be careful! Bowser\n\
-is so wicked! He will try\n\
-to burn you with his\n\
-horrible flame breath.\n\
-Run around behind and\n\
-grab him by the tail with\n\
-the [B] Button. Once you\n\
-grab hold, swing him\n\
-around in great circles.\n\
-Rotate the Control Stick\n\
-to go faster and faster.\n\
-The faster you swing him,\n\
-the farther he'll fly.\n\
+Hey, Mario, just your\n\
+local chair salesman.\n\
+The Chindustry, as we\n\
+call it.\n\
 \n\
-Use the [C] Buttons to look\n\
-around, Mario. You have\n\
-to throw Bowser into one\n\
-of the bombs in the four\n\
-corners.\n\
-Aim well, then press [B]\n\
-again to launch Bowser.\n\
-Good luck, Mario! Our\n\
-fate is in your hands."))
+Bowser just ordered this\n\
+bad boy the other day,\n\
+can't get his mind off\n\
+of it. But that's what\n\
+I do.\n\
+With Big Chair going\n\
+around taking over the\n\
+people with their products,\n\
+it's nice to see someone\n\
+look out for the little guy.\n\
+He may not seem like it,\n\
+but Bowser is all about\n\
+the small town businesses.\n\
+Gotta respect him for\n\
+that.\n\
+If you're ever interested\n\
+in upgrading furniture,\n\
+Mario, don't be afraid to\n\
+reach out. You can find\n\
+my website at \n\
+https://iheartcrafty\n\
+things.com/wp-content/\n\
+uploads/2021/04/Chair\n\
+-DRAWING-%E2%80%93-\n\
+STEP-10.jpg"))
 
 DEFINE_DIALOG(DIALOG_067, 1, 5, 30, 200, _("\
 Tough luck, Mario!\n\
@@ -985,13 +1032,22 @@ You can still control\n\
 Mario--just try to keep\n\
 calm!"))
 
-DEFINE_DIALOG(DIALOG_069, 1, 6, 30, 200, _("\
-Sometimes you'll bump into\n\
-invisible walls at the\n\
-edges of the painting\n\
-worlds. If you hit a wall\n\
-while flying, you'll bounce\n\
-back."))
+DEFINE_DIALOG(DIALOG_069, 1, 3, 30, 200, _("\
+Mario,\n\
+You may have escaped\n\
+from my dream world\n\
+but were in the real world\n\
+now theres no way for you\n\
+to beat me here\n\
+ive already calculated my\n\
+chance of victory at\n\
+99.9999999%\n\
+all of the worlds\n\
+spaghetti belongs to me\n\
+and that includes yours\n\
+so prepare to lose mario\n\
+\n\
+"))
 
 DEFINE_DIALOG(DIALOG_070, 1, 5, 30, 200, _("\
 You can return to the\n\
@@ -1269,112 +1325,119 @@ My troops in the walls\n\
 need them! Bwa ha ha!"))
 
 DEFINE_DIALOG(DIALOG_093, 1, 5, 30, 200, _("\
-Oh boy its the best part\n\
+Oh boy, it's the best part\n\
 of the dream!\n\
-\n\
-the mario pumbling\n\
-part.\n\
-huh?\n\
-Your looking for\n\
-spaghetti\n\
+The Mario pummeling part!\n\
 \n\
 \n\
-Spaghettis for nerds\n\
-I dont have any.\n\
+Huh?\n\
+You're looking for\n\
+spaghetti?\n\
+\n\
+\n\
+Spaghetti's for nerds!\n\
+I don't have any.\n\
+\n\
+\n\
+Wuzzat?\n\
+You also destroyed my\n\
+favorite doors? But...\n\
 \n\
 \n\
 \n\
-guess what its my\n\
-dream so what I say\n\
-goes\n\
+Alright, that's it.\n\
+This is MY dream, so\n\
+MY rules.\n\
 \n\
 \n\
-and I say no tail\n\
-grabbing allowed\n\
+This time, Mario,\n\
+there's NO tail grabbing.\n\
+Sweet dreams!\n\
 "))
 
 DEFINE_DIALOG(DIALOG_094, 1, 5, 30, 200, _("\
 I tried to kidnap\n\
-king toad.\n\
-but hes way more cool\n\
-awesome and smart\n\
-than I am\n\
-he knocked out me and\n\
-all my minions with a\n\
-single epic karate kick\n\
+King Toad, but he's\n\
+way more cool and awesome\n\
+and smart and cooler and\n\
+smartier than I am!\n\
+He knocked me and all\n\
+my minions out with a\n\
+single epic karate kick!\n\
 \n\
 \n\
-it was also so epic that\n\
+It was also so epic that\n\
 it blew up my castle and\n\
-everyone inside\n\
+everyone inside!\n\
 \n\
 \n\
-bank of toad wont even\n\
-cover the damages\n\
+Bank of Toad won't even\n\
+cover the damages...\n\
 \n\
 \n\
 \n\
-ive been homeless ever\n\
-since\n\
+I've been homeless ever\n\
+since.\n\
 \n\
 \n\
 :("))
 
 DEFINE_DIALOG(DIALOG_095, 1, 4, 30, 200, _("\
-Its been 4 days since\n\
-ive last had spaghetti\n\
+It's been 4 days since\n\
+I've last had spaghetti.\n\
 \n\
 \n\
-its over for me I wont\n\
-last much longer \n\
+It's over for me. I won't\n\
+last much longer...\n\
 \n\
 \n\
-im going crazy just this\n\
-morrning I jumped and\n\
-accedently said yahoo\n\
+I'm going crazy. Just this\n\
+morning, I jumped and\n\
+accidentally said yahoo...\n\
 \n\
-yahoo?\n\
-are you kidding me\n\
-we all know your\n\
-suppose to say\n\
-all hail king toad our\n\
-glorius leader\n\
-whenever you jump\n\
+Yahoo?\n\
+Are you kidding me?\n\
+We all know your\n\
+supposed to say\n\
+'All hail King Toad, our\n\
+glorius leader!'\n\
+whenever you jump!\n\
 \n\
-everytime I try to eat\n\
-king toad thinks of a\n\
-genious way to steal my\n\
-food\n\
-if only I was as smart as\n\
-king toad\n\
-then my pasta would be\n\
-safe"))
+Every time I try to eat,\n\
+King Toad thinks of a\n\
+genius way to steal my\n\
+food!\n\
+If only I was as smart as\n\
+King Toad, then my pasta\n\
+would be safe."))
 
-DEFINE_DIALOG(DIALOG_096, 1, 4, 30, 200, _("\
-King toad is such a good\n\
-leader.\n\
+DEFINE_DIALOG(DIALOG_096, 1, 3, 30, 200, _("\
+Hey, Mario. Huh, what's\n\
+that? Why am I not\n\
+kidnapped?\n\
+How could anyone ever be\n\
+kidnapped in this kingdom?\n\
+That's insanity!\n\
+Toad keeps such a close\n\
+eye on all of his citizens!\n\
 \n\
-\n\
-he implented so many new\n\
-policys\n\
-\n\
-\n\
-my favorate is rule 1\n\
-\n\
-toad is better than\n\
-everybody else"))
+By watching our every move,\n\
+he assures us that nothing\n\
+bad ever happens!\n\
+Especially thievery."))
 
 DEFINE_DIALOG(DIALOG_097, 1, 2, 30, 200, _("\
-I forgot my satchel\n\
+I forgot my satchel.\n\
 "))
 
-DEFINE_DIALOG(DIALOG_098, 1, 2, 95, 200, _("\
-SEE MOM I TOLD YOU\n\
-THE BOYS MADE A ROMHACK\n\
-I TOLD YOU\n\
+DEFINE_DIALOG(DIALOG_098, 1, 3, 95, 200, _("\
+SEE, MOM? IT'S RIGHT HERE!\n\
+THE BOYS MADE AN ENTIRE\n\
+ROMHACK! I'M' TELLING YOU!\n\
+Huh?\n\
 \n\
-... but but but but\n\
-it was right here\n\
+but... but...\n\
+It was right here...\n\
 "))
 
 // unused

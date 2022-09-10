@@ -377,3 +377,105 @@ void bhv_goomba_update(void) {
 #endif
     }
 }
+
+
+void bhv_toad_goomba_init(void) {
+  //  o->oGoombaSize = o->oBehParams2ndByte & GOOMBA_BP_SIZE_MASK;
+
+    o->oGoombaScale = sGoombaProperties[o->oGoombaSize].scale;
+    o->oDeathSound = sGoombaProperties[o->oGoombaSize].deathSound;
+
+    obj_set_hitbox(o, &sGoombaHitbox);
+
+    o->oDrawingDistance = sGoombaProperties[o->oGoombaSize].drawDistance;
+    o->oDamageOrCoinValue = sGoombaProperties[o->oGoombaSize].damage;
+
+    o->oGravity = -8.0f / 3.0f * o->oGoombaScale;
+    gMarioState->interactObj = o;
+    gMarioState->usedObj     = o;
+    set_mario_action(gMarioState, ACT_READING_SIGN, 0);
+
+#ifdef FLOOMBAS
+    if (o->oIsFloomba) {
+        o->oAnimState += FLOOMBA_ANIM_STATE_EYES_OPEN;
+    }
+#ifdef INTRO_FLOOMBAS
+    if (o->oAction == FLOOMBA_ACT_STARTUP) {
+        o->oZoomPosZ = o->oPosZ;
+        o->oGoombaScale = 0.0f;
+        cur_obj_hide();
+    }
+#endif
+#endif
+}
+
+void bhv_toad_goomba_update(void) {
+    // PARTIAL_UPDATE
+
+    f32 animSpeed;
+
+    if (obj_update_standard_actions(o->oGoombaScale)) {
+        // If this goomba has a spawner and mario moved away from the spawner, unload
+        if (o->parentObj != o) {
+            if (o->parentObj->oAction == GOOMBA_TRIPLET_SPAWNER_ACT_UNLOADED) {
+                obj_mark_for_deletion(o);
+            }
+        }
+
+        cur_obj_scale(o->oGoombaScale);
+        obj_update_blinking(&o->oGoombaBlinkTimer, 30, 50, 5);
+#ifdef FLOOMBAS
+        if (o->oIsFloomba) {
+            o->oAnimState += FLOOMBA_ANIM_STATE_EYES_OPEN;
+        }
+#endif
+
+        cur_obj_update_floor_and_walls();
+
+        if (o->oGoombaScale == 0.0f || (animSpeed = (o->oForwardVel / o->oGoombaScale * 0.4f)) < 1.0f) {
+            animSpeed = 1.0f;
+        }
+#if defined(FLOOMBAS) && defined(INTRO_FLOOMBAS)
+        if (o->oAction == FLOOMBA_ACT_STARTUP) {
+            animSpeed = (GET_BPARAM1(o->oBehParams) / 16.0f);
+        }
+#endif
+        cur_obj_init_animation_with_accel_and_sound(GOOMBA_ANIM_DEFAULT, animSpeed);
+
+        if (!GET_BPARAM3(o->oBehParams)){
+        switch (o->oAction) {
+				case GOOMBA_ACT_WALK:
+					goomba_act_walk();
+					break;
+				case GOOMBA_ACT_ATTACKED_MARIO:
+					goomba_act_attacked_mario();
+					break;
+				case GOOMBA_ACT_JUMP:
+					goomba_act_jump();
+					break;
+	#if defined(FLOOMBAS) && defined(INTRO_FLOOMBAS)
+				case FLOOMBA_ACT_STARTUP:
+					floomba_act_startup();
+					break;
+	#endif
+        }
+        }
+        if (obj_handle_attacks(&sGoombaHitbox, GOOMBA_ACT_ATTACKED_MARIO,
+                               sGoombaAttackHandlers[o->oGoombaSize & 0x1])
+                               && (o->oAction != GOOMBA_ACT_ATTACKED_MARIO)) {
+            mark_goomba_as_dead();
+
+            set_mario_action(gMarioState, ACT_STAR_DANCE_NO_EXIT, 1);
+
+        }
+
+        cur_obj_move_standard(-78);
+    } else {
+        o->oAnimState = GOOMBA_ANIM_STATE_EYES_CLOSED;
+#ifdef FLOOMBAS
+        if (o->oIsFloomba) {
+            o->oAnimState += FLOOMBA_ANIM_STATE_EYES_OPEN;
+        }
+#endif
+    }
+}

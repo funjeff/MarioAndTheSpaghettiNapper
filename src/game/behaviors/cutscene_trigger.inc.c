@@ -45,6 +45,11 @@ void bhv_cutscene_trigger_loop(void) {
 			set_mario_action(gMarioState,ACT_TOAD_CUTSCENE, 0);
 			set_mario_animation(gMarioState, MARIO_ANIM_IDLE_HEAD_RIGHT);
 			break;
+		case 6:
+			set_mario_action(gMarioState,ACT_SECOND_CUTSCENE, 0);
+			set_mario_animation(gMarioState, MARIO_ANIM_IDLE_HEAD_RIGHT);
+			break;
+
 		}
 	   	obj_mark_for_deletion(o);
 

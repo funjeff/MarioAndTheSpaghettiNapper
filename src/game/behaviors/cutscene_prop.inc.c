@@ -11,7 +11,7 @@
 
 
 void bhv_cutscene_prop_loop(void) {
-    if (gMarioState->action == ACT_FIRST_CUTSCENE || gMarioState->action ==ACT_POST_BOWSER_CUTSCENE ||gMarioState->action == ACT_EARTHWAKE_CUTSCENE || gMarioState->action == ACT_TOAD_CUTSCENE){
+    if (gMarioState->action == ACT_FIRST_CUTSCENE || gMarioState->action ==ACT_POST_BOWSER_CUTSCENE ||gMarioState->action == ACT_EARTHWAKE_CUTSCENE || gMarioState->action == ACT_TOAD_CUTSCENE|| gMarioState->action == ACT_SECOND_CUTSCENE){
 
 		if (gMarioState->actionArg + 1 == o->cutscenePropMoveOnState) {
 
@@ -32,13 +32,21 @@ void bhv_cutscene_prop_loop(void) {
 				 f32 ydistNew = xdistNew * newSlope;
 
 				if (gMarioObject->header.gfx.pos[0] > o->oPosX - o->cutscenePropObjXDisplace){
-					gMarioObject->header.gfx.pos[0] = gMarioObject->header.gfx.pos[0] - xdistNew;
+					if (!o->cutscenePropDisableGoodMovement){
+						gMarioObject->header.gfx.pos[0] = gMarioObject->header.gfx.pos[0] - xdistNew;
+					} else {
+						gMarioObject->header.gfx.pos[0] = gMarioObject->header.gfx.pos[0] - o->cutscenePropObjMoveSpeed;
+					}
 					if (gMarioObject->header.gfx.pos[0] < o->oPosX - o->cutscenePropObjXDisplace){
 						gMarioObject->header.gfx.pos[0] = o->oPosX - o->cutscenePropObjXDisplace;
 						xDone = TRUE;
 					}
 				} else {
-					gMarioObject->header.gfx.pos[0] = gMarioObject->header.gfx.pos[0] + xdistNew;
+					if (!o->cutscenePropDisableGoodMovement){
+						gMarioObject->header.gfx.pos[0] = gMarioObject->header.gfx.pos[0] + xdistNew;
+					} else {
+						gMarioObject->header.gfx.pos[0] = gMarioObject->header.gfx.pos[0] + o->cutscenePropObjMoveSpeed;
+					}
 					if (gMarioObject->header.gfx.pos[0] > o->oPosX - o->cutscenePropObjXDisplace){
 						gMarioObject->header.gfx.pos[0] = o->oPosX - o->cutscenePropObjXDisplace;
 						xDone = TRUE;
@@ -46,13 +54,21 @@ void bhv_cutscene_prop_loop(void) {
 				}
 
 				if (gMarioObject->header.gfx.pos[2] > o->oPosZ - o->cutscenePropObjYDisplace){
-					gMarioObject->header.gfx.pos[2]= gMarioObject->header.gfx.pos[2] - ydistNew;
+					if (!o->cutscenePropDisableGoodMovement){
+						gMarioObject->header.gfx.pos[2]= gMarioObject->header.gfx.pos[2] - ydistNew;
+					} else {
+						gMarioObject->header.gfx.pos[2]= gMarioObject->header.gfx.pos[2] - o->cutscenePropObjMoveSpeed;
+					}
 					if (gMarioObject->header.gfx.pos[2] < o->oPosZ - o->cutscenePropObjYDisplace){
 						gMarioObject->header.gfx.pos[2] = o->oPosZ - o->cutscenePropObjYDisplace;
 						yDone = TRUE;
 					}
 				} else {
+					if (!o->cutscenePropDisableGoodMovement){
 					gMarioObject->header.gfx.pos[2] = gMarioObject->header.gfx.pos[2] + ydistNew;
+					} else {
+						gMarioObject->header.gfx.pos[2]= gMarioObject->header.gfx.pos[2] + o->cutscenePropObjMoveSpeed;
+					}
 					if (gMarioObject->header.gfx.pos[2] > o->oPosZ - o->cutscenePropObjYDisplace){
 						gMarioObject->header.gfx.pos[2] = o->oPosZ - o->cutscenePropObjYDisplace;
 						yDone = TRUE;

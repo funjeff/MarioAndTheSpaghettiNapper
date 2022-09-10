@@ -19,6 +19,11 @@ struct ObjectHitbox sLuigiBombHitbox = {
 };
 
 void bhv_luigiable_bomb_loop(void) {
+	if (GET_BPARAM1(o->oBehParams)){
+		sLuigiBombHitbox.radius = 250 *GET_BPARAM1(o->oBehParams);
+	} else {
+		sLuigiBombHitbox.radius = 1800;
+	}
     obj_set_hitbox(o, &sLuigiBombHitbox);
 
     if (o->luigiBombMarkedForRespawn){
@@ -84,3 +89,4 @@ void bhv_luigiable_bomb_loop(void) {
 
     }
 }
+

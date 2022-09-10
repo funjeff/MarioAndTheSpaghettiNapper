@@ -1,0 +1,10 @@
+extern const GeoLayout basketball_geo[];
+extern Lights1 basketball_f3d_material_lights;
+extern u8 basketball_basketball_texture_free_vector_ci8[];
+extern u8 basketball_basketball_texture_free_vector_ci8_pal_rgba16[];
+extern Vtx basketball_Sphere_mesh_layer_1_vtx_0[1984];
+extern Gfx basketball_Sphere_mesh_layer_1_tri_0[];
+extern Gfx mat_basketball_f3d_material[];
+extern Gfx mat_revert_basketball_f3d_material[];
+extern Gfx basketball_Sphere_mesh_layer_1[];
+extern Gfx basketball_material_revert_render_settings[];

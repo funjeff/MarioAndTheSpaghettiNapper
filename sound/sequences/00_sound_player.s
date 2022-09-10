@@ -2675,7 +2675,14 @@ sound_ref .sound_linguine
 sound_ref .sound_garlic_ice_cream
 sound_ref .sound_so_much_for_the_great_escape
 sound_ref .sound_dudes
-
+sound_ref .sound_luigi_look_hotel
+sound_ref .sound_its_from_bowser
+sound_ref .sound_dear_pesky_plumbers
+sound_ref .sound_crummy_koopa
+sound_ref .sound_gone_too_far
+sound_ref .sound_nice_throw
+sound_ref .sound_marios_fuckin_ballin
+sound_ref .sound_spageti
 
 .sound_starman:
 chan_setbank 11
@@ -2752,6 +2759,54 @@ chan_end
 .sound_dudes:
 chan_setbank 11
 chan_setinstr 96
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_luigi_look_hotel:
+chan_setbank 11
+chan_setinstr 97
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_its_from_bowser:
+chan_setbank 11
+chan_setinstr 98
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_dear_pesky_plumbers:
+chan_setbank 11
+chan_setinstr 99
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_crummy_koopa:
+chan_setbank 11
+chan_setinstr 100
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_gone_too_far:
+chan_setbank 11
+chan_setinstr 101
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_nice_throw:
+chan_setbank 11
+chan_setinstr 102
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_marios_fuckin_ballin:
+chan_setbank 11
+chan_setinstr 103
+chan_setlayer 0, .layer_new_sound
+chan_end
+
+.sound_spageti:
+chan_setbank 11
+chan_setinstr 104
 chan_setlayer 0, .layer_new_sound
 chan_end
 

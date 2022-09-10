@@ -589,9 +589,12 @@
 #define MODEL_PEASENT_MARIO               0xF7   //peasent_mario_geo
 #define MODEL_PEASENT_PEACH               0xF8   //peasent_peach_geo
 #define MODEL_PEASENT_BOWSER              0xF9   //peasent_bowser_geo
-#define MODEL_CANDACE                     0xFA   //peasent_candace_geo
-#define MODEL_BALJEET                     0xFB   //peasent_baljeet_geo
-
+#define MODEL_CANDACE                     0xFA   //candace_geo
+#define MODEL_BALJEET                     0xFB   //baljeet_geo
+#define MODEL_PAPER                       0xFC   //paper_geo
+#define MODEL_BASKETBALL                  0xFD   //basketball_geo
+#define MODEL_GOLD_BAR                    0xFE   //gold_bar_geo
+#define MODEL_GOLD_BAR_SINGLE             0xFF   //gold_bar_single_geo
 
 
 

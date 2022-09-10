@@ -560,7 +560,9 @@ void bhv_arrow_platform_init (void);
 
 void bhv_luigi_rope_loop(void);
 void bhv_luigi_rope_init(void);
+
 void bhv_luigiable_bomb_loop(void);
+
 void bhv_cutscene_prop_loop(void);
 
 void bhv_mario_puppet_loop(void);
@@ -581,7 +583,11 @@ void bhv_penny_loop(void);
 
 void bhv_restart_checkpoint_loop(void);
 
+void bhv_event_trigger_loop(void);
 
+void bhv_toad_goomba_update(void);
+
+void bhv_toad_goomba_init(void);
 
 Gfx *geo_move_mario_part_from_parent(s32 callContext, UNUSED struct GraphNode *node, Mat4 mtx);
 

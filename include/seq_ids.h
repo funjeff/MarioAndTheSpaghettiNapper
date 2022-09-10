@@ -50,6 +50,8 @@ enum SeqId {
 	SEQ_TOAD_TOWN,                    // 0x25
 	SEQ_THWOMP_VOLCANO,               // 0x26
 	SEQ_DEEP_CASTLE,                  // 0x27
+	SEQ_PERRY,                        // 0x28
+	SEQ_FINAL,                        // 0x29
     SEQ_COUNT
 };
 

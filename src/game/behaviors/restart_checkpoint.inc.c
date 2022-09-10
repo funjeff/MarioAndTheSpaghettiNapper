@@ -30,6 +30,13 @@ void bhv_restart_checkpoint_loop(void) {
 			gWarpCheckpoint.levelID = LEVEL_TTC;
 		}
 
+		if (GET_BPARAM4(o->oBehParams) == 2){
+			gWarpCheckpoint.courseNum = COURSE_JRB;
+
+			gWarpCheckpoint.levelID = LEVEL_JRB;
+
+		}
+
 		gWarpCheckpoint.areaNum = GET_BPARAM3(o->oBehParams);
 
     	gWarpCheckpoint.warpNode = GET_BPARAM2(o->oBehParams);

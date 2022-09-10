@@ -480,7 +480,12 @@ s32 act_jump(struct MarioState *m) {
     }
 
     if ((m->controller->buttonDown & L_TRIG) && !m->lHeld){
-          	struct Object * ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BLACK_BOBOMB   ,bhvKoopaShell);
+    		struct Object * ball;
+    	    if (!m->ballType){
+    	    	ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BLACK_BOBOMB   ,bhvKoopaShell);
+    	    } else {
+    	    	ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BASKETBALL   ,bhvKoopaShell);
+    	    }
             u32 interaction = determine_interaction(m, ball);
             m->riddenObj = ball;
             m->interactObj = ball;
@@ -512,7 +517,12 @@ s32 act_double_jump(struct MarioState *m) {
 
 
     if ((m->controller->buttonDown & L_TRIG) && !m->lHeld){
-      	struct Object * ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BLACK_BOBOMB   ,bhvKoopaShell);
+    	struct Object * ball;
+    	if (!m->ballType){
+    		ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BLACK_BOBOMB   ,bhvKoopaShell);
+    	} else {
+    		ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BASKETBALL   ,bhvKoopaShell);
+    	}
         u32 interaction = determine_interaction(m, ball);
         m->riddenObj = ball;
         m->interactObj = ball;
@@ -542,7 +552,12 @@ s32 act_triple_jump(struct MarioState *m) {
     }
 
     if ((m->controller->buttonDown & L_TRIG) && !m->lHeld){
-      	struct Object * ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BLACK_BOBOMB   ,bhvKoopaShell);
+    	struct Object * ball;
+    	if (!m->ballType){
+    		ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BLACK_BOBOMB   ,bhvKoopaShell);
+    	} else {
+    		ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BASKETBALL   ,bhvKoopaShell);
+    	}
         u32 interaction = determine_interaction(m, ball);
         m->riddenObj = ball;
         m->interactObj = ball;
@@ -605,7 +620,12 @@ s32 act_freefall(struct MarioState *m) {
     }
 
     if ((m->controller->buttonDown & L_TRIG) && !m->lHeld){
-      	struct Object * ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BLACK_BOBOMB   ,bhvKoopaShell);
+    	struct Object * ball;
+    	if (!m->ballType){
+    		ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BLACK_BOBOMB   ,bhvKoopaShell);
+    	} else {
+    		ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BASKETBALL   ,bhvKoopaShell);
+    	}
         u32 interaction = determine_interaction(m, ball);
         m->riddenObj = ball;
         m->interactObj = ball;
@@ -634,7 +654,12 @@ s32 act_hold_jump(struct MarioState *m) {
     }
 
     if ((m->controller->buttonDown & L_TRIG) && !m->lHeld){
-       	struct Object * ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BLACK_BOBOMB   ,bhvKoopaShell);
+    	struct Object * ball;
+    	if (!m->ballType){
+    		ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BLACK_BOBOMB   ,bhvKoopaShell);
+    	} else {
+    		ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BASKETBALL   ,bhvKoopaShell);
+    	}
         u32 interaction = determine_interaction(m, ball);
         m->riddenObj = ball;
         m->interactObj = ball;
@@ -672,7 +697,12 @@ s32 act_hold_freefall(struct MarioState *m) {
     }
 
     if ((m->controller->buttonDown & L_TRIG) && !m->lHeld){
-       	struct Object * ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BLACK_BOBOMB   ,bhvKoopaShell);
+    	struct Object * ball;
+    	if (!m->ballType){
+    		ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BLACK_BOBOMB   ,bhvKoopaShell);
+    	} else {
+    		ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BASKETBALL   ,bhvKoopaShell);
+    	}
         u32 interaction = determine_interaction(m, ball);
         m->riddenObj = ball;
         m->interactObj = ball;
@@ -700,7 +730,12 @@ s32 act_side_flip(struct MarioState *m) {
     }
 
     if ((m->controller->buttonDown & L_TRIG) && !m->lHeld){
-       	struct Object * ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BLACK_BOBOMB   ,bhvKoopaShell);
+    	struct Object * ball;
+    	if (!m->ballType){
+    		ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BLACK_BOBOMB   ,bhvKoopaShell);
+    	} else {
+    		ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BASKETBALL   ,bhvKoopaShell);
+    	}
         u32 interaction = determine_interaction(m, ball);
         m->riddenObj = ball;
         m->interactObj = ball;
@@ -747,7 +782,13 @@ s32 act_long_jump(struct MarioState *m) {
         animation = MARIO_ANIM_SLOW_LONGJUMP;
     }
 
-    play_mario_sound(m, SOUND_ACTION_TERRAIN_JUMP, SOUND_MARIO_YAHOO);
+
+    if (random_u16() % 5 == 1){
+    	play_mario_sound(m, SOUND_ACTION_TERRAIN_JUMP, SOUND_CUTSCENE_SPAGETI);
+    } else {
+    	play_mario_sound(m, SOUND_ACTION_TERRAIN_JUMP, SOUND_MARIO_YAHOO);
+    }
+
 
     if (m->floor->type == SURFACE_VERTICAL_WIND && m->actionState == 0) {
         play_sound(SOUND_MARIO_HERE_WE_GO, m->marioObj->header.gfx.cameraToObject);
@@ -2193,7 +2234,12 @@ s32 act_special_triple_jump(struct MarioState *m) {
     }
 
     if ((m->controller->buttonDown & L_TRIG) && !m->lHeld){
-        struct Object * ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BLACK_BOBOMB   ,bhvKoopaShell);
+    	struct Object * ball;
+    	if (!m->ballType){
+    		ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BLACK_BOBOMB   ,bhvKoopaShell);
+    	} else {
+    		ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BASKETBALL   ,bhvKoopaShell);
+    	}
         u32 interaction = determine_interaction(m, ball);
         m->riddenObj = ball;
         m->interactObj = ball;

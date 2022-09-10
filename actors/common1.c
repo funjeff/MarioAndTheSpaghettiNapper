@@ -145,3 +145,7 @@ UNUSED static const u64 binid_22 = 22;
 #include "peasant_bowser/model.inc.c"
 #include "baljeet/model.inc.c"
 #include "candace/model.inc.c"
+#include "paper/model.inc.c"
+#include "basketball/model.inc.c"
+#include "gold_bar/model.inc.c"
+#include "gold_bar_single/model.inc.c"

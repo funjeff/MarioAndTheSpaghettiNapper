@@ -580,5 +580,10 @@ extern const BehaviorScript bhvRestartCheckpoint[];
 
 extern const BehaviorScript bhvBigBombableDoor[];
 
+extern const BehaviorScript bhvEventTrigger[];
+
+extern const BehaviorScript bhvToadGoomba[];
+
+
 
 #endif // BEHAVIOR_DATA_H

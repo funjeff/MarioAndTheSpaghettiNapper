@@ -794,3 +794,4 @@ UNUSED s32 debug_sequence_tracker(s16 debugInputSequence[]) {
 #include "behaviors/destroyable_block.inc.c"
 #include "behaviors/penny.inc.c"
 #include "behaviors/restart_checkpoint.inc.c"
+#include "behaviors/event_trigger.inc.c"

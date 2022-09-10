@@ -494,6 +494,46 @@
             "release_rate": 208,
             "envelope": "envelope0",
             "sound": "60_dudes"
+        },
+			"inst97": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "61_luigi_look"
+        },
+			"inst98": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "62_its_from_bowser"
+        },
+			"inst99": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "63_dear_pesky_plumbers"
+        },
+			"inst100": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "64_crummy_koopa"
+        },
+			"inst101": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "65_gone_too_far"
+        },
+			"inst102": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "66_nice_throw"
+        },
+			"inst103": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "67_marios_fuckin_ballin"
+        },
+			"inst104": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "68_spagetti"
         }
     },
     "instrument_list": [
@@ -593,6 +633,14 @@
 		"inst93",
 		"inst94",
 		"inst95",
-		"inst96"
+		"inst96",
+		"inst97",
+		"inst98",
+		"inst99",
+		"inst100",
+		"inst101",
+		"inst102",
+		"inst103",
+		"inst104"
     ]
 }

@@ -1823,20 +1823,20 @@ static s32 act_toad_cutscene(struct MarioState *m) {
 
 	u32 HEY_I_GOTTA_TIME = 1;
 	u32 BODACIOS_IDEA_TIME = HEY_I_GOTTA_TIME + 50;
-	u32 MUSHROOM_TIME = BODACIOS_IDEA_TIME + 60;
+	u32 MUSHROOM_TIME = BODACIOS_IDEA_TIME + 80;
 	u32 PRINCESS_TIME = MUSHROOM_TIME + 23;
 	u32 I_SHRUNK_TIME = PRINCESS_TIME + 40;
 	u32 THE_MARIO_BROTHERS_TIME = I_SHRUNK_TIME + 50;
 	u32 NEVER_MAKE_IT_TIME = THE_MARIO_BROTHERS_TIME + 60;
 	u32 WHY_DONT_YOU_TIME = NEVER_MAKE_IT_TIME + 35;
 	u32 GIVE_UP_RIGHT_NOW_TIME = WHY_DONT_YOU_TIME + 25;
-	u32 NO_TIME = GIVE_UP_RIGHT_NOW_TIME + 35;
+	u32 NO_TIME = GIVE_UP_RIGHT_NOW_TIME + 55;
 	u32 I_HAVE_TO_TRY_TIME = NO_TIME +15;
 	u32 EVEN_IF_ITS_TIME = I_HAVE_TO_TRY_TIME + 30;
 	u32 BY_MYSELF_TIME = EVEN_IF_ITS_TIME + 25;
 	u32 YOUR_A_FOOL_TIME = BY_MYSELF_TIME + 30;
 	u32 A_FOOL_TIME = YOUR_A_FOOL_TIME + 30;
-	u32 STARMAN_TIME = A_FOOL_TIME + 30;
+	u32 STARMAN_TIME = A_FOOL_TIME + 50;
 	u32 STARBRIGHT_TIME = STARMAN_TIME + 30;
 	u32 GIVE_ME_PASTA_POWER_TIME = STARBRIGHT_TIME + 30;
 	u32 GIVE_ME_PASTA_MIGHT_TIME = GIVE_ME_PASTA_POWER_TIME + 40;
@@ -1871,7 +1871,7 @@ static s32 act_toad_cutscene(struct MarioState *m) {
 			toadProp = (struct Object *) toadProp->header.next;
 		}
 
-		obj_scale(toadProp, 8.0);
+		obj_scale(toadProp, 20.0);
 
 		m->usedObj = toadProp;
 
@@ -2528,6 +2528,105 @@ static s32 act_earthwake_cutscene(struct MarioState *m){
 			earthwake_roar(m);
 			break;
 
+	 }
+	return FALSE;
+}
+
+enum {
+	SECOND_SET_UP,
+    SECOND_WALK_TO_LETTER,
+    SECOND_READ_LETTER,
+	SECOND_ENLARGE_LETTER,
+	SECOND_CRUMMY_KOOPA,
+};
+
+static void second_set_up (struct MarioState *m){
+	uintptr_t *behaviorAddr = segmented_to_virtual(bhvCutsceneProp);
+
+	struct ObjectNode *listHead = &gObjectLists[get_object_list_from_behavior(behaviorAddr)];
+	struct Object *letter = (struct Object *) listHead->next;
+
+	while (letter != (struct Object *) listHead) {
+		if (letter->behavior == behaviorAddr && GET_BPARAM1(letter->oBehParams)) {
+			break;
+		}
+		letter = (struct Object *) letter->header.next;
+	}
+
+	gMarioState->usedObj = letter;
+	letter->cutscenePropMove = 1;
+	letter->cutscenePropDisableGoodMovement = 1;
+	letter->cutscenePropMoveOnState = SECOND_WALK_TO_LETTER + 1;
+	letter->cutscenePropObjMoveSpeed = 5;
+	m->statusForCamera->cameraEvent = CAM_EVENT_FIRST;
+	set_mario_animation(m, MARIO_ANIM_WALKING);
+	play_sound(SOUND_CUTSCENE_LUIGI_LOOK_HOTEL,  m->marioObj->header.gfx.pos);
+	advance_cutscene_step(m);
+
+
+}
+
+static void second_walk_to_letter (struct MarioState *m){
+
+}
+
+static void second_read_letter (struct MarioState *m){
+	m->actionTimer = m->actionTimer + 1;
+	if (m->actionTimer == 1){
+		play_sound(SOUND_CUTSCENE_ITS_FROM_BOWSER,  m->marioObj->header.gfx.pos);
+	}
+	if (m->actionTimer == 51){
+		play_sound(SOUND_CUTSCENE_DEAR_PESKY_PLUMBERS,  m->marioObj->header.gfx.pos);
+	}
+	//m->statusForCamera->cameraEvent = CAM_EVENT_NONE;
+	//gCamera->cutscene = CUTSCENE_NONE;
+
+	if (m->actionTimer == 90){
+		create_dialog_box(DIALOG_021);
+		advance_cutscene_step(m);
+	}
+
+}
+
+static void second_enlarge_letter (struct MarioState *m){
+
+	if (m->controller->buttonDown &  (A_BUTTON | B_BUTTON | START_BUTTON | D_CBUTTONS | R_CBUTTONS | D_JPAD | R_JPAD)){
+		advance_cutscene_step(m);
+	}
+}
+
+static void second_crummy_koopa (struct MarioState *m){
+	m->actionTimer = m->actionTimer + 1;
+	if (m->actionTimer == 1){
+		play_sound(SOUND_CUTSCENE_CRUMMY_KOOPA,  m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == 55){
+		play_sound(SOUND_CUTSCENE_GONE_TOO_FAR,  m->marioObj->header.gfx.pos);
+	}
+
+	if (m->actionTimer == 90){
+		level_trigger_warp(gMarioState, WARP_OP_WARP_OBJECT);
+	}
+}
+
+static s32 act_second_cutscene (struct MarioState *m){
+	 switch (m->actionArg) {
+		case SECOND_SET_UP:
+			second_set_up(m);
+			break;
+		case SECOND_WALK_TO_LETTER:
+			second_walk_to_letter(m);
+			break;
+		case SECOND_READ_LETTER:
+			second_read_letter(m);
+			break;
+		case SECOND_ENLARGE_LETTER:
+			second_enlarge_letter(m);
+			break;
+		case SECOND_CRUMMY_KOOPA:
+			second_crummy_koopa(m);
+			break;
 	 }
 	return FALSE;
 }
@@ -3716,6 +3815,7 @@ s32 mario_execute_cutscene_action(struct MarioState *m) {
         case ACT_EARTHWAKE_CUTSCENE:         cancel = act_earthwake_cutscene(m);         break;
         case ACT_POST_EARTHWAKE_CUTSCENE:    cancel = post_earthwake_cutscene(m);        break;
         case ACT_TOAD_CUTSCENE:              cancel = act_toad_cutscene(m);              break;
+        case ACT_SECOND_CUTSCENE:            cancel = act_second_cutscene(m);              break;
         case ACT_STAR_DANCE_EXIT:            cancel = act_star_dance(m);                 break;
         case ACT_STAR_DANCE_NO_EXIT:         cancel = act_star_dance(m);                 break;
         case ACT_STAR_DANCE_WATER:           cancel = act_star_dance_water(m);           break;

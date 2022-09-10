@@ -62,7 +62,12 @@ s32 check_common_idle_cancels(struct MarioState *m) {
 
     if ((m->controller->buttonDown & L_TRIG) && !m->lHeld){
 
-       	struct Object * ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BLACK_BOBOMB    ,bhvKoopaShell);
+    	struct Object * ball;
+      	if (!m->ballType){
+      		ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BLACK_BOBOMB   ,bhvKoopaShell);
+       	} else {
+      		ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BASKETBALL   ,bhvKoopaShell);
+       	}
        	u32 interaction = determine_interaction(m, ball);
        	m->riddenObj = ball;
        	m->interactObj = ball;

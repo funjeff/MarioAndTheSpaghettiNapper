@@ -5983,6 +5983,9 @@ struct CameraTrigger sCamWDW[] = {
 struct CameraTrigger sCamTTC[] = {
 	NULL_TRIGGER
 };
+struct CameraTrigger sCamLLL[] = {
+	NULL_TRIGGER
+};
 struct CameraTrigger *sCameraTriggers[LEVEL_COUNT + 1] = {
     NULL,
     #include "levels/level_defines.h"
@@ -6621,7 +6624,7 @@ void cutscene_intro_peach_start_letter_music(UNUSED struct Camera *c) {
 #if defined(VERSION_US) || defined(VERSION_SH)
     seq_player_lower_volume(SEQ_PLAYER_LEVEL, 60, 40);
 #endif
-    cutscene_intro_peach_play_message_music();
+    //cutscene_intro_peach_play_message_music();
 }
 
 /**
@@ -6629,7 +6632,7 @@ void cutscene_intro_peach_start_letter_music(UNUSED struct Camera *c) {
  */
 void cutscene_intro_peach_start_flying_music(UNUSED struct Camera *c) {
     seq_player_unlower_volume(SEQ_PLAYER_LEVEL, 60);
-    cutscene_intro_peach_play_lakitu_flying_music();
+   // cutscene_intro_peach_play_lakitu_flying_music();
 }
 
 #ifdef VERSION_EU
@@ -7157,7 +7160,7 @@ void cutscene_earthwake_loop(struct Camera *c){
 
 void cutscene_toad_camera_start(UNUSED struct Camera *c) {
 	vec3f_set(c->focus, 0, 0,0);
-	vec3f_set(c->pos, 1800, 0, -400);
+	vec3f_set(c->pos, 1000, 0, -700);
 
 }
 
@@ -9208,13 +9211,13 @@ void cutscene_intro_peach_reset_fov(UNUSED struct Camera *c) {
  * Peach reads the letter to Mario.
  */
 void cutscene_intro_peach_letter(struct Camera *c) {
-    cutscene_spawn_obj(CUTSCENE_OBJ_BEGINNING_PEACH, 0);
+   // cutscene_spawn_obj(CUTSCENE_OBJ_BEGINNING_PEACH, 0);
     cutscene_event(cutscene_intro_peach_zoom_fov, c, 0, 0);
     cutscene_event(cutscene_intro_peach_start_letter_music, c, 65, 65);
     cutscene_event(cutscene_intro_peach_start_to_pipe_spline, c, 0, 0);
     cutscene_event(peach_letter_text, c, 65, 65);
 #ifndef VERSION_JP
-    cutscene_event(play_sound_peach_reading_letter, c, 83, 83);
+  //  cutscene_event(play_sound_peach_reading_letter, c, 83, 83);
 #endif
 
     if ((gCutsceneTimer > 120) && (get_dialog_id() == DIALOG_NONE)) {

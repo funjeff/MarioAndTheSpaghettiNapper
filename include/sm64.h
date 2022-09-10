@@ -594,6 +594,7 @@ enum MarioActionFlags {
 #define ACT_EARTHWAKE_CUTSCENE         0x00001538
 #define ACT_POST_EARTHWAKE_CUTSCENE    0x00001539
 #define ACT_TOAD_CUTSCENE              0x0000153A
+#define ACT_SECOND_CUTSCENE            0x0000153B
 
 
 

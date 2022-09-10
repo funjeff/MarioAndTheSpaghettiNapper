@@ -91,4 +91,12 @@ extern u8 excelent_bottom_right_texture[];
 
 extern u8 ragu_image_texture[];
 
+extern u8 strike_left_image_texture[];
+
+extern u8 strike_right_image_texture[];
+
+extern u8 strike_middle_left_image_texture[];
+
+extern u8 strike_middle_right_image_texture[];
+
 #endif // SEGMENT2_H

@@ -219,6 +219,10 @@ const LevelScript script_func_global_1[] = {
 	LOAD_MODEL_FROM_GEO(MODEL_PEASENT_BOWSER,          peasant_bowser_geo),
 	LOAD_MODEL_FROM_GEO(MODEL_CANDACE,                 candace_geo),
 	LOAD_MODEL_FROM_GEO(MODEL_BALJEET,                 baljeet_geo),
+	LOAD_MODEL_FROM_GEO(MODEL_PAPER,                   paper_geo),
+	LOAD_MODEL_FROM_GEO(MODEL_BASKETBALL,              basketball_geo),
+	LOAD_MODEL_FROM_GEO(MODEL_GOLD_BAR,                gold_bar_geo),
+	LOAD_MODEL_FROM_GEO(MODEL_GOLD_BAR_SINGLE,         gold_bar_single_geo),
 
     RETURN(),
 };

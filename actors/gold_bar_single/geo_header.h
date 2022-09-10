@@ -1,0 +1,14 @@
+extern const GeoLayout gold_bar_single_geo[];
+extern Lights1 gold_bar_single_sides_lights;
+extern Lights1 gold_bar_single_gold_lights;
+extern u8 gold_bar_single_Gold_ci4[];
+extern u8 gold_bar_single_Gold_ci4_pal_rgba16[];
+extern Vtx gold_bar_single_Gold_Bar_002_mesh_layer_1_vtx_0[8];
+extern Gfx gold_bar_single_Gold_Bar_002_mesh_layer_1_tri_0[];
+extern Vtx gold_bar_single_Gold_Bar_002_mesh_layer_1_vtx_1[16];
+extern Gfx gold_bar_single_Gold_Bar_002_mesh_layer_1_tri_1[];
+extern Gfx mat_gold_bar_single_sides[];
+extern Gfx mat_revert_gold_bar_single_sides[];
+extern Gfx mat_gold_bar_single_gold[];
+extern Gfx gold_bar_single_Gold_Bar_002_mesh_layer_1[];
+extern Gfx gold_bar_single_material_revert_render_settings[];

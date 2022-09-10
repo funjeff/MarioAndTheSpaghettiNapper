@@ -3,8 +3,9 @@
 const GeoLayout ccm_area_1_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, 3102, 871, 43, 90, 0, 90, ccm_dl_bowser_003_mesh_layer_1),
-		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, -2839, 871, 43, 90, 0, 90, ccm_dl_bowser_004_mesh_layer_1),
+		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, 3102, 598, -127, 90, 0, 90, ccm_dl_bowser_003_mesh_layer_1),
+		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, -2839, 598, -127, 90, 0, 90, ccm_dl_bowser_004_mesh_layer_1),
+		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, 26, 528, -3454, 0, 90, 0, ccm_dl_chindustry_mesh_layer_1),
 		GEO_TRANSLATE_NODE_WITH_DL(LAYER_OPAQUE, -9, -283, -159, ccm_dl_Cube_002_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),

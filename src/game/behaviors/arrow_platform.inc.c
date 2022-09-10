@@ -49,7 +49,12 @@ void bhv_arrow_platform_loop (void){
 
 		if (gMarioState->riddenObj == NULL){
 
-			struct Object * ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BLACK_BOBOMB    ,bhvKoopaShell);
+			struct Object * ball;
+			if (!gMarioState->ballType){
+				ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BLACK_BOBOMB   ,bhvKoopaShell);
+			} else {
+				ball = spawn_object_relative(0,0,0,0, gMarioObject, MODEL_BASKETBALL   ,bhvKoopaShell);
+			}
 			u32 interaction = determine_interaction(gMarioState, ball);
 			gMarioState->riddenObj = ball;
 			gMarioState->interactObj = ball;

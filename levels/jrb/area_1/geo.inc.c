@@ -10,10 +10,7 @@ const GeoLayout jrb_area_1_geo[] = {
 		GEO_TRANSLATE_NODE_WITH_DL(LAYER_OPAQUE, 2840, 3921, 6427, jrb_dl_Circle_001_mesh_layer_1),
 		GEO_TRANSLATE_NODE_WITH_DL(LAYER_TRANSPARENT, 6065, -520, -84, jrb_dl_DeathPlane_001_mesh_layer_5),
 		GEO_TRANSLATE_NODE_WITH_DL(LAYER_OPAQUE, -10643, 0, 11504, jrb_dl_Geometry_mesh_layer_1),
-		GEO_OPEN_NODE(),
-			GEO_DISPLAY_LIST(LAYER_TRANSPARENT, jrb_dl_Geometry_mesh_layer_5),
-		GEO_CLOSE_NODE(),
-		GEO_TRANSLATE_NODE_WITH_DL(LAYER_TRANSPARENT, -10643, 0, 11504, jrb_dl_RainbowBridge1_mesh_layer_5),
+		GEO_TRANSLATE_NODE_WITH_DL(LAYER_OPAQUE, -10643, 0, 11504, jrb_dl_RainbowBridge1_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };

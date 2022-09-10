@@ -135,6 +135,7 @@ enum HUDDisplayFlag {
 	HUD_DISPLAY_GREAT                 = (1 <<  8),
 	HUD_DISPLAY_EXCELLENT             = (1 <<  9),
 	HUD_DISPLAY_RAGU                  = (1 <<  10),
+	HUD_DISPLAY_STRIKE                  = (1 <<  11),
 #ifdef BREATH_METER
     HUD_DISPLAY_FLAG_BREATH_METER     = (1 << 14), // 0x4000
 #endif
