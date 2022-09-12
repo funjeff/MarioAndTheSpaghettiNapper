@@ -1,16 +1,16 @@
-Lights1 hmc_dl_wall_lights = gdSPDefLights1(
+Lights1 hmc_dl_wall_v4_001_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
 
-Lights1 hmc_dl_floor_lights = gdSPDefLights1(
+Lights1 hmc_dl_floor_v4_001_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
 
-Lights1 hmc_dl_f3d_material_003_lights = gdSPDefLights1(
+Lights1 hmc_dl_f3d_material_003_v4_001_lights = gdSPDefLights1(
 	0x41, 0x41, 0x41,
 	0x82, 0x82, 0x82, 0x28, 0x28, 0x28);
 
-Lights1 hmc_dl_f3d_material_002_lights = gdSPDefLights1(
+Lights1 hmc_dl_f3d_material_002_v4_001_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
 
@@ -1107,7 +1107,7 @@ Gfx hmc_dl_Cube_001_mesh_layer_1_tri_3[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_hmc_dl_wall[] = {
+Gfx mat_hmc_dl_wall_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
@@ -1119,11 +1119,11 @@ Gfx mat_hmc_dl_wall[] = {
 	gsDPPipeSync(),
 	gsDPSetTile(G_IM_FMT_I, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 124),
-	gsSPSetLights1(hmc_dl_wall_lights),
+	gsSPSetLights1(hmc_dl_wall_v4_001_lights),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_hmc_dl_floor[] = {
+Gfx mat_hmc_dl_floor_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
@@ -1135,19 +1135,19 @@ Gfx mat_hmc_dl_floor[] = {
 	gsDPPipeSync(),
 	gsDPSetTile(G_IM_FMT_I, G_IM_SIZ_8b, 8, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0),
 	gsDPSetTileSize(0, 0, 0, 252, 252),
-	gsSPSetLights1(hmc_dl_floor_lights),
+	gsSPSetLights1(hmc_dl_floor_v4_001_lights),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_hmc_dl_f3d_material_003[] = {
+Gfx mat_hmc_dl_f3d_material_003_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsSPSetLights1(hmc_dl_f3d_material_003_lights),
+	gsSPSetLights1(hmc_dl_f3d_material_003_v4_001_lights),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_hmc_dl_f3d_material_002[] = {
+Gfx mat_hmc_dl_f3d_material_002_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
@@ -1166,26 +1166,26 @@ Gfx mat_hmc_dl_f3d_material_002[] = {
 	gsDPPipeSync(),
 	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_4b, 2, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 124),
-	gsSPSetLights1(hmc_dl_f3d_material_002_lights),
+	gsSPSetLights1(hmc_dl_f3d_material_002_v4_001_lights),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_hmc_dl_f3d_material_002[] = {
+Gfx mat_revert_hmc_dl_f3d_material_002_v4_001[] = {
 	gsDPPipeSync(),
 	gsDPSetTextureLUT(G_TT_NONE),
 	gsSPEndDisplayList(),
 };
 
 Gfx hmc_dl_Cube_001_mesh_layer_1[] = {
-	gsSPDisplayList(mat_hmc_dl_wall),
+	gsSPDisplayList(mat_hmc_dl_wall_v4_001),
 	gsSPDisplayList(hmc_dl_Cube_001_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_hmc_dl_floor),
+	gsSPDisplayList(mat_hmc_dl_floor_v4_001),
 	gsSPDisplayList(hmc_dl_Cube_001_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_hmc_dl_f3d_material_003),
+	gsSPDisplayList(mat_hmc_dl_f3d_material_003_v4_001),
 	gsSPDisplayList(hmc_dl_Cube_001_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_hmc_dl_f3d_material_002),
+	gsSPDisplayList(mat_hmc_dl_f3d_material_002_v4_001),
 	gsSPDisplayList(hmc_dl_Cube_001_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_hmc_dl_f3d_material_002),
+	gsSPDisplayList(mat_revert_hmc_dl_f3d_material_002_v4_001),
 	gsSPEndDisplayList(),
 };
 

@@ -431,4 +431,18 @@ extern const Gfx flame_seg6_dl_0601C928[];
 
 #include "gold_bar_single/geo_header.h"
 
+#include "spaghetti/geo_header.h"
+
+#include "castle_breakable_wall/geo_header.h"
+
+#include "bup_cube/geo_header.h"
+
+#include "toad_statue/geo_header.h"
+
+#include "king_toad/geo_header.h"
+
+#include "goomba_door/geo_header.h"
+
+#include "another_door/geo_header.h"
+
 #endif

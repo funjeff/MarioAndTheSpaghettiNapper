@@ -589,6 +589,11 @@ void bhv_toad_goomba_update(void);
 
 void bhv_toad_goomba_init(void);
 
+void bhv_end_trigger_loop(void);
+
+void bhv_big_ball_trigger_loop(void);
+
+
 Gfx *geo_move_mario_part_from_parent(s32 callContext, UNUSED struct GraphNode *node, Mat4 mtx);
 
 // Bowser

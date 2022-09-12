@@ -409,6 +409,24 @@ const BehaviorScript bhvCutsceneTrigger[] = {
    	END_LOOP(),
 };
 
+const BehaviorScript bhvEndTrigger[] = {
+   	BEGIN(OBJ_LIST_LEVEL),
+   	OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+   	SET_OBJ_PHYSICS(/*Wall hitbox radius*/ 30, /*Gravity*/ -400, /*Bounciness*/ -50, /*Drag strength*/ 1000, /*Friction*/ 1000, /*Buoyancy*/ 200, /*Unused*/ 0, 0),
+	BEGIN_LOOP(),
+   	    CALL_NATIVE(bhv_end_trigger_loop),
+   	END_LOOP(),
+};
+
+const BehaviorScript bhvBigBallTrigger[] = {
+   	BEGIN(OBJ_LIST_LEVEL),
+   	OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+   	SET_OBJ_PHYSICS(/*Wall hitbox radius*/ 30, /*Gravity*/ -400, /*Bounciness*/ -50, /*Drag strength*/ 1000, /*Friction*/ 1000, /*Buoyancy*/ 200, /*Unused*/ 0, 0),
+	BEGIN_LOOP(),
+   	    CALL_NATIVE(bhv_big_ball_trigger_loop),
+   	END_LOOP(),
+};
+
 const BehaviorScript bhvEventTrigger[] = {
    	BEGIN(OBJ_LIST_LEVEL),
    	OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
@@ -4966,7 +4984,7 @@ const BehaviorScript bhvHidden1upInPole[] = {
     OR_INT(oFlags, (OBJ_FLAG_COMPUTE_ANGLE_TO_MARIO | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
     BILLBOARD(),
     SET_HITBOX_WITH_OFFSET(/*Radius*/ 30, /*Height*/ 200, /*Downwards offset*/ 0),
-    SET_FLOAT(oGraphYOffset, 800),
+    SET_FLOAT(oGraphYOffset, 700),
     CALL_NATIVE(bhv_1up_toad_init),
     BEGIN_LOOP(),
         SET_INT(oIntangibleTimer, 0),

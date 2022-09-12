@@ -1,0 +1,10 @@
+extern const GeoLayout castle_breakable_wall_geo[];
+extern Lights1 castle_breakable_wall_f3d_material_005_lights;
+extern u8 castle_breakable_wall_Wall_ci4[];
+extern u8 castle_breakable_wall_Wall_ci4_pal_rgba16[];
+extern Vtx castle_breakable_wall_Cube_mesh_layer_1_vtx_0[24];
+extern Gfx castle_breakable_wall_Cube_mesh_layer_1_tri_0[];
+extern Gfx mat_castle_breakable_wall_f3d_material_005[];
+extern Gfx mat_revert_castle_breakable_wall_f3d_material_005[];
+extern Gfx castle_breakable_wall_Cube_mesh_layer_1[];
+extern Gfx castle_breakable_wall_material_revert_render_settings[];

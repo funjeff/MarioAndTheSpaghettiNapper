@@ -3,7 +3,7 @@
 const GeoLayout bbh_area_1_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, -8643, 0, 0, 90, 0, 0, bbh_dl_Cube_001_mesh_layer_1),
+		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, -11331, 0, 0, 90, 0, 0, bbh_dl_Cube_001_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };

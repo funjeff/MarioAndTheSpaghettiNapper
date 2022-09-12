@@ -795,3 +795,5 @@ UNUSED s32 debug_sequence_tracker(s16 debugInputSequence[]) {
 #include "behaviors/penny.inc.c"
 #include "behaviors/restart_checkpoint.inc.c"
 #include "behaviors/event_trigger.inc.c"
+#include "behaviors/end_trigger.inc.c"
+#include "behaviors/big_ball_trigger.inc.c"

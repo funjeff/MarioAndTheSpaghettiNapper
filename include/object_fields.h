@@ -1415,6 +1415,8 @@ os16112*/
 #define eventTriggerDeleteTimer oF8
 
 
+//end trigger
+#define endTriggerTimer oF4
 
 
 #endif // OBJECT_FIELDS_H

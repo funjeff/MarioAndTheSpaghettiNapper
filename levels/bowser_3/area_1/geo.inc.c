@@ -26,7 +26,7 @@ const GeoLayout bowser_3_area_1_geo[] = {
 		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, 9018, 7715, 13760, 0, -143, 0, bowser_3_dl_Pillar4_009_mesh_layer_1),
 		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, -5322, 3795, 4899, -16, 174, -12, bowser_3_dl_Pillar4_010_mesh_layer_1),
 		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, 5185, 3732, 1724, 0, 112, 0, bowser_3_dl_Pillar5_mesh_layer_1),
-		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, -7928, 3361, 8115, 0, 112, 0, bowser_3_dl_Pillar5_001_mesh_layer_1),
+		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, -7356, 3361, 6832, 0, 112, 0, bowser_3_dl_Pillar5_001_mesh_layer_1),
 		GEO_TRANSLATE_NODE_WITH_DL(LAYER_OPAQUE, 8024, 3188, 1724, bowser_3_dl_Pillar6_mesh_layer_1),
 		GEO_TRANSLATE_NODE_WITH_DL(LAYER_OPAQUE, -1963, 7156, 1575, bowser_3_dl_rainbow1_mesh_layer_1),
 		GEO_TRANSLATE_NODE_WITH_DL(LAYER_OPAQUE, -4013, 6563, -1512, bowser_3_dl_rainbow1_001_mesh_layer_1),

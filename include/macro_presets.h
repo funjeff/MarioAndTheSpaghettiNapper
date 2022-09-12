@@ -15,9 +15,9 @@ struct MacroPreset {
 struct MacroPreset MacroObjectPresets[] = {
     {bhvYellowCoin,                     MODEL_YELLOW_COIN,                  0}, // macro_yellow_coin
     {bhvOneCoin,                        MODEL_YELLOW_COIN,                  0}, // macro_yellow_coin_2
-    {bhvMovingBlueCoin,                 MODEL_BLUE_COIN,                    0}, // macro_moving_blue_coin
-    {bhvBlueCoinSliding,                MODEL_BLUE_COIN,                    0}, // macro_sliding_blue_coin - unused
-    {bhvRedCoin,                        MODEL_RED_COIN,                     0}, // macro_red_coin
+   // {bhvMovingBlueCoin,                 MODEL_BLUE_COIN,                    0}, // macro_moving_blue_coin
+   // {bhvBlueCoinSliding,                MODEL_BLUE_COIN,                    0}, // macro_sliding_blue_coin - unused
+    //{bhvRedCoin,                        MODEL_RED_COIN,                     0}, // macro_red_coin
     {bhvYellowCoin,                     MODEL_YELLOW_COIN,                  0}, // macro_empty_5
     {bhvCoinFormation,                  MODEL_NONE, (                       0                                                            )}, // macro_coin_line_horizontal
     {bhvCoinFormation,                  MODEL_NONE, (                             COIN_FORMATION_FLAG_RING                               )}, // macro_coin_ring_horizontal
@@ -57,7 +57,7 @@ struct MacroPreset MacroObjectPresets[] = {
     {bhvBetaTrampolineTop,              MODEL_TRAMPOLINE,                   0}, // macro_beta_trampoline_top - unused
     {bhvFreeBowlingBall,                MODEL_BOWLING_BALL,                 0}, // macro_free_bowling_ball - unused
     {bhvSnufit,                         MODEL_SNUFIT,                       0}, // macro_snufit
-    {bhvRecoveryHeart,                  MODEL_HEART,                        0}, // macro_recovery_heart
+ //   {bhvRecoveryHeart,                  MODEL_HEART,                        0}, // macro_recovery_heart
     {bhv1upSliding,                     MODEL_1UP,                          0}, // macro_1up_sliding
     {bhv1Up,                            MODEL_1UP,                          MUSHROOM_BP_REQUIRES_NONE}, // macro_1up
     {bhv1upJumpOnApproach,              MODEL_1UP,                          0}, // macro_1up_jump_on_approach - unused
@@ -67,7 +67,7 @@ struct MacroPreset MacroObjectPresets[] = {
     {bhv1Up,                            MODEL_1UP,                          MUSHROOM_BP_REQUIRES_BOWSER_2}, // macro_1up_3
     {bhvYellowCoin,                     MODEL_YELLOW_COIN,                  0}, // macro_empty_52
     {bhvBlueCoinSwitch,                 MODEL_BLUE_COIN_SWITCH,             0}, // macro_blue_coin_switch
-    {bhvHiddenBlueCoin,                 MODEL_BLUE_COIN,                    0}, // macro_hidden_blue_coin
+ //   {bhvHiddenBlueCoin,                 MODEL_BLUE_COIN,                    0}, // macro_hidden_blue_coin
     {bhvCapSwitch,                      MODEL_CAP_SWITCH,                   CAP_SWITCH_BP_WING_CAP  }, // macro_wing_cap_switch - unused
     {bhvCapSwitch,                      MODEL_CAP_SWITCH,                   CAP_SWITCH_BP_METAL_CAP }, // macro_metal_cap_switch - unused
     {bhvCapSwitch,                      MODEL_CAP_SWITCH,                   CAP_SWITCH_BP_VANISH_CAP}, // macro_vanish_cap_switch - unused

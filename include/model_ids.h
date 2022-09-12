@@ -440,9 +440,13 @@
 // other models
 #define MODEL_YELLOW_COIN                 0x74        // yellow_coin_geo
 #define MODEL_YELLOW_COIN_NO_SHADOW       0x75        // yellow_coin_no_shadow_geo
-#define MODEL_BLUE_COIN                   0x76        // blue_coin_geo
-#define MODEL_BLUE_COIN_NO_SHADOW         0x77        // blue_coin_no_shadow_geo
-#define MODEL_HEART                       0x78        // heart_geo
+
+
+//custom
+
+#define MODEL_BUP_CUBE                    0x76        // bup_cube_geo
+#define MODEL_TOAD_STATUE                  0x77        // toad_statue_geo
+#define MODEL_KING_TOAD                   0x78        // king_toad_geo
 #define MODEL_TRANSPARENT_STAR            0x79        // transparent_star_geo
 #define MODEL_STAR                        0x7A        // star_geo
 #define MODEL_TTM_SLIDE_EXIT_PODIUM       0x7B        // ttm_geo_000DF4
@@ -546,8 +550,8 @@
 #define MODEL_1UP                         0xD4        // mushroom_1up_geo
 #define MODEL_CASTLE_STAR_DOOR_8_STARS    0xD5        // castle_geo_000F00
 #define MODEL_CASTLE_STAR_DOOR_70_STARS   0xD6        // castle_geo_000F00
-#define MODEL_RED_COIN                    0xD7        // red_coin_geo
-#define MODEL_RED_COIN_NO_SHADOW          0xD8        // red_coin_no_shadow_geo
+#define MODEL_GOOMBA_DOOR                 0xD7        // goomba_door_geo
+#define MODEL_ANOTHER_DOOR                0xD8        // another_door_geo
 #define MODEL_METAL_BOX                   0xD9        // metal_box_geo
 #define MODEL_METAL_BOX_DL                0xDA        // metal_box_dl
 #define MODEL_NUMBER                      0xDB        // number_geo
@@ -578,8 +582,8 @@
 #define MODEL_PEACH_CAGE                  0xEB   //peach_cage_geo
 #define MODEL_TALKABLE_GOOMBA             0xEC   //talkable_goomba_geo
 #define MODEL_TALKABLE_LUIGI              0xED   //talkable_luigi_geo
-#define MODEL_EARTHWAKE_BLOCK             0xEE   //temp_earthwake_block_geo
-#define MODEL_EARTHWAKE_HAND              0xEF   //eathwake_hand_geo
+#define MODEL_SPAGHETTI                   0xEE   //spaghetti_geo
+#define MODEL_CASTLE_BREAKABLE_WALL       0xEF   //castle_breakable_wall_geo
 #define MODEL_BIG_MASSIF                  0xF1   //big_massif_geo
 #define MODEL_LIL_MASSIF                  0xF2   //lil_massif_geo
 #define MODEL_PENNY                       0xF3   //penny_geo

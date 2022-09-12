@@ -15,6 +15,8 @@ void bhv_cutscene_prop_loop(void) {
 
 		if (gMarioState->actionArg + 1 == o->cutscenePropMoveOnState) {
 
+
+
 			if (o->cutscenePropMove == 1){
 
 				gMarioState->faceAngle[1] = obj_angle_to_object(gMarioObject,o);

@@ -3,8 +3,8 @@
 const GeoLayout ddd_area_1_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_TRANSLATE_NODE_WITH_DL(LAYER_TRANSPARENT, -535, -1428, -213, ddd_dl_DeathPlane_mesh_layer_5),
-		GEO_TRANSLATE_NODE_WITH_DL(LAYER_OPAQUE, -1963, 4216, 1225, ddd_dl_Geometry_002_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(LAYER_OPAQUE, -1963, 4216, 13024, ddd_dl_Geometry_002_mesh_layer_1),
+		GEO_TRANSLATE_NODE_WITH_DL(LAYER_OPAQUE, -1963, -1709, -23522, ddd_dl_Plane_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
@@ -15,7 +15,7 @@ const GeoLayout ddd_area_1[] = {
 		GEO_OPEN_NODE(),
 			GEO_NODE_ORTHO(100.0000),
 			GEO_OPEN_NODE(),
-				GEO_BACKGROUND(BACKGROUND_ABOVE_CLOUDS, geo_skybox_main),
+				GEO_BACKGROUND_COLOR(0x0001),
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),
 		GEO_ZBUFFER(1),
@@ -31,7 +31,6 @@ const GeoLayout ddd_area_1[] = {
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),
 		GEO_DISPLAY_LIST(LAYER_OPAQUE, ddd_dl_material_revert_render_settings),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, ddd_dl_material_revert_render_settings),
 	GEO_CLOSE_NODE(),
 	GEO_END(),
 };

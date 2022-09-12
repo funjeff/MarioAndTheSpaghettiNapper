@@ -203,7 +203,7 @@ extern Vtx bob_dl_LSign_mesh_layer_1_vtx_1[4];
 extern Gfx bob_dl_LSign_mesh_layer_1_tri_1[];
 extern Vtx bob_dl_Rolling_mesh_layer_1_vtx_0[376];
 extern Gfx bob_dl_Rolling_mesh_layer_1_tri_0[];
-extern Vtx bob_dl_Rolling_001_mesh_layer_1_vtx_0[474];
+extern Vtx bob_dl_Rolling_001_mesh_layer_1_vtx_0[470];
 extern Gfx bob_dl_Rolling_001_mesh_layer_1_tri_0[];
 extern Vtx bob_dl_StartingPlatform_mesh_layer_1_vtx_0[266];
 extern Gfx bob_dl_StartingPlatform_mesh_layer_1_tri_0[];

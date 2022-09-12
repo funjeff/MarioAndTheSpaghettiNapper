@@ -584,6 +584,11 @@ extern const BehaviorScript bhvEventTrigger[];
 
 extern const BehaviorScript bhvToadGoomba[];
 
+extern const BehaviorScript bhvEndTrigger[];
+
+extern const BehaviorScript bhvBigBallTrigger[];
+
+
 
 
 #endif // BEHAVIOR_DATA_H

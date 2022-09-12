@@ -1678,6 +1678,8 @@ void bowser_thrown_dropped_update(void) {
  * Bowser's main loop
  */
 void bhv_bowser_loop(void) {
+	gMarioState->ballType = 0;
+
     s16 angleToMario;  // AngleToMario from Bowser's perspective
     s16 angleToCenter; // AngleToCenter from Bowser's perspective
 

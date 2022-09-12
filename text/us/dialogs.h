@@ -278,7 +278,7 @@ a cake for you.\n\
 Yours truly--\n\
 Princess Toadstool"))
 
-DEFINE_DIALOG(DIALOG021, 1, 5, 95, 200, ("\
+DEFINE_DIALOG(DIALOG021, 1, 5, 95, 200, _("\
 I stole your dumb food!\n\
 - Toad            shit\n\
 I mean  - Bowser\n\
@@ -823,8 +823,7 @@ DEFINE_DIALOG(DIALOG_053, 1, 4, 30, 200, _("\
 All pasta possesions must\n\
 be forfeited to King Toad.\n\
 Otherwise, it will be\n\ 
-taken by force.\n\
-"))
+taken by force."))
 
 DEFINE_DIALOG(DIALOG_054, 1, 4, 30, 200, _("\
 Fun Fact!\n\
@@ -936,8 +935,8 @@ feel free to put\n\
 ""SECOND HACK!??!??!""\n\
 in the title.\n\
 This hack is very heavily\n\
-inspired by Mario and Luigi\n\
-Dream Team\n\
+inspired by Mario and\n\
+Luigi Dream Team\n\
 \n\
 So, uh...\n\
 Hopefully you played that.\n\
@@ -971,11 +970,11 @@ pasta plundering Toad is\n\
 anywhere, it's probably\n\
 the top floor.\n\
 Even still...\n\
-\n\
 Some of these other rooms\n\
 seem worth checking out.\n\
 \n\
 Your call, Bro.\n\
+\n\
 \n\
 "))
 
@@ -1022,64 +1021,41 @@ swing ME around! A wimp\n\
 like you won't throw me\n\
 out of here! Never! Ha!"))
 
-DEFINE_DIALOG(DIALOG_068, 1, 5, 30, 200, _("\
-It's Lethal Lava Land!\n\
-If you catch fire or fall\n\
-into a pool of flames,\n\
-you'll be hopping mad, but\n\
-don't lose your cool.\n\
-You can still control\n\
-Mario--just try to keep\n\
-calm!"))
+DEFINE_DIALOG(DIALOG_068, 1, 4, 30, 200, _("\
+\n\
+TOAD KINGDOM\n\
+  LAW 42189\n\
+\n\
+Fences are illegal\n\
+\n\
+\n\
+!"))
 
 DEFINE_DIALOG(DIALOG_069, 1, 3, 30, 200, _("\
-Mario,\n\
+Mario!\n\
 You may have escaped\n\
-from my dream world\n\
-but were in the real world\n\
-now theres no way for you\n\
-to beat me here\n\
-ive already calculated my\n\
+from my dream world, but\n\
+we're in the real world\n\
+now! There's no way for\n\
+you to beat me here!\n\
+I've already calculated my\n\
 chance of victory at\n\
-99.9999999%\n\
-all of the worlds\n\
-spaghetti belongs to me\n\
-and that includes yours\n\
-so prepare to lose mario\n\
-\n\
+99.9999999%!\n\
+All of the world's\n\
+spaghetti belongs to me,\n\
+and that includes yours!\n\
+So PREPARE TO LOSE,\n\
+MARIO!\n\
 "))
 
-DEFINE_DIALOG(DIALOG_070, 1, 5, 30, 200, _("\
-You can return to the\n\
-castle's main hall at any\n\
-time from the painting\n\
-worlds where the enemies\n\
-live.\n\
-Just stop, stand still,\n\
-press Start to pause the\n\
-game, then select\n\
-『Exit Course.』\n\
+DEFINE_DIALOG(DIALOG_070, 1, 4, 30, 200, _("\
 \n\
-You don't have to collect\n\
-all Power Stars in one\n\
-course before going on to\n\
-the next.\n\
+TOAD KINGDOM\n\
+  LAW 33333\n\
 \n\
-Return later, when you're\n\
-more experienced, to pick\n\
-up difficult ones.\n\
+No ballin' allowed.\n\
 \n\
-\n\
-Whenever you find a Star,\n\
-a hint for finding the\n\
-next one will appear on\n\
-the course's start screen.\n\
-\n\
-You can, however, collect\n\
-any of the remaining\n\
-Stars next. You don't\n\
-have to recover the one\n\
-described by the hint."))
+"))
 
 DEFINE_DIALOG(DIALOG_071, 1, 3, 30, 200, _("\
 Danger Ahead!\n\
@@ -1164,24 +1140,9 @@ and free us from this\n\
 awful prison!\n\
 Please!"))
 
-DEFINE_DIALOG(DIALOG_076, 1, 6, 30, 200, _("\
-Thanks to the power of\n\
-the Stars, life is\n\
-returning to the castle.\n\
-Please, Mario, you have\n\
-to give Bowser the boot!\n\
-\n\
-Here, let me tell you a\n\
-little something about the\n\
-castle. In the room with\n\
-the mirrors, look carefully\n\
-for anything that's not\n\
-reflected in the mirror.\n\
-And when you go to the\n\
-water town, you can flood\n\
-it with a high jump into\n\
-the painting. Oh, by the\n\
-way, look what I found!"))
+DEFINE_DIALOG(DIALOG_076, 1, 2, 30, 200, _("\
+Mario's totally gonna\n\
+fall for this one."))
 
 DEFINE_DIALOG(DIALOG_077, 1, 2, 150, 200, _("\
 It is decreed that one\n\
@@ -1292,13 +1253,17 @@ here: Grab the pole to the\n\
 left and slide carefully\n\
 down."))
 
-DEFINE_DIALOG(DIALOG_089, 1, 2, 95, 200, _("\
-SEE MOM I TOLD YOU\n\
-THEY MADE A ROMHACK\n\
-I TOLD YOU\n\
+DEFINE_DIALOG(DIALOG_089, 1, 4, 95, 200, _("\
+SEE, MOM? IT'S RIGHT\n\
+HERE! THE BOYS MADE\n\
+AN ENTIRE ROMHACK!\n\
+I'M TELLING YOU!\n\
+Huh?\n\
 \n\
-... but but but but\n\
-it was right here"))
+\n\
+but... but...\n\
+It was right here...\n\
+"))
 
 DEFINE_DIALOG(DIALOG_090, 1, 6, 30, 200, _("\
 Bwa ha ha ha!\n\
@@ -1430,11 +1395,13 @@ DEFINE_DIALOG(DIALOG_097, 1, 2, 30, 200, _("\
 I forgot my satchel.\n\
 "))
 
-DEFINE_DIALOG(DIALOG_098, 1, 3, 95, 200, _("\
-SEE, MOM? IT'S RIGHT HERE!\n\
-THE BOYS MADE AN ENTIRE\n\
-ROMHACK! I'M' TELLING YOU!\n\
+DEFINE_DIALOG(DIALOG_098, 1, 4, 95, 200, _("\
+SEE, MOM? IT'S RIGHT\n\
+HERE! THE BOYS MADE\n\
+AN ENTIRE ROMHACK!\n\
+I'M TELLING YOU!\n\
 Huh?\n\
+\n\
 \n\
 but... but...\n\
 It was right here...\n\
@@ -1546,30 +1513,15 @@ new body! Here--this is a\n\
 present for you. It's sure\n\
 to warm you up."))
 
-DEFINE_DIALOG(DIALOG_112, 1, 4, 30, 200, _("\
-Collect as many coins as\n\
-possible! They'll refill\n\
-your Power Meter.\n\
-\n\
-You can check to see how\n\
-many coins you've\n\
-collected in each of the\n\
-15 enemy worlds.\n\
-You can also recover\n\
-power by touching the\n\
-Spinning Heart.\n\
-\n\
-The faster you run\n\
-through the heart, the\n\
-more power you'll recover."))
+DEFINE_DIALOG(DIALOG_112, 1, 2, 30, 200, _("\
+BOWSER'S TOP TEN DOORS:\n\
+NUMBER 10:\n\
+THE IRON-WILLED WALL"))
 
-DEFINE_DIALOG(DIALOG_113, 1, 6, 30, 200, _("\
-There are special Caps in\n\
-the red, green and blue\n\
-blocks. Step on the\n\
-switches in the hidden\n\
-courses to activate the\n\
-Cap Blocks."))
+DEFINE_DIALOG(DIALOG_113, 1, 2, 30, 200, _("\
+BOWSER'S TOP TEN DOORS:\n\
+NUMBER 9:\n\
+THE BALLIN' BLOCKER"))
 
 DEFINE_DIALOG(DIALOG_114, 1, 5, 95, 200, _("\
 It makes me so mad! We\n\
@@ -1681,45 +1633,38 @@ C'mon troops! Let's watch\n\
 the ending together!\n\
 Bwa ha ha!"))
 
-DEFINE_DIALOG(DIALOG_122, 1, 4, 30, 200, _("\
-The Black Hole\n\
-Right: Work Elevator\n\
-/// Cloudy Maze\n\
-Left: Underground Lake"))
+DEFINE_DIALOG(DIALOG_122, 1, 2, 30, 200, _("\
+BOWSER'S TOP TEN DOORS:\n\
+NUMBER 8:\n\
+THE HARROWED HATCH"))
 
-DEFINE_DIALOG(DIALOG_123, 1, 4, 30, 200, _("\
-Metal Cavern\n\
-Right: To Waterfall\n\
-Left: Metal Cap Switch"))
+DEFINE_DIALOG(DIALOG_123, 1, 2, 30, 200, _("\
+BOWSER'S TOP TEN DOORS:\n\
+NUMBER 7:\n\
+this one"))
 
-DEFINE_DIALOG(DIALOG_124, 1, 4, 30, 200, _("\
-Work Elevator\n\
-Danger!!\n\
-Read instructions\n\
-thoroughly!\n\
-Elevator continues in the\n\
-direction of the arrow\n\
-activated."))
+DEFINE_DIALOG(DIALOG_124, 1, 2, 30, 200, _("\
+BOWSER'S TOP TEN DOORS:\n\
+NUMBER 5:\n\
+THE RAINBOW GATE"))
 
-DEFINE_DIALOG(DIALOG_125, 1, 3, 30, 200, _("\
-Hazy Maze-Exit\n\
-Danger! Closed.\n\
-Turn back now."))
+DEFINE_DIALOG(DIALOG_125, 1, 2, 30, 200, _("\
+BOWSER'S TOP TEN DOORS:\n\
+NUMBER 4:\n\
+THE PURPLE PORTAL"))
 
-DEFINE_DIALOG(DIALOG_126, 2, 3, 30, 200, _("\
-Up: Black Hole\n\
-Right: Work Elevator\n\
-/// Hazy Maze"))
+DEFINE_DIALOG(DIALOG_126, 1, 2, 30, 200, _("\
+BOWSER'S TOP TEN DOORS:\n\
+NUMBER 3:\n\
+THE ORANGE OPENER"))
 
-DEFINE_DIALOG(DIALOG_127, 3, 4, 30, 200, _("\
-Underground Lake\n\
-Right: Metal Cave\n\
-Left: Abandoned Mine\n\
-///(Closed)\n\
-A gentle sea dragon lives\n\
-here. Pound on his back to\n\
-make him lower his head.\n\
-Don't become his lunch."))
+DEFINE_DIALOG(DIALOG_127, 1, 2, 30, 200, _("\
+BOWSER'S TOP TEN DOORS:\n\
+NUMBER 2:\n\
+THE GOOMBA\n\
+\n\
+This door was raised by\n\
+a loving goomba family."))
 
 DEFINE_DIALOG(DIALOG_128, 1, 4, 95, 200, _("\
 You must fight with\n\
@@ -1727,28 +1672,24 @@ honor! It is against the\n\
 royal rules to throw the\n\
 king out of the ring!"))
 
-DEFINE_DIALOG(DIALOG_129, 1, 5, 30, 200, _("\
-Welcome to the Vanish\n\
-Cap Switch Course! All of\n\
-the blue blocks you find\n\
-will become solid once you\n\
-step on the Cap Switch.\n\
-You'll disappear when you\n\
-put on the Vanish Cap, so\n\
-you'll be able to elude\n\
-enemies and walk through\n\
-many things. Try it out!"))
+DEFINE_DIALOG(DIALOG_129, 1, 2, 30, 200, _("\
+BOWSER'S TOP TEN DOORS:\n\
+HONARABLE MENTION:\n\
+this other one.\n\
+it's pretty big."))
 
-DEFINE_DIALOG(DIALOG_130, 1, 5, 30, 200, _("\
-Welcome to the Metal Cap\n\
-Switch Course! Once you\n\
-step on the Cap Switch,\n\
-the green blocks will\n\
-become solid.\n\
-When you turn your body\n\
-into metal with the Metal\n\
-Cap, you can walk\n\
-underwater! Try it!"))
+DEFINE_DIALOG(DIALOG_130, 1, 4, 30, 200, _("\
+HAHAHAHAHAHAAHA!\n\
+Mario! I know you're\n\
+trying to get to me in\n\
+my own dream!\n\
+Unfortunately for you,\n\
+I've locked my castle!\n\
+If you want to see your\n\
+dream pasta again...\n\
+Tough luck! I put the\n\
+key on top of this\n\
+statue!"))
 
 DEFINE_DIALOG(DIALOG_131, 1, 5, 30, 200, _("\
 Welcome to the Wing Cap\n\

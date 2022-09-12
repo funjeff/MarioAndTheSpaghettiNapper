@@ -53,14 +53,14 @@ void bhv_yellow_coin_init(void) {
     if (500.0f < absf(o->oPosY - o->oFloorHeight)) {
         if (cur_obj_has_model(MODEL_YELLOW_COIN)) {
             cur_obj_set_model(MODEL_YELLOW_COIN_NO_SHADOW);
-        } else if (cur_obj_has_model(MODEL_BLUE_COIN)) {
-            cur_obj_set_model(MODEL_BLUE_COIN_NO_SHADOW);
-        } else if (cur_obj_has_model(MODEL_RED_COIN)) {
+        } /*else if (cur_obj_has_model(MODEL_BLUE_COIN)) {
+            cur_obj_set_model(MODEL_BLUE_COIN_NO_SHADOW);*/
+         /*else if (cur_obj_has_model(MODEL_RED_COIN)) {
             cur_obj_set_model(MODEL_RED_COIN_NO_SHADOW);
 #ifdef IA8_30FPS_COINS
-        } else if (cur_obj_has_model(MODEL_SILVER_COIN)) {
-            cur_obj_set_model(MODEL_SILVER_COIN_NO_SHADOW);
-#endif
+  //      }*/ else if (cur_obj_has_model(MODEL_SILVER_COIN)) {
+ //           cur_obj_set_model(MODEL_SILVER_COIN_NO_SHADOW);
+//#endif
         }
     }
 
@@ -271,9 +271,9 @@ void coin_inside_boo_act_dropped(void) {
     cur_obj_move_standard(-30);
     bhv_coin_sparkles_init();
 
-    if (cur_obj_has_model(MODEL_BLUE_COIN)) {
-        o->oDamageOrCoinValue = 5;
-    }
+//    if (cur_obj_has_model(MODEL_BLUE_COIN)) {
+//        o->oDamageOrCoinValue = 5;
+//    }
 
     if (cur_obj_wait_then_blink(400, 20)) {
         obj_mark_for_deletion(o);
@@ -285,7 +285,7 @@ void coin_inside_boo_act_carried(void) {
 
     cur_obj_become_intangible();
     if (o->oTimer == 0 && GET_BPARAM1(parent->oBehParams) != COIN_INSIDE_BOO_BP_YELLOW_COIN) {
-        cur_obj_set_model(MODEL_BLUE_COIN);
+//        cur_obj_set_model(MODEL_BLUE_COIN);
         cur_obj_scale(0.7f);
     }
 

@@ -659,9 +659,7 @@ void initiate_painting_warp(void) {
             } else if (pWarpNode->id != 0) {
                 warpNode = *pWarpNode;
 
-                if (!(warpNode.destLevel & WARP_NO_CHECKPOINT)) {
-                    sWarpCheckpointActive = check_warp_checkpoint(&warpNode);
-                }
+
 
                 initiate_warp(warpNode.destLevel & 0x7F, warpNode.destArea, warpNode.destNode, WARP_FLAGS_NONE);
                 check_if_should_set_warp_checkpoint(&warpNode);
@@ -767,12 +765,6 @@ s16 level_trigger_warp(struct MarioState *m, s32 warpOp) {
                     struct ObjectWarpNode* warpNode = area_get_warp_node(sSourceWarpNodeId);
 
                     sWarpCheckpointActive = check_warp_checkpoint(&warpNode->node);
-
-                    if (m->bigBallCamera){
-                   	 m->dudeCounter = 50;
-                   	 m->bigBallCamera = 0;
-
-                   }
 
                 }
 
@@ -1340,7 +1332,7 @@ s32 lvl_set_current_level(UNUSED s16 initOrUpdate, s32 levelNum) {
     sWarpCheckpointActive = FALSE;
     gCurrLevelNum = levelNum;
     gCurrCourseNum = gLevelToCourseNumTable[levelNum - 1];
-	if (gCurrLevelNum == LEVEL_LLL) return 0;
+				if (gCurrLevelNum == LEVEL_LLL) return 0;
 	if (gCurrLevelNum == LEVEL_BBH) return 0;
 	if (gCurrLevelNum == LEVEL_TTC) return 0;
 	if (gCurrLevelNum == LEVEL_JRB) return 0;

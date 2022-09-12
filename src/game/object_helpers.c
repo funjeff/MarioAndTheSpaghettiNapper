@@ -1297,7 +1297,7 @@ static void obj_spawn_loot_coins(struct Object *obj, s32 numCoins, f32 baseYVel,
 }
 
 void obj_spawn_loot_blue_coins(struct Object *obj, s32 numCoins, f32 baseYVel, s16 posJitter) {
-    obj_spawn_loot_coins(obj, numCoins, baseYVel, bhvBlueCoinJumping, posJitter, MODEL_BLUE_COIN);
+   // obj_spawn_loot_coins(obj, numCoins, baseYVel, bhvBlueCoinJumping, posJitter, MODEL_BLUE_COIN);
 }
 
 void obj_spawn_loot_yellow_coins(struct Object *obj, s32 numCoins, f32 baseYVel) {
@@ -2342,7 +2342,7 @@ s32 cur_obj_check_interacted(void) {
 
 void cur_obj_spawn_loot_blue_coin(void) {
     if (o->oNumLootCoins >= 5) {
-        spawn_object(o, MODEL_BLUE_COIN, bhvMrIBlueCoin);
+       // spawn_object(o, MODEL_BLUE_COIN, bhvMrIBlueCoin);
         o->oNumLootCoins -= 5;
     }
 }

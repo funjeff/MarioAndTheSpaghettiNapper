@@ -10,7 +10,7 @@ const GeoLayout pss_area_1_geo[] = {
 		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, 455, 24, -369, 90, 0, 0, pss_dl__004_geometry_mesh_layer_1),
 		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, 455, 24, -369, 90, 0, 0, pss_dl__005_geometry_mesh_layer_1),
 		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, 455, 24, -369, 90, 0, 0, pss_dl__006_geometry_mesh_layer_1),
-		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, 455, 24, -369, 90, 0, 0, pss_dl__007_geometry_mesh_layer_1),
+		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_TRANSPARENT, 455, 24, -369, 90, 0, 0, pss_dl__007_geometry_mesh_layer_5),
 		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, 455, 24, -369, 90, 0, 0, pss_dl__008_geometry_mesh_layer_1),
 		GEO_TRANSLATE_ROTATE_WITH_DL(LAYER_OPAQUE, -8509, -5435, 8946, -92, 0, 0, pss_dl_Plane_mesh_layer_1),
 	GEO_CLOSE_NODE(),
@@ -39,6 +39,7 @@ const GeoLayout pss_area_1[] = {
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),
 		GEO_DISPLAY_LIST(LAYER_OPAQUE, pss_dl_material_revert_render_settings),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, pss_dl_material_revert_render_settings),
 	GEO_CLOSE_NODE(),
 	GEO_END(),
 };

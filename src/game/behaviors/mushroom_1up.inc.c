@@ -10,12 +10,11 @@ void bhv_1up_interact(void) {
 #endif
 #endif
         gMarioState->hurtCounter = 31;
-        gMarioState->dudeCounter = 172;
+        gMarioState->dudeCounter = 65;
 #ifdef SAVE_NUM_LIVES
         save_file_set_num_lives(gMarioState->numLives);
 #endif
         o->activeFlags = ACTIVE_FLAG_DEACTIVATED;
-        gMarioState->bigBallCamera = 0;
 #if ENABLE_RUMBLE
         queue_rumble_data(5, 80);
 #endif
@@ -72,8 +71,8 @@ void pole_1up_move_towards_mario(void) {
     obj_turn_toward_object(o, gMarioObject, O_MOVE_ANGLE_YAW_INDEX, 0x1000);
 
     o->oMoveAnglePitch = approach_s16_symmetric(o->oMoveAnglePitch, targetPitch, 0x1000);
-    o->oVelY = sins(o->oMoveAnglePitch) * 30.0f;
-    o->oForwardVel = coss(o->oMoveAnglePitch) * 30.0f;
+    o->oVelY = sins(o->oMoveAnglePitch) * 50.0f;
+    o->oForwardVel = coss(o->oMoveAnglePitch) * 50.0f;
 
 
     bhv_1up_interact();

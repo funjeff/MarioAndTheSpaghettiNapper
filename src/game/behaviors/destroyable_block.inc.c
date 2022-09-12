@@ -25,12 +25,23 @@ struct ObjectHitbox sDestroyableBlockHitbox = {
 
 void bhv_destroyable_block_loop(void){
 
-	if (gMarioState->pos[1] > o->oPosY - 500 && gMarioState->pos[1] < o->oPosY + 500){
-		if (gMarioState->pos[0] > o->oPosX - 500 && gMarioState->pos[0] < o->oPosX + 500){
-			if (gMarioState->pos[2] > o->oPosZ - 500 && gMarioState->pos[2] < o->oPosZ + 500){
-				play_sound(SOUND_GENERAL_BOWSER_BOMB_EXPLOSION, o->header.gfx.cameraToObject);
-				obj_mark_for_deletion(o);
+	if (!GET_BPARAM1(o->oBehParams)){
+		if (gMarioState->pos[1] > o->oPosY - 500 && gMarioState->pos[1] < o->oPosY + 500){
+			if (gMarioState->pos[0] > o->oPosX - 500 && gMarioState->pos[0] < o->oPosX + 500){
+				if (gMarioState->pos[2] > o->oPosZ - 500 && gMarioState->pos[2] < o->oPosZ + 500){
+					play_sound(SOUND_GENERAL_BOWSER_BOMB_EXPLOSION, o->header.gfx.cameraToObject);
+					obj_mark_for_deletion(o);
+				}
 			}
 		}
+	} else {
+		if (gMarioState->pos[1] > o->oPosY - GET_BPARAM1(o->oBehParams) * 8 && gMarioState->pos[1] < o->oPosY + GET_BPARAM1(o->oBehParams) * 8){
+					if (gMarioState->pos[0] > o->oPosX - GET_BPARAM1(o->oBehParams) * 8 && gMarioState->pos[0] < o->oPosX + GET_BPARAM1(o->oBehParams) * 8){
+						if (gMarioState->pos[2] > o->oPosZ - GET_BPARAM1(o->oBehParams) * 8 && gMarioState->pos[2] < o->oPosZ + GET_BPARAM1(o->oBehParams) * 8){
+							play_sound(SOUND_GENERAL_BOWSER_BOMB_EXPLOSION, o->header.gfx.cameraToObject);
+							obj_mark_for_deletion(o);
+						}
+					}
+				}
 	}
 }
